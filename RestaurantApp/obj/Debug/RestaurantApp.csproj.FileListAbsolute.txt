@@ -1,0 +1,9 @@
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\bin\Debug\RestaurantApp.exe.config
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\bin\Debug\RestaurantApp.exe
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\bin\Debug\RestaurantApp.pdb
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.csprojAssemblyReference.cache
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.Properties.Resources.resources
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.csproj.GenerateResource.cache
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.csproj.CoreCompileInputs.cache
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.exe
+E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.pdb
