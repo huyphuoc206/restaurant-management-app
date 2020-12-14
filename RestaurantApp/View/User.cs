@@ -47,5 +47,26 @@ namespace RestaurantApp.View
         {
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login lo = new Login();
+            this.Hide();
+            lo.ShowDialog();
+            this.Hide();
+        }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AccountProfile ap = new AccountProfile();
+            this.Hide();
+            ap.ShowDialog();
+            this.Hide();
+        }
     }
 }

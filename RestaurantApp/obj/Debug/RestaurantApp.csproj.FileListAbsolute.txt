@@ -18,3 +18,16 @@ C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\Restaurant
 C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb
 C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Form1.resources
 C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.User.resources
+F:\restaurant-management-app\RestaurantApp\bin\Debug\RestaurantApp.exe.config
+F:\restaurant-management-app\RestaurantApp\bin\Debug\RestaurantApp.exe
+F:\restaurant-management-app\RestaurantApp\bin\Debug\RestaurantApp.pdb
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csprojAssemblyReference.cache
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Properties.Resources.resources
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.AccountProfile.resources
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.CreateAccount.resources
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.Login.resources
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.User.resources
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.GenerateResource.cache
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.CoreCompileInputs.cache
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.exe
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb

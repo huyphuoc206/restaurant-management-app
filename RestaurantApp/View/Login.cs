@@ -8,28 +8,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RestaurantApp
+namespace RestaurantApp.View
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btn_register_Click(object sender, EventArgs e)
         {
-
+            CreateAccount ca = new CreateAccount();
+            this.Hide();
+            ca.ShowDialog();
+            this.Hide();
         }
 
-        private void pass_text_TextChanged(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
-
+            User user = new User();
+            this.Hide();
+            user.ShowDialog();
+            this.Hide();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btn_exit_Click(object sender, EventArgs e)
         {
+            Application.Exit(); 
+          
+        }
 
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
