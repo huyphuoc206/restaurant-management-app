@@ -155,12 +155,50 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\FoodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OrderDetailController.cs" />
+    <Compile Include="Controllers\TableController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DAO\ICategoryDAO.cs" />
+    <Compile Include="DAO\IFoodDAO.cs" />
+    <Compile Include="DAO\impl\CategoryDAO.cs" />
+    <Compile Include="DAO\impl\FoodDAO.cs" />
+    <Compile Include="DAO\impl\OrderDAO.cs" />
+    <Compile Include="DAO\impl\OrderDetailDAO.cs" />
+    <Compile Include="DAO\impl\TableDAO.cs" />
+    <Compile Include="DAO\impl\UserDAO.cs" />
+    <Compile Include="DAO\IOrderDAO.cs" />
+    <Compile Include="DAO\IOrderDetailDAO.cs" />
+    <Compile Include="DAO\ITableDAO.cs" />
+    <Compile Include="DAO\IUserDAO.cs" />
+    <Compile Include="DTO\AbstractDTO.cs" />
+    <Compile Include="DTO\CategoryDTO.cs" />
+    <Compile Include="DTO\FoodDTO.cs" />
+    <Compile Include="DTO\OrderDetailDTO.cs" />
+    <Compile Include="DTO\OrderDTO.cs" />
+    <Compile Include="DTO\RoleDTO.cs" />
+    <Compile Include="DTO\TableDTO.cs" />
+    <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ICategoryService.cs" />
+    <Compile Include="Service\IFoodService.cs" />
+    <Compile Include="Service\impl\CategoryService.cs" />
+    <Compile Include="Service\impl\FoodService.cs" />
+    <Compile Include="Service\impl\OrderDetailService.cs" />
+    <Compile Include="Service\impl\OrderService.cs" />
+    <Compile Include="Service\impl\TableService.cs" />
+    <Compile Include="Service\impl\UserService.cs" />
+    <Compile Include="Service\IOrderDetailService.cs" />
+    <Compile Include="Service\IOrderService.cs" />
+    <Compile Include="Service\ITableService.cs" />
+    <Compile Include="Service\IUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -215,10 +253,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DTO\" />
     <Folder Include="Models\" />
-    <Folder Include="Repository\" />
-    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
