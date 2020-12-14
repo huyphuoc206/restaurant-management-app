@@ -7,3 +7,14 @@ E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\De
 E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.csproj.CoreCompileInputs.cache
 E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.exe
 E:\Data\University\Workspace\DotNet\RestaurantManagementApp\RestaurantApp\obj\Debug\RestaurantApp.pdb
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\bin\Debug\RestaurantApp.exe.config
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\bin\Debug\RestaurantApp.exe
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\bin\Debug\RestaurantApp.pdb
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Properties.Resources.resources
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.exe
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Form1.resources
+C:\Users\HP\Desktop\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.User.resources
