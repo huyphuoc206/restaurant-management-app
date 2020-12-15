@@ -17,20 +17,13 @@ namespace RestaurantApp.View
             InitializeComponent();
         }
 
-        private void btn_register_Click(object sender, EventArgs e)
-        {
-            CreateAccount ca = new CreateAccount();
-            this.Hide();
-            ca.ShowDialog();
-            this.Hide();
-        }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
             User user = new User();
             this.Hide();
             user.ShowDialog();
-            this.Hide();
+            this.Show();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -45,6 +38,16 @@ namespace RestaurantApp.View
             {
                 e.Cancel = true;
             }
+        }
+
+        private void label_user_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_login_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
