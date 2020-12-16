@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2020 at 04:56 PM
+-- Generation Time: Dec 15, 2020 at 06:26 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -142,6 +142,7 @@ CREATE TABLE `user` (
   `phone` varchar(11) NOT NULL,
   `address` text NOT NULL,
   `email` varchar(255) NOT NULL,
+  `gender` varchar(3) NOT NULL,
   `status` int(11) NOT NULL,
   `roleid` bigint(20) NOT NULL,
   `createddate` date DEFAULT NULL,

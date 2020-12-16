@@ -46,6 +46,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Document\DotNet\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -165,6 +168,8 @@
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAO\ICategoryDAO.cs" />
     <Compile Include="DAO\IFoodDAO.cs" />
+    <Compile Include="DAO\IGenericDAO.cs" />
+    <Compile Include="DAO\impl\AbstractDAO.cs" />
     <Compile Include="DAO\impl\CategoryDAO.cs" />
     <Compile Include="DAO\impl\FoodDAO.cs" />
     <Compile Include="DAO\impl\OrderDAO.cs" />
@@ -175,6 +180,8 @@
     <Compile Include="DAO\IOrderDetailDAO.cs" />
     <Compile Include="DAO\ITableDAO.cs" />
     <Compile Include="DAO\IUserDAO.cs" />
+    <Compile Include="DBUtils\DatabaseUtils.cs" />
+    <Compile Include="DBUtils\MySqlUtils.cs" />
     <Compile Include="DTO\AbstractDTO.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DTO\FoodDTO.cs" />
@@ -186,6 +193,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mapper\CategoryMapper.cs" />
+    <Compile Include="Mapper\FoodMapper.cs" />
+    <Compile Include="Mapper\IRowMapper.cs" />
+    <Compile Include="Mapper\MapperUtils.cs" />
+    <Compile Include="Mapper\OrderDetailMapper.cs" />
+    <Compile Include="Mapper\OrderMapper.cs" />
+    <Compile Include="Mapper\TableMapper.cs" />
+    <Compile Include="Mapper\UserMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ICategoryService.cs" />
     <Compile Include="Service\IFoodService.cs" />

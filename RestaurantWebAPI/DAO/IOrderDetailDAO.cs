@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantWebAPI.DAO
 {
-    interface IOrderDetailDAO
+    public interface IOrderDetailDAO
     {
     }
 }

@@ -1,4 +1,6 @@
-﻿using RestaurantWebAPI.Service;
+﻿using RestaurantWebAPI.DTO;
+using RestaurantWebAPI.Service;
+using RestaurantWebAPI.Service.impl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +13,13 @@ namespace RestaurantWebAPI.Controllers
     public class UserController : ApiController
     {
         private IUserService userService;
+
+        [Route("~/api/GetAllUsers")]
+        [HttpGet]
+        public List<UserDTO> Get()
+        {
+            userService = UserService.Instance;
+            return userService.findAll();
+        }
     }
 }

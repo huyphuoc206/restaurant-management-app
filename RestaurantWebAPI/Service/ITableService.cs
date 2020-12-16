@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantWebAPI.Service
 {
-    interface ITableService
+    public interface ITableService
     {
     }
 }

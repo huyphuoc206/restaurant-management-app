@@ -13,8 +13,9 @@ namespace RestaurantWebAPI.DTO
         private string phone;
         private string address;
         private string email;
+        private string gender;
         private int status;
-        private long roleId;
+        private RoleDTO role;
 
         public string FullName { get => fullName; set => fullName = value; }
         public string UserName { get => userName; set => userName = value; }
@@ -23,6 +24,7 @@ namespace RestaurantWebAPI.DTO
         public string Address { get => address; set => address = value; }
         public string Email { get => email; set => email = value; }
         public int Status { get => status; set => status = value; }
-        public long RoleId { get => roleId; set => roleId = value; }
+        public string Gender { get => gender; set => gender = value; }
+        public RoleDTO Role { get => role; set => role = value; }
     }
 }
