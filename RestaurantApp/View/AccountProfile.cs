@@ -29,10 +29,7 @@ namespace RestaurantApp.View
 
         private void btn_turnBack_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            this.Hide();
-            user.ShowDialog();
-            this.Hide();
+  
         }
     }
 }

@@ -1,72 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RestaurantApp.View
 {
     public partial class User : Form
     {
+      
         public User()
         {
             InitializeComponent();
         }
 
-
-
-
-        private void User_Load(object sender, EventArgs e)
+        private void button_clear_Click(object sender, EventArgs e)
         {
-
+            quantity.Text = "";
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btns_quantity_click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Login lo = new Login();
-            this.Hide();
-            lo.ShowDialog();
-            this.Hide();
-        }
-
-        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AccountProfile ap = new AccountProfile();
-            this.Hide();
-            ap.ShowDialog();
-            this.Hide();
+            Button btn = sender as Button;
+            quantity.Text += btn.Text;
         }
     }
 }

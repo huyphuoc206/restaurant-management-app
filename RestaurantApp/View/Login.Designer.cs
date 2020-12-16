@@ -29,7 +29,6 @@ namespace RestaurantApp.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_register = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_login = new System.Windows.Forms.Button();
             this.pass_text = new System.Windows.Forms.TextBox();
@@ -39,21 +38,10 @@ namespace RestaurantApp.View
             this.label_user = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_register
-            // 
-            this.btn_register.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_register.Location = new System.Drawing.Point(118, 174);
-            this.btn_register.Name = "btn_register";
-            this.btn_register.Size = new System.Drawing.Size(93, 37);
-            this.btn_register.TabIndex = 19;
-            this.btn_register.Text = "Đăng ký";
-            this.btn_register.UseVisualStyleBackColor = true;
-            this.btn_register.Click += new System.EventHandler(this.btn_register_Click);
-            // 
             // btn_exit
             // 
             this.btn_exit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_exit.Location = new System.Drawing.Point(309, 174);
+            this.btn_exit.Location = new System.Drawing.Point(331, 174);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(86, 37);
             this.btn_exit.TabIndex = 17;
@@ -64,7 +52,7 @@ namespace RestaurantApp.View
             // btn_login
             // 
             this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_login.Location = new System.Drawing.Point(217, 174);
+            this.btn_login.Location = new System.Drawing.Point(180, 174);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(86, 37);
             this.btn_login.TabIndex = 18;
@@ -100,6 +88,7 @@ namespace RestaurantApp.View
             this.label_login.Size = new System.Drawing.Size(115, 25);
             this.label_login.TabIndex = 14;
             this.label_login.Text = "Đăng nhập";
+            this.label_login.Click += new System.EventHandler(this.label_login_Click);
             // 
             // label_pass
             // 
@@ -122,13 +111,13 @@ namespace RestaurantApp.View
             this.label_user.Size = new System.Drawing.Size(90, 19);
             this.label_user.TabIndex = 13;
             this.label_user.Text = "Tài khoản :";
+            this.label_user.Click += new System.EventHandler(this.label_user_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 242);
-            this.Controls.Add(this.btn_register);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pass_text);
@@ -137,6 +126,7 @@ namespace RestaurantApp.View
             this.Controls.Add(this.label_pass);
             this.Controls.Add(this.label_user);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.ResumeLayout(false);
@@ -145,8 +135,6 @@ namespace RestaurantApp.View
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_register;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.TextBox pass_text;
