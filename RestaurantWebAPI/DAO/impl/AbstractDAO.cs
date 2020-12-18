@@ -11,7 +11,7 @@ namespace RestaurantWebAPI.DAO.impl
     public class AbstractDAO<T> : IGenericDAO<T>
     {
 
-        private void setParameters(MySqlCommand command, object[] parameters, string sql)
+        private void SetParameters(MySqlCommand command, object[] parameters, string sql)
         {
             string[] listPara = sql.Split(' ');
             int i = 0;
@@ -25,7 +25,7 @@ namespace RestaurantWebAPI.DAO.impl
             }
         }
 
-        public List<T> query(string sql, IRowMapper<T> rowMapper, object[] parameters = null)
+        public List<T> Query(string sql, IRowMapper<T> rowMapper, object[] parameters = null)
         {
             List<T> result = new List<T>();
             MySqlConnection connection = null;
@@ -39,7 +39,7 @@ namespace RestaurantWebAPI.DAO.impl
                 command = connection.CreateCommand();
                 command.CommandText = sql;
                 if (parameters != null)
-                    setParameters(command, parameters, sql);
+                    SetParameters(command, parameters, sql);
 
                 reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -60,7 +60,7 @@ namespace RestaurantWebAPI.DAO.impl
             return result;
         }
 
-        public long insert(string sql, object[] parameters = null)
+        public long NonQuery(string sql, object[] parameters = null)
         {
             long id = -1;
             MySqlConnection connection = null;
@@ -72,7 +72,7 @@ namespace RestaurantWebAPI.DAO.impl
                 command = connection.CreateCommand();
                 command.CommandText = sql;
                 if (parameters != null)
-                    setParameters(command, parameters, sql);
+                    SetParameters(command, parameters, sql);
                 command.ExecuteNonQuery();
                 id = command.LastInsertedId;
             }
@@ -86,33 +86,6 @@ namespace RestaurantWebAPI.DAO.impl
                     connection.Close();
             }
             return id;
-        }
-
-        public int update(string sql, object[] parameters = null)
-        {
-            MySqlConnection connection = null;
-            MySqlCommand command = null;
-            int rowCount = 0;
-            try
-            {
-                connection = DatabaseUtils.getMySqlConnection();
-                connection.Open();
-                command = connection.CreateCommand();
-                command.CommandText = sql;
-                if (parameters != null)
-                    setParameters(command, parameters, sql);
-                rowCount = command.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                return rowCount;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }
-            return rowCount;
         }
     }
 }

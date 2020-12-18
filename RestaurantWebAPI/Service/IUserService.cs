@@ -9,6 +9,12 @@ namespace RestaurantWebAPI.Service
 {
     public interface IUserService
     {
-        List<UserDTO> findAll();
+        List<UserDTO> FindAll();
+
+        UserDTO Save(UserDTO user);
+
+        UserDTO Update(long id, UserDTO user);
+
+        void Delete(long id);
     }
 }

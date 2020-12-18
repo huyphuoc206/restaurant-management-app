@@ -1,9 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using RestaurantWebAPI.DTO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace RestaurantWebAPI.Mapper
 {
@@ -12,7 +9,6 @@ namespace RestaurantWebAPI.Mapper
         public UserDTO MapRow(MySqlDataReader reader)
         {
             UserDTO user = new UserDTO();
-            
             user.ID = reader.GetInt64("id");
             user.FullName = reader.GetString("fullname");
             user.UserName = reader.GetString("username");
@@ -22,12 +18,23 @@ namespace RestaurantWebAPI.Mapper
             user.Email = reader.GetString("email");
             user.Gender = reader.GetString("gender");
             user.Status = reader.GetInt16("status");
+
             RoleDTO role = new RoleDTO();
-            if(MapperUtils.HasColumn("name",reader))
+            role.ID = reader.GetInt64("roleid");
+            if (MapperUtils.HasColumn("name", reader))
                 role.Name = reader.GetString("name");
             if (MapperUtils.HasColumn("code", reader))
                 role.Code = reader.GetString("code");
             user.Role = role;
+
+            if (reader["createddate"] != DBNull.Value)
+                user.CreatedDate = reader.GetDateTime("createddate");
+            if (reader["createdby"] != DBNull.Value)
+                user.CreatedBy = reader.GetString("createdby");
+            if (reader["modifieddate"] != DBNull.Value)
+                user.ModifiedDate = reader.GetDateTime("modifieddate");
+            if (reader["modifiedby"] != DBNull.Value)
+                user.ModifiedBy = reader.GetString("modifiedby");
             return user;
         }
     }

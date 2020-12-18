@@ -5,7 +5,7 @@ using System.Web;
 
 namespace RestaurantWebAPI.DTO
 {
-    public class OrderDetailDTO
+    public class OrderDetailDTO : AbstractDTO
     {
         private long orderId;
         private long foodId;
