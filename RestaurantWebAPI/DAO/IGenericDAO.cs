@@ -9,9 +9,7 @@ namespace RestaurantWebAPI.DAO
 {
     public interface IGenericDAO<T>
     {
-        List<T> query(string sql, IRowMapper<T> rowMapper, object[] parameters);
-        int update(string sql, object[] parameters);
-        long insert(string sql, object[] parameters);
-
+        List<T> Query(string sql, IRowMapper<T> rowMapper, object[] parameters);
+        long NonQuery(string sql, object[] parameters);
     }
 }
