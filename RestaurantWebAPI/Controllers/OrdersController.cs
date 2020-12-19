@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace RestaurantWebAPI.Controllers
 {
-    public class OrderController : ApiController
+    public class OrdersController : ApiController
     {
         private IOrderService orderService;
     }
