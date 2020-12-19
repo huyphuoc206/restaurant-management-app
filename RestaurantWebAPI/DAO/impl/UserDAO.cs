@@ -21,7 +21,7 @@ namespace RestaurantWebAPI.DAO.impl
 
         public List<UserDTO> FindAll()
         {
-            string sql = "SELECT * FROM user JOIN role ON user.roleid = role.id";
+            string sql = "SELECT user.*, role.name FROM user JOIN role ON user.roleid = role.id";
             List<UserDTO> users = Query(sql, new UserMapper());
             return users;
         }

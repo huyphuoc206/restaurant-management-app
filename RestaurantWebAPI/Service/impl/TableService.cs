@@ -29,6 +29,7 @@ namespace RestaurantWebAPI.Service.impl
         public TableDTO Save(TableDTO table)
         {
             tableDAO = TableDAO.Instance;
+            if (table.Seats < 0) return null;
             table.CreatedDate = DateTime.Now;
             long id = tableDAO.Save(table);
             return tableDAO.FindOneById(id);
@@ -37,7 +38,7 @@ namespace RestaurantWebAPI.Service.impl
         public TableDTO Update(long id, TableDTO table)
         {
             tableDAO = TableDAO.Instance;
-
+            if (table.Seats < 0) return null;
             TableDTO oldTable = tableDAO.FindOneById(id);
             if (oldTable != null)
             {
