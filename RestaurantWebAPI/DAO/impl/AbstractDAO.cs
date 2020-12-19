@@ -48,6 +48,7 @@ namespace RestaurantWebAPI.DAO.impl
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return result;
             }
             finally
@@ -60,7 +61,7 @@ namespace RestaurantWebAPI.DAO.impl
             return result;
         }
 
-        public long NonQuery(string sql, object[] parameters = null)
+        public long Insert(string sql, object[] parameters = null)
         {
             long id = -1;
             MySqlConnection connection = null;
@@ -78,6 +79,7 @@ namespace RestaurantWebAPI.DAO.impl
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return id;
             }
             finally
@@ -86,6 +88,32 @@ namespace RestaurantWebAPI.DAO.impl
                     connection.Close();
             }
             return id;
+        }
+
+        public void Update(string sql, object[] parameters = null)
+        {
+            MySqlConnection connection = null;
+            MySqlCommand command = null;
+            try
+            {
+                connection = DatabaseUtils.getMySqlConnection();
+                connection.Open();
+                command = connection.CreateCommand();
+                command.CommandText = sql;
+                if (parameters != null)
+                    SetParameters(command, parameters, sql);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
         }
     }
 }

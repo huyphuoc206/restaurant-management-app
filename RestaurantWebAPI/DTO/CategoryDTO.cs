@@ -9,8 +9,10 @@ namespace RestaurantWebAPI.DTO
     {
         private string name;
         private string code;
+        private int status;
 
         public string Name { get => name; set => name = value; }
         public string Code { get => code; set => code = value; }
+        public int Status { get => status; set => status = value; }
     }
 }

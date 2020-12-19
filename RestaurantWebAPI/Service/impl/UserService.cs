@@ -18,6 +18,7 @@ namespace RestaurantWebAPI.Service.impl
             get { if (instance == null) instance = new UserService(); return instance; }
             private set => instance = value;
         }
+
         private UserService() { }
 
         public List<UserDTO> FindAll()
@@ -63,9 +64,7 @@ namespace RestaurantWebAPI.Service.impl
         public void Delete(long id)
         {
             userDAO = UserDAO.Instance;
-            UserDTO userTemp = userDAO.FindOneById(id);
-            if (userTemp != null)
-                userDAO.Delete(id);
+            userDAO.Delete(id);
         }
     }
 }

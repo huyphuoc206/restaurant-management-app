@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantWebAPI.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,12 @@ namespace RestaurantWebAPI.Service
 {
     public interface ITableService
     {
+        List<TableDTO> FindAll();
+
+        TableDTO Save(TableDTO table);
+
+        TableDTO Update(long id, TableDTO table);
+
+        void Delete(long id);
     }
 }

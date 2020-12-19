@@ -11,7 +11,21 @@ namespace RestaurantWebAPI.Mapper
     {
         public CategoryDTO MapRow(MySqlDataReader reader)
         {
-            throw new NotImplementedException();
+            CategoryDTO category = new CategoryDTO();
+            category.ID = reader.GetInt64("id");
+            category.Name = reader.GetString("name");
+            category.Code = reader.GetString("code");
+            category.Status = reader.GetInt32("status");
+
+            if (reader["createddate"] != DBNull.Value)
+                category.CreatedDate = reader.GetDateTime("createddate");
+            if (reader["createdby"] != DBNull.Value)
+                category.CreatedBy = reader.GetString("createdby");
+            if (reader["modifieddate"] != DBNull.Value)
+                category.ModifiedDate = reader.GetDateTime("modifieddate");
+            if (reader["modifiedby"] != DBNull.Value)
+                category.ModifiedBy = reader.GetString("modifiedby");
+            return category;
         }
     }
 }
