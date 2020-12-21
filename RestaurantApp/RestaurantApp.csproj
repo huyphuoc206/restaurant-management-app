@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\AbstractModel.cs" />
+    <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\FoodModel.cs" />
+    <Compile Include="Model\OrderDetailModel.cs" />
+    <Compile Include="Model\OrderModel.cs" />
+    <Compile Include="Model\RoleModel.cs" />
+    <Compile Include="Model\TableModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
     <Compile Include="View\AccountProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
