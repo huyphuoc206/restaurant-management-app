@@ -67,9 +67,9 @@ namespace RestaurantApp.View
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(391, 35);
+            this.button_clear.Location = new System.Drawing.Point(391, 12);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(75, 30);
+            this.button_clear.Size = new System.Drawing.Size(75, 23);
             this.button_clear.TabIndex = 1;
             this.button_clear.Text = "Xóa";
             this.button_clear.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@ namespace RestaurantApp.View
             // quantity
             // 
             this.quantity.AutoSize = true;
-            this.quantity.Location = new System.Drawing.Point(300, 35);
+            this.quantity.Location = new System.Drawing.Point(300, 22);
             this.quantity.Name = "quantity";
             this.quantity.Size = new System.Drawing.Size(31, 13);
             this.quantity.TabIndex = 0;
@@ -87,10 +87,9 @@ namespace RestaurantApp.View
             // label_quantity
             // 
             this.label_quantity.AutoSize = true;
-           // this.label_quantity.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_quantity.Location = new System.Drawing.Point(242, 35);
+            this.label_quantity.Location = new System.Drawing.Point(242, 22);
             this.label_quantity.Name = "label_quantity";
-            this.label_quantity.Size = new System.Drawing.Size(75, 30);
+            this.label_quantity.Size = new System.Drawing.Size(52, 13);
             this.label_quantity.TabIndex = 0;
             this.label_quantity.Text = "Số lượng:";
             // 
@@ -114,7 +113,7 @@ namespace RestaurantApp.View
             // label_order
             // 
             this.label_order.AutoSize = true;
-            this.label_order.Location = new System.Drawing.Point(120, 0);
+            this.label_order.Location = new System.Drawing.Point(134, 0);
             this.label_order.Name = "label_order";
             this.label_order.Size = new System.Drawing.Size(49, 13);
             this.label_order.TabIndex = 0;
@@ -165,14 +164,13 @@ namespace RestaurantApp.View
         {
             for(int i = 0; i < 10; i++)
             {
-                int y =5 +60*(i + 1);
+                int y = 35 +70*i;
                 btns_quantity[i] = new Button();
                 btns_quantity[i].SetBounds(320, y, 50, 50);
                 btns_quantity[i].Text = "" + i;
                 btns_quantity[i].Click += new System.EventHandler(btns_quantity_click);
             }
         }
-        public void 
     
 
 

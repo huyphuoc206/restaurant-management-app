@@ -88,7 +88,6 @@ namespace RestaurantApp.View
             this.label_login.Size = new System.Drawing.Size(115, 25);
             this.label_login.TabIndex = 14;
             this.label_login.Text = "Đăng nhập";
-            this.label_login.Click += new System.EventHandler(this.label_login_Click);
             // 
             // label_pass
             // 
@@ -111,7 +110,6 @@ namespace RestaurantApp.View
             this.label_user.Size = new System.Drawing.Size(90, 19);
             this.label_user.TabIndex = 13;
             this.label_user.Text = "Tài khoản :";
-            this.label_user.Click += new System.EventHandler(this.label_user_Click);
             // 
             // Login
             // 

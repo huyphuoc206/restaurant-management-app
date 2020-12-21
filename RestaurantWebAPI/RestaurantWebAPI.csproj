@@ -177,6 +177,7 @@
     <Compile Include="DAO\impl\TableDAO.cs" />
     <Compile Include="DAO\impl\UserDAO.cs" />
     <Compile Include="DAO\IOrderDAO.cs" />
+    <Compile Include="DAO\IOrderDaoBase.cs" />
     <Compile Include="DAO\IOrderDetailDAO.cs" />
     <Compile Include="DAO\ITableDAO.cs" />
     <Compile Include="DAO\IUserDAO.cs" />

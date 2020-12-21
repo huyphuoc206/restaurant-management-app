@@ -39,15 +39,5 @@ namespace RestaurantApp.View
                 e.Cancel = true;
             }
         }
-
-        private void label_user_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_login_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

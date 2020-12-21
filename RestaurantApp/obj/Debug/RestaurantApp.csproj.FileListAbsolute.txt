@@ -63,3 +63,4 @@ E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantApp\obj\
 E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.CoreCompileInputs.cache
 E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.exe
 E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb
+F:\NET\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.Admin.resources
