@@ -172,9 +172,6 @@ namespace RestaurantApp.View
             }
         }
     
-
-
-
         private Panel panel_menu;
         private Label label_menu;
         private Panel panel_bill;

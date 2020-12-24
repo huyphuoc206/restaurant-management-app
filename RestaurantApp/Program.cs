@@ -1,4 +1,5 @@
-﻿using RestaurantApp.View;
+﻿using RestaurantApp.Controller;
+using RestaurantApp.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,8 @@ namespace RestaurantApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Admin());
+            Application.Run(new AdminController().View);
+
         }
     }
 }
