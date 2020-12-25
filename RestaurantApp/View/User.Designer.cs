@@ -76,12 +76,12 @@ namespace RestaurantApp.View
             // 
             // cb_categories
             // 
+            this.cb_categories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_categories.FormattingEnabled = true;
             this.cb_categories.Location = new System.Drawing.Point(303, 22);
             this.cb_categories.Name = "cb_categories";
             this.cb_categories.Size = new System.Drawing.Size(196, 21);
             this.cb_categories.TabIndex = 2;
-            this.cb_categories.Text = "Chọn danh mục món ăn";
             // 
             // button_clear
             // 
@@ -151,11 +151,11 @@ namespace RestaurantApp.View
             // 
             // btn_printBill
             // 
-            this.btn_printBill.Location = new System.Drawing.Point(123, 571);
+            this.btn_printBill.Location = new System.Drawing.Point(106, 571);
             this.btn_printBill.Name = "btn_printBill";
-            this.btn_printBill.Size = new System.Drawing.Size(76, 24);
+            this.btn_printBill.Size = new System.Drawing.Size(93, 24);
             this.btn_printBill.TabIndex = 1;
-            this.btn_printBill.Text = "Xuất bill";
+            this.btn_printBill.Text = "Xuất hóa đơn";
             this.btn_printBill.UseVisualStyleBackColor = true;
             // 
             // btn_pay

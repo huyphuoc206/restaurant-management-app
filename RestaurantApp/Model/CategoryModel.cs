@@ -16,14 +16,13 @@ namespace RestaurantApp.Model
         public string Name { get => name; set => name = value; }
         public string Code { get => code; set => code = value; }
         public int Status { get => status; set => status = value; }
-        public static async Task<CategoryModel[]> GetCategoriessAsync(HttpClient client, string path)
+
+        public static async Task<List<CategoryModel>> GetCategoriessAsync(HttpClient client, string path)
         {
             HttpResponseMessage response = await client.GetAsync(path);
-            CategoryModel[] categoryModels = null;
+            List<CategoryModel> categoryModels = new List<CategoryModel>();
             if (response.IsSuccessStatusCode)
-            {
-                categoryModels = await response.Content.ReadAsAsync<CategoryModel[]>();
-            }
+                categoryModels = await response.Content.ReadAsAsync<List<CategoryModel>>();
             return categoryModels;
         }
     }

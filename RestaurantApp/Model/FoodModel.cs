@@ -21,15 +21,15 @@ namespace RestaurantApp.Model
         public int Status { get => status; set => status = value; }
         public CategoryModel Category { get => category; set => category = value; }
        
-        public static async Task<FoodModel[]> GetFoodsAsync(HttpClient client, string path)
+        public static async Task<List<FoodModel>> GetFoodAsync(HttpClient client, string path)
         {
             HttpResponseMessage response = await client.GetAsync(path);
-            FoodModel[] foods = null;
+            List<FoodModel> food = new List<FoodModel>();
             if (response.IsSuccessStatusCode)
             {
-                foods = await response.Content.ReadAsAsync <FoodModel[]>();
+                food = await response.Content.ReadAsAsync <List<FoodModel>>();
             }
-            return foods;
+            return food;
         }
 
 

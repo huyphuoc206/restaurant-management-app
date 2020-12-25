@@ -29,60 +29,25 @@ namespace RestaurantApp.Controller
 
         public User View { get => view; set => view = value; }
 
-        private void InitController()
+        private async void InitController()
         {
-
             loadQuantityFood();
-            //loadData();
-            //loadTables();
-            //loadFoods();
-            //loadCategoriesName();
-
-
+            List<TableModel> tables = await TableModel.GetTablesAsync(client, "api/tables");
+            List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
+            loadCategoriesName(categories);
+            loadTables(tables);
         }
 
-
-        public async void loadData()
+        public void loadTables(List<TableModel> tables)
         {
-
-
-            Task<TableModel[]> t = TableModel.GetTablesAsync(client, "api/tables");
-            Task<FoodModel[]> f = FoodModel.GetFoodsAsync(client, "api/food");
-            Task<CategoryModel[]> c = CategoryModel.GetCategoriessAsync(client, "api/categories");
-            await Task.WhenAll(t, f, c);
-            var tables = await t;
-            var foods = await f;
-            var categories = await c;
-
-            var a = new
-            {
-                tables = await t,
-                foods = await f,
-                categories = await c
-            };
-
-
-
-            view.panel_table.Controls.AddRange(createBtnTables(a.tables));
-            view.panel_menu.Controls.AddRange(createBtnFood(a.foods));
-            view.cb_categories.Items.AddRange(createCategoriesName(a.categories));
-
-
-        }
-
-        public async void loadTables()
-        {
-
-
-            TableModel[] tables = await TableModel.GetTablesAsync(client, "api/tables");
             Button[] btns_table = createBtnTables(tables);
             view.panel_table.Controls.AddRange(btns_table);
-
         }
-        public Button[] createBtnTables(TableModel[] tables)
+
+        public Button[] createBtnTables(List<TableModel> tables)
         {
 
-            Button[] btns_table = new Button[tables.Length];
+            Button[] btns_table = new Button[tables.Count];
             for (int i = 0; i < btns_table.Length; i++)
             {
                 int x = 10 + 100 * (i % 3);
@@ -119,7 +84,21 @@ namespace RestaurantApp.Controller
             view.panel_menu.Controls.AddRange(btns_quantity);
         }
 
-        public async void loadFoods()
+        public String[] createCategoriesName(List<CategoryModel> categories)
+        {
+            String[] rs = new String[categories.Count];
+            for (int i = 0; i < categories.Count; i++)
+                rs[i] = (categories[i].Name);
+            return rs;
+        }
+
+        public void loadCategoriesName(List<CategoryModel> categories)
+        {
+            String[] categoriesName = createCategoriesName(categories);
+            view.cb_categories.Items.AddRange(categoriesName);
+        }
+
+        /*public void loadFoods()
         {
 
             Task<FoodModel[]> f = FoodModel.GetFoodsAsync(client, "api/food");
@@ -143,25 +122,7 @@ namespace RestaurantApp.Controller
             return btns_food;
 
 
-        }
-
-        public String[] createCategoriesName(CategoryModel[] categories)
-        {
-            String[] rs = new String[categories.Length];
-            for (int i = 0; i < categories.Length; i++)
-            {
-                rs[i] = (categories[i].Name);
-
-            }
-            return rs;
-        }
-
-        public async void loadCategoriesName()
-        {
-            Task<CategoryModel[]> c = CategoryModel.GetCategoriessAsync(client, "api/categories");
-            String[] s =createCategoriesName (await c);
-            view.cb_categories.Items.AddRange(s);
-        }
+        }*/
     }
 }
 

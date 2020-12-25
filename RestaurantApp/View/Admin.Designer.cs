@@ -65,7 +65,7 @@ namespace RestaurantApp.View
             this.btn_updateFood = new System.Windows.Forms.Button();
             this.btn_viewFood = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView_food = new System.Windows.Forms.DataGridView();
+            this.DataGridView_food = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_searchfood = new System.Windows.Forms.Button();
             this.text_searchFood = new System.Windows.Forms.TextBox();
@@ -103,7 +103,7 @@ namespace RestaurantApp.View
             this.btn_updateCategory = new System.Windows.Forms.Button();
             this.btn_viewCategory = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.dataGridView_category = new System.Windows.Forms.DataGridView();
+            this.DataGridView_category = new System.Windows.Forms.DataGridView();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btn_searchcategory = new System.Windows.Forms.Button();
             this.tb_searchtextcaterory = new System.Windows.Forms.TextBox();
@@ -143,8 +143,12 @@ namespace RestaurantApp.View
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcAdmin.SuspendLayout();
             this.tpSales.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -154,7 +158,7 @@ namespace RestaurantApp.View
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_food)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_food)).BeginInit();
             this.panel3.SuspendLayout();
             this.tpTable.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -167,7 +171,7 @@ namespace RestaurantApp.View
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_category)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_category)).BeginInit();
             this.panel14.SuspendLayout();
             this.tpAccount.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -226,7 +230,6 @@ namespace RestaurantApp.View
             this.btn_print.TabIndex = 4;
             this.btn_print.Text = "In doanh thu";
             this.btn_print.UseVisualStyleBackColor = false;
-            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // tb_sumsales
             // 
@@ -298,7 +301,6 @@ namespace RestaurantApp.View
             this.dtp_fromdate.Name = "dtp_fromdate";
             this.dtp_fromdate.Size = new System.Drawing.Size(200, 23);
             this.dtp_fromdate.TabIndex = 3;
-            this.dtp_fromdate.ValueChanged += new System.EventHandler(this.fromDate_ValueChanged);
             // 
             // dtp_todate
             // 
@@ -395,7 +397,6 @@ namespace RestaurantApp.View
             this.lb_foodStatus.Size = new System.Drawing.Size(89, 18);
             this.lb_foodStatus.TabIndex = 0;
             this.lb_foodStatus.Text = "Trạng thái:";
-            this.lb_foodStatus.Click += new System.EventHandler(this.label5_Click);
             // 
             // text_foodDiscount
             // 
@@ -477,7 +478,6 @@ namespace RestaurantApp.View
             this.btn_addFood.TabIndex = 0;
             this.btn_addFood.Text = "Thêm";
             this.btn_addFood.UseVisualStyleBackColor = true;
-            this.btn_addFood.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btn_deleteFood
             // 
@@ -487,7 +487,6 @@ namespace RestaurantApp.View
             this.btn_deleteFood.TabIndex = 0;
             this.btn_deleteFood.Text = "Xoá";
             this.btn_deleteFood.UseVisualStyleBackColor = true;
-            this.btn_deleteFood.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btn_updateFood
             // 
@@ -497,7 +496,6 @@ namespace RestaurantApp.View
             this.btn_updateFood.TabIndex = 0;
             this.btn_updateFood.Text = "Sửa";
             this.btn_updateFood.UseVisualStyleBackColor = true;
-            this.btn_updateFood.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btn_viewFood
             // 
@@ -507,11 +505,10 @@ namespace RestaurantApp.View
             this.btn_viewFood.TabIndex = 0;
             this.btn_viewFood.Text = "Xem";
             this.btn_viewFood.UseVisualStyleBackColor = true;
-            this.btn_viewFood.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dataGridView_food);
+            this.panel4.Controls.Add(this.DataGridView_food);
             this.panel4.Location = new System.Drawing.Point(6, 49);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(425, 480);
@@ -519,12 +516,12 @@ namespace RestaurantApp.View
             // 
             // dataGridView_food
             // 
-            this.dataGridView_food.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_food.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_food.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView_food.Name = "dataGridView_food";
-            this.dataGridView_food.Size = new System.Drawing.Size(422, 452);
-            this.dataGridView_food.TabIndex = 2;
+            this.DataGridView_food.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridView_food.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView_food.Location = new System.Drawing.Point(3, 3);
+            this.DataGridView_food.Name = "dataGridView_food";
+            this.DataGridView_food.Size = new System.Drawing.Size(422, 452);
+            this.DataGridView_food.TabIndex = 2;
             // 
             // panel3
             // 
@@ -543,7 +540,6 @@ namespace RestaurantApp.View
             this.btn_searchfood.TabIndex = 1;
             this.btn_searchfood.Text = "Tìm kiếm";
             this.btn_searchfood.UseVisualStyleBackColor = true;
-            this.btn_searchfood.Click += new System.EventHandler(this.button1_Click);
             // 
             // text_searchFood
             // 
@@ -770,7 +766,6 @@ namespace RestaurantApp.View
             this.cb_categoryStatus.Name = "cb_categoryStatus";
             this.cb_categoryStatus.Size = new System.Drawing.Size(221, 24);
             this.cb_categoryStatus.TabIndex = 2;
-            this.cb_categoryStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // lb_categoryStatus
             // 
@@ -875,7 +870,7 @@ namespace RestaurantApp.View
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.dataGridView_category);
+            this.panel13.Controls.Add(this.DataGridView_category);
             this.panel13.Location = new System.Drawing.Point(7, 48);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(425, 480);
@@ -883,13 +878,13 @@ namespace RestaurantApp.View
             // 
             // dataGridView_category
             // 
-            this.dataGridView_category.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_category.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridView_category.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView_category.Name = "dataGridView_category";
-            this.dataGridView_category.Size = new System.Drawing.Size(419, 453);
-            this.dataGridView_category.TabIndex = 2;
+            this.DataGridView_category.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridView_category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView_category.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DataGridView_category.Location = new System.Drawing.Point(3, 3);
+            this.DataGridView_category.Name = "dataGridView_category";
+            this.DataGridView_category.Size = new System.Drawing.Size(419, 453);
+            this.DataGridView_category.TabIndex = 2;
             // 
             // panel14
             // 
@@ -956,7 +951,6 @@ namespace RestaurantApp.View
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(328, 397);
             this.panel15.TabIndex = 1;
-            this.panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.panel15_Paint);
             // 
             // cb_userStatus
             // 
@@ -1113,7 +1107,6 @@ namespace RestaurantApp.View
             this.text_fullname.Name = "text_fullname";
             this.text_fullname.Size = new System.Drawing.Size(204, 23);
             this.text_fullname.TabIndex = 1;
-            this.text_fullname.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // text_username
             // 
@@ -1214,8 +1207,12 @@ namespace RestaurantApp.View
             this.FullName,
             this.Username,
             this.Password,
-            this.Column3,
-            this.Column4});
+            this.phone,
+            this.address,
+            this.Email,
+            this.gender,
+            this.status,
+            this.role});
             this.dataGridView_user.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView_user.Location = new System.Drawing.Point(3, 3);
             this.dataGridView_user.Name = "dataGridView_user";
@@ -1251,31 +1248,75 @@ namespace RestaurantApp.View
             // 
             // FullName
             // 
+            this.FullName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.FullName.DataPropertyName = "FullName";
             this.FullName.HeaderText = "Họ tên";
             this.FullName.Name = "FullName";
+            this.FullName.Width = 70;
             // 
             // Username
             // 
+            this.Username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Username.DataPropertyName = "UserName";
             this.Username.HeaderText = "Tài khoản";
             this.Username.Name = "Username";
+            this.Username.Width = 89;
             // 
             // Password
             // 
+            this.Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Password.DataPropertyName = "PassWord";
             this.Password.HeaderText = "Mật khẩu";
             this.Password.Name = "Password";
+            this.Password.Width = 85;
             // 
-            // Column3
+            // phone
             // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.phone.DataPropertyName = "Phone";
+            this.phone.HeaderText = "Số điện thoại";
+            this.phone.Name = "phone";
+            this.phone.Width = 108;
             // 
-            // Column4
+            // address
             // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.address.DataPropertyName = "Address";
+            this.address.HeaderText = "Địa chỉ";
+            this.address.Name = "address";
+            this.address.Width = 72;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.Width = 64;
+            // 
+            // gender
+            // 
+            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.gender.DataPropertyName = "Gender";
+            this.gender.HeaderText = "Giới tính";
+            this.gender.Name = "gender";
+            this.gender.Width = 79;
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.status.DataPropertyName = "Status";
+            this.status.HeaderText = "Trạng thái";
+            this.status.Name = "status";
+            this.status.Width = 92;
+            // 
+            // role
+            // 
+            this.role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.role.DataPropertyName = "Role";
+            this.role.HeaderText = "Vai trò";
+            this.role.Name = "role";
+            this.role.Width = 71;
             // 
             // Admin
             // 
@@ -1298,7 +1339,7 @@ namespace RestaurantApp.View
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_food)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_food)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tpTable.ResumeLayout(false);
@@ -1315,7 +1356,7 @@ namespace RestaurantApp.View
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_category)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView_category)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.tpAccount.ResumeLayout(false);
@@ -1446,11 +1487,16 @@ namespace RestaurantApp.View
         private DataGridViewTextBoxColumn FullName;
         private DataGridViewTextBoxColumn Username;
         private DataGridViewTextBoxColumn Password;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn phone;
+        private DataGridViewTextBoxColumn address;
+        private DataGridViewTextBoxColumn Email;
+        private DataGridViewTextBoxColumn gender;
+        private DataGridViewTextBoxColumn status;
+        private DataGridViewTextBoxColumn role;
 
         public DataGridView DataGridView_Table { get => dataGridView_table; set => dataGridView_table = value; }
-
         public DataGridView DataGridView_User { get => dataGridView_user; set => dataGridView_user = value; }
+        public DataGridView DataGridView_food { get => dataGridView_food; set => dataGridView_food = value; }
+        public DataGridView DataGridView_category { get => dataGridView_category; set => dataGridView_category = value; }
     }
 }

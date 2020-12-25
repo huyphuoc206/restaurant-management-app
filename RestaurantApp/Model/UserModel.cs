@@ -29,14 +29,12 @@ namespace RestaurantApp.Model
         public string Gender { get => gender; set => gender = value; }
         public RoleModel Role { get => role; set => role = value; }
 
-        public static async Task<UserModel[]> GetUsersAsync(HttpClient client, string path)
+        public static async Task<List<UserModel>> GetUsersAsync(HttpClient client, string path)
         {
             HttpResponseMessage response = await client.GetAsync(path);
-            UserModel[] users = null;
+            List<UserModel> users = new List<UserModel>();
             if (response.IsSuccessStatusCode)
-            {
-                users = await response.Content.ReadAsAsync<UserModel[]>();
-            }
+                users = await response.Content.ReadAsAsync<List<UserModel>>();
             return users;
         }
     }
