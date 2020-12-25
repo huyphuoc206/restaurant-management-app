@@ -23,10 +23,23 @@ namespace RestaurantApp.View
             quantity.Text = "";
         }
 
-        private void btns_quantity_click(object sender, EventArgs e)
+        public void btns_quantity_click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             quantity.Text += btn.Text;
         }
+
+        private void menuItem_userInformation_Click(object sender, EventArgs e)
+        {
+            AccountProfile accountProfile = new AccountProfile();
+            accountProfile.Show();
+        }
+
+        private void menuItem_logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+
     }
 }

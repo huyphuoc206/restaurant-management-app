@@ -34,13 +34,18 @@ namespace RestaurantApp.View
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void label_user_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_login_Click(object sender, EventArgs e)
         {
 
         }

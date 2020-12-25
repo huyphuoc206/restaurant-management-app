@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,5 +16,15 @@ namespace RestaurantApp.Model
         public string Name { get => name; set => name = value; }
         public int Seats { get => seats; set => seats = value; }
         public int Status { get => status; set => status = value; }
+        public static async Task<TableModel[]> GetTablesAsync(HttpClient client, string path)
+        {
+            HttpResponseMessage response = await client.GetAsync(path);
+            TableModel[] tables = null;
+            if (response.IsSuccessStatusCode)
+            {
+                tables = await response.Content.ReadAsAsync<TableModel[]>();
+            }
+            return tables;
+        }
     }
 }
