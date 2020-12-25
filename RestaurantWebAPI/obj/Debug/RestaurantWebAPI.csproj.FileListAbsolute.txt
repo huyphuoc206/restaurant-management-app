@@ -83,3 +83,4 @@ E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantWebAPI\b
 E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantWebAPI\obj\Debug\RestaurantWebAPI.csproj.CopyComplete
 E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantWebAPI\obj\Debug\RestaurantWebAPI.dll
 E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantWebAPI\obj\Debug\RestaurantWebAPI.pdb
+E:\Data\University\Workspace\DotNet\restaurant-management-app\RestaurantWebAPI\bin\MySql.Data.dll
