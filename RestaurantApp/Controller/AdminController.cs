@@ -1,12 +1,9 @@
 ﻿using RestaurantApp.Model;
 using RestaurantApp.View;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RestaurantApp.Controller
@@ -19,41 +16,35 @@ namespace RestaurantApp.Controller
         public AdminController()
         {
             this.View = new Admin();
+            client.BaseAddress = new Uri("https://localhost:44326/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
             InitController();
         }
 
         public Admin View { get => view; set => view = value; }
 
-        private async void InitController()
+        private void InitController()
+        {
+            loadUsers();
+        }
+
+        private async void loadUsers()
         {
             DataGridView dataGridView = view.DataGridView_User;
-            client.BaseAddress = new Uri("https://localhost:44326/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            UserModel[] users = await loadTablesAsync("api/users");
+
+            UserModel[] users = await UserModel.GetUsersAsync(client, "api/users");
             var source = new BindingSource();
             source.DataSource = users;
             dataGridView.DataSource = source;
-            string[] array = { "CreatedDate" ,"CreatedBy","ModifiedDate","ModifiedBy"};
-           
+            string[] array = { "CreatedDate", "CreatedBy", "ModifiedDate", "ModifiedBy","ID" };
+
             foreach (DataGridViewColumn column in dataGridView.Columns)
             {
                 if (array.Contains(column.Name))
-                    column.Visible = false;           
+                    column.Visible = false;
             }
-        }
-
-
-        private async Task<UserModel[]> loadTablesAsync(string path)
-        {
-            HttpResponseMessage response = await client.GetAsync(path);
-            UserModel[] users = null;
-            if (response.IsSuccessStatusCode)
-            {
-                users = await response.Content.ReadAsAsync<UserModel[]>();
-            }
-            return users;
         }
     }
 }

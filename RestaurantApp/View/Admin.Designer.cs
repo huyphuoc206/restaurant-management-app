@@ -141,7 +141,10 @@ namespace RestaurantApp.View
             this.btn_searchuser = new System.Windows.Forms.Button();
             this.tb_searchtextuser = new System.Windows.Forms.TextBox();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcAdmin.SuspendLayout();
             this.tpSales.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -332,7 +335,7 @@ namespace RestaurantApp.View
             this.tpFoods.Location = new System.Drawing.Point(4, 25);
             this.tpFoods.Name = "tpFoods";
             this.tpFoods.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFoods.Size = new System.Drawing.Size(769, 510);
+            this.tpFoods.Size = new System.Drawing.Size(759, 517);
             this.tpFoods.TabIndex = 1;
             this.tpFoods.Text = "Món ăn";
             this.tpFoods.UseVisualStyleBackColor = true;
@@ -559,7 +562,7 @@ namespace RestaurantApp.View
             this.tpTable.Location = new System.Drawing.Point(4, 25);
             this.tpTable.Name = "tpTable";
             this.tpTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTable.Size = new System.Drawing.Size(769, 510);
+            this.tpTable.Size = new System.Drawing.Size(759, 517);
             this.tpTable.TabIndex = 2;
             this.tpTable.Text = "Bàn ăn";
             this.tpTable.UseVisualStyleBackColor = true;
@@ -740,7 +743,7 @@ namespace RestaurantApp.View
             this.tpMenu.Location = new System.Drawing.Point(4, 25);
             this.tpMenu.Name = "tpMenu";
             this.tpMenu.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMenu.Size = new System.Drawing.Size(769, 510);
+            this.tpMenu.Size = new System.Drawing.Size(759, 517);
             this.tpMenu.TabIndex = 3;
             this.tpMenu.Text = "Danh mục";
             this.tpMenu.UseVisualStyleBackColor = true;
@@ -923,7 +926,7 @@ namespace RestaurantApp.View
             this.tpAccount.Location = new System.Drawing.Point(4, 25);
             this.tpAccount.Name = "tpAccount";
             this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAccount.Size = new System.Drawing.Size(769, 510);
+            this.tpAccount.Size = new System.Drawing.Size(759, 517);
             this.tpAccount.TabIndex = 4;
             this.tpAccount.Text = "Tài khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -1209,7 +1212,10 @@ namespace RestaurantApp.View
             this.dataGridView_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_user.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FullName,
-            this.Column2});
+            this.Username,
+            this.Password,
+            this.Column3,
+            this.Column4});
             this.dataGridView_user.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView_user.Location = new System.Drawing.Point(3, 3);
             this.dataGridView_user.Name = "dataGridView_user";
@@ -1249,11 +1255,27 @@ namespace RestaurantApp.View
             this.FullName.HeaderText = "Họ tên";
             this.FullName.Name = "FullName";
             // 
-            // Column2
+            // Username
             // 
-            this.Column2.DataPropertyName = "UserName";
-            this.Column2.HeaderText = "Tài khoản";
-            this.Column2.Name = "Column2";
+            this.Username.DataPropertyName = "UserName";
+            this.Username.HeaderText = "Tài khoản";
+            this.Username.Name = "Username";
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "PassWord";
+            this.Password.HeaderText = "Mật khẩu";
+            this.Password.Name = "Password";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
             // 
             // Admin
             // 
@@ -1422,7 +1444,10 @@ namespace RestaurantApp.View
         private System.Windows.Forms.ComboBox cb_userStatus;
         private System.Windows.Forms.Label lb_status;
         private DataGridViewTextBoxColumn FullName;
-        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Username;
+        private DataGridViewTextBoxColumn Password;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
 
         public DataGridView DataGridView_Table { get => dataGridView_table; set => dataGridView_table = value; }
 
