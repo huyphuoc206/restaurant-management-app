@@ -72,7 +72,7 @@ namespace RestaurantApp.Controller
 
         private void loadCategories(List<CategoryModel> categories)
         {
-            DataGridView dataGridView = view.DataGridView_category;
+            DataGridView dataGridView = view.DataGridView_Category;
 
             var source = new BindingSource();
             source.DataSource = categories;
@@ -88,7 +88,7 @@ namespace RestaurantApp.Controller
 
         private void loadFood(List<FoodModel> food)
         {
-            DataGridView dataGridView = view.DataGridView_food;
+            DataGridView dataGridView = view.DataGridView_Food;
 
             var source = new BindingSource();
             source.DataSource = food;

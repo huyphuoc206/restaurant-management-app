@@ -43,7 +43,6 @@ E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\bin\Debug\S
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\bin\Debug\System.Net.Http.Formatting.dll
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\bin\Debug\System.Net.Http.Primitives.dll
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\bin\Debug\Newtonsoft.Json.dll
-E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csprojAssemblyReference.cache
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Properties.Resources.resources
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.AccountProfile.resources
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.Admin.resources

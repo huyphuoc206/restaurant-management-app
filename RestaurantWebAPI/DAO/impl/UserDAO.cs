@@ -45,16 +45,16 @@ namespace RestaurantWebAPI.DAO.impl
 
         public long Save(UserDTO user)
         {
-            string sql = "INSERT INTO user (fullname, username, password, phone, address, email, gender, status, roleid, createddate, createdby) " +
-                        "VALUES( @fullname , @username , @password , @phone , @address , @email , @gender , @status , @roleid , @createddate , @createdby )";
-            object[] parameters = { user.FullName, user.UserName, user.PassWord, user.Phone, user.Address, user.Email, user.Gender, user.Status, user.Role.ID, user.CreatedDate, user.CreatedBy };
+            string sql = "INSERT INTO user (fullname, username, password, phone, address, email, dob, gender, status, roleid, createddate, createdby) " +
+                        "VALUES( @fullname , @username , @password , @phone , @address , @email , @dob , @gender , @status , @roleid , @createddate , @createdby )";
+            object[] parameters = { user.FullName, user.UserName, user.PassWord, user.Phone, user.Address, user.Email, user.Dob, user.Gender, user.Status, user.Role.ID, user.CreatedDate, user.CreatedBy };
             return Insert(sql, parameters);
         }
 
         public void Update(long id, UserDTO user)
         {
-            string sql = "UPDATE user SET fullname = @fullname , username = @username , password = @password , phone = @phone , address = @address , email = @email , gender = @gender , status = @status , roleid = @roleid , modifieddate = @modifieddate , modifiedby = @modifiedby WHERE id = @id";
-            object[] parameters = { user.FullName, user.UserName, user.PassWord, user.Phone, user.Address, user.Email, user.Gender, user.Status, user.Role.ID, user.ModifiedDate, user.ModifiedBy, id };
+            string sql = "UPDATE user SET fullname = @fullname , username = @username , password = @password , phone = @phone , address = @address , email = @email , dob = @dob , gender = @gender , status = @status , roleid = @roleid , modifieddate = @modifieddate , modifiedby = @modifiedby WHERE id = @id";
+            object[] parameters = { user.FullName, user.UserName, user.PassWord, user.Phone, user.Address, user.Email, user.Dob, user.Gender, user.Status, user.Role.ID, user.ModifiedDate, user.ModifiedBy, id };
             Update(sql, parameters);
         }
 

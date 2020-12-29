@@ -19,9 +19,9 @@ namespace RestaurantApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Admin());
-            Application.Run(new AdminController().View);
+            /*Application.Run(new UserController().View);*/
 
-            /*Application.Run(new AdminController().View);*/
+            Application.Run(new AdminController().View);
         }
     }
 }

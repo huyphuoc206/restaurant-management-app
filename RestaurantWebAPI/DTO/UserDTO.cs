@@ -13,6 +13,7 @@ namespace RestaurantWebAPI.DTO
         private string phone;
         private string address;
         private string email;
+        private DateTime dob;
         private string gender;
         private int status;
         private RoleDTO role;
@@ -26,5 +27,6 @@ namespace RestaurantWebAPI.DTO
         public int Status { get => status; set => status = value; }
         public string Gender { get => gender; set => gender = value; }
         public RoleDTO Role { get => role; set => role = value; }
+        public DateTime Dob { get => dob; set => dob = value; }
     }
 }

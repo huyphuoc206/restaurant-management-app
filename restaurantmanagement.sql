@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2020 at 01:03 PM
+-- Generation Time: Dec 30, 2020 at 12:49 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -101,7 +101,7 @@ CREATE TABLE `orderdetail` (
 CREATE TABLE `orders` (
   `id` bigint(20) NOT NULL,
   `totalprice` bigint(20) NOT NULL,
-  `discount` int(11) NOT NULL,
+  `saleid` bigint(20) NOT NULL,
   `tableid` bigint(20) NOT NULL,
   `status` int(11) NOT NULL,
   `createddate` datetime DEFAULT NULL,
@@ -137,6 +137,23 @@ INSERT INTO `role` (`id`, `name`, `code`, `createddate`, `createdby`, `modifiedd
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sales`
+--
+
+CREATE TABLE `sales` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `discount` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `createddate` datetime NOT NULL,
+  `createdby` varchar(255) NOT NULL,
+  `modifieddate` datetime NOT NULL,
+  `modifiedby` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tables`
 --
 
@@ -158,7 +175,7 @@ CREATE TABLE `tables` (
 INSERT INTO `tables` (`id`, `name`, `seats`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
 (2, 'Bàn 2', 5, 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
 (3, 'Bàn 3', 2, 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
-(4, 'Bàn 4', 7, 1, '2020-12-18 00:00:00', NULL, NULL, NULL);
+(4, 'Bàn 4', 7, 0, '2020-12-18 00:00:00', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -174,6 +191,7 @@ CREATE TABLE `user` (
   `phone` varchar(11) NOT NULL,
   `address` text NOT NULL,
   `email` varchar(255) NOT NULL,
+  `dob` date DEFAULT NULL,
   `gender` varchar(3) NOT NULL,
   `status` int(11) NOT NULL,
   `roleid` bigint(20) NOT NULL,
@@ -187,14 +205,15 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `fullname`, `username`, `password`, `phone`, `address`, `email`, `gender`, `status`, `roleid`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
-(1, 'Huy Phước', 'php', '123', '0909090909', 'HCM City', 'php@gmail.com', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(2, 'Thành Đoan', 'doan', '123', '0909090909', 'HCM City', 'doan@gmail.com', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(3, 'Thanh Tôn', 'ton', '123', '0909090909', 'HCM City', 'ton@gmail.com', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(4, 'Bảo Trang', 'trang', '123', '0909090909', 'HCM City', 'trang@gmail.com', 'Nữ', 1, 1, NULL, NULL, NULL, NULL),
-(5, 'Thiên Long', 'long', '123', '0909090909', 'HCM City', 'long@gmail.com', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(6, 'Nguyễn Thị Hoa Hồng', 'hong', '123', '0909090909', 'HCM City', 'hong@gmail.com', 'Nữ', 1, 2, NULL, NULL, NULL, NULL),
-(25, 'Văn Long', 'vlong', '123456', '0909023123', 'TP. HCM', 'vlong@gmail.com', 'Nam', 1, 2, '2020-12-18 00:00:00', NULL, NULL, NULL);
+INSERT INTO `user` (`id`, `fullname`, `username`, `password`, `phone`, `address`, `email`, `dob`, `gender`, `status`, `roleid`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
+(1, 'Huy Phước', 'php', '123', '0909090909', 'HCM City', 'php@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
+(2, 'Thành Đoan', 'doan', '123', '0909090909', 'HCM City', 'doan@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
+(3, 'Thanh Tôn', 'ton', '123', '0909090909', 'HCM City', 'ton@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
+(4, 'Bảo Trang', 'trang', '123', '0909090909', 'HCM City', 'trang@gmail.com', '2000-02-03', 'Nữ', 1, 1, NULL, NULL, NULL, NULL),
+(5, 'Thiên Long', 'long', '123', '0909090909', 'HCM City', 'long@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
+(6, 'Nguyễn Thị Hoa Hồng', 'hong', '123', '0909090909', 'HCM City', 'hong@gmail.com', '2000-02-03', 'Nữ', 1, 2, NULL, NULL, NULL, NULL),
+(25, 'Văn Long', 'vlong', '123456', '0909023123', 'TP. HCM', 'vlong@gmail.com', '2000-02-03', 'Nam', 1, 2, '2020-12-18 00:00:00', NULL, NULL, NULL),
+(31, 'Messiii', 'abc', '123', '0909023123', 'TP. HCM', 'abc@gmail.com', '2000-03-02', 'Nam', 1, 1, '2020-12-30 06:38:01', NULL, '2020-12-30 06:48:35', NULL);
 
 --
 -- Indexes for dumped tables
@@ -226,12 +245,19 @@ ALTER TABLE `orderdetail`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `tableid` (`tableid`);
+  ADD KEY `tableid` (`tableid`),
+  ADD KEY `saleid` (`saleid`);
 
 --
 -- Indexes for table `role`
 --
 ALTER TABLE `role`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sales`
+--
+ALTER TABLE `sales`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -282,6 +308,12 @@ ALTER TABLE `role`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `sales`
+--
+ALTER TABLE `sales`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tables`
 --
 ALTER TABLE `tables`
@@ -291,7 +323,7 @@ ALTER TABLE `tables`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- Constraints for dumped tables
@@ -314,7 +346,8 @@ ALTER TABLE `orderdetail`
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`tableid`) REFERENCES `tables` (`id`);
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`tableid`) REFERENCES `tables` (`id`),
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`saleid`) REFERENCES `sales` (`id`);
 
 --
 -- Constraints for table `user`

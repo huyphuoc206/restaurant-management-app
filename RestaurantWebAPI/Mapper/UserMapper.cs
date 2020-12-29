@@ -16,6 +16,7 @@ namespace RestaurantWebAPI.Mapper
             user.Phone = reader.GetString("phone");
             user.Address = reader.GetString("address");
             user.Email = reader.GetString("email");
+            user.Dob = reader.GetDateTime("dob");
             user.Gender = reader.GetString("gender");
             user.Status = reader.GetInt16("status");
 

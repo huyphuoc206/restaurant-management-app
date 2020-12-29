@@ -1,6 +1,7 @@
 ﻿using RestaurantWebAPI.DAO;
 using RestaurantWebAPI.DAO.impl;
 using RestaurantWebAPI.DTO;
+using RestaurantWebAPI.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace RestaurantWebAPI.Service.impl
             if (userTemp.Count == 0)
             {
                 user.CreatedDate = DateTime.Now;
+                user.PassWord = MD5Hashing.CreateMD5(user.PassWord);
                 long id = userDAO.Save(user);
                 return userDAO.FindOneById(id);
             }
