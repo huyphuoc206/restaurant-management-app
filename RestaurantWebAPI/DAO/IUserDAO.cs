@@ -15,10 +15,16 @@ namespace RestaurantWebAPI.DAO
 
         UserDTO FindOneById(long id);
 
+        UserDTO FindOneByUserNameAndPasswordAndStatus(string username, string password, int status);
+
         long Save(UserDTO user);
 
-        void Update(long id, UserDTO user);
+        bool Update(long id, UserDTO user);
 
-        void Delete(long id);
+        bool Delete(long id);
+
+        bool ResetPassword(long id, UserDTO user);
+
+
     }
 }

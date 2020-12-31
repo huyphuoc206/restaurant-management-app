@@ -11,12 +11,14 @@ namespace RestaurantWebAPI.DAO
     {
         List<CategoryDTO> FindAll();
 
+        List<CategoryDTO> FindAllByStatus(int status);
+
         CategoryDTO FindOneById(long id);
 
         long Save(CategoryDTO category);
 
-        void Update(long id, CategoryDTO category);
+        bool Update(long id, CategoryDTO category);
 
-        void Delete(long id);
+        bool Delete(long id);
     }
 }

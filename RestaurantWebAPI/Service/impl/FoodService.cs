@@ -54,16 +54,16 @@ namespace RestaurantWebAPI.Service.impl
                 food.CreatedBy = oldFood.CreatedBy;
                 food.CreatedDate = oldFood.CreatedDate;
                 food.ModifiedDate = DateTime.Now;
-                foodDAO.Update(id, food);
-                return foodDAO.FindOneById(id);
+                if (foodDAO.Update(id, food))
+                    return foodDAO.FindOneById(id);
             }
             return null;
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             foodDAO = FoodDAO.Instance;
-            foodDAO.Delete(id);
+            return foodDAO.Delete(id);
         }
 
     }

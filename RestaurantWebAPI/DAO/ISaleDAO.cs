@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace RestaurantWebAPI.DAO
 {
-    public interface ITableDAO
+    interface ISaleDAO
     {
-        List<TableDTO> FindAll();
+        List<SaleDTO> FindAll();
 
-        TableDTO FindOneById(long id);
+        List<SaleDTO> FindAllByStatus(int status);
 
-        long Save(TableDTO table);
+        SaleDTO FindOneById(long id);
 
-        bool Update(long id, TableDTO table);
+        long Save(SaleDTO sale);
+
+        bool Update(long id, SaleDTO sale);
 
         bool Delete(long id);
     }

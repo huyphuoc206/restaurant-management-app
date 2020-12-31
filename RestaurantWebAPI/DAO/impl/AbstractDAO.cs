@@ -90,10 +90,11 @@ namespace RestaurantWebAPI.DAO.impl
             return id;
         }
 
-        public void Update(string sql, object[] parameters = null)
+        public bool Update(string sql, object[] parameters = null)
         {
             MySqlConnection connection = null;
             MySqlCommand command = null;
+            int row = 0;
             try
             {
                 connection = DatabaseUtils.getMySqlConnection();
@@ -102,18 +103,19 @@ namespace RestaurantWebAPI.DAO.impl
                 command.CommandText = sql;
                 if (parameters != null)
                     SetParameters(command, parameters, sql);
-                command.ExecuteNonQuery();
+                row = command.ExecuteNonQuery();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                return;
+                return false;
             }
             finally
             {
                 if (connection != null)
                     connection.Close();
             }
+            return row > 0 ? true : false;
         }
     }
 }

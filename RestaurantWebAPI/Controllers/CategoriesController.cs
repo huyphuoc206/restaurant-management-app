@@ -20,6 +20,14 @@ namespace RestaurantWebAPI.Controllers
             return categoryService.FindAll();
         }
 
+        [Route("api/categories/status/{status:int}")]
+        [HttpGet]
+        public List<CategoryDTO> GetAllByStatus(int status)
+        {
+            categoryService = CategoryService.Instance;
+            return categoryService.FindAllByStatus(status);
+        }
+
         public CategoryDTO Post(CategoryDTO category)
         {
             categoryService = CategoryService.Instance;
@@ -32,10 +40,10 @@ namespace RestaurantWebAPI.Controllers
             return categoryService.Update(id, category);
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             categoryService = CategoryService.Instance;
-            categoryService.Delete(id);
+            return categoryService.Delete(id);
         }
     }
 }

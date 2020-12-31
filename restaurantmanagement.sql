@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2020 at 12:49 AM
+-- Generation Time: Dec 31, 2020 at 01:31 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `category` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `code` varchar(255) NOT NULL,
   `status` int(11) NOT NULL,
   `createddate` datetime DEFAULT NULL,
   `createdby` varchar(255) DEFAULT NULL,
@@ -42,10 +41,11 @@ CREATE TABLE `category` (
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`id`, `name`, `code`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
-(1, 'Lẩu', 'lau', 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
-(2, 'Cơm', 'com', 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
-(4, 'Tráng miệng', 'trang-mieng', 1, '2020-12-18 00:00:00', NULL, NULL, NULL);
+INSERT INTO `category` (`id`, `name`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
+(1, 'Lẩu', 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
+(2, 'Cơm', 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
+(7, 'Đồ uống', 0, '2020-12-30 21:34:27', NULL, NULL, NULL),
+(8, 'Bún', 0, '2020-12-30 21:34:44', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -71,8 +71,9 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`id`, `name`, `price`, `discount`, `status`, `categoryid`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
-(1, 'Cơm chiên', 30000, 10, 1, 2, NULL, NULL, NULL, NULL),
-(3, 'Lẩu gà', 200000, 5, 1, 1, '2020-12-19 00:00:00', NULL, '2020-12-19 00:00:00', NULL);
+(1, 'Cơm chiên', 30000, 10, 0, 2, NULL, NULL, NULL, NULL),
+(3, 'Lẩu gà', 200000, 5, 1, 1, '2020-12-19 00:00:00', NULL, '2020-12-19 00:00:00', NULL),
+(4, 'Lẩu bò', 300000, 5, 1, 1, '2020-12-30 22:19:52', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -145,11 +146,20 @@ CREATE TABLE `sales` (
   `name` varchar(255) NOT NULL,
   `discount` int(11) NOT NULL,
   `status` int(11) NOT NULL,
-  `createddate` datetime NOT NULL,
-  `createdby` varchar(255) NOT NULL,
-  `modifieddate` datetime NOT NULL,
-  `modifiedby` varchar(255) NOT NULL
+  `createddate` datetime DEFAULT NULL,
+  `createdby` varchar(255) DEFAULT NULL,
+  `modifieddate` datetime DEFAULT NULL,
+  `modifiedby` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sales`
+--
+
+INSERT INTO `sales` (`id`, `name`, `discount`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
+(1, 'Đi trên 5 người', 10, 0, '2020-12-30 21:59:34', NULL, NULL, NULL),
+(2, 'Tết đến xuân về', 5, 1, '2020-12-30 22:00:03', NULL, NULL, NULL),
+(4, 'Không có', 0, 1, '2020-12-30 22:02:58', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -175,7 +185,7 @@ CREATE TABLE `tables` (
 INSERT INTO `tables` (`id`, `name`, `seats`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
 (2, 'Bàn 2', 5, 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
 (3, 'Bàn 3', 2, 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
-(4, 'Bàn 4', 7, 0, '2020-12-18 00:00:00', NULL, NULL, NULL);
+(4, 'Bàn 06', 4, 1, '2020-12-18 00:00:00', NULL, '2020-12-30 21:18:02', NULL);
 
 -- --------------------------------------------------------
 
@@ -211,9 +221,10 @@ INSERT INTO `user` (`id`, `fullname`, `username`, `password`, `phone`, `address`
 (3, 'Thanh Tôn', 'ton', '123', '0909090909', 'HCM City', 'ton@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
 (4, 'Bảo Trang', 'trang', '123', '0909090909', 'HCM City', 'trang@gmail.com', '2000-02-03', 'Nữ', 1, 1, NULL, NULL, NULL, NULL),
 (5, 'Thiên Long', 'long', '123', '0909090909', 'HCM City', 'long@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(6, 'Nguyễn Thị Hoa Hồng', 'hong', '123', '0909090909', 'HCM City', 'hong@gmail.com', '2000-02-03', 'Nữ', 1, 2, NULL, NULL, NULL, NULL),
-(25, 'Văn Long', 'vlong', '123456', '0909023123', 'TP. HCM', 'vlong@gmail.com', '2000-02-03', 'Nam', 1, 2, '2020-12-18 00:00:00', NULL, NULL, NULL),
-(31, 'Messiii', 'abc', '123', '0909023123', 'TP. HCM', 'abc@gmail.com', '2000-03-02', 'Nam', 1, 1, '2020-12-30 06:38:01', NULL, '2020-12-30 06:48:35', NULL);
+(6, 'Mes', 'ko', '123', '0909023123', 'TP. HCM', 'sdsdsdacxcs@gmail.com', '2000-03-02', 'Nam', 1, 2, NULL, NULL, '2020-12-31 07:22:03', NULL),
+(37, 'ABC', 'trangg', 'E10ADC3949BA59ABBE56E057F20F883E', '0909023123', 'TP. HCM', 'kkkk@gmail.com', '2000-02-03', 'Nữ', 1, 1, '2020-12-30 22:43:37', NULL, NULL, NULL),
+(38, 'Mes', 'ti123', '55A3F8EA8263001D4CDAE8E1C0A0C364', '0909023123', 'TP. HCM', 'vcascsc@gmail.com', '2000-03-02', 'Nam', 1, 1, '2020-12-30 22:44:50', NULL, '2020-12-30 23:38:48', NULL),
+(39, 'Tí', 'ti', '60FE7FCF24CB90ECC781942DEF8E3DF7', '0909023123', 'TP. HCM', 'kkkkd@gmail.com', '2000-02-03', 'Nữ', 1, 1, '2020-12-30 22:46:35', NULL, '2020-12-31 06:55:47', NULL);
 
 --
 -- Indexes for dumped tables
@@ -281,13 +292,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `orderdetail`
@@ -311,19 +322,19 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tables`
 --
 ALTER TABLE `tables`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- Constraints for dumped tables

@@ -1,4 +1,5 @@
-﻿using RestaurantWebAPI.DTO;
+﻿using RestaurantWebAPI.BindingData;
+using RestaurantWebAPI.DTO;
 using RestaurantWebAPI.Service;
 using RestaurantWebAPI.Service.impl;
 using System;
@@ -26,16 +27,32 @@ namespace RestaurantWebAPI.Controllers
             return userService.Save(user);
         }
 
+        [Route("api/users/Login")]
+        [HttpPost]
+        public UserDTO ResetPassword(Login data)
+        {
+            userService = UserService.Instance;
+            return userService.CheckLogin(data);
+        }
+
         public UserDTO Put(long id, UserDTO user)
         {
             userService = UserService.Instance;
             return userService.Update(id, user);
         }
 
-        public void Delete(long id)
+        [Route("api/users/ResetPassword/{id:long}")]
+        [HttpPut]
+        public UserDTO ResetPassword(long id, ResetPassword data)
         {
             userService = UserService.Instance;
-            userService.Delete(id);
+            return userService.ResetPassword(id, data);
+        }
+
+        public bool Delete(long id)
+        {
+            userService = UserService.Instance;
+            return userService.Delete(id);
         }
     }
 }

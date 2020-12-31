@@ -26,6 +26,13 @@ namespace RestaurantWebAPI.Service.impl
             return categoryDAO.FindAll();
         }
 
+
+        public List<CategoryDTO> FindAllByStatus(int status)
+        {
+            categoryDAO = CategoryDAO.Instance;
+            return categoryDAO.FindAllByStatus(status);
+        }
+
         public CategoryDTO Save(CategoryDTO category)
         {
             categoryDAO = CategoryDAO.Instance;
@@ -43,17 +50,17 @@ namespace RestaurantWebAPI.Service.impl
                 category.CreatedDate = oldCategory.CreatedDate;
                 category.CreatedBy = oldCategory.CreatedBy;
                 category.ModifiedDate = DateTime.Now;
-                categoryDAO.Update(id, category);
-                return categoryDAO.FindOneById(id);
+                if (categoryDAO.Update(id, category))
+                    return categoryDAO.FindOneById(id);
             }
             return null;
 
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             categoryDAO = CategoryDAO.Instance;
-            categoryDAO.Delete(id);
+            return categoryDAO.Delete(id);
         }
     }
 }

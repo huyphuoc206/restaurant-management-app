@@ -41,18 +41,18 @@ namespace RestaurantWebAPI.DAO.impl
             return Insert(sql, parameters);
         }
 
-        public void Update(long id, TableDTO table)
+        public bool Update(long id, TableDTO table)
         {
             string sql = "UPDATE tables SET name = @name , seats = @seats , status = @status , modifieddate = @modifieddate , modifiedby = @modifiedby WHERE id = @id";
             object[] parameters = { table.Name, table.Seats, table.Status, table.ModifiedDate, table.ModifiedBy, id };
-            Update(sql, parameters);
+            return Update(sql, parameters);
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             string sql = "DELETE FROM tables WHERE id = @id";
             object[] parameters = { id };
-            Update(sql, parameters);
+            return Update(sql, parameters);
         }
     }
 }

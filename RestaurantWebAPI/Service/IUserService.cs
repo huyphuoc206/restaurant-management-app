@@ -1,4 +1,5 @@
-﻿using RestaurantWebAPI.DTO;
+﻿using RestaurantWebAPI.BindingData;
+using RestaurantWebAPI.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,10 @@ namespace RestaurantWebAPI.Service
 
         UserDTO Update(long id, UserDTO user);
 
-        void Delete(long id);
+        bool Delete(long id);
+
+        UserDTO ResetPassword(long id, ResetPassword data);
+
+        UserDTO CheckLogin(Login data);
     }
 }

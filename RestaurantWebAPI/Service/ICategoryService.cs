@@ -11,10 +11,12 @@ namespace RestaurantWebAPI.Service
     {
         List<CategoryDTO> FindAll();
 
+        List<CategoryDTO> FindAllByStatus(int status);
+
         CategoryDTO Save(CategoryDTO category);
 
         CategoryDTO Update(long id, CategoryDTO category);
 
-        void Delete(long id);
+        bool Delete(long id);
     }
 }

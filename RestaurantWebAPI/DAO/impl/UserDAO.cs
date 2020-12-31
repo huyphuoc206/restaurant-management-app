@@ -43,6 +43,16 @@ namespace RestaurantWebAPI.DAO.impl
             return users[0];
         }
 
+
+        public UserDTO FindOneByUserNameAndPasswordAndStatus(string username, string password, int status)
+        {
+            string sql = "SELECT * FROM user WHERE username = @username AND password = @password AND status = @status";
+            object[] parameters = { username, password, status };
+            List<UserDTO> users = Query(sql, new UserMapper(), parameters);
+            if (users.Count == 0) return null;
+            return users[0];
+        }
+
         public long Save(UserDTO user)
         {
             string sql = "INSERT INTO user (fullname, username, password, phone, address, email, dob, gender, status, roleid, createddate, createdby) " +
@@ -51,18 +61,25 @@ namespace RestaurantWebAPI.DAO.impl
             return Insert(sql, parameters);
         }
 
-        public void Update(long id, UserDTO user)
+        public bool Update(long id, UserDTO user)
         {
             string sql = "UPDATE user SET fullname = @fullname , username = @username , password = @password , phone = @phone , address = @address , email = @email , dob = @dob , gender = @gender , status = @status , roleid = @roleid , modifieddate = @modifieddate , modifiedby = @modifiedby WHERE id = @id";
             object[] parameters = { user.FullName, user.UserName, user.PassWord, user.Phone, user.Address, user.Email, user.Dob, user.Gender, user.Status, user.Role.ID, user.ModifiedDate, user.ModifiedBy, id };
-            Update(sql, parameters);
+            return Update(sql, parameters);
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             string sql = "DELETE FROM user WHERE id = @id";
             object[] parameters = { id };
-            Update(sql, parameters);
+            return Update(sql, parameters);
+        }
+
+        public bool ResetPassword(long id, UserDTO user)
+        {
+            string sql = "UPDATE user SET password = @password , modifieddate = @modifieddate , modifiedby = @modifiedby WHERE id = @id";
+            object[] parameters = { user.PassWord, user.ModifiedDate, user.ModifiedBy, id };
+            return Update(sql, parameters);
         }
     }
 }

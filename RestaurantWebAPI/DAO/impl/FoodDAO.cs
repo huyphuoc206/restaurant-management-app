@@ -36,7 +36,7 @@ namespace RestaurantWebAPI.DAO.impl
 
         public List<FoodDTO> FindAllByCategoryId(long categoryId)
         {
-            string sql = "SELECT food.*, category.name as categoryname FROM food JOIN category ON food.categoryid = category.id WHERE categoryid = @categoryid";
+            string sql = "SELECT food.*, category.name as categoryname FROM food JOIN category ON food.categoryid = category.id WHERE categoryid = @categoryid AND food.status = 1";
             object[] parameters = { categoryId };
             return Query(sql, new FoodMapper(), parameters);
         }
@@ -48,18 +48,18 @@ namespace RestaurantWebAPI.DAO.impl
             return Insert(sql, parameters);
         }
 
-        public void Update(long id, FoodDTO food)
+        public bool Update(long id, FoodDTO food)
         {
             string sql = "UPDATE food SET name =  @name , price = @price , discount = @discount , status = @status , categoryid = @categoryid , modifieddate = @modifieddate , modifiedby = @modifiedby WHERE id = @id";
             object[] parameters = { food.Name, food.Price, food.Discount, food.Status, food.Category.ID, food.ModifiedDate, food.ModifiedBy, id };
-            Update(sql, parameters);
+            return Update(sql, parameters);
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             string sql = "DELETE FROM food WHERE id = @id";
             object[] parameters = { id };
-            Update(sql, parameters);
+            return Update(sql, parameters);
         }
     }
 }

@@ -11,6 +11,6 @@ namespace RestaurantWebAPI.DAO
     {
         List<T> Query(string sql, IRowMapper<T> rowMapper, object[] parameters);
         long Insert(string sql, object[] parameters);
-        void Update(string sql, object[] parameters);
+        bool Update(string sql, object[] parameters);
     }
 }

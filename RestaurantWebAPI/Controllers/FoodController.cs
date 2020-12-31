@@ -20,7 +20,7 @@ namespace RestaurantWebAPI.Controllers
             return foodService.FindAll();
         }
 
-        [Route("api/category/{categoryId:int}/food")]
+        [Route("api/category/{categoryId:long}/food")]
         [HttpGet]
         public List<FoodDTO> Get(long categoryId)
         {
@@ -40,10 +40,10 @@ namespace RestaurantWebAPI.Controllers
             return foodService.Update(id, food);
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             foodService = FoodService.Instance;
-            foodService.Delete(id);
+            return foodService.Delete(id);
         }
     }
 }

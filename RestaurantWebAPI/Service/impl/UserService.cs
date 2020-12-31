@@ -1,4 +1,5 @@
-﻿using RestaurantWebAPI.DAO;
+﻿using RestaurantWebAPI.BindingData;
+using RestaurantWebAPI.DAO;
 using RestaurantWebAPI.DAO.impl;
 using RestaurantWebAPI.DTO;
 using RestaurantWebAPI.Utils;
@@ -57,16 +58,51 @@ namespace RestaurantWebAPI.Service.impl
                 user.CreatedDate = oldUser.CreatedDate;
                 user.CreatedBy = oldUser.CreatedBy;
                 user.ModifiedDate = DateTime.Now;
-                userDAO.Update(id, user);
-                return userDAO.FindOneById(id);
+                if (user.Role == null)
+                {
+                    user.Status = oldUser.Status;
+                    user.Role = oldUser.Role;
+                }
+                if (user.PassWord == null)
+                    user.PassWord = oldUser.PassWord;
+                if (!user.PassWord.Equals(oldUser.PassWord))
+                    user.PassWord = MD5Hashing.CreateMD5(user.PassWord);
+                if (userDAO.Update(id, user))
+                    return userDAO.FindOneById(id);
             }
             return null;
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             userDAO = UserDAO.Instance;
-            userDAO.Delete(id);
+            return userDAO.Delete(id);
+        }
+
+        public UserDTO ResetPassword(long id, ResetPassword data)
+        {
+            if (!data.NewPassword.Equals(data.NewPasswordConfirm) || data.CurrentPassword.Equals(data.NewPassword))
+                return null;
+            userDAO = UserDAO.Instance;
+            UserDTO user = userDAO.FindOneById(id);
+            if (user != null)
+            {
+                if (!user.PassWord.Equals(MD5Hashing.CreateMD5(data.CurrentPassword)))
+                    return null;
+                user.ModifiedDate = DateTime.Now;
+                user.PassWord = MD5Hashing.CreateMD5(data.NewPassword);
+                if (userDAO.ResetPassword(id, user))
+                    return user;
+            }
+            return null;
+        }
+
+        public UserDTO CheckLogin(Login data)
+        {
+            userDAO = UserDAO.Instance;
+            data.Password = MD5Hashing.CreateMD5(data.Password);
+            UserDTO user = userDAO.FindOneByUserNameAndPasswordAndStatus(data.Username, data.Password, 1);
+            return user;
         }
     }
 }

@@ -15,6 +15,7 @@ namespace RestaurantApp.Model
         private string phone;
         private string address;
         private string email;
+        private DateTime dob;
         private string gender;
         private int status;
         private RoleModel role;
@@ -28,6 +29,7 @@ namespace RestaurantApp.Model
         public int Status { get => status; set => status = value; }
         public string Gender { get => gender; set => gender = value; }
         public RoleModel Role { get => role; set => role = value; }
+        public DateTime Dob { get => dob; set => dob = value; }
 
         public static async Task<List<UserModel>> GetUsersAsync(HttpClient client, string path)
         {

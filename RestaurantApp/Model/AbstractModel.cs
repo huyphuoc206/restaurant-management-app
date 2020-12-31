@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp.Model
 {
-    class AbstractModel
+    public class AbstractModel
     {
         protected long iD;
         protected DateTime createdDate;

@@ -14,7 +14,6 @@ namespace RestaurantWebAPI.Mapper
             CategoryDTO category = new CategoryDTO();
             category.ID = reader.GetInt64("id");
             category.Name = reader.GetString("name");
-            category.Code = reader.GetString("code");
             category.Status = reader.GetInt32("status");
 
             if (reader["createddate"] != DBNull.Value)

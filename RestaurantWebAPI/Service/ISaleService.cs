@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace RestaurantWebAPI.Service
 {
-    public interface IFoodService
+    interface ISaleService
     {
-        List<FoodDTO> FindAll();
+        List<SaleDTO> FindAll();
 
-        List<FoodDTO> FindAllByCategoryId(long categoryId);
+        List<SaleDTO> FindAllByStatus(int status);
 
-        FoodDTO Save(FoodDTO food);
+        SaleDTO Save(SaleDTO sale);
 
-        FoodDTO Update(long id, FoodDTO food);
+        SaleDTO Update(long id, SaleDTO sale);
 
         bool Delete(long id);
     }

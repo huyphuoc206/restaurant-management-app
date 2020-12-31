@@ -29,13 +29,13 @@ namespace RestaurantWebAPI.Controllers
         public TableDTO Put(long id, TableDTO table)
         {
             tableService = TableService.Instance;
-            return tableService.Update(id, table);
+            return tableService.Update(id,table);
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             tableService = TableService.Instance;
-            tableService.Delete(id);
+            return tableService.Delete(id);
         }
     }
 }

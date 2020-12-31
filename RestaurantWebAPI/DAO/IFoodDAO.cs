@@ -17,9 +17,9 @@ namespace RestaurantWebAPI.DAO
 
         long Save(FoodDTO food);
 
-        void Update(long id, FoodDTO food);
+        bool Update(long id, FoodDTO food);
 
-        void Delete(long id);
+        bool Delete(long id);
 
     }
 }

@@ -8,14 +8,14 @@ namespace RestaurantApp.Model
 {
     class OrderDetailModel : AbstractModel
     {
-        private long orderId;
-        private long foodId;
+        private OrderModel order;
+        private FoodModel food;
         private long unitPrice;
         private int quantity;
-
-        public long OrderId { get => orderId; set => orderId = value; }
-        public long FoodId { get => foodId; set => foodId = value; }
+       
         public long UnitPrice { get => unitPrice; set => unitPrice = value; }
         public int Quantity { get => quantity; set => quantity = value; }
+        internal OrderModel Order { get => order; set => order = value; }
+        internal FoodModel Food { get => food; set => food = value; }
     }
 }

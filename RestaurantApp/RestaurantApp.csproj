@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BindingData\Login.cs" />
+    <Compile Include="BindingData\ResetPassword.cs" />
     <Compile Include="Controller\AdminController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\AbstractModel.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Model\OrderDetailModel.cs" />
     <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Model\RoleModel.cs" />
+    <Compile Include="Model\SaleModel.cs" />
     <Compile Include="Model\TableModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="View\AccountProfile.cs">
