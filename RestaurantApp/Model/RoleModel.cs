@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp.Model
 {
-    class RoleModel : AbstractModel
+    public class RoleModel : AbstractModel
     {
         private string name;
         private string code;
 
         public string Name { get => name; set => name = value; }
         public string Code { get => code; set => code = value; }
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

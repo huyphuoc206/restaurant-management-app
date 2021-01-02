@@ -21,5 +21,7 @@ namespace RestaurantWebAPI.Service
         UserDTO ResetPassword(long id, ResetPassword data);
 
         UserDTO CheckLogin(Login data);
+
+        UserDTO FindOneById(long id);
     }
 }

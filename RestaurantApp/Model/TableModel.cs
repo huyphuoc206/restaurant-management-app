@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp.Model
 {
-    class TableModel : AbstractModel
+    public class TableModel : AbstractModel
     {
         private string name;
         private int seats;
-        private int status;
+        private string status;
 
         public string Name { get => name; set => name = value; }
         public int Seats { get => seats; set => seats = value; }
-        public int Status { get => status; set => status = value; }
+        public string Status { get => status; set => status = value; }
 
         public static async Task<List<TableModel>> GetTablesAsync(HttpClient client, string path)
         {

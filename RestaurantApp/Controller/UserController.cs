@@ -55,7 +55,7 @@ namespace RestaurantApp.Controller
                 btns_table[i] = new Button();
                 btns_table[i].Text = tables[i].Name;
                 btns_table[i].SetBounds(x, y, 80, 80);
-                if (tables[i].Status == 1)
+                if (tables[i].Status.Equals("1"))
                 {
                     btns_table[i].Text += "\n Đã có người";
                     btns_table[i].BackColor = Color.Red;

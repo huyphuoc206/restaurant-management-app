@@ -17,37 +17,24 @@ namespace RestaurantApp.View
             InitializeComponent();
         }
 
-
-        private void btn_login_Click(object sender, EventArgs e)
-        {
-            User user = new User();
-            this.Hide();
-            user.ShowDialog();
-            this.Show();
-        }
-
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
-          
+            Application.Exit();
+
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn có thật sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
         }
 
-        private void label_user_Click(object sender, EventArgs e)
+        public void Clear()
         {
-
-        }
-
-        private void label_login_Click(object sender, EventArgs e)
-        {
-
+            this.User_text.Text = "";
+            this.Pass_text.Text = "";
         }
     }
 }

@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp.Model
 {
-    class CategoryModel : AbstractModel
+    public class CategoryModel : AbstractModel
     {
         private string name;
-        private int status;
+        private string status;
 
         public string Name { get => name; set => name = value; }
-        public int Status { get => status; set => status = value; }
+        public string Status { get => status; set => status = value; }
 
         public static async Task<List<CategoryModel>> GetCategoriessAsync(HttpClient client, string path)
         {
@@ -22,6 +22,11 @@ namespace RestaurantApp.Model
             if (response.IsSuccessStatusCode)
                 categoryModels = await response.Content.ReadAsAsync<List<CategoryModel>>();
             return categoryModels;
+        }
+
+        public override string ToString()
+        {
+            return name;
         }
     }
 }

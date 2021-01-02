@@ -21,6 +21,12 @@ namespace RestaurantWebAPI.Controllers
             return userService.FindAll();
         }
 
+        public UserDTO Get(long id)
+        {
+            userService = UserService.Instance;
+            return userService.FindOneById(id);
+        }
+
         public UserDTO Post(UserDTO user)
         {
             userService = UserService.Instance;
@@ -29,7 +35,7 @@ namespace RestaurantWebAPI.Controllers
 
         [Route("api/users/Login")]
         [HttpPost]
-        public UserDTO ResetPassword(Login data)
+        public UserDTO Login(Login data)
         {
             userService = UserService.Instance;
             return userService.CheckLogin(data);

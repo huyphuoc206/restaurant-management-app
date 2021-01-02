@@ -53,3 +53,5 @@ E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\R
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.CopyComplete
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.exe
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb
+E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csprojAssemblyReference.cache
+E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.View.ResetPassword.resources

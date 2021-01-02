@@ -58,6 +58,7 @@ namespace RestaurantWebAPI.Service.impl
                 user.CreatedDate = oldUser.CreatedDate;
                 user.CreatedBy = oldUser.CreatedBy;
                 user.ModifiedDate = DateTime.Now;
+                // kiem tra neu dang cap nhat thong tin (do STAFF cap nhat)
                 if (user.Role == null)
                 {
                     user.Status = oldUser.Status;
@@ -65,6 +66,7 @@ namespace RestaurantWebAPI.Service.impl
                 }
                 if (user.PassWord == null)
                     user.PassWord = oldUser.PassWord;
+                // Neu mat khau truyen vao k = mat khau cu thi dang cap nhat user co doi mat khau
                 if (!user.PassWord.Equals(oldUser.PassWord))
                     user.PassWord = MD5Hashing.CreateMD5(user.PassWord);
                 if (userDAO.Update(id, user))
@@ -103,6 +105,12 @@ namespace RestaurantWebAPI.Service.impl
             data.Password = MD5Hashing.CreateMD5(data.Password);
             UserDTO user = userDAO.FindOneByUserNameAndPasswordAndStatus(data.Username, data.Password, 1);
             return user;
+        }
+
+        public UserDTO FindOneById(long id)
+        {
+            userDAO = UserDAO.Instance;
+            return userDAO.FindOneById(id);
         }
     }
 }

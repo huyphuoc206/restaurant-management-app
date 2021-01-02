@@ -24,6 +24,8 @@ namespace RestaurantWebAPI.Mapper
             role.ID = reader.GetInt64("roleid");
             if (MapperUtils.HasColumn("name", reader))
                 role.Name = reader.GetString("name");
+            if (MapperUtils.HasColumn("code", reader))
+                role.Code = reader.GetString("code");
             user.Role = role;
 
             if (reader["createddate"] != DBNull.Value)

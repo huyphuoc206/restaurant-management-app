@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp.Model
 {
-    class UserModel : AbstractModel
+    public class UserModel : AbstractModel
     {
         private string fullName;
         private string userName;
@@ -17,7 +17,7 @@ namespace RestaurantApp.Model
         private string email;
         private DateTime dob;
         private string gender;
-        private int status;
+        private string status;
         private RoleModel role;
 
         public string FullName { get => fullName; set => fullName = value; }
@@ -26,7 +26,7 @@ namespace RestaurantApp.Model
         public string Phone { get => phone; set => phone = value; }
         public string Address { get => address; set => address = value; }
         public string Email { get => email; set => email = value; }
-        public int Status { get => status; set => status = value; }
+        public string Status { get => status; set => status = value; }
         public string Gender { get => gender; set => gender = value; }
         public RoleModel Role { get => role; set => role = value; }
         public DateTime Dob { get => dob; set => dob = value; }

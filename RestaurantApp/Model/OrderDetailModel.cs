@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantApp.Model
 {
-    class OrderDetailModel : AbstractModel
+    public class OrderDetailModel : AbstractModel
     {
         private OrderModel order;
         private FoodModel food;

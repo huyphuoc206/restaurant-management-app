@@ -46,7 +46,7 @@ namespace RestaurantWebAPI.DAO.impl
 
         public UserDTO FindOneByUserNameAndPasswordAndStatus(string username, string password, int status)
         {
-            string sql = "SELECT * FROM user WHERE username = @username AND password = @password AND status = @status";
+            string sql = "SELECT user.*, role.name, role.code FROM user JOIN role ON user.roleid = role.id WHERE username = @username AND password = @password AND status = @status";
             object[] parameters = { username, password, status };
             List<UserDTO> users = Query(sql, new UserMapper(), parameters);
             if (users.Count == 0) return null;

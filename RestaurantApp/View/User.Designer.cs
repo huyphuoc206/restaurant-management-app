@@ -54,6 +54,7 @@ namespace RestaurantApp.View
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_userInformation = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuResetPassword = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_logout = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_menu.SuspendLayout();
             this.panel_bill.SuspendLayout();
@@ -69,9 +70,9 @@ namespace RestaurantApp.View
             this.panel_menu.Controls.Add(this.label_foodCategory);
             this.panel_menu.Controls.Add(this.label_quantity);
             this.panel_menu.Controls.Add(this.label_menu);
-            this.panel_menu.Location = new System.Drawing.Point(315, 23);
+            this.panel_menu.Location = new System.Drawing.Point(318, 27);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(630, 713);
+            this.panel_menu.Size = new System.Drawing.Size(627, 709);
             this.panel_menu.TabIndex = 0;
             // 
             // cb_categories
@@ -135,9 +136,9 @@ namespace RestaurantApp.View
             this.panel_bill.Controls.Add(this.btn_pay);
             this.panel_bill.Controls.Add(this.listView1);
             this.panel_bill.Controls.Add(this.label_order);
-            this.panel_bill.Location = new System.Drawing.Point(951, 23);
+            this.panel_bill.Location = new System.Drawing.Point(951, 27);
             this.panel_bill.Name = "panel_bill";
-            this.panel_bill.Size = new System.Drawing.Size(300, 713);
+            this.panel_bill.Size = new System.Drawing.Size(300, 709);
             this.panel_bill.TabIndex = 0;
             // 
             // btn_switchTable
@@ -188,9 +189,9 @@ namespace RestaurantApp.View
             // panel_table
             // 
             this.panel_table.Controls.Add(this.label_table);
-            this.panel_table.Location = new System.Drawing.Point(12, 23);
+            this.panel_table.Location = new System.Drawing.Point(12, 27);
             this.panel_table.Name = "panel_table";
-            this.panel_table.Size = new System.Drawing.Size(300, 713);
+            this.panel_table.Size = new System.Drawing.Size(300, 709);
             this.panel_table.TabIndex = 0;
             // 
             // label_table
@@ -204,6 +205,7 @@ namespace RestaurantApp.View
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -216,6 +218,7 @@ namespace RestaurantApp.View
             // 
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItem_userInformation,
+            this.menuResetPassword,
             this.menuItem_logout});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
@@ -224,14 +227,21 @@ namespace RestaurantApp.View
             // menuItem_userInformation
             // 
             this.menuItem_userInformation.Name = "menuItem_userInformation";
-            this.menuItem_userInformation.Size = new System.Drawing.Size(177, 22);
+            this.menuItem_userInformation.Size = new System.Drawing.Size(180, 22);
             this.menuItem_userInformation.Text = "Thông tin tài khoản";
             this.menuItem_userInformation.Click += new System.EventHandler(this.menuItem_userInformation_Click);
+            // 
+            // menuResetPassword
+            // 
+            this.menuResetPassword.Name = "menuResetPassword";
+            this.menuResetPassword.Size = new System.Drawing.Size(180, 22);
+            this.menuResetPassword.Text = "Đổi mật khẩu";
+            this.menuResetPassword.Click += new System.EventHandler(this.menuResetPassword_Click);
             // 
             // menuItem_logout
             // 
             this.menuItem_logout.Name = "menuItem_logout";
-            this.menuItem_logout.Size = new System.Drawing.Size(177, 22);
+            this.menuItem_logout.Size = new System.Drawing.Size(180, 22);
             this.menuItem_logout.Text = "Đăng xuất";
             this.menuItem_logout.Click += new System.EventHandler(this.menuItem_logout_Click);
             // 
@@ -284,5 +294,6 @@ namespace RestaurantApp.View
         public ToolStripMenuItem menuItem_logout;
         public ComboBox cb_categories;
         public Label label_foodCategory;
+        private ToolStripMenuItem menuResetPassword;
     }
 }

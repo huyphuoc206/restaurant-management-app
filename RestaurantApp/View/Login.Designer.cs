@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace RestaurantApp.View
 {
     partial class Login
@@ -29,6 +31,7 @@ namespace RestaurantApp.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_login = new System.Windows.Forms.Button();
             this.pass_text = new System.Windows.Forms.TextBox();
@@ -36,6 +39,8 @@ namespace RestaurantApp.View
             this.label_login = new System.Windows.Forms.Label();
             this.label_pass = new System.Windows.Forms.Label();
             this.label_user = new System.Windows.Forms.Label();
+            this.errorUsernameLogin = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorUsernameLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
@@ -44,7 +49,7 @@ namespace RestaurantApp.View
             this.btn_exit.Location = new System.Drawing.Point(331, 174);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(86, 37);
-            this.btn_exit.TabIndex = 17;
+            this.btn_exit.TabIndex = 4;
             this.btn_exit.Text = "Thoát";
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
@@ -58,7 +63,6 @@ namespace RestaurantApp.View
             this.btn_login.TabIndex = 3;
             this.btn_login.Text = "Đăng nhập";
             this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // pass_text
             // 
@@ -66,6 +70,7 @@ namespace RestaurantApp.View
             this.pass_text.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pass_text.Location = new System.Drawing.Point(180, 125);
             this.pass_text.Name = "pass_text";
+            this.pass_text.PasswordChar = '*';
             this.pass_text.Size = new System.Drawing.Size(237, 29);
             this.pass_text.TabIndex = 2;
             // 
@@ -88,7 +93,6 @@ namespace RestaurantApp.View
             this.label_login.Size = new System.Drawing.Size(115, 25);
             this.label_login.TabIndex = 14;
             this.label_login.Text = "Đăng nhập";
-            this.label_login.Click += new System.EventHandler(this.label_login_Click);
             // 
             // label_pass
             // 
@@ -97,9 +101,9 @@ namespace RestaurantApp.View
             this.label_pass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_pass.Location = new System.Drawing.Point(73, 125);
             this.label_pass.Name = "label_pass";
-            this.label_pass.Size = new System.Drawing.Size(84, 19);
+            this.label_pass.Size = new System.Drawing.Size(79, 19);
             this.label_pass.TabIndex = 12;
-            this.label_pass.Text = "Mật khẩu :";
+            this.label_pass.Text = "Mật khẩu:";
             // 
             // label_user
             // 
@@ -108,13 +112,17 @@ namespace RestaurantApp.View
             this.label_user.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_user.Location = new System.Drawing.Point(73, 75);
             this.label_user.Name = "label_user";
-            this.label_user.Size = new System.Drawing.Size(90, 19);
+            this.label_user.Size = new System.Drawing.Size(85, 19);
             this.label_user.TabIndex = 13;
-            this.label_user.Text = "Tài khoản :";
-            this.label_user.Click += new System.EventHandler(this.label_user_Click);
+            this.label_user.Text = "Tài khoản:";
+            // 
+            // errorUsernameLogin
+            // 
+            this.errorUsernameLogin.ContainerControl = this;
             // 
             // Login
             // 
+            this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 242);
@@ -127,8 +135,9 @@ namespace RestaurantApp.View
             this.Controls.Add(this.label_user);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Quản lý nhà hàng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.errorUsernameLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +151,11 @@ namespace RestaurantApp.View
         private System.Windows.Forms.Label label_login;
         private System.Windows.Forms.Label label_pass;
         private System.Windows.Forms.Label label_user;
+        private System.Windows.Forms.ErrorProvider errorUsernameLogin;
+
+        public Button Btn_login { get => btn_login; set => btn_login = value; }
+
+        public TextBox User_text { get => user_text; set => user_text = value; }
+        public TextBox Pass_text { get => pass_text; set => pass_text = value; }
     }
 }
