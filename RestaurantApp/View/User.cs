@@ -37,6 +37,7 @@ namespace RestaurantApp.View
             AccountProfileController accountProfile = new AccountProfileController();
             accountProfile.View.StartPosition = FormStartPosition.CenterScreen;
             accountProfile.View.ShowDialog();
+            accountMenu.Text = "Xin chào, " + LoginInfo.Fullname;
             this.Show();
         }
 

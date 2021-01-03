@@ -11,6 +11,7 @@ namespace RestaurantApp.Model
     {
         public static long UserID;
         public static string Username;
+        public static string Fullname;
 
         public static async Task<UserModel> GetCurrentUser(HttpClient client, string path)
         {

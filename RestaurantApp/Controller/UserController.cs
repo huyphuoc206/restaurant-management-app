@@ -31,7 +31,6 @@ namespace RestaurantApp.Controller
 
         private async void InitController()
         {
-            loadQuantityFood();
             List<TableModel> tables = await TableModel.GetTablesAsync(client, "api/tables");
             List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
             loadCategoriesName(categories);
@@ -51,37 +50,24 @@ namespace RestaurantApp.Controller
             for (int i = 0; i < btns_table.Length; i++)
             {
                 int x = 10 + 100 * (i % 3);
-                int y = 25 + (i / 3) * 100;
+                int y = 50 + (i / 3) * 100;
                 btns_table[i] = new Button();
+                btns_table[i].TextAlign = ContentAlignment.MiddleCenter;
                 btns_table[i].Text = tables[i].Name;
-                btns_table[i].SetBounds(x, y, 80, 80);
+                btns_table[i].SetBounds(x, y, 60, 60);
                 if (tables[i].Status.Equals("1"))
                 {
-                    btns_table[i].Text += "\n Đã có người";
-                    btns_table[i].BackColor = Color.Red;
+                    btns_table[i].Text += "\n Có người";
+                    btns_table[i].BackColor = Color.Bisque;
                 }
                 else
                 {
                     btns_table[i].Text += " \n Trống";
-                    btns_table[i].BackColor = Color.Green;
+                    btns_table[i].BackColor = Color.Coral;
                 }
 
             }
             return btns_table;
-        }
-
-        public void loadQuantityFood()
-        {
-            Button[] btns_quantity = new Button[10];
-            for (int i = 0; i < 10; i++)
-            {
-                int x = 16 + 61 * i;
-                btns_quantity[i] = new Button();
-                btns_quantity[i].SetBounds(x, 50, 50, 50);
-                btns_quantity[i].Text = "" + i;
-                btns_quantity[i].Click += new System.EventHandler(view.btns_quantity_click);
-            }
-            view.panel_menu.Controls.AddRange(btns_quantity);
         }
 
         public String[] createCategoriesName(List<CategoryModel> categories)

@@ -104,6 +104,7 @@ namespace RestaurantWebAPI.Service.impl
             userDAO = UserDAO.Instance;
             data.Password = MD5Hashing.CreateMD5(data.Password);
             UserDTO user = userDAO.FindOneByUserNameAndPasswordAndStatus(data.Username, data.Password, 1);
+            if (!user.UserName.Equals(data.Username)) return null;
             return user;
         }
 

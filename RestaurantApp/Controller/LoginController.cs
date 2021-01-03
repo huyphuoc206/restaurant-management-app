@@ -47,6 +47,7 @@ namespace RestaurantApp.Controller
             {
                 LoginInfo.UserID = user.ID;
                 LoginInfo.Username = user.UserName;
+                LoginInfo.Fullname = user.FullName;
 
                 if (user.Role.Code.Equals(SystemConstant.MANAGER))
                 {
@@ -58,6 +59,7 @@ namespace RestaurantApp.Controller
                 {
                     UserController userView = new UserController();
                     view.Hide();
+                    userView.View.AccountMenu.Text = "Xin chào, "+LoginInfo.Fullname;
                     userView.View.ShowDialog();
                 }
                 view.Clear();

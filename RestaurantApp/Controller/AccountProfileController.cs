@@ -54,7 +54,9 @@ namespace RestaurantApp.Controller
                 model = await UpdateInformation(model);
                 if (model != null)
                 {
-                    MessageBox.Show("Cập nhật thành công.");
+                    LoginInfo.Fullname = model.FullName;
+                    LoginInfo.Username = model.UserName;
+                    MessageBox.Show("Cập nhật thành công.");                 
                 }
                 else
                 {
