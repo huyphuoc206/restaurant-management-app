@@ -80,9 +80,9 @@ namespace RestaurantApp.View
                     string value = row.Cells[colStatus].Value.ToString();
 
                     if (value.Equals("1"))
-                        row.Cells[colStatus].Value = "Hoạt động";
+                        row.Cells[colStatus].Value = "Đã có người";
                     else
-                        row.Cells[colStatus].Value = "Tạm ngưng";
+                        row.Cells[colStatus].Value = "Còn trống";
                 }
             }
         }

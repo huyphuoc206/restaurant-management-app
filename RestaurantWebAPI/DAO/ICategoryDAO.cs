@@ -11,8 +11,6 @@ namespace RestaurantWebAPI.DAO
     {
         List<CategoryDTO> FindAll();
 
-        List<CategoryDTO> FindAllByStatus(int status);
-
         CategoryDTO FindOneById(long id);
 
         long Save(CategoryDTO category);

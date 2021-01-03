@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2020 at 01:31 AM
+-- Generation Time: Jan 03, 2021 at 11:00 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -71,7 +71,7 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`id`, `name`, `price`, `discount`, `status`, `categoryid`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
-(1, 'Cơm chiên', 30000, 10, 0, 2, NULL, NULL, NULL, NULL),
+(1, 'Cơm chiên', 30000, 10, 1, 2, NULL, NULL, NULL, NULL),
 (3, 'Lẩu gà', 200000, 5, 1, 1, '2020-12-19 00:00:00', NULL, '2020-12-19 00:00:00', NULL),
 (4, 'Lẩu bò', 300000, 5, 1, 1, '2020-12-30 22:19:52', NULL, NULL, NULL);
 
@@ -110,6 +110,18 @@ CREATE TABLE `orders` (
   `modifieddate` datetime DEFAULT NULL,
   `modifiedby` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `totalprice`, `saleid`, `tableid`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
+(7, 50000, 1, 1, 1, '2021-01-02 22:25:39', NULL, NULL, NULL),
+(8, 50000, 1, 1, 1, '2021-01-02 22:25:52', NULL, NULL, NULL),
+(10, 50000, 1, 1, 1, '2021-01-02 22:27:06', NULL, NULL, NULL),
+(11, 50000, 1, 1, 1, '2021-01-02 22:27:14', NULL, NULL, NULL),
+(12, 50000, 1, 1, 1, '2021-01-02 22:28:36', NULL, NULL, NULL),
+(14, 25555, 3, 1, 0, '2021-01-02 22:30:20', NULL, '2021-01-02 22:43:50', NULL);
 
 -- --------------------------------------------------------
 
@@ -157,9 +169,11 @@ CREATE TABLE `sales` (
 --
 
 INSERT INTO `sales` (`id`, `name`, `discount`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
-(1, 'Đi trên 5 người', 10, 0, '2020-12-30 21:59:34', NULL, NULL, NULL),
-(2, 'Tết đến xuân về', 5, 1, '2020-12-30 22:00:03', NULL, NULL, NULL),
-(4, 'Không có', 0, 1, '2020-12-30 22:02:58', NULL, NULL, NULL);
+(1, 'Không có', 0, 1, '2021-01-02 22:03:48', NULL, NULL, NULL),
+(2, 'Noel', 20, 1, '2021-01-02 22:03:57', NULL, NULL, NULL),
+(3, 'Valentine', 10, 1, '2021-01-02 22:04:07', NULL, NULL, NULL),
+(4, 'Đi trên 5 người', 10, 1, '2021-01-02 22:04:17', NULL, NULL, NULL),
+(5, 'Đi trên 10 người', 15, 1, '2021-01-02 22:04:35', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -183,9 +197,16 @@ CREATE TABLE `tables` (
 --
 
 INSERT INTO `tables` (`id`, `name`, `seats`, `status`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
-(2, 'Bàn 2', 5, 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
-(3, 'Bàn 3', 2, 1, '2020-12-18 00:00:00', NULL, NULL, NULL),
-(4, 'Bàn 06', 4, 1, '2020-12-18 00:00:00', NULL, '2020-12-30 21:18:02', NULL);
+(1, 'Bàn 1', 2, 1, '2021-01-02 22:01:43', NULL, NULL, NULL),
+(2, 'Bàn 2', 4, 1, '2021-01-02 22:01:51', NULL, NULL, NULL),
+(3, 'Bàn 3', 4, 1, '2021-01-02 22:01:54', NULL, NULL, NULL),
+(4, 'Bàn 4', 5, 1, '2021-01-02 22:01:57', NULL, NULL, NULL),
+(5, 'Bàn 5', 16, 1, '2021-01-02 22:02:04', NULL, NULL, NULL),
+(6, 'Bàn 6', 7, 1, '2021-01-02 22:02:09', NULL, NULL, NULL),
+(7, 'Bàn 7', 4, 1, '2021-01-02 22:02:18', NULL, NULL, NULL),
+(8, 'Bàn 8', 4, 1, '2021-01-02 22:02:21', NULL, NULL, NULL),
+(9, 'Bàn 9', 4, 1, '2021-01-02 22:02:24', NULL, NULL, NULL),
+(10, 'Bàn 10', 4, 1, '2021-01-02 22:02:26', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -216,15 +237,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullname`, `username`, `password`, `phone`, `address`, `email`, `dob`, `gender`, `status`, `roleid`, `createddate`, `createdby`, `modifieddate`, `modifiedby`) VALUES
-(1, 'Huy Phước', 'php', '123', '0909090909', 'HCM City', 'php@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(2, 'Thành Đoan', 'doan', '123', '0909090909', 'HCM City', 'doan@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(3, 'Thanh Tôn', 'ton', '123', '0909090909', 'HCM City', 'ton@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(4, 'Bảo Trang', 'trang', '123', '0909090909', 'HCM City', 'trang@gmail.com', '2000-02-03', 'Nữ', 1, 1, NULL, NULL, NULL, NULL),
-(5, 'Thiên Long', 'long', '123', '0909090909', 'HCM City', 'long@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
-(6, 'Mes', 'ko', '123', '0909023123', 'TP. HCM', 'sdsdsdacxcs@gmail.com', '2000-03-02', 'Nam', 1, 2, NULL, NULL, '2020-12-31 07:22:03', NULL),
-(37, 'ABC', 'trangg', 'E10ADC3949BA59ABBE56E057F20F883E', '0909023123', 'TP. HCM', 'kkkk@gmail.com', '2000-02-03', 'Nữ', 1, 1, '2020-12-30 22:43:37', NULL, NULL, NULL),
-(38, 'Mes', 'ti123', '55A3F8EA8263001D4CDAE8E1C0A0C364', '0909023123', 'TP. HCM', 'vcascsc@gmail.com', '2000-03-02', 'Nam', 1, 1, '2020-12-30 22:44:50', NULL, '2020-12-30 23:38:48', NULL),
-(39, 'Tí', 'ti', '60FE7FCF24CB90ECC781942DEF8E3DF7', '0909023123', 'TP. HCM', 'kkkkd@gmail.com', '2000-02-03', 'Nữ', 1, 1, '2020-12-30 22:46:35', NULL, '2020-12-31 06:55:47', NULL);
+(1, 'Huy Phước', 'php', '202cb962ac59075b964b07152d234b70', '0909090909', 'HCM City', 'php@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, '2021-01-02 09:55:50', NULL),
+(2, 'Thành Đoan', 'doan', '202cb962ac59075b964b07152d234b70', '0909090909', 'HCM City', 'doan@gmail.com', '2000-02-03', 'Nam', 1, 1, NULL, NULL, NULL, NULL),
+(3, 'Thanh Tôn', 'ton', '900150983cd24fb0d6963f7d28e17f72', '0909090909', 'Biên Hòa', 'ton@gmail.com', '2000-03-17', 'Nữ', 1, 2, NULL, NULL, '2021-01-02 10:31:41', NULL),
+(4, 'Bảo Trang', 'trang', '202cb962ac59075b964b07152d234b70', '0909090909', 'HCM City', 'trang@gmail.com', '2000-02-03', 'Nữ', 1, 1, NULL, NULL, NULL, NULL),
+(5, 'Thiên Long', 'longg', '202cb962ac59075b964b07152d234b70', '0232323232', 'Đắk Lắk', 'sdsd@.', '2000-02-10', 'Nam', 1, 2, NULL, NULL, '2021-01-02 16:50:05', NULL);
 
 --
 -- Indexes for dumped tables
@@ -310,7 +327,7 @@ ALTER TABLE `orderdetail`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -322,13 +339,13 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tables`
 --
 ALTER TABLE `tables`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`

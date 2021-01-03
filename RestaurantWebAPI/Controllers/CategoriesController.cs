@@ -20,14 +20,6 @@ namespace RestaurantWebAPI.Controllers
             return categoryService.FindAll();
         }
 
-        [Route("api/categories/status/{status:int}")]
-        [HttpGet]
-        public List<CategoryDTO> GetAllByStatus(int status)
-        {
-            categoryService = CategoryService.Instance;
-            return categoryService.FindAllByStatus(status);
-        }
-
         public CategoryDTO Post(CategoryDTO category)
         {
             categoryService = CategoryService.Instance;

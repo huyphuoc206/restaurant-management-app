@@ -46,6 +46,8 @@ namespace RestaurantApp.Controller
             if (user != null)
             {
                 LoginInfo.UserID = user.ID;
+                LoginInfo.Username = user.UserName;
+
                 if (user.Role.Code.Equals(SystemConstant.MANAGER))
                 {
                     AdminController adminView = new AdminController();

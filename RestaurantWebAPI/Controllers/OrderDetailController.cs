@@ -1,4 +1,6 @@
-﻿using RestaurantWebAPI.Service;
+﻿using RestaurantWebAPI.DTO;
+using RestaurantWebAPI.Service;
+using RestaurantWebAPI.Service.impl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +13,14 @@ namespace RestaurantWebAPI.Controllers
     public class OrderDetailController : ApiController
     {
         private IOrderDetailService orderDetailService;
+
+        [Route("api/orders/{orderId:long}/orderdetails")]
+        [HttpGet]
+        public List<OrderDetailDTO> Get(long orderId)
+        {
+            orderDetailService = OrderDetailService.Instance;
+            /* return foodService.FindAllByCategoryId(categoryId);*/
+            return null;
+        }
     }
 }

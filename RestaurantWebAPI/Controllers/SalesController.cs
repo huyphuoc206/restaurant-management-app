@@ -20,14 +20,6 @@ namespace RestaurantWebAPI.Controllers
             return saleService.FindAll();
         }
 
-        [Route("api/sales/status/{status:int}")]
-        [HttpGet]
-        public List<SaleDTO> GetAllByStatus(int status)
-        {
-            saleService = SaleService.Instance;
-            return saleService.FindAllByStatus(status);
-        }
-
         public SaleDTO Post(SaleDTO sale)
         {
             saleService = SaleService.Instance;

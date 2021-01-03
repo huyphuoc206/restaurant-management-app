@@ -167,7 +167,6 @@
     <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="Controllers\TablesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DAO\ICategoryDAO.cs" />
     <Compile Include="DAO\IFoodDAO.cs" />
     <Compile Include="DAO\IGenericDAO.cs" />

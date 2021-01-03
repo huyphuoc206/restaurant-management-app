@@ -9,6 +9,7 @@ namespace RestaurantWebAPI.Service.impl
     public class OrderDetailService : IOrderDetailService
     {
         private IOrderDetailDAO orderDetailDAO;
+
         private static OrderDetailService instance;
 
         public static OrderDetailService Instance

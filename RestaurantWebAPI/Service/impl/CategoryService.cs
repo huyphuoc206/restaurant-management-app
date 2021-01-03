@@ -26,13 +26,6 @@ namespace RestaurantWebAPI.Service.impl
             return categoryDAO.FindAll();
         }
 
-
-        public List<CategoryDTO> FindAllByStatus(int status)
-        {
-            categoryDAO = CategoryDAO.Instance;
-            return categoryDAO.FindAllByStatus(status);
-        }
-
         public CategoryDTO Save(CategoryDTO category)
         {
             categoryDAO = CategoryDAO.Instance;

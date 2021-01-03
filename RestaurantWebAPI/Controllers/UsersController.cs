@@ -33,6 +33,18 @@ namespace RestaurantWebAPI.Controllers
             return userService.Save(user);
         }
 
+        public UserDTO Put(long id, UserDTO user)
+        {
+            userService = UserService.Instance;
+            return userService.Update(id, user);
+        }
+
+        public bool Delete(long id)
+        {
+            userService = UserService.Instance;
+            return userService.Delete(id);
+        }
+
         [Route("api/users/Login")]
         [HttpPost]
         public UserDTO Login(Login data)
@@ -41,24 +53,12 @@ namespace RestaurantWebAPI.Controllers
             return userService.CheckLogin(data);
         }
 
-        public UserDTO Put(long id, UserDTO user)
-        {
-            userService = UserService.Instance;
-            return userService.Update(id, user);
-        }
-
         [Route("api/users/ResetPassword/{id:long}")]
         [HttpPut]
         public UserDTO ResetPassword(long id, ResetPassword data)
         {
             userService = UserService.Instance;
             return userService.ResetPassword(id, data);
-        }
-
-        public bool Delete(long id)
-        {
-            userService = UserService.Instance;
-            return userService.Delete(id);
         }
     }
 }

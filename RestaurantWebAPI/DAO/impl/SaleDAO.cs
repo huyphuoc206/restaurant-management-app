@@ -25,13 +25,6 @@ namespace RestaurantWebAPI.DAO.impl
             return Query(sql, new SaleMapper());
         }
 
-        public List<SaleDTO> FindAllByStatus(int status)
-        {
-            string sql = "SELECT * FROM sales WHERE status = @status";
-            object[] parameters = { status };
-            return Query(sql, new SaleMapper(), parameters);
-        }
-
         public SaleDTO FindOneById(long id)
         {
             string sql = "SELECT * FROM sales WHERE id = @id";

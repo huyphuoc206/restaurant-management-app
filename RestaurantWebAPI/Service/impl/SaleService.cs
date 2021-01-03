@@ -26,13 +26,6 @@ namespace RestaurantWebAPI.Service.impl
             return saleDAO.FindAll();
         }
 
-
-        public List<SaleDTO> FindAllByStatus(int status)
-        {
-            saleDAO = SaleDAO.Instance;
-            return saleDAO.FindAllByStatus(status);
-        }
-
         public SaleDTO Save(SaleDTO sale)
         {
             if (sale.Discount < 0 || sale.Discount > 100) return null;

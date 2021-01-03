@@ -11,8 +11,6 @@ namespace RestaurantWebAPI.Service
     {
         List<SaleDTO> FindAll();
 
-        List<SaleDTO> FindAllByStatus(int status);
-
         SaleDTO Save(SaleDTO sale);
 
         SaleDTO Update(long id, SaleDTO sale);

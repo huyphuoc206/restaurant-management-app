@@ -1,4 +1,6 @@
 ﻿using RestaurantWebAPI.DAO;
+using RestaurantWebAPI.DAO.impl;
+using RestaurantWebAPI.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +19,40 @@ namespace RestaurantWebAPI.Service.impl
             private set => instance = value;
         }
         private OrderService() { }
+
+        public List<OrderDTO> FindAll()
+        {
+            orderDAO = OrderDAO.Instance;
+            return orderDAO.FindAll();
+        }
+
+        public OrderDTO Save(OrderDTO order)
+        {
+            orderDAO = OrderDAO.Instance;
+            order.CreatedDate = DateTime.Now;
+            long id = orderDAO.Save(order);
+            return orderDAO.FindOneById(id);
+        }
+
+        public OrderDTO Update(long id, OrderDTO order)
+        {
+            orderDAO = OrderDAO.Instance;
+            OrderDTO oldOrder = orderDAO.FindOneById(id);
+            if (oldOrder != null)
+            {
+                order.CreatedBy = oldOrder.CreatedBy;
+                order.CreatedDate = oldOrder.CreatedDate;
+                order.ModifiedDate = DateTime.Now;
+                if (orderDAO.Update(id, order))
+                    return orderDAO.FindOneById(id);
+            }
+            return null;
+        }
+
+        public bool Delete(long id)
+        {
+            orderDAO = OrderDAO.Instance;
+            return orderDAO.Delete(id);
+        }
     }
 }

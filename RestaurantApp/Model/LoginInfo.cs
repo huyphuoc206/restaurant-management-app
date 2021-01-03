@@ -10,6 +10,7 @@ namespace RestaurantApp.Model
     public class LoginInfo
     {
         public static long UserID;
+        public static string Username;
 
         public static async Task<UserModel> GetCurrentUser(HttpClient client, string path)
         {
