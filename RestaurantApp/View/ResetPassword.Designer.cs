@@ -151,7 +151,6 @@ namespace RestaurantApp.View
             this.Controls.Add(this.text_currentPassword);
             this.Controls.Add(this.lb_currentPassowrd);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "ResetPassword";
             this.Text = "Đổi mật khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.errorResetPassword)).EndInit();

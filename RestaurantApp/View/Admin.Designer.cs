@@ -42,16 +42,16 @@ namespace RestaurantApp.View
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlAdmin = new System.Windows.Forms.TabControl();
             this.tpMoney = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -150,6 +150,8 @@ namespace RestaurantApp.View
             this.tb_searchtextcaterory = new System.Windows.Forms.TextBox();
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.text_userId = new System.Windows.Forms.TextBox();
+            this.lb_userId = new System.Windows.Forms.Label();
             this.cb_userStatus = new System.Windows.Forms.ComboBox();
             this.lb_status = new System.Windows.Forms.Label();
             this.pn_gender = new System.Windows.Forms.Panel();
@@ -178,6 +180,18 @@ namespace RestaurantApp.View
             this.btn_viewUser = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.dataGridView_user = new System.Windows.Forms.DataGridView();
+            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdDateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btn_searchuser = new System.Windows.Forms.Button();
             this.tb_searchtextuser = new System.Windows.Forms.TextBox();
@@ -199,27 +213,19 @@ namespace RestaurantApp.View
             this.btn_viewSale = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.dataGridView_Sale = new System.Windows.Forms.DataGridView();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.btn_SearchSale = new System.Windows.Forms.Button();
+            this.text_searchSale = new System.Windows.Forms.TextBox();
+            this.SaleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.btn_SearchSale = new System.Windows.Forms.Button();
-            this.text_searchSale = new System.Windows.Forms.TextBox();
-            this.text_userId = new System.Windows.Forms.TextBox();
-            this.lb_userId = new System.Windows.Forms.Label();
-            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdDateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_clearFood = new System.Windows.Forms.Button();
+            this.btn_clearTable = new System.Windows.Forms.Button();
+            this.btn_clearCategory = new System.Windows.Forms.Button();
+            this.btn_clearUser = new System.Windows.Forms.Button();
+            this.btn_clearSale = new System.Windows.Forms.Button();
             this.tabControlAdmin.SuspendLayout();
             this.tpMoney.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -284,7 +290,7 @@ namespace RestaurantApp.View
             this.tpMoney.Location = new System.Drawing.Point(4, 25);
             this.tpMoney.Name = "tpMoney";
             this.tpMoney.Padding = new System.Windows.Forms.Padding(3);
-            this.tpMoney.Size = new System.Drawing.Size(1202, 544);
+            this.tpMoney.Size = new System.Drawing.Size(1205, 583);
             this.tpMoney.TabIndex = 0;
             this.tpMoney.Text = "Doanh thu";
             this.tpMoney.UseVisualStyleBackColor = true;
@@ -297,15 +303,15 @@ namespace RestaurantApp.View
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dataGridView_order);
-            this.panel2.Location = new System.Drawing.Point(6, 38);
+            this.panel2.Location = new System.Drawing.Point(6, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1193, 496);
+            this.panel2.Size = new System.Drawing.Size(1196, 535);
             this.panel2.TabIndex = 1;
             // 
             // btn_print
             // 
             this.btn_print.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_print.Location = new System.Drawing.Point(977, 415);
+            this.btn_print.Location = new System.Drawing.Point(987, 463);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(177, 57);
             this.btn_print.TabIndex = 4;
@@ -314,7 +320,7 @@ namespace RestaurantApp.View
             // 
             // tb_sumsales
             // 
-            this.tb_sumsales.Location = new System.Drawing.Point(136, 451);
+            this.tb_sumsales.Location = new System.Drawing.Point(146, 499);
             this.tb_sumsales.Name = "tb_sumsales";
             this.tb_sumsales.ReadOnly = true;
             this.tb_sumsales.Size = new System.Drawing.Size(156, 23);
@@ -322,7 +328,7 @@ namespace RestaurantApp.View
             // 
             // tb_countorder
             // 
-            this.tb_countorder.Location = new System.Drawing.Point(136, 417);
+            this.tb_countorder.Location = new System.Drawing.Point(146, 465);
             this.tb_countorder.Name = "tb_countorder";
             this.tb_countorder.ReadOnly = true;
             this.tb_countorder.Size = new System.Drawing.Size(156, 23);
@@ -331,7 +337,7 @@ namespace RestaurantApp.View
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 424);
+            this.label4.Location = new System.Drawing.Point(15, 472);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 16);
             this.label4.TabIndex = 1;
@@ -340,7 +346,7 @@ namespace RestaurantApp.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 454);
+            this.label2.Location = new System.Drawing.Point(15, 502);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 16);
             this.label2.TabIndex = 1;
@@ -350,9 +356,9 @@ namespace RestaurantApp.View
             // 
             this.dataGridView_order.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_order.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView_order.Location = new System.Drawing.Point(4, 3);
             this.dataGridView_order.Name = "dataGridView_order";
-            this.dataGridView_order.Size = new System.Drawing.Size(1185, 398);
+            this.dataGridView_order.Size = new System.Drawing.Size(1185, 441);
             this.dataGridView_order.TabIndex = 0;
             // 
             // panel1
@@ -364,15 +370,15 @@ namespace RestaurantApp.View
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(211, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 30);
+            this.panel1.Size = new System.Drawing.Size(816, 33);
             this.panel1.TabIndex = 0;
             // 
             // btn_statis
             // 
             this.btn_statis.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_statis.Location = new System.Drawing.Point(682, 3);
+            this.btn_statis.Location = new System.Drawing.Point(667, -1);
             this.btn_statis.Name = "btn_statis";
-            this.btn_statis.Size = new System.Drawing.Size(75, 23);
+            this.btn_statis.Size = new System.Drawing.Size(87, 31);
             this.btn_statis.TabIndex = 4;
             this.btn_statis.Text = "Thống kê";
             this.btn_statis.UseVisualStyleBackColor = false;
@@ -444,7 +450,7 @@ namespace RestaurantApp.View
             this.panel6.Controls.Add(this.lb_foodName);
             this.panel6.Controls.Add(this.lb_foodPrice);
             this.panel6.Controls.Add(this.lb_food);
-            this.panel6.Location = new System.Drawing.Point(782, 100);
+            this.panel6.Location = new System.Drawing.Point(800, 99);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(375, 302);
             this.panel6.TabIndex = 0;
@@ -579,13 +585,14 @@ namespace RestaurantApp.View
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.btn_clearFood);
             this.panel5.Controls.Add(this.btn_addFood);
             this.panel5.Controls.Add(this.btn_deleteFood);
             this.panel5.Controls.Add(this.btn_updateFood);
             this.panel5.Controls.Add(this.btn_viewFood);
-            this.panel5.Location = new System.Drawing.Point(788, 419);
+            this.panel5.Location = new System.Drawing.Point(770, 419);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(335, 127);
+            this.panel5.Size = new System.Drawing.Size(417, 127);
             this.panel5.TabIndex = 0;
             // 
             // btn_addFood
@@ -594,7 +601,7 @@ namespace RestaurantApp.View
             this.btn_addFood.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_addFood.Location = new System.Drawing.Point(6, 19);
             this.btn_addFood.Name = "btn_addFood";
-            this.btn_addFood.Size = new System.Drawing.Size(64, 71);
+            this.btn_addFood.Size = new System.Drawing.Size(66, 71);
             this.btn_addFood.TabIndex = 6;
             this.btn_addFood.Text = "Thêm";
             this.btn_addFood.UseVisualStyleBackColor = false;
@@ -605,7 +612,7 @@ namespace RestaurantApp.View
             this.btn_deleteFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_deleteFood.Location = new System.Drawing.Point(87, 19);
             this.btn_deleteFood.Name = "btn_deleteFood";
-            this.btn_deleteFood.Size = new System.Drawing.Size(64, 71);
+            this.btn_deleteFood.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteFood.TabIndex = 7;
             this.btn_deleteFood.Text = "Xoá";
             this.btn_deleteFood.UseVisualStyleBackColor = false;
@@ -770,7 +777,7 @@ namespace RestaurantApp.View
             this.panel7.Controls.Add(this.nud_tableSeats);
             this.panel7.Controls.Add(this.lb_tableSeats);
             this.panel7.Controls.Add(this.lb_titletable);
-            this.panel7.Location = new System.Drawing.Point(761, 115);
+            this.panel7.Location = new System.Drawing.Point(779, 120);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(361, 239);
             this.panel7.TabIndex = 1;
@@ -858,50 +865,59 @@ namespace RestaurantApp.View
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.btn_clearTable);
             this.panel8.Controls.Add(this.btn_addTable);
             this.panel8.Controls.Add(this.btn_deleteTable);
             this.panel8.Controls.Add(this.btn_updateTable);
             this.panel8.Controls.Add(this.btn_viewTable);
-            this.panel8.Location = new System.Drawing.Point(775, 360);
+            this.panel8.Location = new System.Drawing.Point(743, 378);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(324, 127);
+            this.panel8.Size = new System.Drawing.Size(437, 127);
             this.panel8.TabIndex = 2;
             // 
             // btn_addTable
             // 
+            this.btn_addTable.BackColor = System.Drawing.Color.Green;
+            this.btn_addTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_addTable.Location = new System.Drawing.Point(8, 21);
             this.btn_addTable.Name = "btn_addTable";
-            this.btn_addTable.Size = new System.Drawing.Size(64, 71);
+            this.btn_addTable.Size = new System.Drawing.Size(66, 71);
             this.btn_addTable.TabIndex = 0;
             this.btn_addTable.Text = "Thêm";
-            this.btn_addTable.UseVisualStyleBackColor = true;
+            this.btn_addTable.UseVisualStyleBackColor = false;
             // 
             // btn_deleteTable
             // 
+            this.btn_deleteTable.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_deleteTable.Location = new System.Drawing.Point(89, 21);
             this.btn_deleteTable.Name = "btn_deleteTable";
-            this.btn_deleteTable.Size = new System.Drawing.Size(64, 71);
+            this.btn_deleteTable.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteTable.TabIndex = 0;
             this.btn_deleteTable.Text = "Xoá";
-            this.btn_deleteTable.UseVisualStyleBackColor = true;
+            this.btn_deleteTable.UseVisualStyleBackColor = false;
             // 
             // btn_updateTable
             // 
+            this.btn_updateTable.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_updateTable.Location = new System.Drawing.Point(174, 21);
             this.btn_updateTable.Name = "btn_updateTable";
             this.btn_updateTable.Size = new System.Drawing.Size(66, 71);
             this.btn_updateTable.TabIndex = 0;
             this.btn_updateTable.Text = "Sửa";
-            this.btn_updateTable.UseVisualStyleBackColor = true;
+            this.btn_updateTable.UseVisualStyleBackColor = false;
             // 
             // btn_viewTable
             // 
+            this.btn_viewTable.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_viewTable.Location = new System.Drawing.Point(255, 21);
             this.btn_viewTable.Name = "btn_viewTable";
             this.btn_viewTable.Size = new System.Drawing.Size(66, 71);
             this.btn_viewTable.TabIndex = 0;
             this.btn_viewTable.Text = "Xem";
-            this.btn_viewTable.UseVisualStyleBackColor = true;
+            this.btn_viewTable.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
@@ -1021,7 +1037,7 @@ namespace RestaurantApp.View
             this.panel11.Controls.Add(this.text_categoryname);
             this.panel11.Controls.Add(this.lb_categoryName);
             this.panel11.Controls.Add(this.label18);
-            this.panel11.Location = new System.Drawing.Point(750, 102);
+            this.panel11.Location = new System.Drawing.Point(748, 91);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(385, 261);
             this.panel11.TabIndex = 1;
@@ -1109,50 +1125,59 @@ namespace RestaurantApp.View
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.btn_clearCategory);
             this.panel12.Controls.Add(this.btn_addCategory);
             this.panel12.Controls.Add(this.btn_deleteCategory);
             this.panel12.Controls.Add(this.btn_updateCategory);
             this.panel12.Controls.Add(this.btn_viewCategory);
-            this.panel12.Location = new System.Drawing.Point(776, 369);
+            this.panel12.Location = new System.Drawing.Point(731, 376);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(332, 127);
+            this.panel12.Size = new System.Drawing.Size(428, 108);
             this.panel12.TabIndex = 2;
             // 
             // btn_addCategory
             // 
-            this.btn_addCategory.Location = new System.Drawing.Point(6, 19);
+            this.btn_addCategory.BackColor = System.Drawing.Color.Green;
+            this.btn_addCategory.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_addCategory.Location = new System.Drawing.Point(12, 19);
             this.btn_addCategory.Name = "btn_addCategory";
-            this.btn_addCategory.Size = new System.Drawing.Size(64, 71);
+            this.btn_addCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_addCategory.TabIndex = 0;
             this.btn_addCategory.Text = "Thêm";
-            this.btn_addCategory.UseVisualStyleBackColor = true;
+            this.btn_addCategory.UseVisualStyleBackColor = false;
             // 
             // btn_deleteCategory
             // 
-            this.btn_deleteCategory.Location = new System.Drawing.Point(87, 19);
+            this.btn_deleteCategory.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteCategory.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_deleteCategory.Location = new System.Drawing.Point(93, 19);
             this.btn_deleteCategory.Name = "btn_deleteCategory";
-            this.btn_deleteCategory.Size = new System.Drawing.Size(64, 71);
+            this.btn_deleteCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteCategory.TabIndex = 0;
             this.btn_deleteCategory.Text = "Xoá";
-            this.btn_deleteCategory.UseVisualStyleBackColor = true;
+            this.btn_deleteCategory.UseVisualStyleBackColor = false;
             // 
             // btn_updateCategory
             // 
-            this.btn_updateCategory.Location = new System.Drawing.Point(172, 19);
+            this.btn_updateCategory.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateCategory.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_updateCategory.Location = new System.Drawing.Point(178, 19);
             this.btn_updateCategory.Name = "btn_updateCategory";
             this.btn_updateCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_updateCategory.TabIndex = 0;
             this.btn_updateCategory.Text = "Sửa";
-            this.btn_updateCategory.UseVisualStyleBackColor = true;
+            this.btn_updateCategory.UseVisualStyleBackColor = false;
             // 
             // btn_viewCategory
             // 
-            this.btn_viewCategory.Location = new System.Drawing.Point(253, 19);
+            this.btn_viewCategory.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewCategory.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_viewCategory.Location = new System.Drawing.Point(259, 19);
             this.btn_viewCategory.Name = "btn_viewCategory";
             this.btn_viewCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_viewCategory.TabIndex = 0;
             this.btn_viewCategory.Text = "Xem";
-            this.btn_viewCategory.UseVisualStyleBackColor = true;
+            this.btn_viewCategory.UseVisualStyleBackColor = false;
             // 
             // panel13
             // 
@@ -1287,10 +1312,28 @@ namespace RestaurantApp.View
             this.panel15.Controls.Add(this.lb_fullname);
             this.panel15.Controls.Add(this.lb_username);
             this.panel15.Controls.Add(this.label25);
-            this.panel15.Location = new System.Drawing.Point(837, 12);
+            this.panel15.Location = new System.Drawing.Point(763, 12);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(358, 445);
             this.panel15.TabIndex = 1;
+            // 
+            // text_userId
+            // 
+            this.text_userId.Location = new System.Drawing.Point(121, 39);
+            this.text_userId.Name = "text_userId";
+            this.text_userId.ReadOnly = true;
+            this.text_userId.Size = new System.Drawing.Size(204, 23);
+            this.text_userId.TabIndex = 27;
+            // 
+            // lb_userId
+            // 
+            this.lb_userId.AutoSize = true;
+            this.lb_userId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_userId.Location = new System.Drawing.Point(9, 39);
+            this.lb_userId.Name = "lb_userId";
+            this.lb_userId.Size = new System.Drawing.Size(31, 18);
+            this.lb_userId.TabIndex = 26;
+            this.lb_userId.Text = "ID:";
             // 
             // cb_userStatus
             // 
@@ -1487,57 +1530,66 @@ namespace RestaurantApp.View
             // 
             // panel16
             // 
+            this.panel16.Controls.Add(this.btn_clearUser);
             this.panel16.Controls.Add(this.btn_addUser);
             this.panel16.Controls.Add(this.btn_deleteUser);
             this.panel16.Controls.Add(this.btn_updateUser);
             this.panel16.Controls.Add(this.btn_viewUser);
-            this.panel16.Location = new System.Drawing.Point(843, 463);
+            this.panel16.Location = new System.Drawing.Point(722, 463);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(324, 101);
+            this.panel16.Size = new System.Drawing.Size(437, 101);
             this.panel16.TabIndex = 2;
             // 
             // btn_addUser
             // 
-            this.btn_addUser.Location = new System.Drawing.Point(6, 18);
+            this.btn_addUser.BackColor = System.Drawing.Color.Green;
+            this.btn_addUser.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_addUser.Location = new System.Drawing.Point(20, 18);
             this.btn_addUser.Name = "btn_addUser";
-            this.btn_addUser.Size = new System.Drawing.Size(64, 71);
+            this.btn_addUser.Size = new System.Drawing.Size(66, 71);
             this.btn_addUser.TabIndex = 0;
             this.btn_addUser.Text = "Thêm";
-            this.btn_addUser.UseVisualStyleBackColor = true;
+            this.btn_addUser.UseVisualStyleBackColor = false;
             // 
             // btn_deleteUser
             // 
-            this.btn_deleteUser.Location = new System.Drawing.Point(87, 18);
+            this.btn_deleteUser.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteUser.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_deleteUser.Location = new System.Drawing.Point(101, 18);
             this.btn_deleteUser.Name = "btn_deleteUser";
-            this.btn_deleteUser.Size = new System.Drawing.Size(64, 71);
+            this.btn_deleteUser.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteUser.TabIndex = 0;
             this.btn_deleteUser.Text = "Xoá";
-            this.btn_deleteUser.UseVisualStyleBackColor = true;
+            this.btn_deleteUser.UseVisualStyleBackColor = false;
             // 
             // btn_updateUser
             // 
-            this.btn_updateUser.Location = new System.Drawing.Point(172, 18);
+            this.btn_updateUser.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateUser.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_updateUser.Location = new System.Drawing.Point(186, 18);
             this.btn_updateUser.Name = "btn_updateUser";
             this.btn_updateUser.Size = new System.Drawing.Size(66, 71);
             this.btn_updateUser.TabIndex = 0;
             this.btn_updateUser.Text = "Sửa";
-            this.btn_updateUser.UseVisualStyleBackColor = true;
+            this.btn_updateUser.UseVisualStyleBackColor = false;
             // 
             // btn_viewUser
             // 
-            this.btn_viewUser.Location = new System.Drawing.Point(253, 18);
+            this.btn_viewUser.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewUser.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_viewUser.Location = new System.Drawing.Point(267, 18);
             this.btn_viewUser.Name = "btn_viewUser";
             this.btn_viewUser.Size = new System.Drawing.Size(66, 71);
             this.btn_viewUser.TabIndex = 0;
             this.btn_viewUser.Text = "Xem";
-            this.btn_viewUser.UseVisualStyleBackColor = true;
+            this.btn_viewUser.UseVisualStyleBackColor = false;
             // 
             // panel17
             // 
             this.panel17.Controls.Add(this.dataGridView_user);
             this.panel17.Location = new System.Drawing.Point(7, 48);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(802, 529);
+            this.panel17.Size = new System.Drawing.Size(678, 529);
             this.panel17.TabIndex = 3;
             // 
             // dataGridView_user
@@ -1570,308 +1622,8 @@ namespace RestaurantApp.View
             this.dataGridView_user.Name = "dataGridView_user";
             this.dataGridView_user.ReadOnly = true;
             this.dataGridView_user.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView_user.Size = new System.Drawing.Size(796, 523);
+            this.dataGridView_user.Size = new System.Drawing.Size(672, 523);
             this.dataGridView_user.TabIndex = 2;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.btn_searchuser);
-            this.panel18.Controls.Add(this.tb_searchtextuser);
-            this.panel18.Location = new System.Drawing.Point(8, 8);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(424, 34);
-            this.panel18.TabIndex = 4;
-            // 
-            // btn_searchuser
-            // 
-            this.btn_searchuser.Location = new System.Drawing.Point(325, 4);
-            this.btn_searchuser.Name = "btn_searchuser";
-            this.btn_searchuser.Size = new System.Drawing.Size(86, 27);
-            this.btn_searchuser.TabIndex = 1;
-            this.btn_searchuser.Text = "Tìm kiếm";
-            this.btn_searchuser.UseVisualStyleBackColor = true;
-            // 
-            // tb_searchtextuser
-            // 
-            this.tb_searchtextuser.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtextuser.Location = new System.Drawing.Point(3, 3);
-            this.tb_searchtextuser.Name = "tb_searchtextuser";
-            this.tb_searchtextuser.Size = new System.Drawing.Size(292, 27);
-            this.tb_searchtextuser.TabIndex = 0;
-            // 
-            // tbSale
-            // 
-            this.tbSale.Controls.Add(this.panel21);
-            this.tbSale.Controls.Add(this.panel22);
-            this.tbSale.Controls.Add(this.panel20);
-            this.tbSale.Controls.Add(this.panel19);
-            this.tbSale.Location = new System.Drawing.Point(4, 25);
-            this.tbSale.Name = "tbSale";
-            this.tbSale.Padding = new System.Windows.Forms.Padding(3);
-            this.tbSale.Size = new System.Drawing.Size(1205, 583);
-            this.tbSale.TabIndex = 5;
-            this.tbSale.Text = "Chương trình giảm giá";
-            this.tbSale.UseVisualStyleBackColor = true;
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.text_saleId);
-            this.panel21.Controls.Add(this.lb_saleId);
-            this.panel21.Controls.Add(this.saleDiscountNum);
-            this.panel21.Controls.Add(this.cb_saleStatus);
-            this.panel21.Controls.Add(this.label5);
-            this.panel21.Controls.Add(this.lb_saleDiscount);
-            this.panel21.Controls.Add(this.text_saleName);
-            this.panel21.Controls.Add(this.lb_saleName);
-            this.panel21.Controls.Add(this.lb_sale);
-            this.panel21.Location = new System.Drawing.Point(726, 110);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(385, 247);
-            this.panel21.TabIndex = 7;
-            // 
-            // text_saleId
-            // 
-            this.text_saleId.Location = new System.Drawing.Point(120, 87);
-            this.text_saleId.Name = "text_saleId";
-            this.text_saleId.ReadOnly = true;
-            this.text_saleId.Size = new System.Drawing.Size(221, 23);
-            this.text_saleId.TabIndex = 5;
-            // 
-            // lb_saleId
-            // 
-            this.lb_saleId.AutoSize = true;
-            this.lb_saleId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_saleId.Location = new System.Drawing.Point(25, 88);
-            this.lb_saleId.Name = "lb_saleId";
-            this.lb_saleId.Size = new System.Drawing.Size(31, 18);
-            this.lb_saleId.TabIndex = 4;
-            this.lb_saleId.Text = "ID:";
-            // 
-            // saleDiscountNum
-            // 
-            this.saleDiscountNum.Location = new System.Drawing.Point(120, 168);
-            this.saleDiscountNum.Name = "saleDiscountNum";
-            this.saleDiscountNum.Size = new System.Drawing.Size(120, 23);
-            this.saleDiscountNum.TabIndex = 3;
-            // 
-            // cb_saleStatus
-            // 
-            this.cb_saleStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_saleStatus.FormattingEnabled = true;
-            this.cb_saleStatus.Location = new System.Drawing.Point(120, 208);
-            this.cb_saleStatus.Name = "cb_saleStatus";
-            this.cb_saleStatus.Size = new System.Drawing.Size(221, 24);
-            this.cb_saleStatus.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 18);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Trạng thái:";
-            // 
-            // lb_saleDiscount
-            // 
-            this.lb_saleDiscount.AutoSize = true;
-            this.lb_saleDiscount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_saleDiscount.Location = new System.Drawing.Point(25, 168);
-            this.lb_saleDiscount.Name = "lb_saleDiscount";
-            this.lb_saleDiscount.Size = new System.Drawing.Size(35, 18);
-            this.lb_saleDiscount.TabIndex = 0;
-            this.lb_saleDiscount.Text = "Mã:";
-            // 
-            // text_saleName
-            // 
-            this.text_saleName.Location = new System.Drawing.Point(120, 128);
-            this.text_saleName.Name = "text_saleName";
-            this.text_saleName.Size = new System.Drawing.Size(221, 23);
-            this.text_saleName.TabIndex = 1;
-            // 
-            // lb_saleName
-            // 
-            this.lb_saleName.AutoSize = true;
-            this.lb_saleName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_saleName.Location = new System.Drawing.Point(25, 129);
-            this.lb_saleName.Name = "lb_saleName";
-            this.lb_saleName.Size = new System.Drawing.Size(40, 18);
-            this.lb_saleName.TabIndex = 0;
-            this.lb_saleName.Text = "Tên:";
-            // 
-            // lb_sale
-            // 
-            this.lb_sale.AutoSize = true;
-            this.lb_sale.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sale.Location = new System.Drawing.Point(76, 29);
-            this.lb_sale.Name = "lb_sale";
-            this.lb_sale.Size = new System.Drawing.Size(224, 23);
-            this.lb_sale.TabIndex = 0;
-            this.lb_sale.Text = "Chương trình giảm giá";
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.btn_addSale);
-            this.panel22.Controls.Add(this.btn_deleteSale);
-            this.panel22.Controls.Add(this.btn_updateSale);
-            this.panel22.Controls.Add(this.btn_viewSale);
-            this.panel22.Location = new System.Drawing.Point(748, 363);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(332, 127);
-            this.panel22.TabIndex = 8;
-            // 
-            // btn_addSale
-            // 
-            this.btn_addSale.Location = new System.Drawing.Point(6, 19);
-            this.btn_addSale.Name = "btn_addSale";
-            this.btn_addSale.Size = new System.Drawing.Size(64, 71);
-            this.btn_addSale.TabIndex = 0;
-            this.btn_addSale.Text = "Thêm";
-            this.btn_addSale.UseVisualStyleBackColor = true;
-            // 
-            // btn_deleteSale
-            // 
-            this.btn_deleteSale.Location = new System.Drawing.Point(87, 19);
-            this.btn_deleteSale.Name = "btn_deleteSale";
-            this.btn_deleteSale.Size = new System.Drawing.Size(64, 71);
-            this.btn_deleteSale.TabIndex = 0;
-            this.btn_deleteSale.Text = "Xoá";
-            this.btn_deleteSale.UseVisualStyleBackColor = true;
-            // 
-            // btn_updateSale
-            // 
-            this.btn_updateSale.Location = new System.Drawing.Point(172, 19);
-            this.btn_updateSale.Name = "btn_updateSale";
-            this.btn_updateSale.Size = new System.Drawing.Size(66, 71);
-            this.btn_updateSale.TabIndex = 0;
-            this.btn_updateSale.Text = "Sửa";
-            this.btn_updateSale.UseVisualStyleBackColor = true;
-            // 
-            // btn_viewSale
-            // 
-            this.btn_viewSale.Location = new System.Drawing.Point(253, 19);
-            this.btn_viewSale.Name = "btn_viewSale";
-            this.btn_viewSale.Size = new System.Drawing.Size(66, 71);
-            this.btn_viewSale.TabIndex = 0;
-            this.btn_viewSale.Text = "Xem";
-            this.btn_viewSale.UseVisualStyleBackColor = true;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.dataGridView_Sale);
-            this.panel20.Location = new System.Drawing.Point(14, 60);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(661, 517);
-            this.panel20.TabIndex = 6;
-            // 
-            // dataGridView_Sale
-            // 
-            this.dataGridView_Sale.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_Sale.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView_Sale.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Sale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridView_Sale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Sale.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.saleName,
-            this.saleDiscount,
-            this.saleStatus,
-            this.saleCreatedDate});
-            this.dataGridView_Sale.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridView_Sale.Location = new System.Drawing.Point(10, 3);
-            this.dataGridView_Sale.Name = "dataGridView_Sale";
-            this.dataGridView_Sale.ReadOnly = true;
-            this.dataGridView_Sale.Size = new System.Drawing.Size(639, 511);
-            this.dataGridView_Sale.TabIndex = 2;
-            // 
-            // saleName
-            // 
-            this.saleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.saleName.DataPropertyName = "Name";
-            this.saleName.HeaderText = "Tên";
-            this.saleName.Name = "saleName";
-            this.saleName.ReadOnly = true;
-            // 
-            // saleDiscount
-            // 
-            this.saleDiscount.DataPropertyName = "Discount";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.saleDiscount.DefaultCellStyle = dataGridViewCellStyle19;
-            this.saleDiscount.HeaderText = "Giảm giá (%)";
-            this.saleDiscount.Name = "saleDiscount";
-            this.saleDiscount.ReadOnly = true;
-            // 
-            // saleStatus
-            // 
-            this.saleStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.saleStatus.DataPropertyName = "Status";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.saleStatus.DefaultCellStyle = dataGridViewCellStyle20;
-            this.saleStatus.HeaderText = "Trạng thái";
-            this.saleStatus.Name = "saleStatus";
-            this.saleStatus.ReadOnly = true;
-            // 
-            // saleCreatedDate
-            // 
-            this.saleCreatedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.saleCreatedDate.DataPropertyName = "CreatedDate";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.Format = "dd/MM/yyyy";
-            this.saleCreatedDate.DefaultCellStyle = dataGridViewCellStyle21;
-            this.saleCreatedDate.HeaderText = "Ngày tạo";
-            this.saleCreatedDate.Name = "saleCreatedDate";
-            this.saleCreatedDate.ReadOnly = true;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.btn_SearchSale);
-            this.panel19.Controls.Add(this.text_searchSale);
-            this.panel19.Location = new System.Drawing.Point(11, 16);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(424, 34);
-            this.panel19.TabIndex = 5;
-            // 
-            // btn_SearchSale
-            // 
-            this.btn_SearchSale.Location = new System.Drawing.Point(325, 4);
-            this.btn_SearchSale.Name = "btn_SearchSale";
-            this.btn_SearchSale.Size = new System.Drawing.Size(86, 27);
-            this.btn_SearchSale.TabIndex = 1;
-            this.btn_SearchSale.Text = "Tìm kiếm";
-            this.btn_SearchSale.UseVisualStyleBackColor = true;
-            // 
-            // text_searchSale
-            // 
-            this.text_searchSale.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_searchSale.Location = new System.Drawing.Point(3, 3);
-            this.text_searchSale.Name = "text_searchSale";
-            this.text_searchSale.Size = new System.Drawing.Size(292, 27);
-            this.text_searchSale.TabIndex = 0;
-            // 
-            // text_userId
-            // 
-            this.text_userId.Location = new System.Drawing.Point(121, 39);
-            this.text_userId.Name = "text_userId";
-            this.text_userId.ReadOnly = true;
-            this.text_userId.Size = new System.Drawing.Size(204, 23);
-            this.text_userId.TabIndex = 27;
-            // 
-            // lb_userId
-            // 
-            this.lb_userId.AutoSize = true;
-            this.lb_userId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_userId.Location = new System.Drawing.Point(9, 39);
-            this.lb_userId.Name = "lb_userId";
-            this.lb_userId.Size = new System.Drawing.Size(31, 18);
-            this.lb_userId.TabIndex = 26;
-            this.lb_userId.Text = "ID:";
             // 
             // UserId
             // 
@@ -1992,6 +1744,360 @@ namespace RestaurantApp.View
             this.createdDateUser.Name = "createdDateUser";
             this.createdDateUser.ReadOnly = true;
             this.createdDateUser.Width = 83;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.btn_searchuser);
+            this.panel18.Controls.Add(this.tb_searchtextuser);
+            this.panel18.Location = new System.Drawing.Point(8, 8);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(424, 34);
+            this.panel18.TabIndex = 4;
+            // 
+            // btn_searchuser
+            // 
+            this.btn_searchuser.Location = new System.Drawing.Point(325, 4);
+            this.btn_searchuser.Name = "btn_searchuser";
+            this.btn_searchuser.Size = new System.Drawing.Size(86, 27);
+            this.btn_searchuser.TabIndex = 1;
+            this.btn_searchuser.Text = "Tìm kiếm";
+            this.btn_searchuser.UseVisualStyleBackColor = true;
+            // 
+            // tb_searchtextuser
+            // 
+            this.tb_searchtextuser.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_searchtextuser.Location = new System.Drawing.Point(3, 3);
+            this.tb_searchtextuser.Name = "tb_searchtextuser";
+            this.tb_searchtextuser.Size = new System.Drawing.Size(292, 27);
+            this.tb_searchtextuser.TabIndex = 0;
+            // 
+            // tbSale
+            // 
+            this.tbSale.Controls.Add(this.panel21);
+            this.tbSale.Controls.Add(this.panel22);
+            this.tbSale.Controls.Add(this.panel20);
+            this.tbSale.Controls.Add(this.panel19);
+            this.tbSale.Location = new System.Drawing.Point(4, 25);
+            this.tbSale.Name = "tbSale";
+            this.tbSale.Padding = new System.Windows.Forms.Padding(3);
+            this.tbSale.Size = new System.Drawing.Size(1205, 583);
+            this.tbSale.TabIndex = 5;
+            this.tbSale.Text = "Chương trình giảm giá";
+            this.tbSale.UseVisualStyleBackColor = true;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.text_saleId);
+            this.panel21.Controls.Add(this.lb_saleId);
+            this.panel21.Controls.Add(this.saleDiscountNum);
+            this.panel21.Controls.Add(this.cb_saleStatus);
+            this.panel21.Controls.Add(this.label5);
+            this.panel21.Controls.Add(this.lb_saleDiscount);
+            this.panel21.Controls.Add(this.text_saleName);
+            this.panel21.Controls.Add(this.lb_saleName);
+            this.panel21.Controls.Add(this.lb_sale);
+            this.panel21.Location = new System.Drawing.Point(751, 110);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(385, 247);
+            this.panel21.TabIndex = 7;
+            // 
+            // text_saleId
+            // 
+            this.text_saleId.Location = new System.Drawing.Point(120, 87);
+            this.text_saleId.Name = "text_saleId";
+            this.text_saleId.ReadOnly = true;
+            this.text_saleId.Size = new System.Drawing.Size(221, 23);
+            this.text_saleId.TabIndex = 5;
+            // 
+            // lb_saleId
+            // 
+            this.lb_saleId.AutoSize = true;
+            this.lb_saleId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_saleId.Location = new System.Drawing.Point(25, 88);
+            this.lb_saleId.Name = "lb_saleId";
+            this.lb_saleId.Size = new System.Drawing.Size(31, 18);
+            this.lb_saleId.TabIndex = 4;
+            this.lb_saleId.Text = "ID:";
+            // 
+            // saleDiscountNum
+            // 
+            this.saleDiscountNum.Location = new System.Drawing.Point(120, 168);
+            this.saleDiscountNum.Name = "saleDiscountNum";
+            this.saleDiscountNum.Size = new System.Drawing.Size(120, 23);
+            this.saleDiscountNum.TabIndex = 3;
+            // 
+            // cb_saleStatus
+            // 
+            this.cb_saleStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_saleStatus.FormattingEnabled = true;
+            this.cb_saleStatus.Location = new System.Drawing.Point(120, 208);
+            this.cb_saleStatus.Name = "cb_saleStatus";
+            this.cb_saleStatus.Size = new System.Drawing.Size(221, 24);
+            this.cb_saleStatus.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 18);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Trạng thái:";
+            // 
+            // lb_saleDiscount
+            // 
+            this.lb_saleDiscount.AutoSize = true;
+            this.lb_saleDiscount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_saleDiscount.Location = new System.Drawing.Point(25, 168);
+            this.lb_saleDiscount.Name = "lb_saleDiscount";
+            this.lb_saleDiscount.Size = new System.Drawing.Size(35, 18);
+            this.lb_saleDiscount.TabIndex = 0;
+            this.lb_saleDiscount.Text = "Mã:";
+            // 
+            // text_saleName
+            // 
+            this.text_saleName.Location = new System.Drawing.Point(120, 128);
+            this.text_saleName.Name = "text_saleName";
+            this.text_saleName.Size = new System.Drawing.Size(221, 23);
+            this.text_saleName.TabIndex = 1;
+            // 
+            // lb_saleName
+            // 
+            this.lb_saleName.AutoSize = true;
+            this.lb_saleName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_saleName.Location = new System.Drawing.Point(25, 129);
+            this.lb_saleName.Name = "lb_saleName";
+            this.lb_saleName.Size = new System.Drawing.Size(40, 18);
+            this.lb_saleName.TabIndex = 0;
+            this.lb_saleName.Text = "Tên:";
+            // 
+            // lb_sale
+            // 
+            this.lb_sale.AutoSize = true;
+            this.lb_sale.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sale.Location = new System.Drawing.Point(76, 29);
+            this.lb_sale.Name = "lb_sale";
+            this.lb_sale.Size = new System.Drawing.Size(224, 23);
+            this.lb_sale.TabIndex = 0;
+            this.lb_sale.Text = "Chương trình giảm giá";
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.btn_clearSale);
+            this.panel22.Controls.Add(this.btn_addSale);
+            this.panel22.Controls.Add(this.btn_deleteSale);
+            this.panel22.Controls.Add(this.btn_updateSale);
+            this.panel22.Controls.Add(this.btn_viewSale);
+            this.panel22.Location = new System.Drawing.Point(720, 377);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(444, 113);
+            this.panel22.TabIndex = 8;
+            // 
+            // btn_addSale
+            // 
+            this.btn_addSale.BackColor = System.Drawing.Color.Green;
+            this.btn_addSale.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_addSale.Location = new System.Drawing.Point(20, 19);
+            this.btn_addSale.Name = "btn_addSale";
+            this.btn_addSale.Size = new System.Drawing.Size(66, 71);
+            this.btn_addSale.TabIndex = 0;
+            this.btn_addSale.Text = "Thêm";
+            this.btn_addSale.UseVisualStyleBackColor = false;
+            // 
+            // btn_deleteSale
+            // 
+            this.btn_deleteSale.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteSale.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_deleteSale.Location = new System.Drawing.Point(101, 19);
+            this.btn_deleteSale.Name = "btn_deleteSale";
+            this.btn_deleteSale.Size = new System.Drawing.Size(66, 71);
+            this.btn_deleteSale.TabIndex = 0;
+            this.btn_deleteSale.Text = "Xoá";
+            this.btn_deleteSale.UseVisualStyleBackColor = false;
+            // 
+            // btn_updateSale
+            // 
+            this.btn_updateSale.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateSale.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_updateSale.Location = new System.Drawing.Point(186, 19);
+            this.btn_updateSale.Name = "btn_updateSale";
+            this.btn_updateSale.Size = new System.Drawing.Size(66, 71);
+            this.btn_updateSale.TabIndex = 0;
+            this.btn_updateSale.Text = "Sửa";
+            this.btn_updateSale.UseVisualStyleBackColor = false;
+            // 
+            // btn_viewSale
+            // 
+            this.btn_viewSale.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewSale.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_viewSale.Location = new System.Drawing.Point(267, 19);
+            this.btn_viewSale.Name = "btn_viewSale";
+            this.btn_viewSale.Size = new System.Drawing.Size(66, 71);
+            this.btn_viewSale.TabIndex = 0;
+            this.btn_viewSale.Text = "Xem";
+            this.btn_viewSale.UseVisualStyleBackColor = false;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.dataGridView_Sale);
+            this.panel20.Location = new System.Drawing.Point(14, 60);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(661, 517);
+            this.panel20.TabIndex = 6;
+            // 
+            // dataGridView_Sale
+            // 
+            this.dataGridView_Sale.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_Sale.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView_Sale.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Sale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView_Sale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Sale.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SaleID,
+            this.saleName,
+            this.saleDiscount,
+            this.saleStatus,
+            this.saleCreatedDate});
+            this.dataGridView_Sale.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataGridView_Sale.Location = new System.Drawing.Point(10, 3);
+            this.dataGridView_Sale.Name = "dataGridView_Sale";
+            this.dataGridView_Sale.ReadOnly = true;
+            this.dataGridView_Sale.Size = new System.Drawing.Size(639, 511);
+            this.dataGridView_Sale.TabIndex = 2;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.btn_SearchSale);
+            this.panel19.Controls.Add(this.text_searchSale);
+            this.panel19.Location = new System.Drawing.Point(11, 16);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(424, 34);
+            this.panel19.TabIndex = 5;
+            // 
+            // btn_SearchSale
+            // 
+            this.btn_SearchSale.Location = new System.Drawing.Point(325, 4);
+            this.btn_SearchSale.Name = "btn_SearchSale";
+            this.btn_SearchSale.Size = new System.Drawing.Size(86, 27);
+            this.btn_SearchSale.TabIndex = 1;
+            this.btn_SearchSale.Text = "Tìm kiếm";
+            this.btn_SearchSale.UseVisualStyleBackColor = true;
+            // 
+            // text_searchSale
+            // 
+            this.text_searchSale.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_searchSale.Location = new System.Drawing.Point(3, 3);
+            this.text_searchSale.Name = "text_searchSale";
+            this.text_searchSale.Size = new System.Drawing.Size(292, 27);
+            this.text_searchSale.TabIndex = 0;
+            // 
+            // SaleID
+            // 
+            this.SaleID.DataPropertyName = "ID";
+            this.SaleID.HeaderText = "ID";
+            this.SaleID.Name = "SaleID";
+            this.SaleID.ReadOnly = true;
+            // 
+            // saleName
+            // 
+            this.saleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saleName.DataPropertyName = "Name";
+            this.saleName.HeaderText = "Tên";
+            this.saleName.Name = "saleName";
+            this.saleName.ReadOnly = true;
+            // 
+            // saleDiscount
+            // 
+            this.saleDiscount.DataPropertyName = "Discount";
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.saleDiscount.DefaultCellStyle = dataGridViewCellStyle19;
+            this.saleDiscount.HeaderText = "Giảm giá (%)";
+            this.saleDiscount.Name = "saleDiscount";
+            this.saleDiscount.ReadOnly = true;
+            // 
+            // saleStatus
+            // 
+            this.saleStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saleStatus.DataPropertyName = "Status";
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.saleStatus.DefaultCellStyle = dataGridViewCellStyle20;
+            this.saleStatus.HeaderText = "Trạng thái";
+            this.saleStatus.Name = "saleStatus";
+            this.saleStatus.ReadOnly = true;
+            // 
+            // saleCreatedDate
+            // 
+            this.saleCreatedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saleCreatedDate.DataPropertyName = "CreatedDate";
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.Format = "dd/MM/yyyy";
+            this.saleCreatedDate.DefaultCellStyle = dataGridViewCellStyle21;
+            this.saleCreatedDate.HeaderText = "Ngày tạo";
+            this.saleCreatedDate.Name = "saleCreatedDate";
+            this.saleCreatedDate.ReadOnly = true;
+            // 
+            // btn_clearFood
+            // 
+            this.btn_clearFood.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearFood.Location = new System.Drawing.Point(339, 19);
+            this.btn_clearFood.Name = "btn_clearFood";
+            this.btn_clearFood.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearFood.TabIndex = 10;
+            this.btn_clearFood.Text = "Làm mới";
+            this.btn_clearFood.UseVisualStyleBackColor = false;
+            // 
+            // btn_clearTable
+            // 
+            this.btn_clearTable.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearTable.Location = new System.Drawing.Point(341, 21);
+            this.btn_clearTable.Name = "btn_clearTable";
+            this.btn_clearTable.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearTable.TabIndex = 11;
+            this.btn_clearTable.Text = "Làm mới";
+            this.btn_clearTable.UseVisualStyleBackColor = false;
+            // 
+            // btn_clearCategory
+            // 
+            this.btn_clearCategory.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearCategory.Location = new System.Drawing.Point(343, 19);
+            this.btn_clearCategory.Name = "btn_clearCategory";
+            this.btn_clearCategory.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearCategory.TabIndex = 12;
+            this.btn_clearCategory.Text = "Làm mới";
+            this.btn_clearCategory.UseVisualStyleBackColor = false;
+            // 
+            // btn_clearUser
+            // 
+            this.btn_clearUser.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearUser.Location = new System.Drawing.Point(351, 18);
+            this.btn_clearUser.Name = "btn_clearUser";
+            this.btn_clearUser.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearUser.TabIndex = 12;
+            this.btn_clearUser.Text = "Làm mới";
+            this.btn_clearUser.UseVisualStyleBackColor = false;
+            // 
+            // btn_clearSale
+            // 
+            this.btn_clearSale.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearSale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearSale.Location = new System.Drawing.Point(350, 19);
+            this.btn_clearSale.Name = "btn_clearSale";
+            this.btn_clearSale.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearSale.TabIndex = 12;
+            this.btn_clearSale.Text = "Làm mới";
+            this.btn_clearSale.UseVisualStyleBackColor = false;
             // 
             // Admin
             // 
@@ -2190,10 +2296,6 @@ namespace RestaurantApp.View
         private Panel panel19;
         private Button btn_SearchSale;
         private TextBox text_searchSale;
-        private DataGridViewTextBoxColumn saleName;
-        private DataGridViewTextBoxColumn saleDiscount;
-        private DataGridViewTextBoxColumn saleStatus;
-        private DataGridViewTextBoxColumn saleCreatedDate;
         private TextBox text_foodId;
         private Label lb_foodId;
         private DataGridViewTextBoxColumn ID;
@@ -2230,6 +2332,16 @@ namespace RestaurantApp.View
         private DataGridViewTextBoxColumn role;
         private DataGridViewTextBoxColumn dob;
         private DataGridViewTextBoxColumn createdDateUser;
+        private DataGridViewTextBoxColumn SaleID;
+        private DataGridViewTextBoxColumn saleName;
+        private DataGridViewTextBoxColumn saleDiscount;
+        private DataGridViewTextBoxColumn saleStatus;
+        private DataGridViewTextBoxColumn saleCreatedDate;
+        private Button btn_clearFood;
+        private Button btn_clearTable;
+        private Button btn_clearCategory;
+        private Button btn_clearUser;
+        private Button btn_clearSale;
 
         public DataGridView DataGridView_Table { get => dataGridView_table; set => dataGridView_table = value; }
         public DataGridView DataGridView_User { get => dataGridView_user; set => dataGridView_user = value; }

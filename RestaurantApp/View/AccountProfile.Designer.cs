@@ -295,7 +295,6 @@ namespace RestaurantApp.View
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lb_titleInfo);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "AccountProfile";
             this.Text = "AccountProfile";
             this.panel1.ResumeLayout(false);

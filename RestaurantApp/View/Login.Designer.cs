@@ -141,9 +141,7 @@ namespace RestaurantApp.View
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pass_text);
             this.Controls.Add(this.user_text);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhà hàng";

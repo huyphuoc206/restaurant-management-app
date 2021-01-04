@@ -53,13 +53,14 @@ namespace RestaurantApp.Controller
                 {
                     AdminController adminView = new AdminController();
                     view.Hide();
+                    adminView.View.Text = adminView.View.Text + " (" + LoginInfo.Fullname + ")";
                     adminView.View.ShowDialog();
                 }
                 else if (user.Role.Code.Equals(SystemConstant.STAFF))
                 {
                     UserController userView = new UserController();
                     view.Hide();
-                    userView.View.AccountMenu.Text = "Xin chào, "+LoginInfo.Fullname;
+                    userView.View.AccountMenu.Text = "Nhân viên - "+LoginInfo.Fullname;
                     userView.View.ShowDialog();
                 }
                 view.Clear();
