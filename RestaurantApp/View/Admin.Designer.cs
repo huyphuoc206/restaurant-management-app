@@ -31,27 +31,28 @@ namespace RestaurantApp.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlAdmin = new System.Windows.Forms.TabControl();
             this.tpMoney = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -68,7 +69,7 @@ namespace RestaurantApp.View
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tpFoods = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel_food = new System.Windows.Forms.Panel();
             this.text_foodId = new System.Windows.Forms.TextBox();
             this.lb_foodId = new System.Windows.Forms.Label();
             this.food_discount = new System.Windows.Forms.NumericUpDown();
@@ -83,6 +84,7 @@ namespace RestaurantApp.View
             this.lb_foodPrice = new System.Windows.Forms.Label();
             this.lb_food = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_clearFood = new System.Windows.Forms.Button();
             this.btn_addFood = new System.Windows.Forms.Button();
             this.btn_deleteFood = new System.Windows.Forms.Button();
             this.btn_updateFood = new System.Windows.Forms.Button();
@@ -99,17 +101,18 @@ namespace RestaurantApp.View
             this.btn_searchfood = new System.Windows.Forms.Button();
             this.text_searchFood = new System.Windows.Forms.TextBox();
             this.tpTable = new System.Windows.Forms.TabPage();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel_table = new System.Windows.Forms.Panel();
             this.text_tableId = new System.Windows.Forms.TextBox();
             this.lb_tableId = new System.Windows.Forms.Label();
             this.cb_tableStatus = new System.Windows.Forms.ComboBox();
             this.lb_tableStatus = new System.Windows.Forms.Label();
             this.text_tableName = new System.Windows.Forms.TextBox();
             this.lb_tableName = new System.Windows.Forms.Label();
-            this.nud_tableSeats = new System.Windows.Forms.NumericUpDown();
+            this.num_tableSeats = new System.Windows.Forms.NumericUpDown();
             this.lb_tableSeats = new System.Windows.Forms.Label();
             this.lb_titletable = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_clearTable = new System.Windows.Forms.Button();
             this.btn_addTable = new System.Windows.Forms.Button();
             this.btn_deleteTable = new System.Windows.Forms.Button();
             this.btn_updateTable = new System.Windows.Forms.Button();
@@ -124,17 +127,16 @@ namespace RestaurantApp.View
             this.btn_searchtable = new System.Windows.Forms.Button();
             this.tb_searchtexttable = new System.Windows.Forms.TextBox();
             this.tpMenu = new System.Windows.Forms.TabPage();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel_category = new System.Windows.Forms.Panel();
             this.text_categoryId = new System.Windows.Forms.TextBox();
             this.lb_categoryId = new System.Windows.Forms.Label();
             this.cb_categoryStatus = new System.Windows.Forms.ComboBox();
             this.lb_categoryStatus = new System.Windows.Forms.Label();
-            this.text_categoryCode = new System.Windows.Forms.TextBox();
-            this.lb_categoryCode = new System.Windows.Forms.Label();
             this.text_categoryname = new System.Windows.Forms.TextBox();
             this.lb_categoryName = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btn_clearCategory = new System.Windows.Forms.Button();
             this.btn_addCategory = new System.Windows.Forms.Button();
             this.btn_deleteCategory = new System.Windows.Forms.Button();
             this.btn_updateCategory = new System.Windows.Forms.Button();
@@ -149,7 +151,7 @@ namespace RestaurantApp.View
             this.btn_searchcategory = new System.Windows.Forms.Button();
             this.tb_searchtextcaterory = new System.Windows.Forms.TextBox();
             this.tpAccount = new System.Windows.Forms.TabPage();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel_user = new System.Windows.Forms.Panel();
             this.text_userId = new System.Windows.Forms.TextBox();
             this.lb_userId = new System.Windows.Forms.Label();
             this.cb_userStatus = new System.Windows.Forms.ComboBox();
@@ -174,6 +176,7 @@ namespace RestaurantApp.View
             this.lb_username = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.btn_clearUser = new System.Windows.Forms.Button();
             this.btn_addUser = new System.Windows.Forms.Button();
             this.btn_deleteUser = new System.Windows.Forms.Button();
             this.btn_updateUser = new System.Windows.Forms.Button();
@@ -196,7 +199,7 @@ namespace RestaurantApp.View
             this.btn_searchuser = new System.Windows.Forms.Button();
             this.tb_searchtextuser = new System.Windows.Forms.TextBox();
             this.tbSale = new System.Windows.Forms.TabPage();
-            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel_sale = new System.Windows.Forms.Panel();
             this.text_saleId = new System.Windows.Forms.TextBox();
             this.lb_saleId = new System.Windows.Forms.Label();
             this.saleDiscountNum = new System.Windows.Forms.NumericUpDown();
@@ -207,32 +210,29 @@ namespace RestaurantApp.View
             this.lb_saleName = new System.Windows.Forms.Label();
             this.lb_sale = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.btn_clearSale = new System.Windows.Forms.Button();
             this.btn_addSale = new System.Windows.Forms.Button();
             this.btn_deleteSale = new System.Windows.Forms.Button();
             this.btn_updateSale = new System.Windows.Forms.Button();
             this.btn_viewSale = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.dataGridView_Sale = new System.Windows.Forms.DataGridView();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.btn_SearchSale = new System.Windows.Forms.Button();
-            this.text_searchSale = new System.Windows.Forms.TextBox();
             this.SaleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_clearFood = new System.Windows.Forms.Button();
-            this.btn_clearTable = new System.Windows.Forms.Button();
-            this.btn_clearCategory = new System.Windows.Forms.Button();
-            this.btn_clearUser = new System.Windows.Forms.Button();
-            this.btn_clearSale = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.btn_SearchSale = new System.Windows.Forms.Button();
+            this.text_searchSale = new System.Windows.Forms.TextBox();
+            this.errorEmpty = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControlAdmin.SuspendLayout();
             this.tpMoney.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_order)).BeginInit();
             this.panel1.SuspendLayout();
             this.tpFoods.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel_food.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.food_discount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.food_price)).BeginInit();
             this.panel5.SuspendLayout();
@@ -240,32 +240,33 @@ namespace RestaurantApp.View
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_food)).BeginInit();
             this.panel3.SuspendLayout();
             this.tpTable.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_tableSeats)).BeginInit();
+            this.panel_table.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_tableSeats)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_table)).BeginInit();
             this.panel10.SuspendLayout();
             this.tpMenu.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel_category.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_category)).BeginInit();
             this.panel14.SuspendLayout();
             this.tpAccount.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.panel_user.SuspendLayout();
             this.pn_gender.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_user)).BeginInit();
             this.panel18.SuspendLayout();
             this.tbSale.SuspendLayout();
-            this.panel21.SuspendLayout();
+            this.panel_sale.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saleDiscountNum)).BeginInit();
             this.panel22.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sale)).BeginInit();
             this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmpty)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdmin
@@ -423,7 +424,7 @@ namespace RestaurantApp.View
             // 
             // tpFoods
             // 
-            this.tpFoods.Controls.Add(this.panel6);
+            this.tpFoods.Controls.Add(this.panel_food);
             this.tpFoods.Controls.Add(this.panel5);
             this.tpFoods.Controls.Add(this.panel4);
             this.tpFoods.Controls.Add(this.panel3);
@@ -435,25 +436,25 @@ namespace RestaurantApp.View
             this.tpFoods.Text = "Món ăn";
             this.tpFoods.UseVisualStyleBackColor = true;
             // 
-            // panel6
+            // panel_food
             // 
-            this.panel6.Controls.Add(this.text_foodId);
-            this.panel6.Controls.Add(this.lb_foodId);
-            this.panel6.Controls.Add(this.food_discount);
-            this.panel6.Controls.Add(this.food_price);
-            this.panel6.Controls.Add(this.cb_foodCategory);
-            this.panel6.Controls.Add(this.lb_foodCategory);
-            this.panel6.Controls.Add(this.cb_foodStatus);
-            this.panel6.Controls.Add(this.lb_foodStatus);
-            this.panel6.Controls.Add(this.lb_foodDiscount);
-            this.panel6.Controls.Add(this.text_foodName);
-            this.panel6.Controls.Add(this.lb_foodName);
-            this.panel6.Controls.Add(this.lb_foodPrice);
-            this.panel6.Controls.Add(this.lb_food);
-            this.panel6.Location = new System.Drawing.Point(800, 99);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(375, 302);
-            this.panel6.TabIndex = 0;
+            this.panel_food.Controls.Add(this.text_foodId);
+            this.panel_food.Controls.Add(this.lb_foodId);
+            this.panel_food.Controls.Add(this.food_discount);
+            this.panel_food.Controls.Add(this.food_price);
+            this.panel_food.Controls.Add(this.cb_foodCategory);
+            this.panel_food.Controls.Add(this.lb_foodCategory);
+            this.panel_food.Controls.Add(this.cb_foodStatus);
+            this.panel_food.Controls.Add(this.lb_foodStatus);
+            this.panel_food.Controls.Add(this.lb_foodDiscount);
+            this.panel_food.Controls.Add(this.text_foodName);
+            this.panel_food.Controls.Add(this.lb_foodName);
+            this.panel_food.Controls.Add(this.lb_foodPrice);
+            this.panel_food.Controls.Add(this.lb_food);
+            this.panel_food.Location = new System.Drawing.Point(800, 99);
+            this.panel_food.Name = "panel_food";
+            this.panel_food.Size = new System.Drawing.Size(375, 302);
+            this.panel_food.TabIndex = 0;
             // 
             // text_foodId
             // 
@@ -462,6 +463,7 @@ namespace RestaurantApp.View
             this.text_foodId.ReadOnly = true;
             this.text_foodId.Size = new System.Drawing.Size(221, 23);
             this.text_foodId.TabIndex = 7;
+            this.text_foodId.TextChanged += new System.EventHandler(this.text_foodId_TextChanged);
             // 
             // lb_foodId
             // 
@@ -476,11 +478,6 @@ namespace RestaurantApp.View
             // food_discount
             // 
             this.food_discount.Location = new System.Drawing.Point(104, 218);
-            this.food_discount.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
             this.food_discount.Name = "food_discount";
             this.food_discount.Size = new System.Drawing.Size(107, 23);
             this.food_discount.TabIndex = 4;
@@ -551,7 +548,7 @@ namespace RestaurantApp.View
             this.text_foodName.Name = "text_foodName";
             this.text_foodName.Size = new System.Drawing.Size(221, 23);
             this.text_foodName.TabIndex = 1;
-            this.text_foodName.TextChanged += new System.EventHandler(this.text_foodName_TextChanged);
+            this.text_foodName.Validating += new System.ComponentModel.CancelEventHandler(this.text_foodName_Validating);
             // 
             // lb_foodName
             // 
@@ -594,6 +591,18 @@ namespace RestaurantApp.View
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(417, 127);
             this.panel5.TabIndex = 0;
+            // 
+            // btn_clearFood
+            // 
+            this.btn_clearFood.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearFood.Location = new System.Drawing.Point(339, 19);
+            this.btn_clearFood.Name = "btn_clearFood";
+            this.btn_clearFood.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearFood.TabIndex = 10;
+            this.btn_clearFood.Text = "Làm mới";
+            this.btn_clearFood.UseVisualStyleBackColor = false;
+            this.btn_clearFood.Click += new System.EventHandler(this.btn_clearFood_Click);
             // 
             // btn_addFood
             // 
@@ -651,14 +660,14 @@ namespace RestaurantApp.View
             // 
             this.dataGridView_food.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_food.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_food.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_food.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.dataGridView_food.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_food.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -692,8 +701,8 @@ namespace RestaurantApp.View
             // 
             this.foodPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.foodPrice.DataPropertyName = "Price";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.foodPrice.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.foodPrice.DefaultCellStyle = dataGridViewCellStyle44;
             this.foodPrice.HeaderText = "Giá";
             this.foodPrice.Name = "foodPrice";
             this.foodPrice.ReadOnly = true;
@@ -702,8 +711,8 @@ namespace RestaurantApp.View
             // 
             this.discount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.discount.DataPropertyName = "Discount";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.discount.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.discount.DefaultCellStyle = dataGridViewCellStyle45;
             this.discount.HeaderText = "Giảm giá (%)";
             this.discount.Name = "discount";
             this.discount.ReadOnly = true;
@@ -720,8 +729,8 @@ namespace RestaurantApp.View
             // 
             this.foodStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.foodStatus.DataPropertyName = "Status";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.foodStatus.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.foodStatus.DefaultCellStyle = dataGridViewCellStyle46;
             this.foodStatus.HeaderText = "Trạng thái";
             this.foodStatus.Name = "foodStatus";
             this.foodStatus.ReadOnly = true;
@@ -754,7 +763,7 @@ namespace RestaurantApp.View
             // 
             // tpTable
             // 
-            this.tpTable.Controls.Add(this.panel7);
+            this.tpTable.Controls.Add(this.panel_table);
             this.tpTable.Controls.Add(this.panel8);
             this.tpTable.Controls.Add(this.panel9);
             this.tpTable.Controls.Add(this.panel10);
@@ -766,29 +775,30 @@ namespace RestaurantApp.View
             this.tpTable.Text = "Bàn ăn";
             this.tpTable.UseVisualStyleBackColor = true;
             // 
-            // panel7
+            // panel_table
             // 
-            this.panel7.Controls.Add(this.text_tableId);
-            this.panel7.Controls.Add(this.lb_tableId);
-            this.panel7.Controls.Add(this.cb_tableStatus);
-            this.panel7.Controls.Add(this.lb_tableStatus);
-            this.panel7.Controls.Add(this.text_tableName);
-            this.panel7.Controls.Add(this.lb_tableName);
-            this.panel7.Controls.Add(this.nud_tableSeats);
-            this.panel7.Controls.Add(this.lb_tableSeats);
-            this.panel7.Controls.Add(this.lb_titletable);
-            this.panel7.Location = new System.Drawing.Point(779, 120);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(361, 239);
-            this.panel7.TabIndex = 1;
+            this.panel_table.Controls.Add(this.text_tableId);
+            this.panel_table.Controls.Add(this.lb_tableId);
+            this.panel_table.Controls.Add(this.cb_tableStatus);
+            this.panel_table.Controls.Add(this.lb_tableStatus);
+            this.panel_table.Controls.Add(this.text_tableName);
+            this.panel_table.Controls.Add(this.lb_tableName);
+            this.panel_table.Controls.Add(this.num_tableSeats);
+            this.panel_table.Controls.Add(this.lb_tableSeats);
+            this.panel_table.Controls.Add(this.lb_titletable);
+            this.panel_table.Location = new System.Drawing.Point(779, 120);
+            this.panel_table.Name = "panel_table";
+            this.panel_table.Size = new System.Drawing.Size(385, 239);
+            this.panel_table.TabIndex = 1;
             // 
             // text_tableId
             // 
-            this.text_tableId.Location = new System.Drawing.Point(114, 65);
+            this.text_tableId.Location = new System.Drawing.Point(123, 66);
             this.text_tableId.Name = "text_tableId";
             this.text_tableId.ReadOnly = true;
             this.text_tableId.Size = new System.Drawing.Size(221, 23);
             this.text_tableId.TabIndex = 10;
+            this.text_tableId.TextChanged += new System.EventHandler(this.text_tableId_TextChanged);
             // 
             // lb_tableId
             // 
@@ -804,7 +814,7 @@ namespace RestaurantApp.View
             // 
             this.cb_tableStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_tableStatus.FormattingEnabled = true;
-            this.cb_tableStatus.Location = new System.Drawing.Point(114, 149);
+            this.cb_tableStatus.Location = new System.Drawing.Point(123, 199);
             this.cb_tableStatus.Name = "cb_tableStatus";
             this.cb_tableStatus.Size = new System.Drawing.Size(221, 24);
             this.cb_tableStatus.TabIndex = 8;
@@ -813,7 +823,7 @@ namespace RestaurantApp.View
             // 
             this.lb_tableStatus.AutoSize = true;
             this.lb_tableStatus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tableStatus.Location = new System.Drawing.Point(19, 150);
+            this.lb_tableStatus.Location = new System.Drawing.Point(19, 200);
             this.lb_tableStatus.Name = "lb_tableStatus";
             this.lb_tableStatus.Size = new System.Drawing.Size(89, 18);
             this.lb_tableStatus.TabIndex = 7;
@@ -821,10 +831,11 @@ namespace RestaurantApp.View
             // 
             // text_tableName
             // 
-            this.text_tableName.Location = new System.Drawing.Point(114, 108);
+            this.text_tableName.Location = new System.Drawing.Point(123, 109);
             this.text_tableName.Name = "text_tableName";
             this.text_tableName.Size = new System.Drawing.Size(221, 23);
             this.text_tableName.TabIndex = 6;
+            this.text_tableName.Validating += new System.ComponentModel.CancelEventHandler(this.text_tableName_Validating);
             // 
             // lb_tableName
             // 
@@ -836,18 +847,28 @@ namespace RestaurantApp.View
             this.lb_tableName.TabIndex = 5;
             this.lb_tableName.Text = "Tên:";
             // 
-            // nud_tableSeats
+            // num_tableSeats
             // 
-            this.nud_tableSeats.Location = new System.Drawing.Point(123, 195);
-            this.nud_tableSeats.Name = "nud_tableSeats";
-            this.nud_tableSeats.Size = new System.Drawing.Size(67, 23);
-            this.nud_tableSeats.TabIndex = 3;
+            this.num_tableSeats.Location = new System.Drawing.Point(123, 158);
+            this.num_tableSeats.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_tableSeats.Name = "num_tableSeats";
+            this.num_tableSeats.Size = new System.Drawing.Size(67, 23);
+            this.num_tableSeats.TabIndex = 3;
+            this.num_tableSeats.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lb_tableSeats
             // 
             this.lb_tableSeats.AutoSize = true;
             this.lb_tableSeats.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tableSeats.Location = new System.Drawing.Point(19, 195);
+            this.lb_tableSeats.Location = new System.Drawing.Point(19, 158);
             this.lb_tableSeats.Name = "lb_tableSeats";
             this.lb_tableSeats.Size = new System.Drawing.Size(98, 18);
             this.lb_tableSeats.TabIndex = 0;
@@ -874,6 +895,18 @@ namespace RestaurantApp.View
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(437, 127);
             this.panel8.TabIndex = 2;
+            // 
+            // btn_clearTable
+            // 
+            this.btn_clearTable.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearTable.Location = new System.Drawing.Point(341, 21);
+            this.btn_clearTable.Name = "btn_clearTable";
+            this.btn_clearTable.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearTable.TabIndex = 11;
+            this.btn_clearTable.Text = "Làm mới";
+            this.btn_clearTable.UseVisualStyleBackColor = false;
+            this.btn_clearTable.Click += new System.EventHandler(this.btn_clearTable_Click);
             // 
             // btn_addTable
             // 
@@ -931,14 +964,14 @@ namespace RestaurantApp.View
             // 
             this.dataGridView_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_table.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_table.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.dataGridView_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -970,8 +1003,8 @@ namespace RestaurantApp.View
             // 
             this.seats.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.seats.DataPropertyName = "Seats";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.seats.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.seats.DefaultCellStyle = dataGridViewCellStyle48;
             this.seats.HeaderText = "Số chỗ ngồi";
             this.seats.Name = "seats";
             this.seats.ReadOnly = true;
@@ -980,8 +1013,8 @@ namespace RestaurantApp.View
             // 
             this.tableStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tableStatus.DataPropertyName = "Status";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tableStatus.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tableStatus.DefaultCellStyle = dataGridViewCellStyle49;
             this.tableStatus.HeaderText = "Trạng thái";
             this.tableStatus.Name = "tableStatus";
             this.tableStatus.ReadOnly = true;
@@ -1014,7 +1047,7 @@ namespace RestaurantApp.View
             // 
             // tpMenu
             // 
-            this.tpMenu.Controls.Add(this.panel11);
+            this.tpMenu.Controls.Add(this.panel_category);
             this.tpMenu.Controls.Add(this.panel12);
             this.tpMenu.Controls.Add(this.panel13);
             this.tpMenu.Controls.Add(this.panel14);
@@ -1026,21 +1059,19 @@ namespace RestaurantApp.View
             this.tpMenu.Text = "Danh mục";
             this.tpMenu.UseVisualStyleBackColor = true;
             // 
-            // panel11
+            // panel_category
             // 
-            this.panel11.Controls.Add(this.text_categoryId);
-            this.panel11.Controls.Add(this.lb_categoryId);
-            this.panel11.Controls.Add(this.cb_categoryStatus);
-            this.panel11.Controls.Add(this.lb_categoryStatus);
-            this.panel11.Controls.Add(this.text_categoryCode);
-            this.panel11.Controls.Add(this.lb_categoryCode);
-            this.panel11.Controls.Add(this.text_categoryname);
-            this.panel11.Controls.Add(this.lb_categoryName);
-            this.panel11.Controls.Add(this.label18);
-            this.panel11.Location = new System.Drawing.Point(748, 91);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(385, 261);
-            this.panel11.TabIndex = 1;
+            this.panel_category.Controls.Add(this.text_categoryId);
+            this.panel_category.Controls.Add(this.lb_categoryId);
+            this.panel_category.Controls.Add(this.cb_categoryStatus);
+            this.panel_category.Controls.Add(this.lb_categoryStatus);
+            this.panel_category.Controls.Add(this.text_categoryname);
+            this.panel_category.Controls.Add(this.lb_categoryName);
+            this.panel_category.Controls.Add(this.label18);
+            this.panel_category.Location = new System.Drawing.Point(748, 91);
+            this.panel_category.Name = "panel_category";
+            this.panel_category.Size = new System.Drawing.Size(385, 242);
+            this.panel_category.TabIndex = 1;
             // 
             // text_categoryId
             // 
@@ -1064,7 +1095,7 @@ namespace RestaurantApp.View
             // 
             this.cb_categoryStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_categoryStatus.FormattingEnabled = true;
-            this.cb_categoryStatus.Location = new System.Drawing.Point(125, 219);
+            this.cb_categoryStatus.Location = new System.Drawing.Point(125, 188);
             this.cb_categoryStatus.Name = "cb_categoryStatus";
             this.cb_categoryStatus.Size = new System.Drawing.Size(221, 24);
             this.cb_categoryStatus.TabIndex = 2;
@@ -1073,28 +1104,11 @@ namespace RestaurantApp.View
             // 
             this.lb_categoryStatus.AutoSize = true;
             this.lb_categoryStatus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_categoryStatus.Location = new System.Drawing.Point(30, 220);
+            this.lb_categoryStatus.Location = new System.Drawing.Point(30, 189);
             this.lb_categoryStatus.Name = "lb_categoryStatus";
             this.lb_categoryStatus.Size = new System.Drawing.Size(89, 18);
             this.lb_categoryStatus.TabIndex = 0;
             this.lb_categoryStatus.Text = "Trạng thái:";
-            // 
-            // text_categoryCode
-            // 
-            this.text_categoryCode.Location = new System.Drawing.Point(125, 179);
-            this.text_categoryCode.Name = "text_categoryCode";
-            this.text_categoryCode.Size = new System.Drawing.Size(221, 23);
-            this.text_categoryCode.TabIndex = 1;
-            // 
-            // lb_categoryCode
-            // 
-            this.lb_categoryCode.AutoSize = true;
-            this.lb_categoryCode.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_categoryCode.Location = new System.Drawing.Point(30, 179);
-            this.lb_categoryCode.Name = "lb_categoryCode";
-            this.lb_categoryCode.Size = new System.Drawing.Size(35, 18);
-            this.lb_categoryCode.TabIndex = 0;
-            this.lb_categoryCode.Text = "Mã:";
             // 
             // text_categoryname
             // 
@@ -1130,10 +1144,21 @@ namespace RestaurantApp.View
             this.panel12.Controls.Add(this.btn_deleteCategory);
             this.panel12.Controls.Add(this.btn_updateCategory);
             this.panel12.Controls.Add(this.btn_viewCategory);
-            this.panel12.Location = new System.Drawing.Point(731, 376);
+            this.panel12.Location = new System.Drawing.Point(732, 355);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(428, 108);
             this.panel12.TabIndex = 2;
+            // 
+            // btn_clearCategory
+            // 
+            this.btn_clearCategory.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearCategory.Location = new System.Drawing.Point(343, 19);
+            this.btn_clearCategory.Name = "btn_clearCategory";
+            this.btn_clearCategory.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearCategory.TabIndex = 12;
+            this.btn_clearCategory.Text = "Làm mới";
+            this.btn_clearCategory.UseVisualStyleBackColor = false;
             // 
             // btn_addCategory
             // 
@@ -1192,14 +1217,14 @@ namespace RestaurantApp.View
             this.dataGridView_category.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_category.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView_category.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle50;
             this.dataGridView_category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_category.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
@@ -1232,8 +1257,8 @@ namespace RestaurantApp.View
             // 
             this.categoryStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.categoryStatus.DataPropertyName = "Status";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.categoryStatus.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.categoryStatus.DefaultCellStyle = dataGridViewCellStyle51;
             this.categoryStatus.HeaderText = "Trạng thái";
             this.categoryStatus.Name = "categoryStatus";
             this.categoryStatus.ReadOnly = true;
@@ -1242,9 +1267,9 @@ namespace RestaurantApp.View
             // 
             this.createdDateCategory.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.createdDateCategory.DataPropertyName = "CreatedDate";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Format = "dd/MM/yyyy";
-            this.createdDateCategory.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle52.Format = "dd/MM/yyyy";
+            this.createdDateCategory.DefaultCellStyle = dataGridViewCellStyle52;
             this.createdDateCategory.HeaderText = "Ngày tạo";
             this.createdDateCategory.Name = "createdDateCategory";
             this.createdDateCategory.ReadOnly = true;
@@ -1277,7 +1302,7 @@ namespace RestaurantApp.View
             // 
             // tpAccount
             // 
-            this.tpAccount.Controls.Add(this.panel15);
+            this.tpAccount.Controls.Add(this.panel_user);
             this.tpAccount.Controls.Add(this.panel16);
             this.tpAccount.Controls.Add(this.panel17);
             this.tpAccount.Controls.Add(this.panel18);
@@ -1289,33 +1314,33 @@ namespace RestaurantApp.View
             this.tpAccount.Text = "Tài khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
             // 
-            // panel15
+            // panel_user
             // 
-            this.panel15.Controls.Add(this.text_userId);
-            this.panel15.Controls.Add(this.lb_userId);
-            this.panel15.Controls.Add(this.cb_userStatus);
-            this.panel15.Controls.Add(this.lb_status);
-            this.panel15.Controls.Add(this.pn_gender);
-            this.panel15.Controls.Add(this.text_email);
-            this.panel15.Controls.Add(this.lb_email);
-            this.panel15.Controls.Add(this.cb_role);
-            this.panel15.Controls.Add(this.text_address);
-            this.panel15.Controls.Add(this.text_phone);
-            this.panel15.Controls.Add(this.lb_role);
-            this.panel15.Controls.Add(this.lb_gender);
-            this.panel15.Controls.Add(this.lb_address);
-            this.panel15.Controls.Add(this.lb_phone);
-            this.panel15.Controls.Add(this.text_password);
-            this.panel15.Controls.Add(this.lb_password);
-            this.panel15.Controls.Add(this.text_fullname);
-            this.panel15.Controls.Add(this.text_username);
-            this.panel15.Controls.Add(this.lb_fullname);
-            this.panel15.Controls.Add(this.lb_username);
-            this.panel15.Controls.Add(this.label25);
-            this.panel15.Location = new System.Drawing.Point(763, 12);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(358, 445);
-            this.panel15.TabIndex = 1;
+            this.panel_user.Controls.Add(this.text_userId);
+            this.panel_user.Controls.Add(this.lb_userId);
+            this.panel_user.Controls.Add(this.cb_userStatus);
+            this.panel_user.Controls.Add(this.lb_status);
+            this.panel_user.Controls.Add(this.pn_gender);
+            this.panel_user.Controls.Add(this.text_email);
+            this.panel_user.Controls.Add(this.lb_email);
+            this.panel_user.Controls.Add(this.cb_role);
+            this.panel_user.Controls.Add(this.text_address);
+            this.panel_user.Controls.Add(this.text_phone);
+            this.panel_user.Controls.Add(this.lb_role);
+            this.panel_user.Controls.Add(this.lb_gender);
+            this.panel_user.Controls.Add(this.lb_address);
+            this.panel_user.Controls.Add(this.lb_phone);
+            this.panel_user.Controls.Add(this.text_password);
+            this.panel_user.Controls.Add(this.lb_password);
+            this.panel_user.Controls.Add(this.text_fullname);
+            this.panel_user.Controls.Add(this.text_username);
+            this.panel_user.Controls.Add(this.lb_fullname);
+            this.panel_user.Controls.Add(this.lb_username);
+            this.panel_user.Controls.Add(this.label25);
+            this.panel_user.Location = new System.Drawing.Point(763, 12);
+            this.panel_user.Name = "panel_user";
+            this.panel_user.Size = new System.Drawing.Size(358, 445);
+            this.panel_user.TabIndex = 1;
             // 
             // text_userId
             // 
@@ -1540,6 +1565,17 @@ namespace RestaurantApp.View
             this.panel16.Size = new System.Drawing.Size(437, 101);
             this.panel16.TabIndex = 2;
             // 
+            // btn_clearUser
+            // 
+            this.btn_clearUser.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearUser.Location = new System.Drawing.Point(351, 18);
+            this.btn_clearUser.Name = "btn_clearUser";
+            this.btn_clearUser.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearUser.TabIndex = 12;
+            this.btn_clearUser.Text = "Làm mới";
+            this.btn_clearUser.UseVisualStyleBackColor = false;
+            // 
             // btn_addUser
             // 
             this.btn_addUser.BackColor = System.Drawing.Color.Green;
@@ -1595,14 +1631,14 @@ namespace RestaurantApp.View
             // dataGridView_user
             // 
             this.dataGridView_user.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_user.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_user.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle53;
             this.dataGridView_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_user.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserId,
@@ -1663,8 +1699,8 @@ namespace RestaurantApp.View
             // 
             this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.phone.DataPropertyName = "Phone";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.phone.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.phone.DefaultCellStyle = dataGridViewCellStyle54;
             this.phone.HeaderText = "Số điện thoại";
             this.phone.Name = "phone";
             this.phone.ReadOnly = true;
@@ -1692,8 +1728,8 @@ namespace RestaurantApp.View
             // 
             this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.gender.DataPropertyName = "Gender";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gender.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gender.DefaultCellStyle = dataGridViewCellStyle55;
             this.gender.HeaderText = "Giới tính";
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
@@ -1703,8 +1739,8 @@ namespace RestaurantApp.View
             // 
             this.userStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.userStatus.DataPropertyName = "Status";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.userStatus.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.userStatus.DefaultCellStyle = dataGridViewCellStyle56;
             this.userStatus.HeaderText = "Trạng thái";
             this.userStatus.Name = "userStatus";
             this.userStatus.ReadOnly = true;
@@ -1714,8 +1750,8 @@ namespace RestaurantApp.View
             // 
             this.role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.role.DataPropertyName = "Role";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.role.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.role.DefaultCellStyle = dataGridViewCellStyle57;
             this.role.HeaderText = "Vai trò";
             this.role.Name = "role";
             this.role.ReadOnly = true;
@@ -1725,9 +1761,9 @@ namespace RestaurantApp.View
             // 
             this.dob.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dob.DataPropertyName = "Dob";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Format = "dd/MM/yyyy";
-            this.dob.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle58.Format = "dd/MM/yyyy";
+            this.dob.DefaultCellStyle = dataGridViewCellStyle58;
             this.dob.HeaderText = "Ngày sinh";
             this.dob.Name = "dob";
             this.dob.ReadOnly = true;
@@ -1737,9 +1773,9 @@ namespace RestaurantApp.View
             // 
             this.createdDateUser.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.createdDateUser.DataPropertyName = "CreatedDate";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.Format = "dd/MM/yyyy";
-            this.createdDateUser.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle59.Format = "dd/MM/yyyy";
+            this.createdDateUser.DefaultCellStyle = dataGridViewCellStyle59;
             this.createdDateUser.HeaderText = "Ngày tạo";
             this.createdDateUser.Name = "createdDateUser";
             this.createdDateUser.ReadOnly = true;
@@ -1773,7 +1809,7 @@ namespace RestaurantApp.View
             // 
             // tbSale
             // 
-            this.tbSale.Controls.Add(this.panel21);
+            this.tbSale.Controls.Add(this.panel_sale);
             this.tbSale.Controls.Add(this.panel22);
             this.tbSale.Controls.Add(this.panel20);
             this.tbSale.Controls.Add(this.panel19);
@@ -1785,21 +1821,21 @@ namespace RestaurantApp.View
             this.tbSale.Text = "Chương trình giảm giá";
             this.tbSale.UseVisualStyleBackColor = true;
             // 
-            // panel21
+            // panel_sale
             // 
-            this.panel21.Controls.Add(this.text_saleId);
-            this.panel21.Controls.Add(this.lb_saleId);
-            this.panel21.Controls.Add(this.saleDiscountNum);
-            this.panel21.Controls.Add(this.cb_saleStatus);
-            this.panel21.Controls.Add(this.label5);
-            this.panel21.Controls.Add(this.lb_saleDiscount);
-            this.panel21.Controls.Add(this.text_saleName);
-            this.panel21.Controls.Add(this.lb_saleName);
-            this.panel21.Controls.Add(this.lb_sale);
-            this.panel21.Location = new System.Drawing.Point(751, 110);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(385, 247);
-            this.panel21.TabIndex = 7;
+            this.panel_sale.Controls.Add(this.text_saleId);
+            this.panel_sale.Controls.Add(this.lb_saleId);
+            this.panel_sale.Controls.Add(this.saleDiscountNum);
+            this.panel_sale.Controls.Add(this.cb_saleStatus);
+            this.panel_sale.Controls.Add(this.label5);
+            this.panel_sale.Controls.Add(this.lb_saleDiscount);
+            this.panel_sale.Controls.Add(this.text_saleName);
+            this.panel_sale.Controls.Add(this.lb_saleName);
+            this.panel_sale.Controls.Add(this.lb_sale);
+            this.panel_sale.Location = new System.Drawing.Point(751, 110);
+            this.panel_sale.Name = "panel_sale";
+            this.panel_sale.Size = new System.Drawing.Size(385, 247);
+            this.panel_sale.TabIndex = 7;
             // 
             // text_saleId
             // 
@@ -1823,7 +1859,7 @@ namespace RestaurantApp.View
             // 
             this.saleDiscountNum.Location = new System.Drawing.Point(120, 168);
             this.saleDiscountNum.Name = "saleDiscountNum";
-            this.saleDiscountNum.Size = new System.Drawing.Size(120, 23);
+            this.saleDiscountNum.Size = new System.Drawing.Size(79, 23);
             this.saleDiscountNum.TabIndex = 3;
             // 
             // cb_saleStatus
@@ -1851,9 +1887,9 @@ namespace RestaurantApp.View
             this.lb_saleDiscount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_saleDiscount.Location = new System.Drawing.Point(25, 168);
             this.lb_saleDiscount.Name = "lb_saleDiscount";
-            this.lb_saleDiscount.Size = new System.Drawing.Size(35, 18);
+            this.lb_saleDiscount.Size = new System.Drawing.Size(78, 18);
             this.lb_saleDiscount.TabIndex = 0;
-            this.lb_saleDiscount.Text = "Mã:";
+            this.lb_saleDiscount.Text = "Giảm giá:";
             // 
             // text_saleName
             // 
@@ -1893,6 +1929,17 @@ namespace RestaurantApp.View
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(444, 113);
             this.panel22.TabIndex = 8;
+            // 
+            // btn_clearSale
+            // 
+            this.btn_clearSale.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearSale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_clearSale.Location = new System.Drawing.Point(350, 19);
+            this.btn_clearSale.Name = "btn_clearSale";
+            this.btn_clearSale.Size = new System.Drawing.Size(66, 71);
+            this.btn_clearSale.TabIndex = 12;
+            this.btn_clearSale.Text = "Làm mới";
+            this.btn_clearSale.UseVisualStyleBackColor = false;
             // 
             // btn_addSale
             // 
@@ -1951,14 +1998,14 @@ namespace RestaurantApp.View
             this.dataGridView_Sale.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Sale.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView_Sale.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_Sale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Sale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle60;
             this.dataGridView_Sale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Sale.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SaleID,
@@ -1972,6 +2019,51 @@ namespace RestaurantApp.View
             this.dataGridView_Sale.ReadOnly = true;
             this.dataGridView_Sale.Size = new System.Drawing.Size(639, 511);
             this.dataGridView_Sale.TabIndex = 2;
+            // 
+            // SaleID
+            // 
+            this.SaleID.DataPropertyName = "ID";
+            this.SaleID.HeaderText = "ID";
+            this.SaleID.Name = "SaleID";
+            this.SaleID.ReadOnly = true;
+            // 
+            // saleName
+            // 
+            this.saleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saleName.DataPropertyName = "Name";
+            this.saleName.HeaderText = "Tên";
+            this.saleName.Name = "saleName";
+            this.saleName.ReadOnly = true;
+            // 
+            // saleDiscount
+            // 
+            this.saleDiscount.DataPropertyName = "Discount";
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.saleDiscount.DefaultCellStyle = dataGridViewCellStyle61;
+            this.saleDiscount.HeaderText = "Giảm giá (%)";
+            this.saleDiscount.Name = "saleDiscount";
+            this.saleDiscount.ReadOnly = true;
+            // 
+            // saleStatus
+            // 
+            this.saleStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saleStatus.DataPropertyName = "Status";
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.saleStatus.DefaultCellStyle = dataGridViewCellStyle62;
+            this.saleStatus.HeaderText = "Trạng thái";
+            this.saleStatus.Name = "saleStatus";
+            this.saleStatus.ReadOnly = true;
+            // 
+            // saleCreatedDate
+            // 
+            this.saleCreatedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saleCreatedDate.DataPropertyName = "CreatedDate";
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle63.Format = "dd/MM/yyyy";
+            this.saleCreatedDate.DefaultCellStyle = dataGridViewCellStyle63;
+            this.saleCreatedDate.HeaderText = "Ngày tạo";
+            this.saleCreatedDate.Name = "saleCreatedDate";
+            this.saleCreatedDate.ReadOnly = true;
             // 
             // panel19
             // 
@@ -1999,110 +2091,15 @@ namespace RestaurantApp.View
             this.text_searchSale.Size = new System.Drawing.Size(292, 27);
             this.text_searchSale.TabIndex = 0;
             // 
-            // SaleID
+            // errorEmpty
             // 
-            this.SaleID.DataPropertyName = "ID";
-            this.SaleID.HeaderText = "ID";
-            this.SaleID.Name = "SaleID";
-            this.SaleID.ReadOnly = true;
-            // 
-            // saleName
-            // 
-            this.saleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.saleName.DataPropertyName = "Name";
-            this.saleName.HeaderText = "Tên";
-            this.saleName.Name = "saleName";
-            this.saleName.ReadOnly = true;
-            // 
-            // saleDiscount
-            // 
-            this.saleDiscount.DataPropertyName = "Discount";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.saleDiscount.DefaultCellStyle = dataGridViewCellStyle19;
-            this.saleDiscount.HeaderText = "Giảm giá (%)";
-            this.saleDiscount.Name = "saleDiscount";
-            this.saleDiscount.ReadOnly = true;
-            // 
-            // saleStatus
-            // 
-            this.saleStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.saleStatus.DataPropertyName = "Status";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.saleStatus.DefaultCellStyle = dataGridViewCellStyle20;
-            this.saleStatus.HeaderText = "Trạng thái";
-            this.saleStatus.Name = "saleStatus";
-            this.saleStatus.ReadOnly = true;
-            // 
-            // saleCreatedDate
-            // 
-            this.saleCreatedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.saleCreatedDate.DataPropertyName = "CreatedDate";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.Format = "dd/MM/yyyy";
-            this.saleCreatedDate.DefaultCellStyle = dataGridViewCellStyle21;
-            this.saleCreatedDate.HeaderText = "Ngày tạo";
-            this.saleCreatedDate.Name = "saleCreatedDate";
-            this.saleCreatedDate.ReadOnly = true;
-            // 
-            // btn_clearFood
-            // 
-            this.btn_clearFood.BackColor = System.Drawing.Color.Tan;
-            this.btn_clearFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearFood.Location = new System.Drawing.Point(339, 19);
-            this.btn_clearFood.Name = "btn_clearFood";
-            this.btn_clearFood.Size = new System.Drawing.Size(66, 71);
-            this.btn_clearFood.TabIndex = 10;
-            this.btn_clearFood.Text = "Làm mới";
-            this.btn_clearFood.UseVisualStyleBackColor = false;
-            // 
-            // btn_clearTable
-            // 
-            this.btn_clearTable.BackColor = System.Drawing.Color.Tan;
-            this.btn_clearTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearTable.Location = new System.Drawing.Point(341, 21);
-            this.btn_clearTable.Name = "btn_clearTable";
-            this.btn_clearTable.Size = new System.Drawing.Size(66, 71);
-            this.btn_clearTable.TabIndex = 11;
-            this.btn_clearTable.Text = "Làm mới";
-            this.btn_clearTable.UseVisualStyleBackColor = false;
-            // 
-            // btn_clearCategory
-            // 
-            this.btn_clearCategory.BackColor = System.Drawing.Color.Tan;
-            this.btn_clearCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearCategory.Location = new System.Drawing.Point(343, 19);
-            this.btn_clearCategory.Name = "btn_clearCategory";
-            this.btn_clearCategory.Size = new System.Drawing.Size(66, 71);
-            this.btn_clearCategory.TabIndex = 12;
-            this.btn_clearCategory.Text = "Làm mới";
-            this.btn_clearCategory.UseVisualStyleBackColor = false;
-            // 
-            // btn_clearUser
-            // 
-            this.btn_clearUser.BackColor = System.Drawing.Color.Tan;
-            this.btn_clearUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearUser.Location = new System.Drawing.Point(351, 18);
-            this.btn_clearUser.Name = "btn_clearUser";
-            this.btn_clearUser.Size = new System.Drawing.Size(66, 71);
-            this.btn_clearUser.TabIndex = 12;
-            this.btn_clearUser.Text = "Làm mới";
-            this.btn_clearUser.UseVisualStyleBackColor = false;
-            // 
-            // btn_clearSale
-            // 
-            this.btn_clearSale.BackColor = System.Drawing.Color.Tan;
-            this.btn_clearSale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearSale.Location = new System.Drawing.Point(350, 19);
-            this.btn_clearSale.Name = "btn_clearSale";
-            this.btn_clearSale.Size = new System.Drawing.Size(66, 71);
-            this.btn_clearSale.TabIndex = 12;
-            this.btn_clearSale.Text = "Làm mới";
-            this.btn_clearSale.UseVisualStyleBackColor = false;
+            this.errorEmpty.ContainerControl = this;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1215, 624);
             this.Controls.Add(this.tabControlAdmin);
@@ -2117,8 +2114,8 @@ namespace RestaurantApp.View
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tpFoods.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panel_food.ResumeLayout(false);
+            this.panel_food.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.food_discount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.food_price)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -2127,25 +2124,25 @@ namespace RestaurantApp.View
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tpTable.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_tableSeats)).EndInit();
+            this.panel_table.ResumeLayout(false);
+            this.panel_table.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_tableSeats)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_table)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.tpMenu.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.panel_category.ResumeLayout(false);
+            this.panel_category.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_category)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.tpAccount.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            this.panel_user.ResumeLayout(false);
+            this.panel_user.PerformLayout();
             this.pn_gender.ResumeLayout(false);
             this.pn_gender.PerformLayout();
             this.panel16.ResumeLayout(false);
@@ -2154,14 +2151,15 @@ namespace RestaurantApp.View
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.tbSale.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
+            this.panel_sale.ResumeLayout(false);
+            this.panel_sale.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saleDiscountNum)).EndInit();
             this.panel22.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sale)).EndInit();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmpty)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2187,7 +2185,7 @@ namespace RestaurantApp.View
         private Label label4;
         private Button btn_statis;
         private Button btn_print;
-        private Panel panel6;
+        private Panel panel_food;
         private Panel panel5;
         private Panel panel4;
         private Panel panel3;
@@ -2205,8 +2203,8 @@ namespace RestaurantApp.View
         private Button btn_addFood;
         private Button btn_deleteFood;
         private Button btn_updateFood;
-        private Panel panel7;
-        private NumericUpDown nud_tableSeats;
+        private Panel panel_table;
+        private NumericUpDown num_tableSeats;
         private Label lb_tableSeats;
         private Label lb_titletable;
         private Panel panel8;
@@ -2219,7 +2217,7 @@ namespace RestaurantApp.View
         private Panel panel10;
         private Button btn_searchtable;
         private TextBox tb_searchtexttable;
-        private Panel panel11;
+        private Panel panel_category;
         private ComboBox cb_categoryStatus;
         private Label lb_categoryStatus;
         private TextBox text_categoryname;
@@ -2235,7 +2233,7 @@ namespace RestaurantApp.View
         private Panel panel14;
         private Button btn_searchcategory;
         private TextBox tb_searchtextcaterory;
-        private Panel panel15;
+        private Panel panel_user;
         private TextBox text_phone;
         private Label lb_address;
         private Label lb_phone;
@@ -2256,8 +2254,6 @@ namespace RestaurantApp.View
         private Panel panel18;
         private Button btn_searchuser;
         private TextBox tb_searchtextuser;
-        private TextBox text_categoryCode;
-        private Label lb_categoryCode;
         private TextBox text_address;
         private Label lb_role;
         private Label lb_gender;
@@ -2278,7 +2274,7 @@ namespace RestaurantApp.View
         private NumericUpDown food_discount;
         private NumericUpDown food_price;
         private TabPage tbSale;
-        private Panel panel21;
+        private Panel panel_sale;
         private NumericUpDown saleDiscountNum;
         private ComboBox cb_saleStatus;
         private Label label5;
@@ -2342,6 +2338,7 @@ namespace RestaurantApp.View
         private Button btn_clearCategory;
         private Button btn_clearUser;
         private Button btn_clearSale;
+        private ErrorProvider errorEmpty;
 
         public DataGridView DataGridView_Table { get => dataGridView_table; set => dataGridView_table = value; }
         public DataGridView DataGridView_User { get => dataGridView_user; set => dataGridView_user = value; }
@@ -2375,6 +2372,16 @@ namespace RestaurantApp.View
         public ComboBox Cb_foodStatus { get => cb_foodStatus; set => cb_foodStatus = value; }
         public ComboBox Cb_foodCategory { get => cb_foodCategory; set => cb_foodCategory = value; }
         public NumericUpDown Food_discount { get => food_discount; set => food_discount = value; }
-        public NumericUpDown Food_price { get => food_price; set => food_price = value; }
+        public NumericUpDown Food_price { get => food_price; set => food_price = value; }      
+        public ErrorProvider ErrorEmpty { get => errorEmpty; set => errorEmpty = value; }
+        public Panel PanelFood { get => panel_food; set => panel_food = value; }
+        public Panel PanelTable { get => panel_table; set => panel_food = value; }
+        public Panel PanelCategory { get => panel_category; set => panel_food = value; }
+        public Panel PanelUser { get => panel_user; set => panel_food = value; }
+        public Panel PanelSale { get => panel_sale; set => panel_food = value; }
+        public NumericUpDown Num_tableSeats { get => num_tableSeats; set => num_tableSeats = value; }
+        public TextBox Text_tableId { get => text_tableId; set => text_foodId = value; }
+        public TextBox Text_tableName { get => text_tableName; set => text_foodName = value; }
+        public ComboBox Cb_tableStatus { get => cb_tableStatus; set => cb_foodStatus = value; }
     }
 }
