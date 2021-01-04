@@ -31,7 +31,5 @@ namespace RestaurantApp.Model
             }
             return food;
         }
-
-
     }
 }

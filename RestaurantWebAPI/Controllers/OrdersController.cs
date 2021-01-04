@@ -20,6 +20,14 @@ namespace RestaurantWebAPI.Controllers
             return orderService.FindAll();
         }
 
+        [Route("api/table/{tableId:long}/orders")]
+        [HttpGet]
+        public List<OrderDTO> Get(long tableId)
+        {
+            orderService = OrderService.Instance;
+            return orderService.FindAllByTableId(tableId);
+        }
+
         public OrderDTO Post(OrderDTO order)
         {
             orderService = OrderService.Instance;

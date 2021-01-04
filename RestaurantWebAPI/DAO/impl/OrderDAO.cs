@@ -54,5 +54,12 @@ namespace RestaurantWebAPI.DAO.impl
             object[] parameters = { id };
             return Update(sql, parameters);
         }
+
+        public List<OrderDTO> FindAllByTableId(long tableId)
+        {
+            string sql = "SELECT orders.*, tables.name as tablename, tables.seats, sales.name as salename, sales.discount FROM orders JOIN tables ON orders.tableid = tables.id JOIN sales ON orders.saleid = sales.id WHERE tables.id = @id";
+            object[] parameters = { tableId };
+            return Query(sql, new OrderMapper(), parameters);
+        }
     }
 }

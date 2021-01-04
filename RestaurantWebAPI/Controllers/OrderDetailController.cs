@@ -19,8 +19,27 @@ namespace RestaurantWebAPI.Controllers
         public List<OrderDetailDTO> Get(long orderId)
         {
             orderDetailService = OrderDetailService.Instance;
-            /* return foodService.FindAllByCategoryId(categoryId);*/
-            return null;
+            return orderDetailService.FindAllByOrderId(orderId);
+        }
+
+        [Route("api/orders/{orderId:long}/orderdetails")]
+        [HttpPost]
+        public OrderDetailDTO Post(long orderId, OrderDetailDTO orderDetail)
+        {
+            orderDetailService = OrderDetailService.Instance;
+            return orderDetailService.Save(orderId, orderDetail);
+        }
+
+        public OrderDetailDTO Put(long id, OrderDetailDTO orderDetail)
+        {
+            orderDetailService = OrderDetailService.Instance;
+            return orderDetailService.Update(id, orderDetail);
+        }
+
+        public bool Delete(long id)
+        {
+            orderDetailService = OrderDetailService.Instance;
+            return orderDetailService.Delete(id);
         }
     }
 }

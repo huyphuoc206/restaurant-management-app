@@ -11,6 +11,8 @@ namespace RestaurantWebAPI.Service.impl
     public class OrderService : IOrderService
     {
         private IOrderDAO orderDAO;
+        private ITableDAO tableDAO;
+
         private static OrderService instance;
 
         public static OrderService Instance
@@ -53,6 +55,14 @@ namespace RestaurantWebAPI.Service.impl
         {
             orderDAO = OrderDAO.Instance;
             return orderDAO.Delete(id);
+        }
+
+        public List<OrderDTO> FindAllByTableId(long tableId)
+        {
+            orderDAO = OrderDAO.Instance;
+            tableDAO = TableDAO.Instance;
+            if (tableDAO.FindOneById(tableId) == null) return null;
+            return orderDAO.FindAllByTableId(tableId);
         }
     }
 }
