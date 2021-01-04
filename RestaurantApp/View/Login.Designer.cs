@@ -36,103 +36,112 @@ namespace RestaurantApp.View
             this.btn_login = new System.Windows.Forms.Button();
             this.pass_text = new System.Windows.Forms.TextBox();
             this.user_text = new System.Windows.Forms.TextBox();
-            this.label_login = new System.Windows.Forms.Label();
-            this.label_pass = new System.Windows.Forms.Label();
-            this.label_user = new System.Windows.Forms.Label();
             this.errorUsernameLogin = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorUsernameLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_exit
             // 
             this.btn_exit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_exit.Location = new System.Drawing.Point(331, 174);
+            this.btn_exit.BackColor = System.Drawing.Color.Black;
+            this.btn_exit.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exit.Location = new System.Drawing.Point(154, 360);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(86, 37);
+            this.btn_exit.Size = new System.Drawing.Size(95, 45);
             this.btn_exit.TabIndex = 4;
             this.btn_exit.Text = "Thoát";
-            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.UseVisualStyleBackColor = false;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // btn_login
             // 
             this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_login.Location = new System.Drawing.Point(180, 174);
+            this.btn_login.BackColor = System.Drawing.Color.Black;
+            this.btn_login.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_login.Location = new System.Drawing.Point(37, 360);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(86, 37);
+            this.btn_login.Size = new System.Drawing.Size(95, 45);
             this.btn_login.TabIndex = 3;
             this.btn_login.Text = "Đăng nhập";
-            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // pass_text
             // 
             this.pass_text.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pass_text.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass_text.Location = new System.Drawing.Point(180, 125);
+            this.pass_text.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass_text.Location = new System.Drawing.Point(28, 294);
             this.pass_text.Name = "pass_text";
             this.pass_text.PasswordChar = '*';
-            this.pass_text.Size = new System.Drawing.Size(237, 29);
+            this.pass_text.Size = new System.Drawing.Size(191, 35);
             this.pass_text.TabIndex = 2;
             // 
             // user_text
             // 
             this.user_text.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.user_text.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_text.Location = new System.Drawing.Point(180, 75);
+            this.user_text.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_text.Location = new System.Drawing.Point(28, 236);
             this.user_text.Name = "user_text";
-            this.user_text.Size = new System.Drawing.Size(237, 29);
+            this.user_text.Size = new System.Drawing.Size(191, 35);
             this.user_text.TabIndex = 1;
-            // 
-            // label_login
-            // 
-            this.label_login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_login.AutoSize = true;
-            this.label_login.Font = new System.Drawing.Font("Arial", 16F);
-            this.label_login.Location = new System.Drawing.Point(184, 32);
-            this.label_login.Name = "label_login";
-            this.label_login.Size = new System.Drawing.Size(115, 25);
-            this.label_login.TabIndex = 14;
-            this.label_login.Text = "Đăng nhập";
-            // 
-            // label_pass
-            // 
-            this.label_pass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_pass.AutoSize = true;
-            this.label_pass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_pass.Location = new System.Drawing.Point(73, 125);
-            this.label_pass.Name = "label_pass";
-            this.label_pass.Size = new System.Drawing.Size(79, 19);
-            this.label_pass.TabIndex = 12;
-            this.label_pass.Text = "Mật khẩu:";
-            // 
-            // label_user
-            // 
-            this.label_user.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_user.AutoSize = true;
-            this.label_user.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_user.Location = new System.Drawing.Point(73, 75);
-            this.label_user.Name = "label_user";
-            this.label_user.Size = new System.Drawing.Size(85, 19);
-            this.label_user.TabIndex = 13;
-            this.label_user.Text = "Tài khoản:";
             // 
             // errorUsernameLogin
             // 
             this.errorUsernameLogin.ContainerControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::RestaurantApp.Properties.Resources.logo1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(216, 236);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(46, 35);
+            this.panel1.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImage = global::RestaurantApp.Properties.Resources.logo2;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Location = new System.Drawing.Point(216, 294);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(46, 35);
+            this.panel2.TabIndex = 16;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::RestaurantApp.Properties.Resources.logo4;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(91, 139);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(101, 63);
+            this.panel3.TabIndex = 17;
             // 
             // Login
             // 
             this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 242);
+            this.BackgroundImage = global::RestaurantApp.Properties.Resources.background_fix;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(901, 468);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pass_text);
             this.Controls.Add(this.user_text);
-            this.Controls.Add(this.label_login);
-            this.Controls.Add(this.label_pass);
-            this.Controls.Add(this.label_user);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
@@ -150,10 +159,10 @@ namespace RestaurantApp.View
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.TextBox pass_text;
         private System.Windows.Forms.TextBox user_text;
-        private System.Windows.Forms.Label label_login;
-        private System.Windows.Forms.Label label_pass;
-        private System.Windows.Forms.Label label_user;
         private System.Windows.Forms.ErrorProvider errorUsernameLogin;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
 
         public Button Btn_login { get => btn_login; set => btn_login = value; }
 
