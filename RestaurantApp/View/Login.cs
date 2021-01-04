@@ -36,5 +36,10 @@ namespace RestaurantApp.View
             this.User_text.Text = "";
             this.Pass_text.Text = "";
         }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
