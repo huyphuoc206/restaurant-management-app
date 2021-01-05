@@ -40,32 +40,30 @@ namespace RestaurantApp.Controller
         public void loadTables(List<TableModel> tables)
         {
             Button[] btns_table = createBtnTables(tables);
-            view.panel_table.Controls.AddRange(btns_table);
+            view.FlPanel_table.Controls.AddRange(btns_table);
         }
 
         public Button[] createBtnTables(List<TableModel> tables)
         {
-
             Button[] btns_table = new Button[tables.Count];
             for (int i = 0; i < btns_table.Length; i++)
             {
-                int x = 10 + 100 * (i % 3);
-                int y = 50 + (i / 3) * 100;
-                btns_table[i] = new Button();
+                if (tables[i].Status.Equals("2")) continue;
+                btns_table[i] = new Button() {Width = 80, Height = 80 };
                 btns_table[i].TextAlign = ContentAlignment.MiddleCenter;
                 btns_table[i].Text = tables[i].Name;
-                btns_table[i].SetBounds(x, y, 60, 60);
                 if (tables[i].Status.Equals("1"))
                 {
                     btns_table[i].Text += "\n Có người";
-                    btns_table[i].BackColor = Color.Bisque;
+                    btns_table[i].BackColor = Color.Red;
+                    btns_table[i].ForeColor = Color.White;
                 }
-                else
+                else if (tables[i].Status.Equals("0"))
                 {
                     btns_table[i].Text += " \n Trống";
-                    btns_table[i].BackColor = Color.Coral;
+                    btns_table[i].BackColor = Color.Gold;
+                    btns_table[i].ForeColor = Color.Black;
                 }
-
             }
             return btns_table;
         }
