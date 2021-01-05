@@ -18,7 +18,7 @@ namespace RestaurantApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginController().View);
+            Application.Run(new UserController().View);
         }
     }
 }

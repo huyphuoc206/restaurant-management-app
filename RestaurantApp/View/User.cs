@@ -55,5 +55,10 @@ namespace RestaurantApp.View
             resetPassword.View.ShowDialog();
             this.Show();
         }
+
+        private void User_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
