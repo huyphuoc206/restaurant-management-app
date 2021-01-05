@@ -45,6 +45,8 @@ namespace RestaurantApp.View
         {
             this.Close();
             LoginInfo.UserID = 0;
+            LoginInfo.Username = "";
+            LoginInfo.Fullname = "";
         }
 
         private void menuResetPassword_Click(object sender, EventArgs e)
@@ -54,11 +56,6 @@ namespace RestaurantApp.View
             resetPassword.View.StartPosition = FormStartPosition.CenterScreen;
             resetPassword.View.ShowDialog();
             this.Show();
-        }
-
-        private void User_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

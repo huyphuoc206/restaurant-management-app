@@ -1,4 +1,5 @@
-﻿using RestaurantApp.Model;
+﻿using RestaurantApp.Constant;
+using RestaurantApp.Model;
 using RestaurantApp.View;
 using System;
 using System.Collections.Generic;
@@ -49,18 +50,21 @@ namespace RestaurantApp.Controller
             for (int i = 0; i < btns_table.Length; i++)
             {
                 if (tables[i].Status.Equals("2")) continue;
-                btns_table[i] = new Button() {Width = 80, Height = 80 };
+                btns_table[i] = new Button() {Width = SystemConstant.TABLE_WIDTH, Height = SystemConstant.TABLE_HEIGHT };
                 btns_table[i].TextAlign = ContentAlignment.MiddleCenter;
                 btns_table[i].Text = tables[i].Name;
+                btns_table[i].Text += "\n"+tables[i].Seats+" chỗ";
+                btns_table[i].FlatStyle = FlatStyle.Flat;
+                btns_table[i].FlatAppearance.BorderSize = 0;
                 if (tables[i].Status.Equals("1"))
                 {
-                    btns_table[i].Text += "\n Có người";
-                    btns_table[i].BackColor = Color.Red;
+                    btns_table[i].Text += "\nCó người";
+                    btns_table[i].BackColor = Color.DarkRed;
                     btns_table[i].ForeColor = Color.White;
                 }
                 else if (tables[i].Status.Equals("0"))
                 {
-                    btns_table[i].Text += " \n Trống";
+                    btns_table[i].Text += " \nTrống";
                     btns_table[i].BackColor = Color.Gold;
                     btns_table[i].ForeColor = Color.Black;
                 }

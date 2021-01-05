@@ -69,7 +69,6 @@ namespace RestaurantApp.View
             this.btn_login.TabIndex = 3;
             this.btn_login.Text = "Đăng nhập";
             this.btn_login.UseVisualStyleBackColor = false;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // pass_text
             // 

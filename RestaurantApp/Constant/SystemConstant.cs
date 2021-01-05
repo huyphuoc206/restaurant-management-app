@@ -10,5 +10,7 @@ namespace RestaurantApp.Constant
     {
         public const string MANAGER = "MANAGER";
         public const string STAFF = "STAFF";
+        public const int TABLE_WIDTH = 80;
+        public const int TABLE_HEIGHT = 80;
     }
 }

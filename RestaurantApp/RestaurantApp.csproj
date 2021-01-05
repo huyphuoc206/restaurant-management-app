@@ -75,6 +75,9 @@
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\AbstractModel.cs" />
     <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Model\FoodModel.cs" />
     <Compile Include="Model\LoginInfo.cs" />
     <Compile Include="Model\OrderDetailModel.cs" />
@@ -115,6 +118,9 @@
     <Compile Include="View\User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Model\CircularButton.resx">
+      <DependentUpon>CircularButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
