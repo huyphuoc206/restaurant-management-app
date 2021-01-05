@@ -39,5 +39,23 @@ namespace RestaurantApp.Model
                 users = await response.Content.ReadAsAsync<List<UserModel>>();
             return users;
         }
+
+        public async Task<UserModel> Save(HttpClient client, string path)
+        {
+            UserModel userResult = null;
+            HttpResponseMessage response = await client.PostAsJsonAsync(path, this);
+            if (response.IsSuccessStatusCode)
+                userResult = await response.Content.ReadAsAsync<UserModel>();
+            return userResult;
+        }
+
+        public async Task<UserModel> Update(HttpClient client, string path)
+        {
+            UserModel userResult = null;
+            HttpResponseMessage response = await client.PutAsJsonAsync(path, this);
+            if (response.IsSuccessStatusCode)
+                userResult = await response.Content.ReadAsAsync<UserModel>();
+            return userResult;
+        }
     }
 }

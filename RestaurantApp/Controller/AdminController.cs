@@ -44,12 +44,14 @@ namespace RestaurantApp.Controller
             List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
             List<FoodModel> food = await FoodModel.GetFoodAsync(client, "api/food");
             List<SaleModel> sales = await SaleModel.GetSalesAsync(client, "api/sales");
+            List<RoleModel> roles = await RoleModel.GetRolesAsync(client, "api/roles");
             view.loadCategories(categories);
             view.loadUsers(users);
             view.loadTables(tables);
             view.loadFood(food);
             view.loadSales(sales);
             view.loadCategoriesIntoCb(categories);
+            view.loadRolesIntoCb(roles);
         }
 
         private void EventBtnView()
@@ -64,16 +66,25 @@ namespace RestaurantApp.Controller
         {
             view.Btn_addFood.Click += new EventHandler(AddFood);
             view.Btn_addTable.Click += new EventHandler(AddTable);
+            view.Btn_addCategory.Click += new EventHandler(AddCategory);
+            view.Btn_addSale.Click += new EventHandler(AddSale);
+            view.Btn_addUser.Click += new EventHandler(AddUser);
         }
         private void EventBtnUpdate()
         {
             view.Btn_updateFood.Click += new EventHandler(UpdateFood);
             view.Btn_updateTable.Click += new EventHandler(UpdateTable);
+            view.Btn_updateCategory.Click += new EventHandler(UpdateCategory);
+            view.Btn_updateSale.Click += new EventHandler(UpdateSale);
+            view.Btn_updateUser.Click += new EventHandler(UpdateUser);
         }
         private void EventBtnDelete()
         {
             view.Btn_deleteFood.Click += new EventHandler(DeleteFood);
             view.Btn_deleteTable.Click += new EventHandler(DeleteTable);
+            view.Btn_deleteCategory.Click += new EventHandler(DeleteCategory);
+            view.Btn_deleteSale.Click += new EventHandler(DeleteSale);
+            view.Btn_deleteUser.Click += new EventHandler(DeleteUser);
         }
 
         // CRUD Food
@@ -109,9 +120,7 @@ namespace RestaurantApp.Controller
                     food.Status = "0";
                 food.CreatedBy = LoginInfo.Username;
 
-                HttpResponseMessage response = await client.PostAsJsonAsync("api/food", food);
-                if (response.IsSuccessStatusCode)
-                    food = await response.Content.ReadAsAsync<FoodModel>();
+                food = await food.Save(client, "api/food");
 
                 if (food != null)
                 {
@@ -119,9 +128,7 @@ namespace RestaurantApp.Controller
                     LoadFood(sender, e);
                 }
                 else
-                {
                     MessageBox.Show("Có lỗi xảy ra.");
-                }
             }
         }
         private async void UpdateFood(object sender, EventArgs e)
@@ -151,57 +158,26 @@ namespace RestaurantApp.Controller
                     food.Status = "0";
                 food.ModifiedBy = LoginInfo.Username;
 
-                HttpResponseMessage response = await client.PutAsJsonAsync("api/food/" + id, food);
-                if (response.IsSuccessStatusCode)
-                    food = await response.Content.ReadAsAsync<FoodModel>();
+                food = await food.Update(client, "api/food/" + id);
 
                 if (food != null)
                 {
-                    // Xu ly cac order detail thuoc order (chua duoc thanh toan) co chua food nay -> phai cap nhat lai gia tien
-                    List<OrderModel> orders = await OrderModel.GetOrdersAsync(client, "api/orders");
-                    List<OrderModel> ordersUnPaid = new List<OrderModel>();
-                    foreach (OrderModel o in orders)
-                    {
-                        if (o.Status.Equals("0"))
-                            ordersUnPaid.Add(o);
-                    }
-                    if (ordersUnPaid.Count != 0)
-                    {
-                        foreach (OrderModel o in ordersUnPaid)
-                        {
-                            List<OrderDetailModel> orderDetails = await OrderDetailModel.GetOrderDetailAsync(client, "api/orders/" + o.ID + "/orderdetails");
-                            foreach (OrderDetailModel od in orderDetails)
-                            {
-                                if (od.Food.ID == id)
-                                {
-                                    od.UnitPrice = food.Price - food.Price * food.Discount / 100;
-                                    od.ModifiedBy = LoginInfo.Username;
-                                    await client.PutAsJsonAsync("api/orderdetail/" + od.ID, od);
-                                }
-                            }
-                        }
-                    }
-
                     MessageBox.Show("Cập nhật món ăn thành công.");
                     LoadFood(sender, e);
                 }
                 else
-                {
                     MessageBox.Show("Có lỗi xảy ra.");
-                }
             }
         }
         private async void DeleteFood(object sender, EventArgs e)
         {
             long id = Convert.ToInt64(view.Text_foodId.Text);
+            FoodModel food = new FoodModel();
 
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa món ăn này?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                HttpResponseMessage response = await client.DeleteAsync("api/food/" + id);
-                bool result = false;
-                if (response.IsSuccessStatusCode)
-                    result = await response.Content.ReadAsAsync<bool>();
+                bool result = await food.Delete(client, "api/food/" + id);
 
                 if (result)
                 {
@@ -209,9 +185,7 @@ namespace RestaurantApp.Controller
                     LoadFood(sender, e);
                 }
                 else
-                {
                     MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
-                }
             }
         }
         // End CRUD Food
@@ -248,9 +222,7 @@ namespace RestaurantApp.Controller
                     table.Status = "2";
                 table.CreatedBy = LoginInfo.Username;
 
-                HttpResponseMessage response = await client.PostAsJsonAsync("api/tables", table);
-                if (response.IsSuccessStatusCode)
-                    table = await response.Content.ReadAsAsync<TableModel>();
+                table = await table.Save(client, "api/tables");
 
                 if (table != null)
                 {
@@ -258,9 +230,7 @@ namespace RestaurantApp.Controller
                     LoadTable(sender, e);
                 }
                 else
-                {
                     MessageBox.Show("Có lỗi xảy ra.");
-                }
             }
         }
         private async void UpdateTable(object sender, EventArgs e)
@@ -289,10 +259,8 @@ namespace RestaurantApp.Controller
                     table.Status = "2";
                 table.ModifiedBy = LoginInfo.Username;
 
-                HttpResponseMessage response = await client.PutAsJsonAsync("api/tables/" + id, table);
-                if (response.IsSuccessStatusCode)
-                    table = await response.Content.ReadAsAsync<TableModel>();
-
+                table = await table.Update(client, "api/tables/" + id);
+             
                 if (table != null)
                 {
                     MessageBox.Show("Cập nhật bàn ăn thành công.");
@@ -307,45 +275,335 @@ namespace RestaurantApp.Controller
         private async void DeleteTable(object sender, EventArgs e)
         {
             long id = Convert.ToInt64(view.Text_tableId.Text);
-
+            TableModel table = new TableModel();
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa bàn ăn này?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                HttpResponseMessage response = await client.DeleteAsync("api/tables/" + id);
-                bool result = false;
-                if (response.IsSuccessStatusCode)
-                    result = await response.Content.ReadAsAsync<bool>();
-
+                bool result = await table.Delete(client, "api/tables/" + id);
+              
                 if (result)
                 {
                     MessageBox.Show("Xóa bàn ăn thành công.");
                     LoadTable(sender, e);
                 }
                 else
-                {
                     MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành ngưng hoạt động thay vì xóa.");
-                }
             }
         }
         // End CRUD Table
 
+        // CRUD Category
         private async void LoadCategory(object sender, EventArgs e)
         {
-            /*view.ClearCategoryBinding();*/
+            view.ClearCategoryBinding();
             List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
             view.loadCategories(categories);
         }
-        private async void LoadUser(object sender, EventArgs e)
+        private async void AddCategory(object sender, EventArgs e)
         {
-            /*view.ClearUserBinding();*/
-            List<UserModel> users = await UserModel.GetUsersAsync(client, "api/users");
-            view.loadUsers(users);
+            foreach (Control c in view.PanelCategory.Controls)
+                c.Focus();
+            int countError = 0;
+            foreach (Control c in view.PanelCategory.Controls)
+            {
+                String error = view.ErrorEmpty.GetError(c);
+                if (error != String.Empty)
+                    countError++;
+            }
+            if (countError == 0)
+            {
+                CategoryModel category = new CategoryModel();
+                category.Name = view.Text_categoryname.Text;
+                string status = (string)view.Cb_categoryStatus.SelectedItem;
+                if (status.Equals("Hoạt động"))
+                    category.Status = "1";
+                else
+                    category.Status = "0";
+
+                category.CreatedBy = LoginInfo.Username;
+
+                category = await category.Save(client, "api/categories");
+
+                if (category != null)
+                {
+                    MessageBox.Show("Thêm danh mục thành công.");
+                    LoadCategory(sender, e);
+                }
+                else
+                    MessageBox.Show("Có lỗi xảy ra.");
+            }
         }
+        private async void UpdateCategory(object sender, EventArgs e)
+        {
+            foreach (Control c in view.PanelCategory.Controls)
+                c.Focus();
+            int countError = 0;
+            foreach (Control c in view.PanelCategory.Controls)
+            {
+                String error = view.ErrorEmpty.GetError(c);
+                if (error != String.Empty)
+                    countError++;
+            }
+            if (countError == 0)
+            {
+                long id = Convert.ToInt64(view.Text_categoryId.Text);
+                CategoryModel category = new CategoryModel();
+                category.Name = view.Text_categoryname.Text;
+                string status = (string)view.Cb_categoryStatus.SelectedItem;
+                if (status.Equals("Hoạt động"))
+                    category.Status = "1";
+                else
+                    category.Status = "0";
+
+                category.ModifiedBy = LoginInfo.Username;
+
+                category = await category.Update(client, "api/categories/" + id);
+
+                if (category != null)
+                {
+                    MessageBox.Show("Cập nhật danh mục thành công.");
+                    LoadCategory(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra.");
+                }
+            }
+        }
+        private async void DeleteCategory(object sender, EventArgs e)
+        {
+            long id = Convert.ToInt64(view.Text_categoryId.Text);
+            CategoryModel category = new CategoryModel();
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa danh mục này?", "Chú ý", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool result = await category.Delete(client, "api/categories/" + id);
+
+                if (result)
+                {
+                    MessageBox.Show("Xóa danh mục thành công.");
+                    LoadCategory(sender, e);
+                }
+                else
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+            }
+        }
+        // End CRUD Category
+
+
+        // CRUD Sale
         private async void LoadSale(object sender, EventArgs e)
         {
-            /*view.ClearSaleBinding();*/
+            view.ClearSaleBinding();
             List<SaleModel> sales = await SaleModel.GetSalesAsync(client, "api/sales");
             view.loadSales(sales);
         }
+        private async void AddSale(object sender, EventArgs e)
+        {
+            foreach (Control c in view.PanelSale.Controls)
+                c.Focus();
+            int countError = 0;
+            foreach (Control c in view.PanelSale.Controls)
+            {
+                String error = view.ErrorEmpty.GetError(c);
+                if (error != String.Empty)
+                    countError++;
+            }
+            if (countError == 0)
+            {
+                SaleModel sale = new SaleModel();
+                sale.Name = view.Text_saleName.Text;
+                sale.Discount = (int)view.SaleDiscountNum.Value;
+                string status = (string)view.Cb_saleStatus.SelectedItem;
+                if (status.Equals("Hoạt động"))
+                    sale.Status = "1";
+                else
+                    sale.Status = "0";
+
+                sale.CreatedBy = LoginInfo.Username;
+
+                sale = await sale.Save(client, "api/sales");
+
+                if (sale != null)
+                {
+                    MessageBox.Show("Thêm chương trình giảm giá thành công.");
+                    LoadSale(sender, e);
+                }
+                else
+                    MessageBox.Show("Có lỗi xảy ra.");
+            }
+        }
+        private async void UpdateSale(object sender, EventArgs e)
+        {
+            foreach (Control c in view.PanelSale.Controls)
+                c.Focus();
+            int countError = 0;
+            foreach (Control c in view.PanelSale.Controls)
+            {
+                String error = view.ErrorEmpty.GetError(c);
+                if (error != String.Empty)
+                    countError++;
+            }
+            if (countError == 0)
+            {
+                long id = Convert.ToInt64(view.Text_saleId.Text);
+                SaleModel sale = new SaleModel();
+                sale.Name = view.Text_saleName.Text;
+                sale.Discount = (int)view.SaleDiscountNum.Value;
+                string status = (string)view.Cb_saleStatus.SelectedItem;
+                if (status.Equals("Hoạt động"))
+                    sale.Status = "1";
+                else
+                    sale.Status = "0";
+
+                sale.ModifiedBy = LoginInfo.Username;
+
+                sale = await sale.Update(client, "api/sales/" + id);
+
+                if (sale != null)
+                {
+                    MessageBox.Show("Cập nhật chương trình giảm giá thành công.");
+                    LoadSale(sender, e);
+                }
+                else
+                    MessageBox.Show("Có lỗi xảy ra.");
+            }
+        }
+        private async void DeleteSale(object sender, EventArgs e)
+        {
+            long id = Convert.ToInt64(view.Text_saleId.Text);
+            SaleModel sale = new SaleModel();
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa chương trình giảm giá này?", "Chú ý", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool result = await sale.Delete(client, "api/sales/" + id);
+
+                if (result)
+                {
+                    MessageBox.Show("Xóa chương trình giảm giá thành công.");
+                    LoadSale(sender, e);
+                }
+                else
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+            }
+        }
+        // End CRUD Sale
+
+        // CRUD User
+        private async void LoadUser(object sender, EventArgs e)
+        {
+            view.ClearUserBinding();
+            List<UserModel> users = await UserModel.GetUsersAsync(client, "api/users");
+            view.loadUsers(users);
+        }
+        private async void AddUser(object sender, EventArgs e)
+        {
+            foreach (Control c in view.PanelUser.Controls)
+                c.Focus();
+            int countError = 0;
+            foreach (Control c in view.PanelUser.Controls)
+            {
+                String error = view.ErrorEmpty.GetError(c);
+                if (error != String.Empty)
+                    countError++;
+            }
+            if (countError == 0)
+            {
+                UserModel user = new UserModel();
+                user.FullName = view.Text_fullname.Text;
+                user.UserName = view.Text_username.Text;
+                user.PassWord = view.Text_password.Text;
+                user.Phone = view.Text_phone.Text;
+                user.Email = view.Text_email.Text;
+                user.Address = view.Text_address.Text;
+                user.Dob = view.DateTime_dobUser.Value;
+                RoleModel role = (RoleModel)view.Cb_role.SelectedItem;
+                user.Role = role;
+                string status = (string)view.Cb_userStatus.SelectedItem;
+                if (status.Equals("Hoạt động"))
+                    user.Status = "1";
+                else
+                    user.Status = "0";
+                string gender = view.Radio_female.Checked ? view.Radio_female.Text : view.Radio_male.Text;
+                user.Gender = gender;
+                user.CreatedBy = LoginInfo.Username;
+
+                user = await user.Save(client, "api/users");
+
+                if (user != null)
+                {
+                    MessageBox.Show("Thêm người dùng thành công.");
+                    LoadUser(sender, e);
+                }
+                else
+                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.");
+            }
+        }
+        private async void UpdateUser(object sender, EventArgs e)
+        {
+            foreach (Control c in view.PanelUser.Controls)
+                c.Focus();
+            int countError = 0;
+            foreach (Control c in view.PanelUser.Controls)
+            {
+                String error = view.ErrorEmpty.GetError(c);
+                if (error != String.Empty)
+                    countError++;
+            }
+            if (countError == 0)
+            {
+                long id = Convert.ToInt64(view.Text_userId.Text);
+                UserModel user = new UserModel();
+                user.FullName = view.Text_fullname.Text;
+                user.UserName = view.Text_username.Text;
+                user.PassWord = view.Text_password.Text;
+                user.Phone = view.Text_phone.Text;
+                user.Email = view.Text_email.Text;
+                user.Address = view.Text_address.Text;
+                user.Dob = view.DateTime_dobUser.Value;
+                RoleModel role = (RoleModel)view.Cb_role.SelectedItem;
+                user.Role = role;
+                string status = (string)view.Cb_userStatus.SelectedItem;
+                if (status.Equals("Hoạt động"))
+                    user.Status = "1";
+                else
+                    user.Status = "0";
+                string gender = view.Radio_female.Checked ? view.Radio_female.Text : view.Radio_male.Text;
+                user.Gender = gender;
+
+                user.ModifiedBy = LoginInfo.Username;
+
+                user = await user.Update(client, "api/users/" + id);
+
+                if (user != null)
+                {
+                    MessageBox.Show("Cập nhật người dùng thành công.");
+                    LoadUser(sender, e);
+                }
+                else
+                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.");
+            }
+        }
+        private async void DeleteUser(object sender, EventArgs e)
+        {
+            long id = Convert.ToInt64(view.Text_userId.Text);
+            UserModel user = new UserModel();
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa người dùng này?", "Chú ý", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool result = await user.Delete(client, "api/users/" + id);
+
+                if (result)
+                {
+                    MessageBox.Show("Xóa người dùng thành công.");
+                    LoadUser(sender, e);
+                }
+                else
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+            }
+        }
+        // End CRUD User
+
+
     }
 }
