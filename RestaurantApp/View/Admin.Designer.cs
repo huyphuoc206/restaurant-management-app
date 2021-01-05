@@ -307,82 +307,95 @@ namespace RestaurantApp.View
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dataGridView_order);
-            this.panel2.Location = new System.Drawing.Point(6, 42);
+            this.panel2.Location = new System.Drawing.Point(6, 65);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1196, 535);
+            this.panel2.Size = new System.Drawing.Size(1193, 512);
             this.panel2.TabIndex = 1;
             // 
             // btn_print
             // 
             this.btn_print.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_print.Location = new System.Drawing.Point(987, 463);
+            this.btn_print.BackgroundImage = global::RestaurantApp.Properties.Resources.print1;
+            this.btn_print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_print.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print.Location = new System.Drawing.Point(1078, 436);
             this.btn_print.Name = "btn_print";
-            this.btn_print.Size = new System.Drawing.Size(177, 57);
+            this.btn_print.Size = new System.Drawing.Size(76, 69);
             this.btn_print.TabIndex = 4;
-            this.btn_print.Text = "In doanh thu";
             this.btn_print.UseVisualStyleBackColor = false;
             // 
             // tb_sumsales
             // 
-            this.tb_sumsales.Location = new System.Drawing.Point(146, 499);
+            this.tb_sumsales.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_sumsales.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_sumsales.Location = new System.Drawing.Point(298, 472);
             this.tb_sumsales.Name = "tb_sumsales";
             this.tb_sumsales.ReadOnly = true;
-            this.tb_sumsales.Size = new System.Drawing.Size(156, 23);
+            this.tb_sumsales.Size = new System.Drawing.Size(152, 27);
             this.tb_sumsales.TabIndex = 2;
             // 
             // tb_countorder
             // 
-            this.tb_countorder.Location = new System.Drawing.Point(146, 465);
+            this.tb_countorder.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_countorder.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_countorder.Location = new System.Drawing.Point(298, 436);
             this.tb_countorder.Name = "tb_countorder";
             this.tb_countorder.ReadOnly = true;
-            this.tb_countorder.Size = new System.Drawing.Size(156, 23);
+            this.tb_countorder.Size = new System.Drawing.Size(152, 27);
             this.tb_countorder.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 472);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(66, 436);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 16);
+            this.label4.Size = new System.Drawing.Size(207, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Số lượng đơn hàng: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 502);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(66, 470);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 16);
+            this.label2.Size = new System.Drawing.Size(176, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tổng doanh thu: ";
             // 
             // dataGridView_order
             // 
             this.dataGridView_order.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_order.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_order.Location = new System.Drawing.Point(4, 3);
             this.dataGridView_order.Name = "dataGridView_order";
-            this.dataGridView_order.Size = new System.Drawing.Size(1185, 441);
+            this.dataGridView_order.Size = new System.Drawing.Size(1185, 427);
             this.dataGridView_order.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btn_statis);
             this.panel1.Controls.Add(this.dtp_fromdate);
             this.panel1.Controls.Add(this.dtp_todate);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(211, 6);
+            this.panel1.Location = new System.Drawing.Point(54, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 33);
+            this.panel1.Size = new System.Drawing.Size(1106, 53);
             this.panel1.TabIndex = 0;
             // 
             // btn_statis
             // 
-            this.btn_statis.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_statis.Location = new System.Drawing.Point(667, -1);
+            this.btn_statis.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btn_statis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_statis.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_statis.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_statis.Location = new System.Drawing.Point(921, 5);
             this.btn_statis.Name = "btn_statis";
-            this.btn_statis.Size = new System.Drawing.Size(87, 31);
+            this.btn_statis.Size = new System.Drawing.Size(132, 41);
             this.btn_statis.TabIndex = 4;
             this.btn_statis.Text = "Thống kê";
             this.btn_statis.UseVisualStyleBackColor = false;
@@ -390,43 +403,46 @@ namespace RestaurantApp.View
             // dtp_fromdate
             // 
             this.dtp_fromdate.CustomFormat = "dd/MM/yyyy";
-            this.dtp_fromdate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_fromdate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_fromdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_fromdate.Location = new System.Drawing.Point(103, 3);
+            this.dtp_fromdate.Location = new System.Drawing.Point(133, 12);
             this.dtp_fromdate.Name = "dtp_fromdate";
-            this.dtp_fromdate.Size = new System.Drawing.Size(138, 23);
+            this.dtp_fromdate.Size = new System.Drawing.Size(166, 27);
             this.dtp_fromdate.TabIndex = 3;
             // 
             // dtp_todate
             // 
             this.dtp_todate.CustomFormat = "dd/MM/yyyy";
-            this.dtp_todate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_todate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_todate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_todate.Location = new System.Drawing.Point(450, 3);
+            this.dtp_todate.Location = new System.Drawing.Point(667, 12);
             this.dtp_todate.Name = "dtp_todate";
-            this.dtp_todate.Size = new System.Drawing.Size(138, 23);
+            this.dtp_todate.Size = new System.Drawing.Size(168, 27);
             this.dtp_todate.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(378, 8);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(551, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tới ngày: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 8);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Từ ngày: ";
             // 
             // tpFoods
             // 
+            this.tpFoods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tpFoods.Controls.Add(this.panel_food);
             this.tpFoods.Controls.Add(this.panel5);
             this.tpFoods.Controls.Add(this.panel4);
@@ -438,6 +454,7 @@ namespace RestaurantApp.View
             this.tpFoods.TabIndex = 1;
             this.tpFoods.Text = "Món ăn";
             this.tpFoods.UseVisualStyleBackColor = true;
+            this.tpFoods.Click += new System.EventHandler(this.tpFoods_Click);
             // 
             // panel_food
             // 
@@ -454,132 +471,138 @@ namespace RestaurantApp.View
             this.panel_food.Controls.Add(this.lb_foodName);
             this.panel_food.Controls.Add(this.lb_foodPrice);
             this.panel_food.Controls.Add(this.lb_food);
-            this.panel_food.Location = new System.Drawing.Point(800, 99);
+            this.panel_food.Location = new System.Drawing.Point(770, 70);
             this.panel_food.Name = "panel_food";
-            this.panel_food.Size = new System.Drawing.Size(375, 302);
+            this.panel_food.Size = new System.Drawing.Size(417, 331);
             this.panel_food.TabIndex = 0;
             // 
             // text_foodId
             // 
-            this.text_foodId.Location = new System.Drawing.Point(104, 57);
+            this.text_foodId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_foodId.Location = new System.Drawing.Point(166, 36);
             this.text_foodId.Name = "text_foodId";
             this.text_foodId.ReadOnly = true;
-            this.text_foodId.Size = new System.Drawing.Size(221, 23);
+            this.text_foodId.Size = new System.Drawing.Size(221, 27);
             this.text_foodId.TabIndex = 11;
             this.text_foodId.TextChanged += new System.EventHandler(this.text_foodId_TextChanged);
             // 
             // lb_foodId
             // 
             this.lb_foodId.AutoSize = true;
-            this.lb_foodId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_foodId.Location = new System.Drawing.Point(9, 58);
+            this.lb_foodId.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_foodId.Location = new System.Drawing.Point(15, 39);
             this.lb_foodId.Name = "lb_foodId";
-            this.lb_foodId.Size = new System.Drawing.Size(31, 18);
+            this.lb_foodId.Size = new System.Drawing.Size(40, 23);
             this.lb_foodId.TabIndex = 6;
             this.lb_foodId.Text = "ID:";
             // 
             // food_discount
             // 
-            this.food_discount.Location = new System.Drawing.Point(104, 218);
+            this.food_discount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.food_discount.Location = new System.Drawing.Point(280, 233);
             this.food_discount.Name = "food_discount";
-            this.food_discount.Size = new System.Drawing.Size(107, 23);
+            this.food_discount.Size = new System.Drawing.Size(107, 27);
             this.food_discount.TabIndex = 4;
             // 
             // food_price
             // 
-            this.food_price.Location = new System.Drawing.Point(104, 180);
+            this.food_price.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.food_price.Location = new System.Drawing.Point(280, 181);
             this.food_price.Maximum = new decimal(new int[] {
             -727379969,
             232,
             0,
             0});
             this.food_price.Name = "food_price";
-            this.food_price.Size = new System.Drawing.Size(107, 23);
+            this.food_price.Size = new System.Drawing.Size(107, 27);
             this.food_price.TabIndex = 3;
             // 
             // cb_foodCategory
             // 
             this.cb_foodCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_foodCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_foodCategory.FormattingEnabled = true;
-            this.cb_foodCategory.Location = new System.Drawing.Point(104, 140);
+            this.cb_foodCategory.Location = new System.Drawing.Point(168, 132);
             this.cb_foodCategory.Name = "cb_foodCategory";
-            this.cb_foodCategory.Size = new System.Drawing.Size(221, 24);
+            this.cb_foodCategory.Size = new System.Drawing.Size(219, 27);
             this.cb_foodCategory.TabIndex = 2;
             // 
             // lb_foodCategory
             // 
             this.lb_foodCategory.AutoSize = true;
-            this.lb_foodCategory.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_foodCategory.Location = new System.Drawing.Point(9, 141);
+            this.lb_foodCategory.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_foodCategory.Location = new System.Drawing.Point(15, 135);
             this.lb_foodCategory.Name = "lb_foodCategory";
-            this.lb_foodCategory.Size = new System.Drawing.Size(45, 18);
+            this.lb_foodCategory.Size = new System.Drawing.Size(57, 23);
             this.lb_foodCategory.TabIndex = 3;
             this.lb_foodCategory.Text = "Loại:";
             // 
             // cb_foodStatus
             // 
             this.cb_foodStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_foodStatus.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_foodStatus.FormattingEnabled = true;
-            this.cb_foodStatus.Location = new System.Drawing.Point(104, 255);
+            this.cb_foodStatus.Location = new System.Drawing.Point(168, 278);
             this.cb_foodStatus.Name = "cb_foodStatus";
-            this.cb_foodStatus.Size = new System.Drawing.Size(221, 24);
+            this.cb_foodStatus.Size = new System.Drawing.Size(221, 27);
             this.cb_foodStatus.TabIndex = 5;
             // 
             // lb_foodStatus
             // 
             this.lb_foodStatus.AutoSize = true;
-            this.lb_foodStatus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_foodStatus.Location = new System.Drawing.Point(9, 255);
+            this.lb_foodStatus.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_foodStatus.Location = new System.Drawing.Point(15, 278);
             this.lb_foodStatus.Name = "lb_foodStatus";
-            this.lb_foodStatus.Size = new System.Drawing.Size(89, 18);
+            this.lb_foodStatus.Size = new System.Drawing.Size(115, 23);
             this.lb_foodStatus.TabIndex = 0;
             this.lb_foodStatus.Text = "Trạng thái:";
             // 
             // lb_foodDiscount
             // 
             this.lb_foodDiscount.AutoSize = true;
-            this.lb_foodDiscount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_foodDiscount.Location = new System.Drawing.Point(9, 218);
+            this.lb_foodDiscount.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_foodDiscount.Location = new System.Drawing.Point(15, 232);
             this.lb_foodDiscount.Name = "lb_foodDiscount";
-            this.lb_foodDiscount.Size = new System.Drawing.Size(78, 18);
+            this.lb_foodDiscount.Size = new System.Drawing.Size(101, 23);
             this.lb_foodDiscount.TabIndex = 0;
             this.lb_foodDiscount.Text = "Giảm giá:";
             // 
             // text_foodName
             // 
-            this.text_foodName.Location = new System.Drawing.Point(104, 99);
+            this.text_foodName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_foodName.Location = new System.Drawing.Point(166, 87);
             this.text_foodName.Name = "text_foodName";
-            this.text_foodName.Size = new System.Drawing.Size(221, 23);
+            this.text_foodName.Size = new System.Drawing.Size(221, 27);
             this.text_foodName.TabIndex = 1;
             this.text_foodName.Validating += new System.ComponentModel.CancelEventHandler(this.text_foodName_Validating);
             // 
             // lb_foodName
             // 
             this.lb_foodName.AutoSize = true;
-            this.lb_foodName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_foodName.Location = new System.Drawing.Point(9, 100);
+            this.lb_foodName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_foodName.Location = new System.Drawing.Point(15, 90);
             this.lb_foodName.Name = "lb_foodName";
-            this.lb_foodName.Size = new System.Drawing.Size(40, 18);
+            this.lb_foodName.Size = new System.Drawing.Size(52, 23);
             this.lb_foodName.TabIndex = 0;
             this.lb_foodName.Text = "Tên:";
             // 
             // lb_foodPrice
             // 
             this.lb_foodPrice.AutoSize = true;
-            this.lb_foodPrice.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_foodPrice.Location = new System.Drawing.Point(9, 180);
+            this.lb_foodPrice.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_foodPrice.Location = new System.Drawing.Point(15, 184);
             this.lb_foodPrice.Name = "lb_foodPrice";
-            this.lb_foodPrice.Size = new System.Drawing.Size(38, 18);
+            this.lb_foodPrice.Size = new System.Drawing.Size(48, 23);
             this.lb_foodPrice.TabIndex = 0;
             this.lb_foodPrice.Text = "Giá:";
             // 
             // lb_food
             // 
             this.lb_food.AutoSize = true;
-            this.lb_food.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_food.Location = new System.Drawing.Point(125, 13);
+            this.lb_food.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_food.Location = new System.Drawing.Point(174, 4);
             this.lb_food.Name = "lb_food";
-            this.lb_food.Size = new System.Drawing.Size(80, 23);
+            this.lb_food.Size = new System.Drawing.Size(89, 25);
             this.lb_food.TabIndex = 0;
             this.lb_food.Text = "Món ăn";
             // 
@@ -590,65 +613,70 @@ namespace RestaurantApp.View
             this.panel5.Controls.Add(this.btn_deleteFood);
             this.panel5.Controls.Add(this.btn_updateFood);
             this.panel5.Controls.Add(this.btn_viewFood);
-            this.panel5.Location = new System.Drawing.Point(770, 419);
+            this.panel5.Location = new System.Drawing.Point(770, 425);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(417, 127);
             this.panel5.TabIndex = 0;
             // 
             // btn_clearFood
             // 
-            this.btn_clearFood.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearFood.BackColor = System.Drawing.Color.Transparent;
+            this.btn_clearFood.BackgroundImage = global::RestaurantApp.Properties.Resources.update_icon;
+            this.btn_clearFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_clearFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_clearFood.Location = new System.Drawing.Point(339, 19);
             this.btn_clearFood.Name = "btn_clearFood";
             this.btn_clearFood.Size = new System.Drawing.Size(66, 71);
             this.btn_clearFood.TabIndex = 10;
-            this.btn_clearFood.Text = "Làm mới";
             this.btn_clearFood.UseVisualStyleBackColor = false;
             this.btn_clearFood.Click += new System.EventHandler(this.btn_clearFood_Click);
             // 
             // btn_addFood
             // 
-            this.btn_addFood.BackColor = System.Drawing.Color.Green;
+            this.btn_addFood.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addFood.BackgroundImage = global::RestaurantApp.Properties.Resources.add;
+            this.btn_addFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_addFood.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_addFood.Location = new System.Drawing.Point(6, 19);
+            this.btn_addFood.Location = new System.Drawing.Point(8, 19);
             this.btn_addFood.Name = "btn_addFood";
             this.btn_addFood.Size = new System.Drawing.Size(66, 71);
             this.btn_addFood.TabIndex = 6;
-            this.btn_addFood.Text = "Thêm";
             this.btn_addFood.UseVisualStyleBackColor = false;
             // 
             // btn_deleteFood
             // 
-            this.btn_deleteFood.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteFood.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteFood.BackgroundImage = global::RestaurantApp.Properties.Resources.delete_icon;
+            this.btn_deleteFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_deleteFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_deleteFood.Location = new System.Drawing.Point(87, 19);
+            this.btn_deleteFood.Location = new System.Drawing.Point(89, 19);
             this.btn_deleteFood.Name = "btn_deleteFood";
             this.btn_deleteFood.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteFood.TabIndex = 7;
-            this.btn_deleteFood.Text = "Xoá";
             this.btn_deleteFood.UseVisualStyleBackColor = false;
             // 
             // btn_updateFood
             // 
-            this.btn_updateFood.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateFood.BackColor = System.Drawing.Color.Transparent;
+            this.btn_updateFood.BackgroundImage = global::RestaurantApp.Properties.Resources.Fix_icon;
+            this.btn_updateFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_updateFood.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_updateFood.Location = new System.Drawing.Point(168, 19);
+            this.btn_updateFood.Location = new System.Drawing.Point(170, 19);
             this.btn_updateFood.Name = "btn_updateFood";
             this.btn_updateFood.Size = new System.Drawing.Size(66, 71);
             this.btn_updateFood.TabIndex = 8;
-            this.btn_updateFood.Text = "Sửa";
             this.btn_updateFood.UseVisualStyleBackColor = false;
             // 
             // btn_viewFood
             // 
-            this.btn_viewFood.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewFood.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewFood.BackgroundImage = global::RestaurantApp.Properties.Resources.Search_icon;
+            this.btn_viewFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_viewFood.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_viewFood.Location = new System.Drawing.Point(253, 19);
             this.btn_viewFood.Name = "btn_viewFood";
             this.btn_viewFood.Size = new System.Drawing.Size(66, 71);
             this.btn_viewFood.TabIndex = 9;
-            this.btn_viewFood.Text = "Xem";
             this.btn_viewFood.UseVisualStyleBackColor = false;
             // 
             // panel4
@@ -742,26 +770,28 @@ namespace RestaurantApp.View
             // 
             this.panel3.Controls.Add(this.btn_searchfood);
             this.panel3.Controls.Add(this.text_searchFood);
-            this.panel3.Location = new System.Drawing.Point(11, 24);
+            this.panel3.Location = new System.Drawing.Point(11, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(424, 34);
+            this.panel3.Size = new System.Drawing.Size(475, 52);
             this.panel3.TabIndex = 0;
             // 
             // btn_searchfood
             // 
-            this.btn_searchfood.Location = new System.Drawing.Point(325, 4);
+            this.btn_searchfood.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
+            this.btn_searchfood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_searchfood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_searchfood.Location = new System.Drawing.Point(344, 4);
             this.btn_searchfood.Name = "btn_searchfood";
-            this.btn_searchfood.Size = new System.Drawing.Size(86, 27);
+            this.btn_searchfood.Size = new System.Drawing.Size(47, 30);
             this.btn_searchfood.TabIndex = 1;
-            this.btn_searchfood.Text = "Tìm kiếm";
             this.btn_searchfood.UseVisualStyleBackColor = true;
             // 
             // text_searchFood
             // 
-            this.text_searchFood.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_searchFood.Location = new System.Drawing.Point(3, 3);
+            this.text_searchFood.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_searchFood.Location = new System.Drawing.Point(16, 4);
             this.text_searchFood.Name = "text_searchFood";
-            this.text_searchFood.Size = new System.Drawing.Size(292, 27);
+            this.text_searchFood.Size = new System.Drawing.Size(329, 30);
             this.text_searchFood.TabIndex = 0;
             // 
             // tpTable
@@ -789,77 +819,81 @@ namespace RestaurantApp.View
             this.panel_table.Controls.Add(this.num_tableSeats);
             this.panel_table.Controls.Add(this.lb_tableSeats);
             this.panel_table.Controls.Add(this.lb_titletable);
-            this.panel_table.Location = new System.Drawing.Point(779, 120);
+            this.panel_table.Location = new System.Drawing.Point(743, 64);
             this.panel_table.Name = "panel_table";
-            this.panel_table.Size = new System.Drawing.Size(385, 239);
+            this.panel_table.Size = new System.Drawing.Size(437, 286);
             this.panel_table.TabIndex = 1;
             // 
             // text_tableId
             // 
-            this.text_tableId.Location = new System.Drawing.Point(123, 66);
+            this.text_tableId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_tableId.Location = new System.Drawing.Point(186, 66);
             this.text_tableId.Name = "text_tableId";
             this.text_tableId.ReadOnly = true;
-            this.text_tableId.Size = new System.Drawing.Size(221, 23);
+            this.text_tableId.Size = new System.Drawing.Size(221, 27);
             this.text_tableId.TabIndex = 9;
             this.text_tableId.TextChanged += new System.EventHandler(this.text_tableId_TextChanged);
             // 
             // lb_tableId
             // 
             this.lb_tableId.AutoSize = true;
-            this.lb_tableId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tableId.Location = new System.Drawing.Point(19, 66);
+            this.lb_tableId.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tableId.Location = new System.Drawing.Point(25, 70);
             this.lb_tableId.Name = "lb_tableId";
-            this.lb_tableId.Size = new System.Drawing.Size(31, 18);
+            this.lb_tableId.Size = new System.Drawing.Size(40, 23);
             this.lb_tableId.TabIndex = 9;
             this.lb_tableId.Text = "ID:";
             // 
             // cb_tableStatus
             // 
             this.cb_tableStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_tableStatus.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_tableStatus.FormattingEnabled = true;
-            this.cb_tableStatus.Location = new System.Drawing.Point(123, 199);
+            this.cb_tableStatus.Location = new System.Drawing.Point(186, 199);
             this.cb_tableStatus.Name = "cb_tableStatus";
-            this.cb_tableStatus.Size = new System.Drawing.Size(221, 24);
+            this.cb_tableStatus.Size = new System.Drawing.Size(221, 27);
             this.cb_tableStatus.TabIndex = 3;
             // 
             // lb_tableStatus
             // 
             this.lb_tableStatus.AutoSize = true;
-            this.lb_tableStatus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tableStatus.Location = new System.Drawing.Point(19, 200);
+            this.lb_tableStatus.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tableStatus.Location = new System.Drawing.Point(25, 203);
             this.lb_tableStatus.Name = "lb_tableStatus";
-            this.lb_tableStatus.Size = new System.Drawing.Size(89, 18);
+            this.lb_tableStatus.Size = new System.Drawing.Size(115, 23);
             this.lb_tableStatus.TabIndex = 7;
             this.lb_tableStatus.Text = "Trạng thái:";
             // 
             // text_tableName
             // 
-            this.text_tableName.Location = new System.Drawing.Point(123, 109);
+            this.text_tableName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_tableName.Location = new System.Drawing.Point(186, 109);
             this.text_tableName.Name = "text_tableName";
-            this.text_tableName.Size = new System.Drawing.Size(221, 23);
+            this.text_tableName.Size = new System.Drawing.Size(221, 27);
             this.text_tableName.TabIndex = 1;
             this.text_tableName.Validating += new System.ComponentModel.CancelEventHandler(this.text_tableName_Validating);
             // 
             // lb_tableName
             // 
             this.lb_tableName.AutoSize = true;
-            this.lb_tableName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tableName.Location = new System.Drawing.Point(19, 109);
+            this.lb_tableName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tableName.Location = new System.Drawing.Point(25, 113);
             this.lb_tableName.Name = "lb_tableName";
-            this.lb_tableName.Size = new System.Drawing.Size(40, 18);
+            this.lb_tableName.Size = new System.Drawing.Size(52, 23);
             this.lb_tableName.TabIndex = 5;
             this.lb_tableName.Text = "Tên:";
             // 
             // num_tableSeats
             // 
-            this.num_tableSeats.Location = new System.Drawing.Point(123, 158);
+            this.num_tableSeats.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_tableSeats.Location = new System.Drawing.Point(340, 153);
             this.num_tableSeats.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.num_tableSeats.Name = "num_tableSeats";
-            this.num_tableSeats.Size = new System.Drawing.Size(67, 23);
+            this.num_tableSeats.Size = new System.Drawing.Size(67, 27);
             this.num_tableSeats.TabIndex = 2;
             this.num_tableSeats.Value = new decimal(new int[] {
             1,
@@ -870,20 +904,20 @@ namespace RestaurantApp.View
             // lb_tableSeats
             // 
             this.lb_tableSeats.AutoSize = true;
-            this.lb_tableSeats.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tableSeats.Location = new System.Drawing.Point(19, 158);
+            this.lb_tableSeats.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tableSeats.Location = new System.Drawing.Point(25, 157);
             this.lb_tableSeats.Name = "lb_tableSeats";
-            this.lb_tableSeats.Size = new System.Drawing.Size(98, 18);
+            this.lb_tableSeats.Size = new System.Drawing.Size(129, 23);
             this.lb_tableSeats.TabIndex = 0;
             this.lb_tableSeats.Text = "Số chỗ ngồi:";
             // 
             // lb_titletable
             // 
             this.lb_titletable.AutoSize = true;
-            this.lb_titletable.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_titletable.Location = new System.Drawing.Point(141, 10);
+            this.lb_titletable.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_titletable.Location = new System.Drawing.Point(181, 3);
             this.lb_titletable.Name = "lb_titletable";
-            this.lb_titletable.Size = new System.Drawing.Size(75, 23);
+            this.lb_titletable.Size = new System.Drawing.Size(84, 25);
             this.lb_titletable.TabIndex = 0;
             this.lb_titletable.Text = "Bàn ăn";
             // 
@@ -894,65 +928,70 @@ namespace RestaurantApp.View
             this.panel8.Controls.Add(this.btn_deleteTable);
             this.panel8.Controls.Add(this.btn_updateTable);
             this.panel8.Controls.Add(this.btn_viewTable);
-            this.panel8.Location = new System.Drawing.Point(743, 378);
+            this.panel8.Location = new System.Drawing.Point(743, 431);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(437, 127);
             this.panel8.TabIndex = 2;
             // 
             // btn_clearTable
             // 
-            this.btn_clearTable.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearTable.BackColor = System.Drawing.Color.Transparent;
+            this.btn_clearTable.BackgroundImage = global::RestaurantApp.Properties.Resources.update_icon;
+            this.btn_clearTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_clearTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearTable.Location = new System.Drawing.Point(341, 21);
+            this.btn_clearTable.Location = new System.Drawing.Point(355, 21);
             this.btn_clearTable.Name = "btn_clearTable";
             this.btn_clearTable.Size = new System.Drawing.Size(66, 71);
             this.btn_clearTable.TabIndex = 8;
-            this.btn_clearTable.Text = "Làm mới";
             this.btn_clearTable.UseVisualStyleBackColor = false;
             this.btn_clearTable.Click += new System.EventHandler(this.btn_clearTable_Click);
             // 
             // btn_addTable
             // 
-            this.btn_addTable.BackColor = System.Drawing.Color.Green;
+            this.btn_addTable.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addTable.BackgroundImage = global::RestaurantApp.Properties.Resources.add;
+            this.btn_addTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_addTable.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_addTable.Location = new System.Drawing.Point(8, 21);
             this.btn_addTable.Name = "btn_addTable";
             this.btn_addTable.Size = new System.Drawing.Size(66, 71);
             this.btn_addTable.TabIndex = 4;
-            this.btn_addTable.Text = "Thêm";
             this.btn_addTable.UseVisualStyleBackColor = false;
             // 
             // btn_deleteTable
             // 
-            this.btn_deleteTable.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteTable.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteTable.BackgroundImage = global::RestaurantApp.Properties.Resources.delete_icon;
+            this.btn_deleteTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_deleteTable.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_deleteTable.Location = new System.Drawing.Point(89, 21);
+            this.btn_deleteTable.Location = new System.Drawing.Point(99, 21);
             this.btn_deleteTable.Name = "btn_deleteTable";
             this.btn_deleteTable.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteTable.TabIndex = 5;
-            this.btn_deleteTable.Text = "Xoá";
             this.btn_deleteTable.UseVisualStyleBackColor = false;
             // 
             // btn_updateTable
             // 
-            this.btn_updateTable.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateTable.BackColor = System.Drawing.Color.Transparent;
+            this.btn_updateTable.BackgroundImage = global::RestaurantApp.Properties.Resources.Fix_icon;
+            this.btn_updateTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_updateTable.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_updateTable.Location = new System.Drawing.Point(174, 21);
+            this.btn_updateTable.Location = new System.Drawing.Point(184, 21);
             this.btn_updateTable.Name = "btn_updateTable";
             this.btn_updateTable.Size = new System.Drawing.Size(66, 71);
             this.btn_updateTable.TabIndex = 6;
-            this.btn_updateTable.Text = "Sửa";
             this.btn_updateTable.UseVisualStyleBackColor = false;
             // 
             // btn_viewTable
             // 
-            this.btn_viewTable.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewTable.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewTable.BackgroundImage = global::RestaurantApp.Properties.Resources.Search_icon;
+            this.btn_viewTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_viewTable.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_viewTable.Location = new System.Drawing.Point(255, 21);
+            this.btn_viewTable.Location = new System.Drawing.Point(268, 21);
             this.btn_viewTable.Name = "btn_viewTable";
             this.btn_viewTable.Size = new System.Drawing.Size(66, 71);
             this.btn_viewTable.TabIndex = 7;
-            this.btn_viewTable.Text = "Xem";
             this.btn_viewTable.UseVisualStyleBackColor = false;
             // 
             // panel9
@@ -984,7 +1023,7 @@ namespace RestaurantApp.View
             this.dataGridView_table.Location = new System.Drawing.Point(3, 3);
             this.dataGridView_table.Name = "dataGridView_table";
             this.dataGridView_table.ReadOnly = true;
-            this.dataGridView_table.Size = new System.Drawing.Size(685, 507);
+            this.dataGridView_table.Size = new System.Drawing.Size(688, 507);
             this.dataGridView_table.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -1026,26 +1065,28 @@ namespace RestaurantApp.View
             // 
             this.panel10.Controls.Add(this.btn_searchtable);
             this.panel10.Controls.Add(this.tb_searchtexttable);
-            this.panel10.Location = new System.Drawing.Point(14, 24);
+            this.panel10.Location = new System.Drawing.Point(14, 6);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(424, 34);
+            this.panel10.Size = new System.Drawing.Size(424, 52);
             this.panel10.TabIndex = 4;
             // 
             // btn_searchtable
             // 
-            this.btn_searchtable.Location = new System.Drawing.Point(325, 4);
+            this.btn_searchtable.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
+            this.btn_searchtable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_searchtable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_searchtable.Location = new System.Drawing.Point(309, 3);
             this.btn_searchtable.Name = "btn_searchtable";
-            this.btn_searchtable.Size = new System.Drawing.Size(86, 27);
+            this.btn_searchtable.Size = new System.Drawing.Size(38, 30);
             this.btn_searchtable.TabIndex = 1;
-            this.btn_searchtable.Text = "Tìm kiếm";
             this.btn_searchtable.UseVisualStyleBackColor = true;
             // 
             // tb_searchtexttable
             // 
-            this.tb_searchtexttable.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtexttable.Location = new System.Drawing.Point(3, 3);
+            this.tb_searchtexttable.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_searchtexttable.Location = new System.Drawing.Point(18, 3);
             this.tb_searchtexttable.Name = "tb_searchtexttable";
-            this.tb_searchtexttable.Size = new System.Drawing.Size(292, 27);
+            this.tb_searchtexttable.Size = new System.Drawing.Size(292, 30);
             this.tb_searchtexttable.TabIndex = 0;
             // 
             // tpMenu
@@ -1061,6 +1102,7 @@ namespace RestaurantApp.View
             this.tpMenu.TabIndex = 3;
             this.tpMenu.Text = "Danh mục";
             this.tpMenu.UseVisualStyleBackColor = true;
+            this.tpMenu.Click += new System.EventHandler(this.tpMenu_Click);
             // 
             // panel_category
             // 
@@ -1071,74 +1113,77 @@ namespace RestaurantApp.View
             this.panel_category.Controls.Add(this.text_categoryname);
             this.panel_category.Controls.Add(this.lb_categoryName);
             this.panel_category.Controls.Add(this.label18);
-            this.panel_category.Location = new System.Drawing.Point(748, 91);
+            this.panel_category.Location = new System.Drawing.Point(713, 57);
             this.panel_category.Name = "panel_category";
-            this.panel_category.Size = new System.Drawing.Size(385, 242);
+            this.panel_category.Size = new System.Drawing.Size(447, 276);
             this.panel_category.TabIndex = 1;
             // 
             // text_categoryId
             // 
-            this.text_categoryId.Location = new System.Drawing.Point(125, 94);
+            this.text_categoryId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_categoryId.Location = new System.Drawing.Point(197, 65);
             this.text_categoryId.Name = "text_categoryId";
             this.text_categoryId.ReadOnly = true;
-            this.text_categoryId.Size = new System.Drawing.Size(221, 23);
+            this.text_categoryId.Size = new System.Drawing.Size(221, 27);
             this.text_categoryId.TabIndex = 8;
             this.text_categoryId.TextChanged += new System.EventHandler(this.text_categoryId_TextChanged);
             // 
             // lb_categoryId
             // 
             this.lb_categoryId.AutoSize = true;
-            this.lb_categoryId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_categoryId.Location = new System.Drawing.Point(30, 95);
+            this.lb_categoryId.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_categoryId.Location = new System.Drawing.Point(30, 69);
             this.lb_categoryId.Name = "lb_categoryId";
-            this.lb_categoryId.Size = new System.Drawing.Size(31, 18);
+            this.lb_categoryId.Size = new System.Drawing.Size(40, 23);
             this.lb_categoryId.TabIndex = 3;
             this.lb_categoryId.Text = "ID:";
             // 
             // cb_categoryStatus
             // 
             this.cb_categoryStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_categoryStatus.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_categoryStatus.FormattingEnabled = true;
-            this.cb_categoryStatus.Location = new System.Drawing.Point(125, 188);
+            this.cb_categoryStatus.Location = new System.Drawing.Point(197, 185);
             this.cb_categoryStatus.Name = "cb_categoryStatus";
-            this.cb_categoryStatus.Size = new System.Drawing.Size(221, 24);
+            this.cb_categoryStatus.Size = new System.Drawing.Size(221, 27);
             this.cb_categoryStatus.TabIndex = 2;
             // 
             // lb_categoryStatus
             // 
             this.lb_categoryStatus.AutoSize = true;
-            this.lb_categoryStatus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_categoryStatus.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_categoryStatus.Location = new System.Drawing.Point(30, 189);
             this.lb_categoryStatus.Name = "lb_categoryStatus";
-            this.lb_categoryStatus.Size = new System.Drawing.Size(89, 18);
+            this.lb_categoryStatus.Size = new System.Drawing.Size(115, 23);
             this.lb_categoryStatus.TabIndex = 0;
             this.lb_categoryStatus.Text = "Trạng thái:";
             // 
             // text_categoryname
             // 
-            this.text_categoryname.Location = new System.Drawing.Point(125, 139);
+            this.text_categoryname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_categoryname.Location = new System.Drawing.Point(197, 123);
             this.text_categoryname.Name = "text_categoryname";
-            this.text_categoryname.Size = new System.Drawing.Size(221, 23);
+            this.text_categoryname.Size = new System.Drawing.Size(221, 27);
             this.text_categoryname.TabIndex = 1;
             this.text_categoryname.Validating += new System.ComponentModel.CancelEventHandler(this.text_categoryname_Validating);
             // 
             // lb_categoryName
             // 
             this.lb_categoryName.AutoSize = true;
-            this.lb_categoryName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_categoryName.Location = new System.Drawing.Point(30, 140);
+            this.lb_categoryName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_categoryName.Location = new System.Drawing.Point(30, 127);
             this.lb_categoryName.Name = "lb_categoryName";
-            this.lb_categoryName.Size = new System.Drawing.Size(40, 18);
+            this.lb_categoryName.Size = new System.Drawing.Size(52, 23);
             this.lb_categoryName.TabIndex = 0;
             this.lb_categoryName.Text = "Tên:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(121, 37);
+            this.label18.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(165, 3);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(127, 23);
+            this.label18.Size = new System.Drawing.Size(140, 25);
             this.label18.TabIndex = 0;
             this.label18.Text = "Loại món ăn";
             // 
@@ -1149,65 +1194,70 @@ namespace RestaurantApp.View
             this.panel12.Controls.Add(this.btn_deleteCategory);
             this.panel12.Controls.Add(this.btn_updateCategory);
             this.panel12.Controls.Add(this.btn_viewCategory);
-            this.panel12.Location = new System.Drawing.Point(732, 355);
+            this.panel12.Location = new System.Drawing.Point(713, 436);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(428, 108);
+            this.panel12.Size = new System.Drawing.Size(447, 108);
             this.panel12.TabIndex = 2;
             // 
             // btn_clearCategory
             // 
-            this.btn_clearCategory.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btn_clearCategory.BackgroundImage = global::RestaurantApp.Properties.Resources.update_icon;
+            this.btn_clearCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_clearCategory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearCategory.Location = new System.Drawing.Point(343, 19);
+            this.btn_clearCategory.Location = new System.Drawing.Point(363, 19);
             this.btn_clearCategory.Name = "btn_clearCategory";
             this.btn_clearCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_clearCategory.TabIndex = 7;
-            this.btn_clearCategory.Text = "Làm mới";
             this.btn_clearCategory.UseVisualStyleBackColor = false;
             this.btn_clearCategory.Click += new System.EventHandler(this.btn_clearCategory_Click);
             // 
             // btn_addCategory
             // 
-            this.btn_addCategory.BackColor = System.Drawing.Color.Green;
+            this.btn_addCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addCategory.BackgroundImage = global::RestaurantApp.Properties.Resources.add;
+            this.btn_addCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_addCategory.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_addCategory.Location = new System.Drawing.Point(12, 19);
             this.btn_addCategory.Name = "btn_addCategory";
             this.btn_addCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_addCategory.TabIndex = 3;
-            this.btn_addCategory.Text = "Thêm";
             this.btn_addCategory.UseVisualStyleBackColor = false;
             // 
             // btn_deleteCategory
             // 
-            this.btn_deleteCategory.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteCategory.BackgroundImage = global::RestaurantApp.Properties.Resources.delete_icon;
+            this.btn_deleteCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_deleteCategory.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_deleteCategory.Location = new System.Drawing.Point(93, 19);
+            this.btn_deleteCategory.Location = new System.Drawing.Point(107, 19);
             this.btn_deleteCategory.Name = "btn_deleteCategory";
             this.btn_deleteCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteCategory.TabIndex = 4;
-            this.btn_deleteCategory.Text = "Xoá";
             this.btn_deleteCategory.UseVisualStyleBackColor = false;
             // 
             // btn_updateCategory
             // 
-            this.btn_updateCategory.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btn_updateCategory.BackgroundImage = global::RestaurantApp.Properties.Resources.Fix_icon;
+            this.btn_updateCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_updateCategory.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_updateCategory.Location = new System.Drawing.Point(178, 19);
+            this.btn_updateCategory.Location = new System.Drawing.Point(198, 19);
             this.btn_updateCategory.Name = "btn_updateCategory";
             this.btn_updateCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_updateCategory.TabIndex = 5;
-            this.btn_updateCategory.Text = "Sửa";
             this.btn_updateCategory.UseVisualStyleBackColor = false;
             // 
             // btn_viewCategory
             // 
-            this.btn_viewCategory.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewCategory.BackgroundImage = global::RestaurantApp.Properties.Resources.Search_icon;
+            this.btn_viewCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_viewCategory.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_viewCategory.Location = new System.Drawing.Point(259, 19);
+            this.btn_viewCategory.Location = new System.Drawing.Point(282, 19);
             this.btn_viewCategory.Name = "btn_viewCategory";
             this.btn_viewCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_viewCategory.TabIndex = 6;
-            this.btn_viewCategory.Text = "Xem";
             this.btn_viewCategory.UseVisualStyleBackColor = false;
             // 
             // panel13
@@ -1284,26 +1334,28 @@ namespace RestaurantApp.View
             // 
             this.panel14.Controls.Add(this.btn_searchcategory);
             this.panel14.Controls.Add(this.tb_searchtextcaterory);
-            this.panel14.Location = new System.Drawing.Point(17, 17);
+            this.panel14.Location = new System.Drawing.Point(17, 6);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(424, 34);
+            this.panel14.Size = new System.Drawing.Size(467, 45);
             this.panel14.TabIndex = 4;
             // 
             // btn_searchcategory
             // 
-            this.btn_searchcategory.Location = new System.Drawing.Point(325, 4);
+            this.btn_searchcategory.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
+            this.btn_searchcategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_searchcategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_searchcategory.Location = new System.Drawing.Point(301, 3);
             this.btn_searchcategory.Name = "btn_searchcategory";
-            this.btn_searchcategory.Size = new System.Drawing.Size(86, 27);
+            this.btn_searchcategory.Size = new System.Drawing.Size(43, 33);
             this.btn_searchcategory.TabIndex = 1;
-            this.btn_searchcategory.Text = "Tìm kiếm";
             this.btn_searchcategory.UseVisualStyleBackColor = true;
             // 
             // tb_searchtextcaterory
             // 
-            this.tb_searchtextcaterory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtextcaterory.Location = new System.Drawing.Point(3, 3);
+            this.tb_searchtextcaterory.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_searchtextcaterory.Location = new System.Drawing.Point(10, 3);
             this.tb_searchtextcaterory.Name = "tb_searchtextcaterory";
-            this.tb_searchtextcaterory.Size = new System.Drawing.Size(292, 27);
+            this.tb_searchtextcaterory.Size = new System.Drawing.Size(292, 33);
             this.tb_searchtextcaterory.TabIndex = 0;
             // 
             // tpAccount
@@ -1346,18 +1398,18 @@ namespace RestaurantApp.View
             this.panel_user.Controls.Add(this.lb_fullname);
             this.panel_user.Controls.Add(this.lb_username);
             this.panel_user.Controls.Add(this.label25);
-            this.panel_user.Location = new System.Drawing.Point(765, 12);
+            this.panel_user.Location = new System.Drawing.Point(723, 6);
             this.panel_user.Name = "panel_user";
-            this.panel_user.Size = new System.Drawing.Size(356, 480);
+            this.panel_user.Size = new System.Drawing.Size(452, 486);
             this.panel_user.TabIndex = 1;
             // 
             // lb_dob
             // 
             this.lb_dob.AutoSize = true;
-            this.lb_dob.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_dob.Location = new System.Drawing.Point(9, 363);
+            this.lb_dob.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_dob.Location = new System.Drawing.Point(18, 363);
             this.lb_dob.Name = "lb_dob";
-            this.lb_dob.Size = new System.Drawing.Size(87, 18);
+            this.lb_dob.Size = new System.Drawing.Size(112, 23);
             this.lb_dob.TabIndex = 28;
             this.lb_dob.Text = "Ngày sinh:";
             // 
@@ -1366,46 +1418,48 @@ namespace RestaurantApp.View
             this.dateTime_dobUser.CustomFormat = "dd/MM/yyyy";
             this.dateTime_dobUser.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTime_dobUser.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTime_dobUser.Location = new System.Drawing.Point(120, 363);
+            this.dateTime_dobUser.Location = new System.Drawing.Point(262, 360);
             this.dateTime_dobUser.Name = "dateTime_dobUser";
-            this.dateTime_dobUser.Size = new System.Drawing.Size(134, 26);
+            this.dateTime_dobUser.Size = new System.Drawing.Size(171, 26);
             this.dateTime_dobUser.TabIndex = 27;
             // 
             // text_userId
             // 
-            this.text_userId.Location = new System.Drawing.Point(121, 39);
+            this.text_userId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_userId.Location = new System.Drawing.Point(223, 36);
             this.text_userId.Name = "text_userId";
             this.text_userId.ReadOnly = true;
-            this.text_userId.Size = new System.Drawing.Size(204, 23);
+            this.text_userId.Size = new System.Drawing.Size(210, 27);
             this.text_userId.TabIndex = 16;
             this.text_userId.TextChanged += new System.EventHandler(this.text_userId_TextChanged);
             // 
             // lb_userId
             // 
             this.lb_userId.AutoSize = true;
-            this.lb_userId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_userId.Location = new System.Drawing.Point(9, 39);
+            this.lb_userId.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_userId.Location = new System.Drawing.Point(18, 40);
             this.lb_userId.Name = "lb_userId";
-            this.lb_userId.Size = new System.Drawing.Size(31, 18);
+            this.lb_userId.Size = new System.Drawing.Size(40, 23);
             this.lb_userId.TabIndex = 26;
             this.lb_userId.Text = "ID:";
             // 
             // cb_userStatus
             // 
             this.cb_userStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_userStatus.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_userStatus.FormattingEnabled = true;
-            this.cb_userStatus.Location = new System.Drawing.Point(121, 445);
+            this.cb_userStatus.Location = new System.Drawing.Point(223, 441);
             this.cb_userStatus.Name = "cb_userStatus";
-            this.cb_userStatus.Size = new System.Drawing.Size(204, 24);
+            this.cb_userStatus.Size = new System.Drawing.Size(210, 27);
             this.cb_userStatus.TabIndex = 10;
             // 
             // lb_status
             // 
             this.lb_status.AutoSize = true;
-            this.lb_status.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_status.Location = new System.Drawing.Point(9, 445);
+            this.lb_status.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_status.Location = new System.Drawing.Point(18, 445);
             this.lb_status.Name = "lb_status";
-            this.lb_status.Size = new System.Drawing.Size(89, 18);
+            this.lb_status.Size = new System.Drawing.Size(115, 23);
             this.lb_status.TabIndex = 24;
             this.lb_status.Text = "Trạng thái:";
             // 
@@ -1413,16 +1467,16 @@ namespace RestaurantApp.View
             // 
             this.pn_gender.Controls.Add(this.radio_female);
             this.pn_gender.Controls.Add(this.radio_male);
-            this.pn_gender.Location = new System.Drawing.Point(121, 320);
+            this.pn_gender.Location = new System.Drawing.Point(262, 315);
             this.pn_gender.Name = "pn_gender";
-            this.pn_gender.Size = new System.Drawing.Size(133, 28);
+            this.pn_gender.Size = new System.Drawing.Size(171, 28);
             this.pn_gender.TabIndex = 23;
             // 
             // radio_female
             // 
             this.radio_female.AutoSize = true;
             this.radio_female.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_female.Location = new System.Drawing.Point(75, 0);
+            this.radio_female.Location = new System.Drawing.Point(99, 1);
             this.radio_female.Name = "radio_female";
             this.radio_female.Size = new System.Drawing.Size(48, 23);
             this.radio_female.TabIndex = 8;
@@ -1435,7 +1489,7 @@ namespace RestaurantApp.View
             this.radio_male.AutoSize = true;
             this.radio_male.Checked = true;
             this.radio_male.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_male.Location = new System.Drawing.Point(3, 0);
+            this.radio_male.Location = new System.Drawing.Point(3, 1);
             this.radio_male.Name = "radio_male";
             this.radio_male.Size = new System.Drawing.Size(60, 23);
             this.radio_male.TabIndex = 7;
@@ -1445,149 +1499,156 @@ namespace RestaurantApp.View
             // 
             // text_email
             // 
-            this.text_email.Location = new System.Drawing.Point(121, 233);
+            this.text_email.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_email.Location = new System.Drawing.Point(223, 233);
             this.text_email.Name = "text_email";
-            this.text_email.Size = new System.Drawing.Size(204, 23);
+            this.text_email.Size = new System.Drawing.Size(210, 27);
             this.text_email.TabIndex = 5;
             this.text_email.Validating += new System.ComponentModel.CancelEventHandler(this.text_email_Validating);
             // 
             // lb_email
             // 
             this.lb_email.AutoSize = true;
-            this.lb_email.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_email.Location = new System.Drawing.Point(9, 234);
+            this.lb_email.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_email.Location = new System.Drawing.Point(18, 237);
             this.lb_email.Name = "lb_email";
-            this.lb_email.Size = new System.Drawing.Size(54, 18);
+            this.lb_email.Size = new System.Drawing.Size(70, 23);
             this.lb_email.TabIndex = 6;
             this.lb_email.Text = "Email:";
             // 
             // cb_role
             // 
             this.cb_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_role.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_role.FormattingEnabled = true;
-            this.cb_role.Location = new System.Drawing.Point(121, 401);
+            this.cb_role.Location = new System.Drawing.Point(223, 401);
             this.cb_role.Name = "cb_role";
-            this.cb_role.Size = new System.Drawing.Size(204, 24);
+            this.cb_role.Size = new System.Drawing.Size(210, 27);
             this.cb_role.TabIndex = 9;
             // 
             // text_address
             // 
-            this.text_address.Location = new System.Drawing.Point(121, 278);
+            this.text_address.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_address.Location = new System.Drawing.Point(223, 275);
             this.text_address.Name = "text_address";
-            this.text_address.Size = new System.Drawing.Size(204, 23);
+            this.text_address.Size = new System.Drawing.Size(210, 27);
             this.text_address.TabIndex = 6;
             this.text_address.Validating += new System.ComponentModel.CancelEventHandler(this.text_address_Validating);
             // 
             // text_phone
             // 
-            this.text_phone.Location = new System.Drawing.Point(121, 192);
+            this.text_phone.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_phone.Location = new System.Drawing.Point(223, 192);
             this.text_phone.Name = "text_phone";
-            this.text_phone.Size = new System.Drawing.Size(204, 23);
+            this.text_phone.Size = new System.Drawing.Size(210, 27);
             this.text_phone.TabIndex = 4;
             this.text_phone.Validating += new System.ComponentModel.CancelEventHandler(this.text_phone_Validating);
             // 
             // lb_role
             // 
             this.lb_role.AutoSize = true;
-            this.lb_role.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_role.Location = new System.Drawing.Point(9, 401);
+            this.lb_role.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_role.Location = new System.Drawing.Point(18, 405);
             this.lb_role.Name = "lb_role";
-            this.lb_role.Size = new System.Drawing.Size(63, 18);
+            this.lb_role.Size = new System.Drawing.Size(81, 23);
             this.lb_role.TabIndex = 0;
             this.lb_role.Text = "Vai trò:";
             // 
             // lb_gender
             // 
             this.lb_gender.AutoSize = true;
-            this.lb_gender.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gender.Location = new System.Drawing.Point(9, 320);
+            this.lb_gender.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_gender.Location = new System.Drawing.Point(18, 320);
             this.lb_gender.Name = "lb_gender";
-            this.lb_gender.Size = new System.Drawing.Size(76, 18);
+            this.lb_gender.Size = new System.Drawing.Size(99, 23);
             this.lb_gender.TabIndex = 0;
             this.lb_gender.Text = "Giới tính:";
             // 
             // lb_address
             // 
             this.lb_address.AutoSize = true;
-            this.lb_address.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_address.Location = new System.Drawing.Point(9, 279);
+            this.lb_address.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_address.Location = new System.Drawing.Point(18, 279);
             this.lb_address.Name = "lb_address";
-            this.lb_address.Size = new System.Drawing.Size(65, 18);
+            this.lb_address.Size = new System.Drawing.Size(83, 23);
             this.lb_address.TabIndex = 0;
             this.lb_address.Text = "Địa chỉ:";
             // 
             // lb_phone
             // 
             this.lb_phone.AutoSize = true;
-            this.lb_phone.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_phone.Location = new System.Drawing.Point(9, 192);
+            this.lb_phone.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_phone.Location = new System.Drawing.Point(18, 196);
             this.lb_phone.Name = "lb_phone";
-            this.lb_phone.Size = new System.Drawing.Size(110, 18);
+            this.lb_phone.Size = new System.Drawing.Size(143, 23);
             this.lb_phone.TabIndex = 0;
             this.lb_phone.Text = "Số điện thoại:";
             // 
             // text_password
             // 
-            this.text_password.Location = new System.Drawing.Point(121, 151);
+            this.text_password.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_password.Location = new System.Drawing.Point(223, 151);
             this.text_password.Name = "text_password";
             this.text_password.PasswordChar = '*';
-            this.text_password.Size = new System.Drawing.Size(204, 23);
+            this.text_password.Size = new System.Drawing.Size(210, 27);
             this.text_password.TabIndex = 3;
             this.text_password.Validating += new System.ComponentModel.CancelEventHandler(this.text_password_Validating);
             // 
             // lb_password
             // 
             this.lb_password.AutoSize = true;
-            this.lb_password.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_password.Location = new System.Drawing.Point(9, 151);
+            this.lb_password.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_password.Location = new System.Drawing.Point(18, 155);
             this.lb_password.Name = "lb_password";
-            this.lb_password.Size = new System.Drawing.Size(81, 18);
+            this.lb_password.Size = new System.Drawing.Size(105, 23);
             this.lb_password.TabIndex = 0;
             this.lb_password.Text = "Mật khẩu:";
             // 
             // text_fullname
             // 
-            this.text_fullname.Location = new System.Drawing.Point(121, 77);
+            this.text_fullname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_fullname.Location = new System.Drawing.Point(223, 77);
             this.text_fullname.Name = "text_fullname";
-            this.text_fullname.Size = new System.Drawing.Size(204, 23);
+            this.text_fullname.Size = new System.Drawing.Size(210, 27);
             this.text_fullname.TabIndex = 1;
             this.text_fullname.Validating += new System.ComponentModel.CancelEventHandler(this.text_fullname_Validating);
             // 
             // text_username
             // 
-            this.text_username.Location = new System.Drawing.Point(121, 113);
+            this.text_username.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_username.Location = new System.Drawing.Point(223, 113);
             this.text_username.Name = "text_username";
-            this.text_username.Size = new System.Drawing.Size(204, 23);
+            this.text_username.Size = new System.Drawing.Size(210, 27);
             this.text_username.TabIndex = 2;
             this.text_username.Validating += new System.ComponentModel.CancelEventHandler(this.text_username_Validating);
             // 
             // lb_fullname
             // 
             this.lb_fullname.AutoSize = true;
-            this.lb_fullname.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_fullname.Location = new System.Drawing.Point(9, 77);
+            this.lb_fullname.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_fullname.Location = new System.Drawing.Point(18, 81);
             this.lb_fullname.Name = "lb_fullname";
-            this.lb_fullname.Size = new System.Drawing.Size(61, 18);
+            this.lb_fullname.Size = new System.Drawing.Size(81, 23);
             this.lb_fullname.TabIndex = 0;
             this.lb_fullname.Text = "Họ tên:";
             // 
             // lb_username
             // 
             this.lb_username.AutoSize = true;
-            this.lb_username.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_username.Location = new System.Drawing.Point(9, 113);
+            this.lb_username.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_username.Location = new System.Drawing.Point(18, 117);
             this.lb_username.Name = "lb_username";
-            this.lb_username.Size = new System.Drawing.Size(85, 18);
+            this.lb_username.Size = new System.Drawing.Size(110, 23);
             this.lb_username.TabIndex = 0;
             this.lb_username.Text = "Tài khoản:";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(124, 4);
+            this.label25.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(182, 4);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(103, 23);
+            this.label25.Size = new System.Drawing.Size(115, 25);
             this.label25.TabIndex = 0;
             this.label25.Text = "Tài khoản";
             // 
@@ -1600,63 +1661,68 @@ namespace RestaurantApp.View
             this.panel16.Controls.Add(this.btn_viewUser);
             this.panel16.Location = new System.Drawing.Point(723, 498);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(439, 79);
+            this.panel16.Size = new System.Drawing.Size(452, 79);
             this.panel16.TabIndex = 2;
             // 
             // btn_clearUser
             // 
-            this.btn_clearUser.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearUser.BackColor = System.Drawing.Color.Transparent;
+            this.btn_clearUser.BackgroundImage = global::RestaurantApp.Properties.Resources.update_icon;
+            this.btn_clearUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_clearUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_clearUser.Location = new System.Drawing.Point(352, 3);
+            this.btn_clearUser.Location = new System.Drawing.Point(367, 3);
             this.btn_clearUser.Name = "btn_clearUser";
             this.btn_clearUser.Size = new System.Drawing.Size(66, 71);
             this.btn_clearUser.TabIndex = 15;
-            this.btn_clearUser.Text = "Làm mới";
             this.btn_clearUser.UseVisualStyleBackColor = false;
             this.btn_clearUser.Click += new System.EventHandler(this.btn_clearUser_Click);
             // 
             // btn_addUser
             // 
-            this.btn_addUser.BackColor = System.Drawing.Color.Green;
+            this.btn_addUser.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addUser.BackgroundImage = global::RestaurantApp.Properties.Resources.add_user;
+            this.btn_addUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_addUser.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_addUser.Location = new System.Drawing.Point(21, 3);
             this.btn_addUser.Name = "btn_addUser";
             this.btn_addUser.Size = new System.Drawing.Size(66, 71);
             this.btn_addUser.TabIndex = 11;
-            this.btn_addUser.Text = "Thêm";
             this.btn_addUser.UseVisualStyleBackColor = false;
             // 
             // btn_deleteUser
             // 
-            this.btn_deleteUser.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteUser.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteUser.BackgroundImage = global::RestaurantApp.Properties.Resources.delete_icon;
+            this.btn_deleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_deleteUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_deleteUser.Location = new System.Drawing.Point(102, 3);
+            this.btn_deleteUser.Location = new System.Drawing.Point(111, 3);
             this.btn_deleteUser.Name = "btn_deleteUser";
             this.btn_deleteUser.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteUser.TabIndex = 12;
-            this.btn_deleteUser.Text = "Xoá";
             this.btn_deleteUser.UseVisualStyleBackColor = false;
             // 
             // btn_updateUser
             // 
-            this.btn_updateUser.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateUser.BackColor = System.Drawing.Color.Transparent;
+            this.btn_updateUser.BackgroundImage = global::RestaurantApp.Properties.Resources.Fix_icon;
+            this.btn_updateUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_updateUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_updateUser.Location = new System.Drawing.Point(187, 3);
+            this.btn_updateUser.Location = new System.Drawing.Point(199, 3);
             this.btn_updateUser.Name = "btn_updateUser";
             this.btn_updateUser.Size = new System.Drawing.Size(66, 71);
             this.btn_updateUser.TabIndex = 13;
-            this.btn_updateUser.Text = "Sửa";
             this.btn_updateUser.UseVisualStyleBackColor = false;
             // 
             // btn_viewUser
             // 
-            this.btn_viewUser.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewUser.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewUser.BackgroundImage = global::RestaurantApp.Properties.Resources.Search_icon;
+            this.btn_viewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_viewUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_viewUser.Location = new System.Drawing.Point(268, 3);
+            this.btn_viewUser.Location = new System.Drawing.Point(283, 3);
             this.btn_viewUser.Name = "btn_viewUser";
             this.btn_viewUser.Size = new System.Drawing.Size(66, 71);
             this.btn_viewUser.TabIndex = 14;
-            this.btn_viewUser.Text = "Xem";
             this.btn_viewUser.UseVisualStyleBackColor = false;
             // 
             // panel17
@@ -1693,11 +1759,11 @@ namespace RestaurantApp.View
             this.dob,
             this.createdDateUser});
             this.dataGridView_user.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.dataGridView_user.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView_user.Location = new System.Drawing.Point(3, 4);
             this.dataGridView_user.Name = "dataGridView_user";
             this.dataGridView_user.ReadOnly = true;
             this.dataGridView_user.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView_user.Size = new System.Drawing.Size(675, 526);
+            this.dataGridView_user.Size = new System.Drawing.Size(675, 525);
             this.dataGridView_user.TabIndex = 2;
             // 
             // UserId
@@ -1826,24 +1892,27 @@ namespace RestaurantApp.View
             this.panel18.Controls.Add(this.tb_searchtextuser);
             this.panel18.Location = new System.Drawing.Point(8, 8);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(424, 34);
+            this.panel18.Size = new System.Drawing.Size(489, 34);
             this.panel18.TabIndex = 4;
             // 
             // btn_searchuser
             // 
-            this.btn_searchuser.Location = new System.Drawing.Point(325, 4);
+            this.btn_searchuser.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
+            this.btn_searchuser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_searchuser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_searchuser.Location = new System.Drawing.Point(320, 2);
             this.btn_searchuser.Name = "btn_searchuser";
-            this.btn_searchuser.Size = new System.Drawing.Size(86, 27);
+            this.btn_searchuser.Size = new System.Drawing.Size(37, 30);
             this.btn_searchuser.TabIndex = 1;
-            this.btn_searchuser.Text = "Tìm kiếm";
             this.btn_searchuser.UseVisualStyleBackColor = true;
+            this.btn_searchuser.Click += new System.EventHandler(this.btn_searchuser_Click);
             // 
             // tb_searchtextuser
             // 
-            this.tb_searchtextuser.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtextuser.Location = new System.Drawing.Point(3, 3);
+            this.tb_searchtextuser.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_searchtextuser.Location = new System.Drawing.Point(28, 2);
             this.tb_searchtextuser.Name = "tb_searchtextuser";
-            this.tb_searchtextuser.Size = new System.Drawing.Size(292, 27);
+            this.tb_searchtextuser.Size = new System.Drawing.Size(292, 30);
             this.tb_searchtextuser.TabIndex = 0;
             // 
             // tbSale
@@ -1871,91 +1940,95 @@ namespace RestaurantApp.View
             this.panel_sale.Controls.Add(this.text_saleName);
             this.panel_sale.Controls.Add(this.lb_saleName);
             this.panel_sale.Controls.Add(this.lb_sale);
-            this.panel_sale.Location = new System.Drawing.Point(751, 110);
+            this.panel_sale.Location = new System.Drawing.Point(720, 60);
             this.panel_sale.Name = "panel_sale";
-            this.panel_sale.Size = new System.Drawing.Size(385, 247);
+            this.panel_sale.Size = new System.Drawing.Size(444, 299);
             this.panel_sale.TabIndex = 7;
             // 
             // text_saleId
             // 
-            this.text_saleId.Location = new System.Drawing.Point(120, 87);
+            this.text_saleId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_saleId.Location = new System.Drawing.Point(195, 83);
             this.text_saleId.Name = "text_saleId";
             this.text_saleId.ReadOnly = true;
-            this.text_saleId.Size = new System.Drawing.Size(221, 23);
+            this.text_saleId.Size = new System.Drawing.Size(221, 27);
             this.text_saleId.TabIndex = 9;
             this.text_saleId.TextChanged += new System.EventHandler(this.text_saleId_TextChanged);
             // 
             // lb_saleId
             // 
             this.lb_saleId.AutoSize = true;
-            this.lb_saleId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_saleId.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_saleId.Location = new System.Drawing.Point(25, 88);
             this.lb_saleId.Name = "lb_saleId";
-            this.lb_saleId.Size = new System.Drawing.Size(31, 18);
+            this.lb_saleId.Size = new System.Drawing.Size(40, 23);
             this.lb_saleId.TabIndex = 4;
             this.lb_saleId.Text = "ID:";
             // 
             // saleDiscountNum
             // 
-            this.saleDiscountNum.Location = new System.Drawing.Point(120, 168);
+            this.saleDiscountNum.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saleDiscountNum.Location = new System.Drawing.Point(337, 199);
             this.saleDiscountNum.Name = "saleDiscountNum";
-            this.saleDiscountNum.Size = new System.Drawing.Size(79, 23);
+            this.saleDiscountNum.Size = new System.Drawing.Size(79, 27);
             this.saleDiscountNum.TabIndex = 2;
             // 
             // cb_saleStatus
             // 
             this.cb_saleStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_saleStatus.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_saleStatus.FormattingEnabled = true;
-            this.cb_saleStatus.Location = new System.Drawing.Point(120, 208);
+            this.cb_saleStatus.Location = new System.Drawing.Point(195, 249);
             this.cb_saleStatus.Name = "cb_saleStatus";
-            this.cb_saleStatus.Size = new System.Drawing.Size(221, 24);
+            this.cb_saleStatus.Size = new System.Drawing.Size(221, 27);
             this.cb_saleStatus.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 209);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 253);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 18);
+            this.label5.Size = new System.Drawing.Size(115, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "Trạng thái:";
             // 
             // lb_saleDiscount
             // 
             this.lb_saleDiscount.AutoSize = true;
-            this.lb_saleDiscount.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_saleDiscount.Location = new System.Drawing.Point(25, 168);
+            this.lb_saleDiscount.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_saleDiscount.Location = new System.Drawing.Point(25, 203);
             this.lb_saleDiscount.Name = "lb_saleDiscount";
-            this.lb_saleDiscount.Size = new System.Drawing.Size(78, 18);
+            this.lb_saleDiscount.Size = new System.Drawing.Size(101, 23);
             this.lb_saleDiscount.TabIndex = 0;
             this.lb_saleDiscount.Text = "Giảm giá:";
             // 
             // text_saleName
             // 
-            this.text_saleName.Location = new System.Drawing.Point(120, 128);
+            this.text_saleName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_saleName.Location = new System.Drawing.Point(195, 143);
             this.text_saleName.Name = "text_saleName";
-            this.text_saleName.Size = new System.Drawing.Size(221, 23);
+            this.text_saleName.Size = new System.Drawing.Size(221, 27);
             this.text_saleName.TabIndex = 1;
             this.text_saleName.Validating += new System.ComponentModel.CancelEventHandler(this.text_saleName_Validating);
             // 
             // lb_saleName
             // 
             this.lb_saleName.AutoSize = true;
-            this.lb_saleName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_saleName.Location = new System.Drawing.Point(25, 129);
+            this.lb_saleName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_saleName.Location = new System.Drawing.Point(25, 147);
             this.lb_saleName.Name = "lb_saleName";
-            this.lb_saleName.Size = new System.Drawing.Size(40, 18);
+            this.lb_saleName.Size = new System.Drawing.Size(52, 23);
             this.lb_saleName.TabIndex = 0;
             this.lb_saleName.Text = "Tên:";
             // 
             // lb_sale
             // 
             this.lb_sale.AutoSize = true;
-            this.lb_sale.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sale.Location = new System.Drawing.Point(76, 29);
+            this.lb_sale.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sale.Location = new System.Drawing.Point(106, 3);
             this.lb_sale.Name = "lb_sale";
-            this.lb_sale.Size = new System.Drawing.Size(224, 23);
+            this.lb_sale.Size = new System.Drawing.Size(245, 25);
             this.lb_sale.TabIndex = 0;
             this.lb_sale.Text = "Chương trình giảm giá";
             // 
@@ -1966,65 +2039,70 @@ namespace RestaurantApp.View
             this.panel22.Controls.Add(this.btn_deleteSale);
             this.panel22.Controls.Add(this.btn_updateSale);
             this.panel22.Controls.Add(this.btn_viewSale);
-            this.panel22.Location = new System.Drawing.Point(720, 377);
+            this.panel22.Location = new System.Drawing.Point(720, 437);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(444, 113);
             this.panel22.TabIndex = 8;
             // 
             // btn_clearSale
             // 
-            this.btn_clearSale.BackColor = System.Drawing.Color.Tan;
+            this.btn_clearSale.BackColor = System.Drawing.Color.Transparent;
+            this.btn_clearSale.BackgroundImage = global::RestaurantApp.Properties.Resources.update_icon;
+            this.btn_clearSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_clearSale.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_clearSale.Location = new System.Drawing.Point(350, 19);
             this.btn_clearSale.Name = "btn_clearSale";
             this.btn_clearSale.Size = new System.Drawing.Size(66, 71);
             this.btn_clearSale.TabIndex = 8;
-            this.btn_clearSale.Text = "Làm mới";
             this.btn_clearSale.UseVisualStyleBackColor = false;
             this.btn_clearSale.Click += new System.EventHandler(this.btn_clearSale_Click);
             // 
             // btn_addSale
             // 
-            this.btn_addSale.BackColor = System.Drawing.Color.Green;
+            this.btn_addSale.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addSale.BackgroundImage = global::RestaurantApp.Properties.Resources.add;
+            this.btn_addSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_addSale.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_addSale.Location = new System.Drawing.Point(20, 19);
             this.btn_addSale.Name = "btn_addSale";
             this.btn_addSale.Size = new System.Drawing.Size(66, 71);
             this.btn_addSale.TabIndex = 4;
-            this.btn_addSale.Text = "Thêm";
             this.btn_addSale.UseVisualStyleBackColor = false;
             // 
             // btn_deleteSale
             // 
-            this.btn_deleteSale.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteSale.BackColor = System.Drawing.Color.Transparent;
+            this.btn_deleteSale.BackgroundImage = global::RestaurantApp.Properties.Resources.delete_icon;
+            this.btn_deleteSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_deleteSale.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_deleteSale.Location = new System.Drawing.Point(101, 19);
             this.btn_deleteSale.Name = "btn_deleteSale";
             this.btn_deleteSale.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteSale.TabIndex = 5;
-            this.btn_deleteSale.Text = "Xoá";
             this.btn_deleteSale.UseVisualStyleBackColor = false;
             // 
             // btn_updateSale
             // 
-            this.btn_updateSale.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_updateSale.BackColor = System.Drawing.Color.Transparent;
+            this.btn_updateSale.BackgroundImage = global::RestaurantApp.Properties.Resources.Fix_icon;
+            this.btn_updateSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_updateSale.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_updateSale.Location = new System.Drawing.Point(186, 19);
             this.btn_updateSale.Name = "btn_updateSale";
             this.btn_updateSale.Size = new System.Drawing.Size(66, 71);
             this.btn_updateSale.TabIndex = 6;
-            this.btn_updateSale.Text = "Sửa";
             this.btn_updateSale.UseVisualStyleBackColor = false;
             // 
             // btn_viewSale
             // 
-            this.btn_viewSale.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_viewSale.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewSale.BackgroundImage = global::RestaurantApp.Properties.Resources.Search_icon;
+            this.btn_viewSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_viewSale.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_viewSale.Location = new System.Drawing.Point(267, 19);
             this.btn_viewSale.Name = "btn_viewSale";
             this.btn_viewSale.Size = new System.Drawing.Size(66, 71);
             this.btn_viewSale.TabIndex = 7;
-            this.btn_viewSale.Text = "Xem";
             this.btn_viewSale.UseVisualStyleBackColor = false;
             // 
             // panel20
@@ -2111,26 +2189,28 @@ namespace RestaurantApp.View
             // 
             this.panel19.Controls.Add(this.btn_SearchSale);
             this.panel19.Controls.Add(this.text_searchSale);
-            this.panel19.Location = new System.Drawing.Point(11, 16);
+            this.panel19.Location = new System.Drawing.Point(11, 6);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(424, 34);
+            this.panel19.Size = new System.Drawing.Size(484, 44);
             this.panel19.TabIndex = 5;
             // 
             // btn_SearchSale
             // 
-            this.btn_SearchSale.Location = new System.Drawing.Point(325, 4);
+            this.btn_SearchSale.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
+            this.btn_SearchSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_SearchSale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_SearchSale.Location = new System.Drawing.Point(325, 3);
             this.btn_SearchSale.Name = "btn_SearchSale";
-            this.btn_SearchSale.Size = new System.Drawing.Size(86, 27);
+            this.btn_SearchSale.Size = new System.Drawing.Size(41, 30);
             this.btn_SearchSale.TabIndex = 1;
-            this.btn_SearchSale.Text = "Tìm kiếm";
             this.btn_SearchSale.UseVisualStyleBackColor = true;
             // 
             // text_searchSale
             // 
-            this.text_searchSale.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_searchSale.Location = new System.Drawing.Point(3, 3);
+            this.text_searchSale.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_searchSale.Location = new System.Drawing.Point(13, 3);
             this.text_searchSale.Name = "text_searchSale";
-            this.text_searchSale.Size = new System.Drawing.Size(292, 27);
+            this.text_searchSale.Size = new System.Drawing.Size(314, 30);
             this.text_searchSale.TabIndex = 0;
             // 
             // errorEmpty

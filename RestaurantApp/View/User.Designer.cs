@@ -101,7 +101,7 @@ namespace RestaurantApp.View
             this.btn_9.BackColor = System.Drawing.Color.HotPink;
             this.btn_9.FlatAppearance.BorderSize = 0;
             this.btn_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_9.ForeColor = System.Drawing.Color.White;
             this.btn_9.Location = new System.Drawing.Point(511, 20);
             this.btn_9.Name = "btn_9";
@@ -116,7 +116,7 @@ namespace RestaurantApp.View
             this.btn_8.BackColor = System.Drawing.Color.HotPink;
             this.btn_8.FlatAppearance.BorderSize = 0;
             this.btn_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_8.ForeColor = System.Drawing.Color.White;
             this.btn_8.Location = new System.Drawing.Point(456, 20);
             this.btn_8.Name = "btn_8";
@@ -131,7 +131,7 @@ namespace RestaurantApp.View
             this.btn_7.BackColor = System.Drawing.Color.HotPink;
             this.btn_7.FlatAppearance.BorderSize = 0;
             this.btn_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_7.ForeColor = System.Drawing.Color.White;
             this.btn_7.Location = new System.Drawing.Point(401, 19);
             this.btn_7.Name = "btn_7";
@@ -146,7 +146,7 @@ namespace RestaurantApp.View
             this.btn_6.BackColor = System.Drawing.Color.HotPink;
             this.btn_6.FlatAppearance.BorderSize = 0;
             this.btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_6.ForeColor = System.Drawing.Color.White;
             this.btn_6.Location = new System.Drawing.Point(346, 20);
             this.btn_6.Name = "btn_6";
@@ -161,7 +161,7 @@ namespace RestaurantApp.View
             this.btn_5.BackColor = System.Drawing.Color.HotPink;
             this.btn_5.FlatAppearance.BorderSize = 0;
             this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_5.ForeColor = System.Drawing.Color.White;
             this.btn_5.Location = new System.Drawing.Point(291, 20);
             this.btn_5.Name = "btn_5";
@@ -176,7 +176,7 @@ namespace RestaurantApp.View
             this.btn_4.BackColor = System.Drawing.Color.HotPink;
             this.btn_4.FlatAppearance.BorderSize = 0;
             this.btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_4.ForeColor = System.Drawing.Color.White;
             this.btn_4.Location = new System.Drawing.Point(236, 19);
             this.btn_4.Name = "btn_4";
@@ -191,7 +191,7 @@ namespace RestaurantApp.View
             this.btn_3.BackColor = System.Drawing.Color.HotPink;
             this.btn_3.FlatAppearance.BorderSize = 0;
             this.btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_3.ForeColor = System.Drawing.Color.White;
             this.btn_3.Location = new System.Drawing.Point(181, 20);
             this.btn_3.Name = "btn_3";
@@ -206,7 +206,7 @@ namespace RestaurantApp.View
             this.btn_2.BackColor = System.Drawing.Color.HotPink;
             this.btn_2.FlatAppearance.BorderSize = 0;
             this.btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_2.ForeColor = System.Drawing.Color.White;
             this.btn_2.Location = new System.Drawing.Point(126, 20);
             this.btn_2.Name = "btn_2";
@@ -221,7 +221,7 @@ namespace RestaurantApp.View
             this.btn_1.BackColor = System.Drawing.Color.HotPink;
             this.btn_1.FlatAppearance.BorderSize = 0;
             this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_1.ForeColor = System.Drawing.Color.White;
             this.btn_1.Location = new System.Drawing.Point(71, 20);
             this.btn_1.Name = "btn_1";
@@ -236,7 +236,7 @@ namespace RestaurantApp.View
             this.btn_0.BackColor = System.Drawing.Color.HotPink;
             this.btn_0.FlatAppearance.BorderSize = 0;
             this.btn_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_0.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_0.ForeColor = System.Drawing.Color.White;
             this.btn_0.Location = new System.Drawing.Point(16, 20);
             this.btn_0.Name = "btn_0";
