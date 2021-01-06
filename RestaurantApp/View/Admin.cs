@@ -563,6 +563,21 @@ namespace RestaurantApp.View
                 ErrorEmpty.SetError(text_email, null);
             }
         }
+
+        private void tpFoods_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tpMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_searchuser_Click(object sender, EventArgs e)
+        {
+
+        }
         // end user
     }
 }

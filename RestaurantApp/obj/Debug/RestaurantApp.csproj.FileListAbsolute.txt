@@ -93,4 +93,8 @@ F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.CopyCo
 F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.exe
 F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Model.CircularButton.resources
+<<<<<<< HEAD
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csprojAssemblyReference.cache
+=======
+F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Model.CircularButton.resources
+>>>>>>> 227b91ab0916dd78e4bc848bfca3d4d1b9d26e4b

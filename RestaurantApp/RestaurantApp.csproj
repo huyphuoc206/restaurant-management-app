@@ -193,5 +193,32 @@
   <ItemGroup>
     <None Include="Resources\background_user21.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fix-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kinh-lup-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
