@@ -23,12 +23,12 @@ namespace RestaurantApp.Controller
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            InitControllerAsync();
+            InitController();
         }
 
         public Admin View { get => view; set => view = value; }
 
-        private void InitControllerAsync()
+        private void InitController()
         {
             LoadData();
             EventBtnView();
@@ -298,6 +298,7 @@ namespace RestaurantApp.Controller
             view.ClearCategoryBinding();
             List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
             view.loadCategories(categories);
+            view.loadCategoriesIntoCb(categories);
         }
         private async void AddCategory(object sender, EventArgs e)
         {
@@ -603,7 +604,5 @@ namespace RestaurantApp.Controller
             }
         }
         // End CRUD User
-
-
     }
 }

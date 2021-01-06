@@ -15,6 +15,11 @@ namespace RestaurantApp.Model
         public int Discount { get => discount; set => discount = value; }
         public string Status { get => status; set => status = value; }
 
+        public override string ToString()
+        {
+            return name +" ("+discount+"%)";
+        }
+
         public static async Task<List<SaleModel>> GetSalesAsync(HttpClient client, string path)
         {
             HttpResponseMessage response = await client.GetAsync(path);

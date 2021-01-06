@@ -45,6 +45,7 @@ namespace RestaurantApp.View
         {
             cb.Items.Add(s1);
             cb.Items.Add(s2);
+            cb.SelectedIndex = 0;
         }
 
         // food

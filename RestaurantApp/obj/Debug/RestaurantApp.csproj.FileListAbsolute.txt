@@ -93,3 +93,4 @@ F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.CopyCo
 F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.exe
 F:\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.Model.CircularButton.resources
+E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csprojAssemblyReference.cache

@@ -30,87 +30,46 @@ namespace RestaurantApp.Controller
 
         public User View { get => view; set => view = value; }
 
-        private async void InitController()
+        private void InitController()
+        {
+            loadData();
+            Event();
+        }
+
+        private async void loadData()
         {
             List<TableModel> tables = await TableModel.GetTablesAsync(client, "api/tables");
+            List<SaleModel> sales = await SaleModel.GetSalesAsync(client, "api/sales");
+            List<SaleModel> salesShow = new List<SaleModel>();
+            foreach (SaleModel sale in sales)
+                if (sale.Status.Equals("1"))
+                    salesShow.Add(sale);
             List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
-            loadCategoriesName(categories);
-            loadTables(tables);
+            List<CategoryModel> categoriesShow = new List<CategoryModel>();
+            foreach (CategoryModel category in categories)
+                if (category.Status.Equals("1"))
+                    categoriesShow.Add(category);
+            view.loadTables(tables);
+            view.loadCategories(categoriesShow);
+            view.loadSales(salesShow);
         }
 
-        public void loadTables(List<TableModel> tables)
+        private void Event()
         {
-            Button[] btns_table = createBtnTables(tables);
-            view.FlPanel_table.Controls.AddRange(btns_table);
+            view.cb_categories.SelectedIndexChanged += new EventHandler(cb_categories_SelectedIndexChanged);
         }
-
-        public Button[] createBtnTables(List<TableModel> tables)
+        private async void cb_categories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Button[] btns_table = new Button[tables.Count];
-            for (int i = 0; i < btns_table.Length; i++)
-            {
-                if (tables[i].Status.Equals("2")) continue;
-                btns_table[i] = new Button() {Width = SystemConstant.TABLE_WIDTH, Height = SystemConstant.TABLE_HEIGHT };
-                btns_table[i].TextAlign = ContentAlignment.MiddleCenter;
-                btns_table[i].Text = tables[i].Name;
-                btns_table[i].Text += "\n"+tables[i].Seats+" chỗ";
-                btns_table[i].FlatStyle = FlatStyle.Flat;
-                btns_table[i].FlatAppearance.BorderSize = 0;
-                if (tables[i].Status.Equals("1"))
-                {
-                    btns_table[i].Text += "\nCó người";
-                    btns_table[i].BackColor = Color.DarkRed;
-                    btns_table[i].ForeColor = Color.White;
-                }
-                else if (tables[i].Status.Equals("0"))
-                {
-                    btns_table[i].Text += " \nTrống";
-                    btns_table[i].BackColor = Color.Gold;
-                    btns_table[i].ForeColor = Color.Black;
-                }
-            }
-            return btns_table;
+            long id = 0;
+
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+            CategoryModel selected = cb.SelectedItem as CategoryModel;
+            List<FoodModel> food = await selected.GetFoodByCategoryId(client, "api/category/" + selected.ID + "/food");
+            view.loadFoodByCategory(food);
         }
-
-        public String[] createCategoriesName(List<CategoryModel> categories)
-        {
-            String[] rs = new String[categories.Count];
-            for (int i = 0; i < categories.Count; i++)
-                rs[i] = (categories[i].Name);
-            return rs;
-        }
-
-        public void loadCategoriesName(List<CategoryModel> categories)
-        {
-            String[] categoriesName = createCategoriesName(categories);
-            view.cb_categories.Items.AddRange(categoriesName);
-        }
-
-        /*public void loadFoods()
-        {
-
-            Task<FoodModel[]> f = FoodModel.GetFoodsAsync(client, "api/food");
-            FoodModel[] foods = await f;
-            Button[] btns_food = createBtnFood(foods);
-            view.panel_menu.Controls.AddRange(btns_food);
-        }
-        public Button[] createBtnFood(FoodModel[] foods)
-        {
-
-            Button[] btns_food = new Button[foods.Length];
-            for (int i = 0; i < btns_food.Length; i++)
-            {
-                int x = 30 + 120 * (i % 5);
-                int y = 140 + (i / 5) * 110;
-                btns_food[i] = new Button();
-                btns_food[i].SetBounds(x, y, 100, 100);
-                btns_food[i].Text = foods[i].Name;
-
-            }
-            return btns_food;
-
-
-        }*/
     }
 }
 

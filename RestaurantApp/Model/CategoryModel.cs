@@ -46,5 +46,14 @@ namespace RestaurantApp.Model
                 categoryResult = await response.Content.ReadAsAsync<CategoryModel>();
             return categoryResult;
         }
+
+        public async Task<List<FoodModel>> GetFoodByCategoryId(HttpClient client, string path)
+        {
+            HttpResponseMessage response = await client.GetAsync(path);
+            List<FoodModel> food = new List<FoodModel>();
+            if (response.IsSuccessStatusCode)
+                food = await response.Content.ReadAsAsync<List<FoodModel>>();
+            return food;
+        }
     }
 }
