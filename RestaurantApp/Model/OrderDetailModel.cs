@@ -19,15 +19,13 @@ namespace RestaurantApp.Model
         public OrderModel Order { get => order; set => order = value; }
         public FoodModel Food { get => food; set => food = value; }
 
-        public static async Task<List<OrderDetailModel>> GetOrderDetailAsync(HttpClient client, string path)
+        public async Task<bool> DeleteOrderDetails(HttpClient client)
         {
-            HttpResponseMessage response = await client.GetAsync(path);
-            List<OrderDetailModel> orderDetail = new List<OrderDetailModel>();
+            bool result = false;
+            HttpResponseMessage response = await client.DeleteAsync("api/orderdetail/" + this.ID);
             if (response.IsSuccessStatusCode)
-            {
-                orderDetail = await response.Content.ReadAsAsync<List<OrderDetailModel>>();
-            }
-            return orderDetail;
+                result = await response.Content.ReadAsAsync<bool>();
+            return result;
         }
     }
 }

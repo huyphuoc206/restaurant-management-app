@@ -126,7 +126,7 @@ namespace RestaurantApp.View
             this.tableStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btn_searchtable = new System.Windows.Forms.Button();
-            this.tb_searchtexttable = new System.Windows.Forms.TextBox();
+            this.text_searchTable = new System.Windows.Forms.TextBox();
             this.tpMenu = new System.Windows.Forms.TabPage();
             this.panel_category = new System.Windows.Forms.Panel();
             this.text_categoryId = new System.Windows.Forms.TextBox();
@@ -149,8 +149,8 @@ namespace RestaurantApp.View
             this.categoryStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdDateCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.text_searchCategory = new System.Windows.Forms.TextBox();
             this.btn_searchcategory = new System.Windows.Forms.Button();
-            this.tb_searchtextcaterory = new System.Windows.Forms.TextBox();
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel_user = new System.Windows.Forms.Panel();
             this.lb_dob = new System.Windows.Forms.Label();
@@ -229,6 +229,28 @@ namespace RestaurantApp.View
             this.btn_SearchSale = new System.Windows.Forms.Button();
             this.text_searchSale = new System.Windows.Forms.TextBox();
             this.errorEmpty = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTipPrint = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipClear = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipAddFood = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipUpdateFood = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDeleteFood = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipViewFood = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipAddTable = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipUpdateTable = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDeleteTable = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipViewTable = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipAddCategory = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipUpdateCategory = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDeleteCategory = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipViewCategory = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipAddUser = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipUpdateUser = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDeleteUser = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipViewUser = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipAddSale = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipUpdateSale = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDeleteSale = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipViewSale = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlAdmin.SuspendLayout();
             this.tpMoney.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -314,7 +336,7 @@ namespace RestaurantApp.View
             // 
             // btn_print
             // 
-            this.btn_print.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_print.BackColor = System.Drawing.Color.Transparent;
             this.btn_print.BackgroundImage = global::RestaurantApp.Properties.Resources.print1;
             this.btn_print.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_print.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,13 +344,14 @@ namespace RestaurantApp.View
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(76, 69);
             this.btn_print.TabIndex = 4;
+            this.toolTipPrint.SetToolTip(this.btn_print, "In doanh thu");
             this.btn_print.UseVisualStyleBackColor = false;
             // 
             // tb_sumsales
             // 
             this.tb_sumsales.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tb_sumsales.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_sumsales.Location = new System.Drawing.Point(298, 472);
+            this.tb_sumsales.Location = new System.Drawing.Point(304, 481);
             this.tb_sumsales.Name = "tb_sumsales";
             this.tb_sumsales.ReadOnly = true;
             this.tb_sumsales.Size = new System.Drawing.Size(152, 27);
@@ -338,7 +361,7 @@ namespace RestaurantApp.View
             // 
             this.tb_countorder.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tb_countorder.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_countorder.Location = new System.Drawing.Point(298, 436);
+            this.tb_countorder.Location = new System.Drawing.Point(304, 445);
             this.tb_countorder.Name = "tb_countorder";
             this.tb_countorder.ReadOnly = true;
             this.tb_countorder.Size = new System.Drawing.Size(152, 27);
@@ -348,7 +371,7 @@ namespace RestaurantApp.View
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 436);
+            this.label4.Location = new System.Drawing.Point(72, 445);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(207, 25);
             this.label4.TabIndex = 1;
@@ -358,7 +381,7 @@ namespace RestaurantApp.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 470);
+            this.label2.Location = new System.Drawing.Point(72, 479);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 25);
             this.label2.TabIndex = 1;
@@ -454,7 +477,6 @@ namespace RestaurantApp.View
             this.tpFoods.TabIndex = 1;
             this.tpFoods.Text = "Món ăn";
             this.tpFoods.UseVisualStyleBackColor = true;
-            this.tpFoods.Click += new System.EventHandler(this.tpFoods_Click);
             // 
             // panel_food
             // 
@@ -628,6 +650,7 @@ namespace RestaurantApp.View
             this.btn_clearFood.Name = "btn_clearFood";
             this.btn_clearFood.Size = new System.Drawing.Size(66, 71);
             this.btn_clearFood.TabIndex = 10;
+            this.toolTipClear.SetToolTip(this.btn_clearFood, "Làm mới");
             this.btn_clearFood.UseVisualStyleBackColor = false;
             this.btn_clearFood.Click += new System.EventHandler(this.btn_clearFood_Click);
             // 
@@ -641,6 +664,7 @@ namespace RestaurantApp.View
             this.btn_addFood.Name = "btn_addFood";
             this.btn_addFood.Size = new System.Drawing.Size(66, 71);
             this.btn_addFood.TabIndex = 6;
+            this.toolTipAddFood.SetToolTip(this.btn_addFood, "Thêm món ăn");
             this.btn_addFood.UseVisualStyleBackColor = false;
             // 
             // btn_deleteFood
@@ -653,6 +677,7 @@ namespace RestaurantApp.View
             this.btn_deleteFood.Name = "btn_deleteFood";
             this.btn_deleteFood.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteFood.TabIndex = 7;
+            this.toolTipDeleteFood.SetToolTip(this.btn_deleteFood, "Xóa món ăn");
             this.btn_deleteFood.UseVisualStyleBackColor = false;
             // 
             // btn_updateFood
@@ -665,6 +690,7 @@ namespace RestaurantApp.View
             this.btn_updateFood.Name = "btn_updateFood";
             this.btn_updateFood.Size = new System.Drawing.Size(66, 71);
             this.btn_updateFood.TabIndex = 8;
+            this.toolTipUpdateFood.SetToolTip(this.btn_updateFood, "Cập nhật món ăn");
             this.btn_updateFood.UseVisualStyleBackColor = false;
             // 
             // btn_viewFood
@@ -677,6 +703,7 @@ namespace RestaurantApp.View
             this.btn_viewFood.Name = "btn_viewFood";
             this.btn_viewFood.Size = new System.Drawing.Size(66, 71);
             this.btn_viewFood.TabIndex = 9;
+            this.toolTipViewFood.SetToolTip(this.btn_viewFood, "Xem danh sách món ăn");
             this.btn_viewFood.UseVisualStyleBackColor = false;
             // 
             // panel4
@@ -770,9 +797,9 @@ namespace RestaurantApp.View
             // 
             this.panel3.Controls.Add(this.btn_searchfood);
             this.panel3.Controls.Add(this.text_searchFood);
-            this.panel3.Location = new System.Drawing.Point(11, 6);
+            this.panel3.Location = new System.Drawing.Point(51, 24);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(475, 52);
+            this.panel3.Size = new System.Drawing.Size(390, 40);
             this.panel3.TabIndex = 0;
             // 
             // btn_searchfood
@@ -780,7 +807,7 @@ namespace RestaurantApp.View
             this.btn_searchfood.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_searchfood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_searchfood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_searchfood.Location = new System.Drawing.Point(344, 4);
+            this.btn_searchfood.Location = new System.Drawing.Point(329, 3);
             this.btn_searchfood.Name = "btn_searchfood";
             this.btn_searchfood.Size = new System.Drawing.Size(47, 30);
             this.btn_searchfood.TabIndex = 1;
@@ -789,7 +816,7 @@ namespace RestaurantApp.View
             // text_searchFood
             // 
             this.text_searchFood.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_searchFood.Location = new System.Drawing.Point(16, 4);
+            this.text_searchFood.Location = new System.Drawing.Point(3, 3);
             this.text_searchFood.Name = "text_searchFood";
             this.text_searchFood.Size = new System.Drawing.Size(329, 30);
             this.text_searchFood.TabIndex = 0;
@@ -943,6 +970,7 @@ namespace RestaurantApp.View
             this.btn_clearTable.Name = "btn_clearTable";
             this.btn_clearTable.Size = new System.Drawing.Size(66, 71);
             this.btn_clearTable.TabIndex = 8;
+            this.toolTipClear.SetToolTip(this.btn_clearTable, "Làm mới");
             this.btn_clearTable.UseVisualStyleBackColor = false;
             this.btn_clearTable.Click += new System.EventHandler(this.btn_clearTable_Click);
             // 
@@ -956,6 +984,7 @@ namespace RestaurantApp.View
             this.btn_addTable.Name = "btn_addTable";
             this.btn_addTable.Size = new System.Drawing.Size(66, 71);
             this.btn_addTable.TabIndex = 4;
+            this.toolTipAddTable.SetToolTip(this.btn_addTable, "Thêm bàn ăn");
             this.btn_addTable.UseVisualStyleBackColor = false;
             // 
             // btn_deleteTable
@@ -968,6 +997,7 @@ namespace RestaurantApp.View
             this.btn_deleteTable.Name = "btn_deleteTable";
             this.btn_deleteTable.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteTable.TabIndex = 5;
+            this.toolTipDeleteTable.SetToolTip(this.btn_deleteTable, "Xóa bàn ăn");
             this.btn_deleteTable.UseVisualStyleBackColor = false;
             // 
             // btn_updateTable
@@ -980,6 +1010,7 @@ namespace RestaurantApp.View
             this.btn_updateTable.Name = "btn_updateTable";
             this.btn_updateTable.Size = new System.Drawing.Size(66, 71);
             this.btn_updateTable.TabIndex = 6;
+            this.toolTipUpdateTable.SetToolTip(this.btn_updateTable, "Cập nhật bàn ăn");
             this.btn_updateTable.UseVisualStyleBackColor = false;
             // 
             // btn_viewTable
@@ -992,6 +1023,7 @@ namespace RestaurantApp.View
             this.btn_viewTable.Name = "btn_viewTable";
             this.btn_viewTable.Size = new System.Drawing.Size(66, 71);
             this.btn_viewTable.TabIndex = 7;
+            this.toolTipViewTable.SetToolTip(this.btn_viewTable, "Xem danh sách bàn ăn");
             this.btn_viewTable.UseVisualStyleBackColor = false;
             // 
             // panel9
@@ -1064,10 +1096,10 @@ namespace RestaurantApp.View
             // panel10
             // 
             this.panel10.Controls.Add(this.btn_searchtable);
-            this.panel10.Controls.Add(this.tb_searchtexttable);
-            this.panel10.Location = new System.Drawing.Point(14, 6);
+            this.panel10.Controls.Add(this.text_searchTable);
+            this.panel10.Location = new System.Drawing.Point(39, 17);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(424, 52);
+            this.panel10.Size = new System.Drawing.Size(406, 41);
             this.panel10.TabIndex = 4;
             // 
             // btn_searchtable
@@ -1075,19 +1107,19 @@ namespace RestaurantApp.View
             this.btn_searchtable.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_searchtable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_searchtable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_searchtable.Location = new System.Drawing.Point(309, 3);
+            this.btn_searchtable.Location = new System.Drawing.Point(342, 3);
             this.btn_searchtable.Name = "btn_searchtable";
-            this.btn_searchtable.Size = new System.Drawing.Size(38, 30);
+            this.btn_searchtable.Size = new System.Drawing.Size(47, 30);
             this.btn_searchtable.TabIndex = 1;
             this.btn_searchtable.UseVisualStyleBackColor = true;
             // 
-            // tb_searchtexttable
+            // text_searchTable
             // 
-            this.tb_searchtexttable.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtexttable.Location = new System.Drawing.Point(18, 3);
-            this.tb_searchtexttable.Name = "tb_searchtexttable";
-            this.tb_searchtexttable.Size = new System.Drawing.Size(292, 30);
-            this.tb_searchtexttable.TabIndex = 0;
+            this.text_searchTable.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_searchTable.Location = new System.Drawing.Point(18, 3);
+            this.text_searchTable.Name = "text_searchTable";
+            this.text_searchTable.Size = new System.Drawing.Size(329, 30);
+            this.text_searchTable.TabIndex = 0;
             // 
             // tpMenu
             // 
@@ -1102,7 +1134,6 @@ namespace RestaurantApp.View
             this.tpMenu.TabIndex = 3;
             this.tpMenu.Text = "Danh mục";
             this.tpMenu.UseVisualStyleBackColor = true;
-            this.tpMenu.Click += new System.EventHandler(this.tpMenu_Click);
             // 
             // panel_category
             // 
@@ -1209,6 +1240,7 @@ namespace RestaurantApp.View
             this.btn_clearCategory.Name = "btn_clearCategory";
             this.btn_clearCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_clearCategory.TabIndex = 7;
+            this.toolTipClear.SetToolTip(this.btn_clearCategory, "Làm mới");
             this.btn_clearCategory.UseVisualStyleBackColor = false;
             this.btn_clearCategory.Click += new System.EventHandler(this.btn_clearCategory_Click);
             // 
@@ -1222,6 +1254,7 @@ namespace RestaurantApp.View
             this.btn_addCategory.Name = "btn_addCategory";
             this.btn_addCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_addCategory.TabIndex = 3;
+            this.toolTipAddCategory.SetToolTip(this.btn_addCategory, "Thêm danh mục");
             this.btn_addCategory.UseVisualStyleBackColor = false;
             // 
             // btn_deleteCategory
@@ -1234,6 +1267,7 @@ namespace RestaurantApp.View
             this.btn_deleteCategory.Name = "btn_deleteCategory";
             this.btn_deleteCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteCategory.TabIndex = 4;
+            this.toolTipDeleteCategory.SetToolTip(this.btn_deleteCategory, "Xóa danh mục");
             this.btn_deleteCategory.UseVisualStyleBackColor = false;
             // 
             // btn_updateCategory
@@ -1246,6 +1280,7 @@ namespace RestaurantApp.View
             this.btn_updateCategory.Name = "btn_updateCategory";
             this.btn_updateCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_updateCategory.TabIndex = 5;
+            this.toolTipUpdateCategory.SetToolTip(this.btn_updateCategory, "Cập nhật danh mục");
             this.btn_updateCategory.UseVisualStyleBackColor = false;
             // 
             // btn_viewCategory
@@ -1258,6 +1293,7 @@ namespace RestaurantApp.View
             this.btn_viewCategory.Name = "btn_viewCategory";
             this.btn_viewCategory.Size = new System.Drawing.Size(66, 71);
             this.btn_viewCategory.TabIndex = 6;
+            this.toolTipViewCategory.SetToolTip(this.btn_viewCategory, "Xem danh sách danh mục");
             this.btn_viewCategory.UseVisualStyleBackColor = false;
             // 
             // panel13
@@ -1332,31 +1368,31 @@ namespace RestaurantApp.View
             // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.text_searchCategory);
             this.panel14.Controls.Add(this.btn_searchcategory);
-            this.panel14.Controls.Add(this.tb_searchtextcaterory);
-            this.panel14.Location = new System.Drawing.Point(17, 6);
+            this.panel14.Location = new System.Drawing.Point(64, 13);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(467, 45);
+            this.panel14.Size = new System.Drawing.Size(390, 38);
             this.panel14.TabIndex = 4;
+            // 
+            // text_searchCategory
+            // 
+            this.text_searchCategory.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_searchCategory.Location = new System.Drawing.Point(3, 3);
+            this.text_searchCategory.Name = "text_searchCategory";
+            this.text_searchCategory.Size = new System.Drawing.Size(329, 30);
+            this.text_searchCategory.TabIndex = 2;
             // 
             // btn_searchcategory
             // 
             this.btn_searchcategory.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_searchcategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_searchcategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_searchcategory.Location = new System.Drawing.Point(301, 3);
+            this.btn_searchcategory.Location = new System.Drawing.Point(329, 3);
             this.btn_searchcategory.Name = "btn_searchcategory";
-            this.btn_searchcategory.Size = new System.Drawing.Size(43, 33);
+            this.btn_searchcategory.Size = new System.Drawing.Size(47, 30);
             this.btn_searchcategory.TabIndex = 1;
             this.btn_searchcategory.UseVisualStyleBackColor = true;
-            // 
-            // tb_searchtextcaterory
-            // 
-            this.tb_searchtextcaterory.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtextcaterory.Location = new System.Drawing.Point(10, 3);
-            this.tb_searchtextcaterory.Name = "tb_searchtextcaterory";
-            this.tb_searchtextcaterory.Size = new System.Drawing.Size(292, 33);
-            this.tb_searchtextcaterory.TabIndex = 0;
             // 
             // tpAccount
             // 
@@ -1418,7 +1454,7 @@ namespace RestaurantApp.View
             this.dateTime_dobUser.CustomFormat = "dd/MM/yyyy";
             this.dateTime_dobUser.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTime_dobUser.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTime_dobUser.Location = new System.Drawing.Point(262, 360);
+            this.dateTime_dobUser.Location = new System.Drawing.Point(223, 360);
             this.dateTime_dobUser.Name = "dateTime_dobUser";
             this.dateTime_dobUser.Size = new System.Drawing.Size(171, 26);
             this.dateTime_dobUser.TabIndex = 27;
@@ -1467,7 +1503,7 @@ namespace RestaurantApp.View
             // 
             this.pn_gender.Controls.Add(this.radio_female);
             this.pn_gender.Controls.Add(this.radio_male);
-            this.pn_gender.Location = new System.Drawing.Point(262, 315);
+            this.pn_gender.Location = new System.Drawing.Point(223, 315);
             this.pn_gender.Name = "pn_gender";
             this.pn_gender.Size = new System.Drawing.Size(171, 28);
             this.pn_gender.TabIndex = 23;
@@ -1674,6 +1710,7 @@ namespace RestaurantApp.View
             this.btn_clearUser.Name = "btn_clearUser";
             this.btn_clearUser.Size = new System.Drawing.Size(66, 71);
             this.btn_clearUser.TabIndex = 15;
+            this.toolTipClear.SetToolTip(this.btn_clearUser, "Làm mới");
             this.btn_clearUser.UseVisualStyleBackColor = false;
             this.btn_clearUser.Click += new System.EventHandler(this.btn_clearUser_Click);
             // 
@@ -1687,6 +1724,7 @@ namespace RestaurantApp.View
             this.btn_addUser.Name = "btn_addUser";
             this.btn_addUser.Size = new System.Drawing.Size(66, 71);
             this.btn_addUser.TabIndex = 11;
+            this.toolTipAddUser.SetToolTip(this.btn_addUser, "Thêm người dùng");
             this.btn_addUser.UseVisualStyleBackColor = false;
             // 
             // btn_deleteUser
@@ -1699,6 +1737,7 @@ namespace RestaurantApp.View
             this.btn_deleteUser.Name = "btn_deleteUser";
             this.btn_deleteUser.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteUser.TabIndex = 12;
+            this.toolTipDeleteUser.SetToolTip(this.btn_deleteUser, "Xóa người dùng");
             this.btn_deleteUser.UseVisualStyleBackColor = false;
             // 
             // btn_updateUser
@@ -1711,6 +1750,7 @@ namespace RestaurantApp.View
             this.btn_updateUser.Name = "btn_updateUser";
             this.btn_updateUser.Size = new System.Drawing.Size(66, 71);
             this.btn_updateUser.TabIndex = 13;
+            this.toolTipUpdateUser.SetToolTip(this.btn_updateUser, "Cập nhật người dùng");
             this.btn_updateUser.UseVisualStyleBackColor = false;
             // 
             // btn_viewUser
@@ -1723,6 +1763,7 @@ namespace RestaurantApp.View
             this.btn_viewUser.Name = "btn_viewUser";
             this.btn_viewUser.Size = new System.Drawing.Size(66, 71);
             this.btn_viewUser.TabIndex = 14;
+            this.toolTipViewUser.SetToolTip(this.btn_viewUser, "Xem danh sách người dùng");
             this.btn_viewUser.UseVisualStyleBackColor = false;
             // 
             // panel17
@@ -1890,9 +1931,9 @@ namespace RestaurantApp.View
             // 
             this.panel18.Controls.Add(this.btn_searchuser);
             this.panel18.Controls.Add(this.tb_searchtextuser);
-            this.panel18.Location = new System.Drawing.Point(8, 8);
+            this.panel18.Location = new System.Drawing.Point(48, 8);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(489, 34);
+            this.panel18.Size = new System.Drawing.Size(390, 34);
             this.panel18.TabIndex = 4;
             // 
             // btn_searchuser
@@ -1900,19 +1941,18 @@ namespace RestaurantApp.View
             this.btn_searchuser.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_searchuser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_searchuser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_searchuser.Location = new System.Drawing.Point(320, 2);
+            this.btn_searchuser.Location = new System.Drawing.Point(329, 3);
             this.btn_searchuser.Name = "btn_searchuser";
-            this.btn_searchuser.Size = new System.Drawing.Size(37, 30);
+            this.btn_searchuser.Size = new System.Drawing.Size(47, 30);
             this.btn_searchuser.TabIndex = 1;
             this.btn_searchuser.UseVisualStyleBackColor = true;
-            this.btn_searchuser.Click += new System.EventHandler(this.btn_searchuser_Click);
             // 
             // tb_searchtextuser
             // 
             this.tb_searchtextuser.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtextuser.Location = new System.Drawing.Point(28, 2);
+            this.tb_searchtextuser.Location = new System.Drawing.Point(3, 3);
             this.tb_searchtextuser.Name = "tb_searchtextuser";
-            this.tb_searchtextuser.Size = new System.Drawing.Size(292, 30);
+            this.tb_searchtextuser.Size = new System.Drawing.Size(329, 30);
             this.tb_searchtextuser.TabIndex = 0;
             // 
             // tbSale
@@ -2054,6 +2094,7 @@ namespace RestaurantApp.View
             this.btn_clearSale.Name = "btn_clearSale";
             this.btn_clearSale.Size = new System.Drawing.Size(66, 71);
             this.btn_clearSale.TabIndex = 8;
+            this.toolTipClear.SetToolTip(this.btn_clearSale, "Làm mới");
             this.btn_clearSale.UseVisualStyleBackColor = false;
             this.btn_clearSale.Click += new System.EventHandler(this.btn_clearSale_Click);
             // 
@@ -2067,6 +2108,7 @@ namespace RestaurantApp.View
             this.btn_addSale.Name = "btn_addSale";
             this.btn_addSale.Size = new System.Drawing.Size(66, 71);
             this.btn_addSale.TabIndex = 4;
+            this.toolTipAddSale.SetToolTip(this.btn_addSale, "Thêm chương trình giảm giá");
             this.btn_addSale.UseVisualStyleBackColor = false;
             // 
             // btn_deleteSale
@@ -2079,6 +2121,7 @@ namespace RestaurantApp.View
             this.btn_deleteSale.Name = "btn_deleteSale";
             this.btn_deleteSale.Size = new System.Drawing.Size(66, 71);
             this.btn_deleteSale.TabIndex = 5;
+            this.toolTipDeleteSale.SetToolTip(this.btn_deleteSale, "Xóa chương trình giảm giá");
             this.btn_deleteSale.UseVisualStyleBackColor = false;
             // 
             // btn_updateSale
@@ -2091,6 +2134,7 @@ namespace RestaurantApp.View
             this.btn_updateSale.Name = "btn_updateSale";
             this.btn_updateSale.Size = new System.Drawing.Size(66, 71);
             this.btn_updateSale.TabIndex = 6;
+            this.toolTipUpdateSale.SetToolTip(this.btn_updateSale, "Cập nhật chương trình giảm giá");
             this.btn_updateSale.UseVisualStyleBackColor = false;
             // 
             // btn_viewSale
@@ -2103,6 +2147,7 @@ namespace RestaurantApp.View
             this.btn_viewSale.Name = "btn_viewSale";
             this.btn_viewSale.Size = new System.Drawing.Size(66, 71);
             this.btn_viewSale.TabIndex = 7;
+            this.toolTipViewSale.SetToolTip(this.btn_viewSale, "Xem danh sách chương trình giảm giá");
             this.btn_viewSale.UseVisualStyleBackColor = false;
             // 
             // panel20
@@ -2189,9 +2234,9 @@ namespace RestaurantApp.View
             // 
             this.panel19.Controls.Add(this.btn_SearchSale);
             this.panel19.Controls.Add(this.text_searchSale);
-            this.panel19.Location = new System.Drawing.Point(11, 6);
+            this.panel19.Location = new System.Drawing.Point(51, 13);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(484, 44);
+            this.panel19.Size = new System.Drawing.Size(403, 41);
             this.panel19.TabIndex = 5;
             // 
             // btn_SearchSale
@@ -2199,9 +2244,9 @@ namespace RestaurantApp.View
             this.btn_SearchSale.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_SearchSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_SearchSale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_SearchSale.Location = new System.Drawing.Point(325, 3);
+            this.btn_SearchSale.Location = new System.Drawing.Point(339, 3);
             this.btn_SearchSale.Name = "btn_SearchSale";
-            this.btn_SearchSale.Size = new System.Drawing.Size(41, 30);
+            this.btn_SearchSale.Size = new System.Drawing.Size(47, 30);
             this.btn_SearchSale.TabIndex = 1;
             this.btn_SearchSale.UseVisualStyleBackColor = true;
             // 
@@ -2210,7 +2255,7 @@ namespace RestaurantApp.View
             this.text_searchSale.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_searchSale.Location = new System.Drawing.Point(13, 3);
             this.text_searchSale.Name = "text_searchSale";
-            this.text_searchSale.Size = new System.Drawing.Size(314, 30);
+            this.text_searchSale.Size = new System.Drawing.Size(329, 30);
             this.text_searchSale.TabIndex = 0;
             // 
             // errorEmpty
@@ -2226,6 +2271,7 @@ namespace RestaurantApp.View
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1247, 661);
             this.Controls.Add(this.tabControlAdmin);
+            this.MaximizeBox = false;
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhà hàng";
@@ -2339,7 +2385,7 @@ namespace RestaurantApp.View
         private DataGridView dataGridView_table;
         private Panel panel10;
         private Button btn_searchtable;
-        private TextBox tb_searchtexttable;
+        private TextBox text_searchTable;
         private Panel panel_category;
         private ComboBox cb_categoryStatus;
         private Label lb_categoryStatus;
@@ -2355,7 +2401,6 @@ namespace RestaurantApp.View
         private DataGridView dataGridView_category;
         private Panel panel14;
         private Button btn_searchcategory;
-        private TextBox tb_searchtextcaterory;
         private Panel panel_user;
         private TextBox text_phone;
         private Label lb_address;
@@ -2464,6 +2509,29 @@ namespace RestaurantApp.View
         private DataGridViewTextBoxColumn foodStatus;
         private Label lb_dob;
         private DateTimePicker dateTime_dobUser;
+        private ToolTip toolTipPrint;
+        private ToolTip toolTipClear;
+        private ToolTip toolTipAddFood;
+        private ToolTip toolTipDeleteFood;
+        private ToolTip toolTipUpdateFood;
+        private ToolTip toolTipViewFood;
+        private ToolTip toolTipAddTable;
+        private ToolTip toolTipDeleteTable;
+        private ToolTip toolTipUpdateTable;
+        private ToolTip toolTipViewTable;
+        private ToolTip toolTipAddCategory;
+        private ToolTip toolTipDeleteCategory;
+        private ToolTip toolTipUpdateCategory;
+        private ToolTip toolTipViewCategory;
+        private ToolTip toolTipAddUser;
+        private ToolTip toolTipDeleteUser;
+        private ToolTip toolTipUpdateUser;
+        private ToolTip toolTipViewUser;
+        private ToolTip toolTipAddSale;
+        private ToolTip toolTipDeleteSale;
+        private ToolTip toolTipUpdateSale;
+        private ToolTip toolTipViewSale;
+        private TextBox text_searchCategory;
 
         public DataGridView DataGridView_Table { get => dataGridView_table; set => dataGridView_table = value; }
         public DataGridView DataGridView_User { get => dataGridView_user; set => dataGridView_user = value; }

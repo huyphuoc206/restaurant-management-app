@@ -20,40 +20,49 @@ namespace RestaurantApp.Model
             return name;
         }
 
-        public static async Task<List<CategoryModel>> GetCategoriessAsync(HttpClient client, string path)
+        public async Task<List<CategoryModel>> GetCategories(HttpClient client)
         {
-            HttpResponseMessage response = await client.GetAsync(path);
+            HttpResponseMessage response = await client.GetAsync("api/categories");
             List<CategoryModel> categoryModels = new List<CategoryModel>();
             if (response.IsSuccessStatusCode)
                 categoryModels = await response.Content.ReadAsAsync<List<CategoryModel>>();
             return categoryModels;
         }
 
-        public async Task<CategoryModel> Save(HttpClient client, string path)
+        public async Task<CategoryModel> Save(HttpClient client)
         {
             CategoryModel categoryResult = null;
-            HttpResponseMessage response = await client.PostAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/categories", this);
             if (response.IsSuccessStatusCode)
                 categoryResult = await response.Content.ReadAsAsync<CategoryModel>();
             return categoryResult;
         }
 
-        public async Task<CategoryModel> Update(HttpClient client, string path)
+        public async Task<CategoryModel> Update(HttpClient client)
         {
             CategoryModel categoryResult = null;
-            HttpResponseMessage response = await client.PutAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PutAsJsonAsync("api/categories/"+this.ID, this);
             if (response.IsSuccessStatusCode)
                 categoryResult = await response.Content.ReadAsAsync<CategoryModel>();
             return categoryResult;
         }
 
-        public async Task<List<FoodModel>> GetFoodByCategoryId(HttpClient client, string path)
+        public async Task<List<FoodModel>> GetFoodByCategoryId(HttpClient client)
         {
-            HttpResponseMessage response = await client.GetAsync(path);
+            HttpResponseMessage response = await client.GetAsync("api/category/" + this.ID + "/food");
             List<FoodModel> food = new List<FoodModel>();
             if (response.IsSuccessStatusCode)
                 food = await response.Content.ReadAsAsync<List<FoodModel>>();
             return food;
+        }
+
+        public async Task<bool> Delete(HttpClient client)
+        {
+            bool result = false;
+            HttpResponseMessage response = await client.DeleteAsync("api/categories/" + this.ID);
+            if (response.IsSuccessStatusCode)
+                result = await response.Content.ReadAsAsync<bool>();
+            return result;
         }
     }
 }

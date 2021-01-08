@@ -17,34 +17,43 @@ namespace RestaurantApp.Model
 
         public override string ToString()
         {
-            return name +" ("+discount+"%)";
+            return name + " (" + discount + "%)";
         }
 
-        public static async Task<List<SaleModel>> GetSalesAsync(HttpClient client, string path)
+        public async Task<List<SaleModel>> GetSales(HttpClient client)
         {
-            HttpResponseMessage response = await client.GetAsync(path);
+            HttpResponseMessage response = await client.GetAsync("api/sales");
             List<SaleModel> sales = new List<SaleModel>();
             if (response.IsSuccessStatusCode)
                 sales = await response.Content.ReadAsAsync<List<SaleModel>>();
             return sales;
         }
 
-        public async Task<SaleModel> Save(HttpClient client, string path)
+        public async Task<SaleModel> Save(HttpClient client)
         {
             SaleModel saleResult = null;
-            HttpResponseMessage response = await client.PostAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/sales", this);
             if (response.IsSuccessStatusCode)
                 saleResult = await response.Content.ReadAsAsync<SaleModel>();
             return saleResult;
         }
 
-        public async Task<SaleModel> Update(HttpClient client, string path)
+        public async Task<SaleModel> Update(HttpClient client)
         {
             SaleModel saleResult = null;
-            HttpResponseMessage response = await client.PutAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PutAsJsonAsync("api/sales/" + this.ID, this);
             if (response.IsSuccessStatusCode)
                 saleResult = await response.Content.ReadAsAsync<SaleModel>();
             return saleResult;
+        }
+
+        public async Task<bool> Delete(HttpClient client)
+        {
+            bool result = false;
+            HttpResponseMessage response = await client.DeleteAsync("api/sales/" + this.ID);
+            if (response.IsSuccessStatusCode)
+                result = await response.Content.ReadAsAsync<bool>();
+            return result;
         }
     }
 }

@@ -40,6 +40,7 @@ namespace RestaurantWebAPI.Service.impl
             if (sale.Discount < 0 || sale.Discount > 100) return null;
             saleDAO = SaleDAO.Instance;
             SaleDTO oldSale = saleDAO.FindOneById(id);
+            if (oldSale.ID == 1) return null;
             if (oldSale != null)
             {
                 sale.CreatedDate = oldSale.CreatedDate;
@@ -55,6 +56,7 @@ namespace RestaurantWebAPI.Service.impl
         public bool Delete(long id)
         {
             saleDAO = SaleDAO.Instance;
+            if (id == 1) return false;
             return saleDAO.Delete(id);
         }
     }

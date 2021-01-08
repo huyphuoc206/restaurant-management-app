@@ -69,49 +69,22 @@ namespace RestaurantApp.View
             cb_sales.Items.AddRange(salesShow.ToArray());
         }
 
-        public void loadTables(List<TableModel> tables)
+        public void loadTables(Button[] buttonsTables)
         {
-            Button[] btns_table = new Button[tables.Count];
-            for (int i = 0; i < btns_table.Length; i++)
-            {
-                if (tables[i].Status.Equals("2")) continue;
-                btns_table[i] = new Button() { Width = SystemConstant.TABLE_WIDTH, Height = SystemConstant.TABLE_HEIGHT };
-                btns_table[i].TextAlign = ContentAlignment.MiddleCenter;
-                btns_table[i].Text = tables[i].Name;
-                btns_table[i].Text += "\n" + tables[i].Seats + " chỗ";
-                btns_table[i].FlatStyle = FlatStyle.Flat;
-                btns_table[i].FlatAppearance.BorderSize = 0;
-                if (tables[i].Status.Equals("1"))
-                {
-                    btns_table[i].Text += "\nCó người";
-                    btns_table[i].BackColor = Color.DarkRed;
-                    btns_table[i].ForeColor = Color.White;
-                }
-                else if (tables[i].Status.Equals("0"))
-                {
-                    btns_table[i].Text += " \nTrống";
-                    btns_table[i].BackColor = Color.Gold;
-                    btns_table[i].ForeColor = Color.Black;
-                }
-            }
-            flPanel_table.Controls.AddRange(btns_table);
+            flPanel_table.Controls.Clear();
+            flPanel_table.Controls.AddRange(buttonsTables);
         }
 
-        public void loadFoodByCategory(List<FoodModel> food)
+        public void loadFoodByCategory(Button[] buttonsFood)
         {
-            panel_food.Controls.Clear();
-            Button[] btns_food = new Button[food.Count];
-            for (int i = 0; i < btns_food.Length; i++)
-            {
-                btns_food[i] = new Button() { Width = SystemConstant.FOOD_WIDTH, Height = SystemConstant.FOOD_HEIGHT };
-                btns_food[i].TextAlign = ContentAlignment.MiddleCenter;
-                btns_food[i].Text = food[i].Name;
-                btns_food[i].FlatStyle = FlatStyle.Flat;
-                btns_food[i].FlatAppearance.BorderSize = 0;
-                btns_food[i].BackColor = Color.Turquoise;
-                btns_food[i].ForeColor = Color.Black;
-            }
-            panel_food.Controls.AddRange(btns_food);
+            panel_food.Controls.Clear();          
+            panel_food.Controls.AddRange(buttonsFood);
+        }
+
+        public void clearOrder()
+        {
+            list_orderDetails.Items.Clear();
+            Text_totalPrice.Text = "";
         }
     }
 }

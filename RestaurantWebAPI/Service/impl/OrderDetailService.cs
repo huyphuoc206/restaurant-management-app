@@ -31,7 +31,7 @@ namespace RestaurantWebAPI.Service.impl
 
             // xu ly neu don hang chua ton tai thi tao moi luon hoac xu ly ben app??????????
             if (orderDAO.FindOneById(orderId) == null || foodDAO.FindOneById(orderDetail.Food.ID) == null) return null;
-            
+
             orderDetail.CreatedDate = DateTime.Now;
             FoodDTO food = foodDAO.FindOneById(orderDetail.Food.ID);
             orderDetail.Food = food;
@@ -43,10 +43,18 @@ namespace RestaurantWebAPI.Service.impl
             {
                 if (o.Food.ID == orderDetail.Food.ID)
                 {
-                    orderDetailDAO.UpdateQuantity(o.ID, orderDetail.Quantity + o.Quantity);
+                    int totalQuantity = orderDetail.Quantity + o.Quantity;
+                    if (totalQuantity <= 0)
+                    {
+                        orderDetailDAO.Delete(o.ID);
+                        return null;
+                    }
+
+                    orderDetailDAO.UpdateQuantity(o.ID, totalQuantity);
                     return orderDetailDAO.FindOneById(o.ID);
                 }
             }
+            if (orderDetail.Quantity < 1) return null;
             long id = orderDetailDAO.Save(orderId, orderDetail);
             return orderDetailDAO.FindOneById(id);
         }

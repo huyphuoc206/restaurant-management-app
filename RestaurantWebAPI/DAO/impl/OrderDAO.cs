@@ -36,8 +36,8 @@ namespace RestaurantWebAPI.DAO.impl
 
         public long Save(OrderDTO order)
         {
-            string sql = "INSERT INTO orders (totalprice, saleid, tableid, status, createddate, createdby) VALUES( @totalprice , @saleid , @tableid , @status , @createddate , @createdby )";
-            object[] parameters = { order.TotalPrice, order.Sale.ID, order.Table.ID, order.Status, order.CreatedDate, order.CreatedBy };
+            string sql = "INSERT INTO orders (totalprice, tableid, status, createddate, createdby) VALUES( @totalprice , @tableid , @status , @createddate , @createdby )";
+            object[] parameters = { order.TotalPrice, order.Table.ID, order.Status, order.CreatedDate, order.CreatedBy };
             return Insert(sql, parameters);
         }
 
