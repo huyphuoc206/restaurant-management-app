@@ -51,9 +51,9 @@ namespace RestaurantApp.View
             this.lb_fullname = new System.Windows.Forms.Label();
             this.lb_username = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_back = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
             this.errorEmpty = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pn_gender.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,9 +86,9 @@ namespace RestaurantApp.View
             this.panel1.Controls.Add(this.lb_phone);
             this.panel1.Controls.Add(this.lb_fullname);
             this.panel1.Controls.Add(this.lb_username);
-            this.panel1.Location = new System.Drawing.Point(12, 49);
+            this.panel1.Location = new System.Drawing.Point(12, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 264);
+            this.panel1.Size = new System.Drawing.Size(478, 292);
             this.panel1.TabIndex = 1;
             // 
             // date_dob
@@ -96,7 +96,7 @@ namespace RestaurantApp.View
             this.date_dob.CustomFormat = "dd/MM/yyyy";
             this.date_dob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_dob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_dob.Location = new System.Drawing.Point(172, 220);
+            this.date_dob.Location = new System.Drawing.Point(323, 245);
             this.date_dob.Name = "date_dob";
             this.date_dob.Size = new System.Drawing.Size(125, 26);
             this.date_dob.TabIndex = 24;
@@ -104,10 +104,10 @@ namespace RestaurantApp.View
             // lb_dob
             // 
             this.lb_dob.AutoSize = true;
-            this.lb_dob.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_dob.Location = new System.Drawing.Point(18, 220);
+            this.lb_dob.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_dob.Location = new System.Drawing.Point(17, 248);
             this.lb_dob.Name = "lb_dob";
-            this.lb_dob.Size = new System.Drawing.Size(85, 19);
+            this.lb_dob.Size = new System.Drawing.Size(100, 23);
             this.lb_dob.TabIndex = 23;
             this.lb_dob.Text = "Ngày sinh:";
             // 
@@ -115,16 +115,16 @@ namespace RestaurantApp.View
             // 
             this.pn_gender.Controls.Add(this.radio_female);
             this.pn_gender.Controls.Add(this.radio_male);
-            this.pn_gender.Location = new System.Drawing.Point(172, 182);
+            this.pn_gender.Location = new System.Drawing.Point(173, 211);
             this.pn_gender.Name = "pn_gender";
-            this.pn_gender.Size = new System.Drawing.Size(273, 18);
+            this.pn_gender.Size = new System.Drawing.Size(275, 28);
             this.pn_gender.TabIndex = 22;
             // 
             // radio_female
             // 
             this.radio_female.AutoSize = true;
             this.radio_female.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_female.Location = new System.Drawing.Point(69, 0);
+            this.radio_female.Location = new System.Drawing.Point(224, 3);
             this.radio_female.Name = "radio_female";
             this.radio_female.Size = new System.Drawing.Size(48, 23);
             this.radio_female.TabIndex = 1;
@@ -136,7 +136,7 @@ namespace RestaurantApp.View
             // 
             this.radio_male.AutoSize = true;
             this.radio_male.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_male.Location = new System.Drawing.Point(3, 0);
+            this.radio_male.Location = new System.Drawing.Point(112, 2);
             this.radio_male.Name = "radio_male";
             this.radio_male.Size = new System.Drawing.Size(60, 23);
             this.radio_male.TabIndex = 0;
@@ -147,7 +147,7 @@ namespace RestaurantApp.View
             // text_address
             // 
             this.text_address.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_address.Location = new System.Drawing.Point(173, 147);
+            this.text_address.Location = new System.Drawing.Point(173, 164);
             this.text_address.Name = "text_address";
             this.text_address.Size = new System.Drawing.Size(275, 27);
             this.text_address.TabIndex = 13;
@@ -156,7 +156,7 @@ namespace RestaurantApp.View
             // text_email
             // 
             this.text_email.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_email.Location = new System.Drawing.Point(173, 113);
+            this.text_email.Location = new System.Drawing.Point(173, 124);
             this.text_email.Name = "text_email";
             this.text_email.Size = new System.Drawing.Size(275, 27);
             this.text_email.TabIndex = 14;
@@ -165,7 +165,7 @@ namespace RestaurantApp.View
             // text_phone
             // 
             this.text_phone.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_phone.Location = new System.Drawing.Point(173, 80);
+            this.text_phone.Location = new System.Drawing.Point(173, 84);
             this.text_phone.Name = "text_phone";
             this.text_phone.Size = new System.Drawing.Size(275, 27);
             this.text_phone.TabIndex = 15;
@@ -174,10 +174,10 @@ namespace RestaurantApp.View
             // lb_gender
             // 
             this.lb_gender.AutoSize = true;
-            this.lb_gender.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gender.Location = new System.Drawing.Point(18, 182);
+            this.lb_gender.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_gender.Location = new System.Drawing.Point(17, 210);
             this.lb_gender.Name = "lb_gender";
-            this.lb_gender.Size = new System.Drawing.Size(75, 19);
+            this.lb_gender.Size = new System.Drawing.Size(86, 23);
             this.lb_gender.TabIndex = 8;
             this.lb_gender.Text = "Giới tính:";
             // 
@@ -193,27 +193,27 @@ namespace RestaurantApp.View
             // lb_email
             // 
             this.lb_email.AutoSize = true;
-            this.lb_email.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_email.Location = new System.Drawing.Point(20, 113);
+            this.lb_email.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_email.Location = new System.Drawing.Point(20, 128);
             this.lb_email.Name = "lb_email";
-            this.lb_email.Size = new System.Drawing.Size(54, 19);
+            this.lb_email.Size = new System.Drawing.Size(62, 23);
             this.lb_email.TabIndex = 9;
             this.lb_email.Text = "Email:";
             // 
             // lb_address
             // 
             this.lb_address.AutoSize = true;
-            this.lb_address.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_address.Location = new System.Drawing.Point(18, 147);
+            this.lb_address.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_address.Location = new System.Drawing.Point(17, 168);
             this.lb_address.Name = "lb_address";
-            this.lb_address.Size = new System.Drawing.Size(63, 19);
+            this.lb_address.Size = new System.Drawing.Size(74, 23);
             this.lb_address.TabIndex = 4;
             this.lb_address.Text = "Địa chỉ:";
             // 
             // text_username
             // 
             this.text_username.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_username.Location = new System.Drawing.Point(173, 12);
+            this.text_username.Location = new System.Drawing.Point(173, 8);
             this.text_username.Name = "text_username";
             this.text_username.Size = new System.Drawing.Size(275, 27);
             this.text_username.TabIndex = 17;
@@ -222,30 +222,30 @@ namespace RestaurantApp.View
             // lb_phone
             // 
             this.lb_phone.AutoSize = true;
-            this.lb_phone.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_phone.Location = new System.Drawing.Point(18, 80);
+            this.lb_phone.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_phone.Location = new System.Drawing.Point(17, 88);
             this.lb_phone.Name = "lb_phone";
-            this.lb_phone.Size = new System.Drawing.Size(108, 19);
+            this.lb_phone.Size = new System.Drawing.Size(127, 23);
             this.lb_phone.TabIndex = 5;
             this.lb_phone.Text = "Số điện thoại:";
             // 
             // lb_fullname
             // 
             this.lb_fullname.AutoSize = true;
-            this.lb_fullname.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_fullname.Location = new System.Drawing.Point(20, 45);
+            this.lb_fullname.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_fullname.Location = new System.Drawing.Point(17, 49);
             this.lb_fullname.Name = "lb_fullname";
-            this.lb_fullname.Size = new System.Drawing.Size(83, 19);
+            this.lb_fullname.Size = new System.Drawing.Size(98, 23);
             this.lb_fullname.TabIndex = 10;
             this.lb_fullname.Text = "Họ và tên:";
             // 
             // lb_username
             // 
             this.lb_username.AutoSize = true;
-            this.lb_username.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_username.Location = new System.Drawing.Point(18, 12);
+            this.lb_username.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_username.Location = new System.Drawing.Point(16, 12);
             this.lb_username.Name = "lb_username";
-            this.lb_username.Size = new System.Drawing.Size(85, 19);
+            this.lb_username.Size = new System.Drawing.Size(99, 23);
             this.lb_username.TabIndex = 6;
             this.lb_username.Text = "Tài khoản:";
             // 
@@ -253,44 +253,48 @@ namespace RestaurantApp.View
             // 
             this.panel2.Controls.Add(this.btn_back);
             this.panel2.Controls.Add(this.btn_update);
-            this.panel2.Location = new System.Drawing.Point(233, 319);
+            this.panel2.Location = new System.Drawing.Point(297, 343);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 54);
+            this.panel2.Size = new System.Drawing.Size(193, 72);
             this.panel2.TabIndex = 2;
-            // 
-            // btn_back
-            // 
-            this.btn_back.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_back.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.Location = new System.Drawing.Point(127, 3);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(77, 43);
-            this.btn_back.TabIndex = 1;
-            this.btn_back.Text = "Quay lại";
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_turnBack_Click);
-            // 
-            // btn_update
-            // 
-            this.btn_update.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(21, 3);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 43);
-            this.btn_update.TabIndex = 0;
-            this.btn_update.Text = "Cập nhật";
-            this.btn_update.UseVisualStyleBackColor = true;
             // 
             // errorEmpty
             // 
             this.errorEmpty.ContainerControl = this;
+            // 
+            // btn_update
+            // 
+            this.btn_update.BackgroundImage = global::RestaurantApp.Properties.Resources.update;
+            this.btn_update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_update.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Location = new System.Drawing.Point(30, 10);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(55, 51);
+            this.btn_update.TabIndex = 0;
+            this.btn_update.UseVisualStyleBackColor = true;
+            // 
+            // btn_back
+            // 
+            this.btn_back.BackColor = System.Drawing.Color.Transparent;
+            this.btn_back.BackgroundImage = global::RestaurantApp.Properties.Resources.Back1;
+            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_back.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_back.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.Location = new System.Drawing.Point(114, 10);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(53, 51);
+            this.btn_back.TabIndex = 1;
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_turnBack_Click);
             // 
             // AccountProfile
             // 
             this.AcceptButton = this.btn_update;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btn_back;
-            this.ClientSize = new System.Drawing.Size(502, 397);
+            this.ClientSize = new System.Drawing.Size(502, 427);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lb_titleInfo);
