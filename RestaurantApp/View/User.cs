@@ -61,7 +61,15 @@ namespace RestaurantApp.View
 
         public void loadCategories(List<CategoryModel> categories)
         {
-            Cb_categories.Items.AddRange(categories.ToArray());
+            /*cb_categories.Items.AddRange(categories.ToArray());*/
+            cb_categories.DataSource = categories;
+            cb_categories.DisplayMember = "Name";
+        }
+
+        public void loadTableToSwitch(List<TableModel> tables)
+        {
+            cb_switchTable.DataSource = tables;
+            cb_switchTable.DisplayMember = "Name";
         }
 
         public void loadSales(List<SaleModel> salesShow)

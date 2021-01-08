@@ -18,3 +18,6 @@ E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\R
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.csproj.CopyComplete
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.exe
 E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\obj\Debug\RestaurantApp.pdb
+E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\bin\Debug\BouncyCastle.Crypto.dll
+E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\bin\Debug\itextsharp.dll
+E:\Data\University\Workspace\restaurant-management-app\RestaurantApp\bin\Debug\itextsharp.xml

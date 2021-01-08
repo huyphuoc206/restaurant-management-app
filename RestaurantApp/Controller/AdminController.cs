@@ -124,11 +124,11 @@ namespace RestaurantApp.Controller
 
                 if (food != null)
                 {
-                    MessageBox.Show("Thêm món ăn thành công.");
+                    MessageBox.Show("Thêm món ăn thành công.", "Thông báo");
                     LoadFood(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateFood(object sender, EventArgs e)
@@ -162,11 +162,11 @@ namespace RestaurantApp.Controller
 
                 if (food != null)
                 {
-                    MessageBox.Show("Cập nhật món ăn thành công.");
+                    MessageBox.Show("Cập nhật món ăn thành công.", "Thông báo");
                     LoadFood(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void DeleteFood(object sender, EventArgs e)
@@ -180,11 +180,11 @@ namespace RestaurantApp.Controller
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa món ăn thành công.");
+                    MessageBox.Show("Xóa món ăn thành công.", "Thông báo");
                     LoadFood(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Food
@@ -225,11 +225,11 @@ namespace RestaurantApp.Controller
 
                 if (table != null)
                 {
-                    MessageBox.Show("Thêm bàn ăn thành công.");
+                    MessageBox.Show("Thêm bàn ăn thành công.", "Thông báo");
                     LoadTable(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateTable(object sender, EventArgs e)
@@ -259,15 +259,15 @@ namespace RestaurantApp.Controller
                 table.ModifiedBy = LoginInfo.Username;
 
                 table = await table.Update(client);
-             
+
                 if (table != null)
                 {
-                    MessageBox.Show("Cập nhật bàn ăn thành công.");
+                    MessageBox.Show("Cập nhật bàn ăn thành công.", "Thông báo");
                     LoadTable(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
                 }
             }
         }
@@ -279,14 +279,14 @@ namespace RestaurantApp.Controller
             if (dialogResult == DialogResult.Yes)
             {
                 bool result = await table.Delete(client);
-              
+
                 if (result)
                 {
-                    MessageBox.Show("Xóa bàn ăn thành công.");
+                    MessageBox.Show("Xóa bàn ăn thành công.", "Thông báo");
                     LoadTable(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành ngưng hoạt động thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành ngưng hoạt động thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Table
@@ -326,11 +326,11 @@ namespace RestaurantApp.Controller
 
                 if (category != null)
                 {
-                    MessageBox.Show("Thêm danh mục thành công.");
+                    MessageBox.Show("Thêm danh mục thành công.", "Thông báo");
                     LoadCategory(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateCategory(object sender, EventArgs e)
@@ -361,12 +361,12 @@ namespace RestaurantApp.Controller
 
                 if (category != null)
                 {
-                    MessageBox.Show("Cập nhật danh mục thành công.");
+                    MessageBox.Show("Cập nhật danh mục thành công.", "Thông báo");
                     LoadCategory(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
                 }
             }
         }
@@ -381,11 +381,11 @@ namespace RestaurantApp.Controller
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa danh mục thành công.");
+                    MessageBox.Show("Xóa danh mục thành công.", "Thông báo");
                     LoadCategory(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Category
@@ -426,11 +426,11 @@ namespace RestaurantApp.Controller
 
                 if (sale != null)
                 {
-                    MessageBox.Show("Thêm chương trình giảm giá thành công.");
+                    MessageBox.Show("Thêm chương trình giảm giá thành công.", "Thông báo");
                     LoadSale(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateSale(object sender, EventArgs e)
@@ -462,11 +462,11 @@ namespace RestaurantApp.Controller
 
                 if (sale != null)
                 {
-                    MessageBox.Show("Cập nhật chương trình giảm giá thành công.");
+                    MessageBox.Show("Cập nhật chương trình giảm giá thành công.", "Thông báo");
                     LoadSale(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void DeleteSale(object sender, EventArgs e)
@@ -480,11 +480,11 @@ namespace RestaurantApp.Controller
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa chương trình giảm giá thành công.");
+                    MessageBox.Show("Xóa chương trình giảm giá thành công.", "Thông báo");
                     LoadSale(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Sale
@@ -532,11 +532,11 @@ namespace RestaurantApp.Controller
 
                 if (user != null)
                 {
-                    MessageBox.Show("Thêm người dùng thành công.");
+                    MessageBox.Show("Thêm người dùng thành công.", "Thông báo");
                     LoadUser(sender, e);
                 }
                 else
-                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.");
+                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.", "Thông báo");
             }
         }
         private async void UpdateUser(object sender, EventArgs e)
@@ -577,11 +577,11 @@ namespace RestaurantApp.Controller
 
                 if (user != null)
                 {
-                    MessageBox.Show("Cập nhật người dùng thành công.");
+                    MessageBox.Show("Cập nhật người dùng thành công.", "Thông báo");
                     LoadUser(sender, e);
                 }
                 else
-                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.");
+                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.", "Thông báo");
             }
         }
         private async void DeleteUser(object sender, EventArgs e)
@@ -595,11 +595,11 @@ namespace RestaurantApp.Controller
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa người dùng thành công.");
+                    MessageBox.Show("Xóa người dùng thành công.", "Thông báo");
                     LoadUser(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD User

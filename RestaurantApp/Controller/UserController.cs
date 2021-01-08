@@ -1,5 +1,7 @@
 ﻿using RestaurantApp.Constant;
 using RestaurantApp.Model;
+using RestaurantApp.ModelData;
+using RestaurantApp.Utils;
 using RestaurantApp.View;
 using System;
 using System.Collections.Generic;
@@ -53,14 +55,95 @@ namespace RestaurantApp.Controller
             view.loadTables(getButtonsTables(tables));
             view.loadCategories(categoriesShow);
             view.loadSales(salesShow);
+            view.loadTableToSwitch(tables);
+            view.Cb_IndeQuantity.SelectedIndex = 0;
         }
 
         private void Event()
         {
-            view.cb_categories.SelectedIndexChanged += new EventHandler(cb_categories_SelectedIndexChanged);
+            view.Cb_categories.SelectedIndexChanged += new EventHandler(cb_categories_SelectedIndexChanged);
             view.Btn_CancelTable.Click += new EventHandler(cancelTable);
-            view.btn_pay.Click += new EventHandler(payOrder);
+            view.Btn_Pay.Click += new EventHandler(payOrder);
             view.cb_sales.SelectedIndexChanged += new EventHandler(cb_sales_SelectedIndexChanged);
+            view.Btn_SwitchTable.Click += new EventHandler(switchTable);
+            view.btn_printBill.Click += new EventHandler(printBill);
+        }
+
+        private async void printBill(object sender, EventArgs e)
+        {
+            TableModel table = view.list_orderDetails.Tag as TableModel; // lay ban dang dc chon
+            if (table == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần in hóa đơn.", "Chú ý");
+                return;
+            }
+            if (table.Status.Equals("0"))
+            {
+                MessageBox.Show("Bàn này chưa gọi món.", "Chú ý");
+                return;
+            }
+            BillData billData = new BillData();
+            billData.tableName = table.Name.ToUpper();
+            SaleModel sale = (SaleModel)view.cb_sales.SelectedItem;
+            if (sale == null)
+            {
+                MessageBox.Show("Vui lòng chọn chương trình giảm giá.", "Chú ý");
+                return;
+            }
+            OrderModel order = await table.GetOrderUnChecked(client);
+            billData.orderId = order.ID;
+            billData.checkin = order.CreatedDate;
+            billData.checkout = DateTime.Now;
+            billData.tableName = table.Name;
+            billData.sale = sale;
+            billData.totalPrice = view.Text_totalPrice.Text;
+            PDFUtil.PrintingBill(view.list_orderDetails, billData);
+        }
+
+        private async void switchTable(object sender, EventArgs e)
+        {
+            TableModel currentTable = view.list_orderDetails.Tag as TableModel; // lay ban dang dc chon
+            TableModel selectedTable = (TableModel)view.cb_switchTable.SelectedItem;
+            if (currentTable == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn muốn chuyển.", "Chú ý");
+                return;
+            }
+            if (currentTable.Status.Equals("0"))
+            {
+                MessageBox.Show("Bàn này hiện tại đang trống, không có gì để chuyển.", "Chú ý");
+                return;
+            }
+            if (currentTable.ID == selectedTable.ID)
+            {
+                MessageBox.Show("Không thể chuyển 2 bàn trùng nhau.", "Chú ý");
+                return;
+            }
+            if (selectedTable.Status.Equals("1"))
+            {
+                MessageBox.Show(selectedTable.Name + " hiện đang có người, không thể chuyển qua bàn này.", "Chú ý");
+                return;
+            }
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn chuyền từ " + currentTable.Name + " sang " + selectedTable.Name + "? ", "Chú ý", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                OrderModel order = await currentTable.GetOrderUnChecked(client);
+                order.Table = selectedTable;
+                order.ModifiedBy = LoginInfo.Username;
+                order = await order.Update(client);
+                if (order != null)
+                {
+                    MessageBox.Show("Chuyển " + currentTable.Name + " sang " + selectedTable.Name + " thành công", "Thông báo");
+                    currentTable.Status = "0";
+                    await currentTable.Update(client);
+                    selectedTable.Status = "1";
+                    await selectedTable.Update(client);
+                    List<TableModel> tables = await selectedTable.GetTables(client);
+                    view.loadTables(getButtonsTables(tables));
+                    showOrder(currentTable);
+                }
+            }
+
         }
 
         private async void cb_sales_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,7 +159,7 @@ namespace RestaurantApp.Controller
             List<OrderDetailModel> orderDetails = await currentOrder.GetOrderDetails(client);
             if (orderDetails.Count == 0)
             {
-                MessageBox.Show("Bàn này chưa gọi món, vui lòng hủy bàn hoặc thêm món.");
+                MessageBox.Show("Bàn này chưa gọi món, vui lòng hủy bàn hoặc thêm món.", "Chú ý");
                 view.cb_sales.SelectedIndex = -1;
                 return;
             }
@@ -93,17 +176,17 @@ namespace RestaurantApp.Controller
             TableModel table = view.list_orderDetails.Tag as TableModel; // lay ban dang dc chon
             if (table == null)
             {
-                MessageBox.Show("Vui lòng chọn bàn cần thanh toán.");
+                MessageBox.Show("Vui lòng chọn bàn cần thanh toán.","Chú ý");
                 return;
             }
             if (table.Status.Equals("0"))
             {
-                MessageBox.Show("Bàn này không có đơn hàng cần thanh toán.");
+                MessageBox.Show("Bàn này không có đơn hàng cần thanh toán.", "Chú ý");
                 return;
             }
             if (view.cb_sales.SelectedIndex < 0)
             {
-                MessageBox.Show("Vui lòng chọn chương trình giảm giá.");
+                MessageBox.Show("Vui lòng chọn chương trình giảm giá.", "Chú ý");
                 return;
             }
             DialogResult dialogResult = MessageBox.Show("Bạn muốn thanh toán bàn này?", "Chú ý", MessageBoxButtons.YesNo);
@@ -112,6 +195,7 @@ namespace RestaurantApp.Controller
                 OrderModel currentOrder = await table.GetOrderUnChecked(client);
                 SaleModel sale = (SaleModel)view.cb_sales.SelectedItem;
                 currentOrder.Sale = sale;
+                currentOrder.ModifiedBy = LoginInfo.Username;
                 currentOrder = await currentOrder.Pay(client);
                 if (currentOrder != null)
                 {
@@ -124,7 +208,7 @@ namespace RestaurantApp.Controller
                 }
                 else
                 {
-                    MessageBox.Show("Bàn này chưa gọi món, vui lòng hủy bàn hoặc thêm món.");
+                    MessageBox.Show("Bàn này chưa gọi món, vui lòng hủy bàn hoặc thêm món.", "Chú ý");
                     return;
                 }
             }
@@ -135,7 +219,7 @@ namespace RestaurantApp.Controller
             TableModel table = view.list_orderDetails.Tag as TableModel; // lay ban dang dc chon
             if (table == null)
             {
-                MessageBox.Show("Vui lòng chọn bàn muốn hủy.");
+                MessageBox.Show("Vui lòng chọn bàn muốn hủy.", "Chú ý");
                 return;
             }
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn hủy bàn này?", "Chú ý", MessageBoxButtons.YesNo);
@@ -144,13 +228,13 @@ namespace RestaurantApp.Controller
                 bool result = await table.CancelTable(client);
                 if (result)
                 {
-                    MessageBox.Show("Hủy thành công.");
+                    MessageBox.Show("Hủy thành công.", "Thông báo");
                     List<TableModel> tables = await table.GetTables(client);
                     view.loadTables(getButtonsTables(tables));
                     showOrder(table);
                 }
                 else
-                    MessageBox.Show("Hủy thất bại, bàn này chưa gọi món.");
+                    MessageBox.Show("Hủy thất bại, bàn này chưa gọi món.", "Thông báo");
             }
         }
 
@@ -195,12 +279,12 @@ namespace RestaurantApp.Controller
             TableModel table = view.list_orderDetails.Tag as TableModel; // lay ban dang dc chon
             if (table == null)
             {
-                MessageBox.Show("Vui lòng chọn bàn.");
+                MessageBox.Show("Vui lòng chọn bàn.", "Chú ý");
                 return;
             }
             if (string.IsNullOrEmpty(view.Quantity.Text))
             {
-                MessageBox.Show("Vui lòng nhập số lượng.");
+                MessageBox.Show("Vui lòng nhập số lượng.", "Chú ý");
                 return;
             }
             int quantity = Int32.Parse(view.Quantity.Text);
@@ -212,7 +296,7 @@ namespace RestaurantApp.Controller
             {
                 if (orderDetail.Quantity < 1)
                 {
-                    MessageBox.Show("Số lượng phải là số dương.");
+                    MessageBox.Show("Số lượng phải là số dương.", "Chú ý");
                     return;
                 }
                 OrderModel order = new OrderModel();

@@ -41,6 +41,15 @@ namespace RestaurantApp.Model
             return orderDetails;
         }
 
+        public async Task<OrderModel> Update(HttpClient client)
+        {
+            OrderModel orderResult = null;
+            HttpResponseMessage response = await client.PutAsJsonAsync("api/orders/" + this.ID, this);
+            if (response.IsSuccessStatusCode)
+                orderResult = await response.Content.ReadAsAsync<OrderModel>();
+            return orderResult;
+        }
+
         public void SetUnChecked()
         {
             this.status = "0";

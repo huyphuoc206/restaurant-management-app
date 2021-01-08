@@ -38,6 +38,16 @@ namespace RestaurantApp.View
         {
             this.panel_menu = new System.Windows.Forms.Panel();
             this.cb_indeQuantity = new System.Windows.Forms.ComboBox();
+            this.btn_9 = new RestaurantApp.Model.CircularButton();
+            this.btn_8 = new RestaurantApp.Model.CircularButton();
+            this.btn_7 = new RestaurantApp.Model.CircularButton();
+            this.btn_6 = new RestaurantApp.Model.CircularButton();
+            this.btn_5 = new RestaurantApp.Model.CircularButton();
+            this.btn_4 = new RestaurantApp.Model.CircularButton();
+            this.btn_3 = new RestaurantApp.Model.CircularButton();
+            this.btn_2 = new RestaurantApp.Model.CircularButton();
+            this.btn_1 = new RestaurantApp.Model.CircularButton();
+            this.btn_0 = new RestaurantApp.Model.CircularButton();
             this.panel_food = new System.Windows.Forms.FlowLayoutPanel();
             this.quantity = new System.Windows.Forms.TextBox();
             this.cb_categories = new System.Windows.Forms.ComboBox();
@@ -67,16 +77,6 @@ namespace RestaurantApp.View
             this.menuItem_logout = new System.Windows.Forms.ToolStripMenuItem();
             this.flPanel_table = new System.Windows.Forms.FlowLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btn_9 = new RestaurantApp.Model.CircularButton();
-            this.btn_8 = new RestaurantApp.Model.CircularButton();
-            this.btn_7 = new RestaurantApp.Model.CircularButton();
-            this.btn_6 = new RestaurantApp.Model.CircularButton();
-            this.btn_5 = new RestaurantApp.Model.CircularButton();
-            this.btn_4 = new RestaurantApp.Model.CircularButton();
-            this.btn_3 = new RestaurantApp.Model.CircularButton();
-            this.btn_2 = new RestaurantApp.Model.CircularButton();
-            this.btn_1 = new RestaurantApp.Model.CircularButton();
-            this.btn_0 = new RestaurantApp.Model.CircularButton();
             this.panel_menu.SuspendLayout();
             this.panel_bill.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -119,7 +119,156 @@ namespace RestaurantApp.View
             this.cb_indeQuantity.Name = "cb_indeQuantity";
             this.cb_indeQuantity.Size = new System.Drawing.Size(37, 28);
             this.cb_indeQuantity.TabIndex = 24;
-            this.cb_indeQuantity.SelectedItem = "+";
+            // 
+            // btn_9
+            // 
+            this.btn_9.BackColor = System.Drawing.Color.HotPink;
+            this.btn_9.FlatAppearance.BorderSize = 0;
+            this.btn_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_9.ForeColor = System.Drawing.Color.White;
+            this.btn_9.Location = new System.Drawing.Point(511, 20);
+            this.btn_9.Name = "btn_9";
+            this.btn_9.Size = new System.Drawing.Size(49, 50);
+            this.btn_9.TabIndex = 23;
+            this.btn_9.Text = "9";
+            this.btn_9.UseVisualStyleBackColor = false;
+            this.btn_9.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_8
+            // 
+            this.btn_8.BackColor = System.Drawing.Color.HotPink;
+            this.btn_8.FlatAppearance.BorderSize = 0;
+            this.btn_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_8.ForeColor = System.Drawing.Color.White;
+            this.btn_8.Location = new System.Drawing.Point(456, 20);
+            this.btn_8.Name = "btn_8";
+            this.btn_8.Size = new System.Drawing.Size(49, 50);
+            this.btn_8.TabIndex = 22;
+            this.btn_8.Text = "8";
+            this.btn_8.UseVisualStyleBackColor = false;
+            this.btn_8.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_7
+            // 
+            this.btn_7.BackColor = System.Drawing.Color.HotPink;
+            this.btn_7.FlatAppearance.BorderSize = 0;
+            this.btn_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_7.ForeColor = System.Drawing.Color.White;
+            this.btn_7.Location = new System.Drawing.Point(401, 19);
+            this.btn_7.Name = "btn_7";
+            this.btn_7.Size = new System.Drawing.Size(49, 50);
+            this.btn_7.TabIndex = 21;
+            this.btn_7.Text = "7";
+            this.btn_7.UseVisualStyleBackColor = false;
+            this.btn_7.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_6
+            // 
+            this.btn_6.BackColor = System.Drawing.Color.HotPink;
+            this.btn_6.FlatAppearance.BorderSize = 0;
+            this.btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_6.ForeColor = System.Drawing.Color.White;
+            this.btn_6.Location = new System.Drawing.Point(346, 20);
+            this.btn_6.Name = "btn_6";
+            this.btn_6.Size = new System.Drawing.Size(49, 50);
+            this.btn_6.TabIndex = 20;
+            this.btn_6.Text = "6";
+            this.btn_6.UseVisualStyleBackColor = false;
+            this.btn_6.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_5
+            // 
+            this.btn_5.BackColor = System.Drawing.Color.HotPink;
+            this.btn_5.FlatAppearance.BorderSize = 0;
+            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_5.ForeColor = System.Drawing.Color.White;
+            this.btn_5.Location = new System.Drawing.Point(291, 20);
+            this.btn_5.Name = "btn_5";
+            this.btn_5.Size = new System.Drawing.Size(49, 50);
+            this.btn_5.TabIndex = 19;
+            this.btn_5.Text = "5";
+            this.btn_5.UseVisualStyleBackColor = false;
+            this.btn_5.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_4
+            // 
+            this.btn_4.BackColor = System.Drawing.Color.HotPink;
+            this.btn_4.FlatAppearance.BorderSize = 0;
+            this.btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_4.ForeColor = System.Drawing.Color.White;
+            this.btn_4.Location = new System.Drawing.Point(236, 19);
+            this.btn_4.Name = "btn_4";
+            this.btn_4.Size = new System.Drawing.Size(49, 50);
+            this.btn_4.TabIndex = 18;
+            this.btn_4.Text = "4";
+            this.btn_4.UseVisualStyleBackColor = false;
+            this.btn_4.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_3
+            // 
+            this.btn_3.BackColor = System.Drawing.Color.HotPink;
+            this.btn_3.FlatAppearance.BorderSize = 0;
+            this.btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_3.ForeColor = System.Drawing.Color.White;
+            this.btn_3.Location = new System.Drawing.Point(181, 20);
+            this.btn_3.Name = "btn_3";
+            this.btn_3.Size = new System.Drawing.Size(49, 50);
+            this.btn_3.TabIndex = 17;
+            this.btn_3.Text = "3";
+            this.btn_3.UseVisualStyleBackColor = false;
+            this.btn_3.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_2
+            // 
+            this.btn_2.BackColor = System.Drawing.Color.HotPink;
+            this.btn_2.FlatAppearance.BorderSize = 0;
+            this.btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_2.ForeColor = System.Drawing.Color.White;
+            this.btn_2.Location = new System.Drawing.Point(126, 20);
+            this.btn_2.Name = "btn_2";
+            this.btn_2.Size = new System.Drawing.Size(49, 50);
+            this.btn_2.TabIndex = 16;
+            this.btn_2.Text = "2";
+            this.btn_2.UseVisualStyleBackColor = false;
+            this.btn_2.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_1
+            // 
+            this.btn_1.BackColor = System.Drawing.Color.HotPink;
+            this.btn_1.FlatAppearance.BorderSize = 0;
+            this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_1.ForeColor = System.Drawing.Color.White;
+            this.btn_1.Location = new System.Drawing.Point(71, 20);
+            this.btn_1.Name = "btn_1";
+            this.btn_1.Size = new System.Drawing.Size(49, 50);
+            this.btn_1.TabIndex = 15;
+            this.btn_1.Text = "1";
+            this.btn_1.UseVisualStyleBackColor = false;
+            this.btn_1.Click += new System.EventHandler(this.btns_quantity_click);
+            // 
+            // btn_0
+            // 
+            this.btn_0.BackColor = System.Drawing.Color.HotPink;
+            this.btn_0.FlatAppearance.BorderSize = 0;
+            this.btn_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_0.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_0.ForeColor = System.Drawing.Color.White;
+            this.btn_0.Location = new System.Drawing.Point(16, 20);
+            this.btn_0.Name = "btn_0";
+            this.btn_0.Size = new System.Drawing.Size(49, 50);
+            this.btn_0.TabIndex = 0;
+            this.btn_0.Text = "0";
+            this.btn_0.UseVisualStyleBackColor = false;
+            this.btn_0.Click += new System.EventHandler(this.btns_quantity_click);
             // 
             // panel_food
             // 
@@ -223,18 +372,6 @@ namespace RestaurantApp.View
             this.cb_switchTable.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_switchTable.ForeColor = System.Drawing.SystemColors.MenuText;
             this.cb_switchTable.FormattingEnabled = true;
-            this.cb_switchTable.Items.AddRange(new object[] {
-            "a",
-            "a",
-            "a",
-            "a",
-            "a",
-            "a",
-            "a",
-            "â",
-            "",
-            "ấd",
-            ""});
             this.cb_switchTable.Location = new System.Drawing.Point(165, 548);
             this.cb_switchTable.Name = "cb_switchTable";
             this.cb_switchTable.Size = new System.Drawing.Size(80, 27);
@@ -435,156 +572,6 @@ namespace RestaurantApp.View
             this.flPanel_table.Size = new System.Drawing.Size(282, 618);
             this.flPanel_table.TabIndex = 2;
             // 
-            // btn_9
-            // 
-            this.btn_9.BackColor = System.Drawing.Color.HotPink;
-            this.btn_9.FlatAppearance.BorderSize = 0;
-            this.btn_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_9.ForeColor = System.Drawing.Color.White;
-            this.btn_9.Location = new System.Drawing.Point(511, 20);
-            this.btn_9.Name = "btn_9";
-            this.btn_9.Size = new System.Drawing.Size(49, 50);
-            this.btn_9.TabIndex = 23;
-            this.btn_9.Text = "9";
-            this.btn_9.UseVisualStyleBackColor = false;
-            this.btn_9.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_8
-            // 
-            this.btn_8.BackColor = System.Drawing.Color.HotPink;
-            this.btn_8.FlatAppearance.BorderSize = 0;
-            this.btn_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_8.ForeColor = System.Drawing.Color.White;
-            this.btn_8.Location = new System.Drawing.Point(456, 20);
-            this.btn_8.Name = "btn_8";
-            this.btn_8.Size = new System.Drawing.Size(49, 50);
-            this.btn_8.TabIndex = 22;
-            this.btn_8.Text = "8";
-            this.btn_8.UseVisualStyleBackColor = false;
-            this.btn_8.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_7
-            // 
-            this.btn_7.BackColor = System.Drawing.Color.HotPink;
-            this.btn_7.FlatAppearance.BorderSize = 0;
-            this.btn_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_7.ForeColor = System.Drawing.Color.White;
-            this.btn_7.Location = new System.Drawing.Point(401, 19);
-            this.btn_7.Name = "btn_7";
-            this.btn_7.Size = new System.Drawing.Size(49, 50);
-            this.btn_7.TabIndex = 21;
-            this.btn_7.Text = "7";
-            this.btn_7.UseVisualStyleBackColor = false;
-            this.btn_7.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_6
-            // 
-            this.btn_6.BackColor = System.Drawing.Color.HotPink;
-            this.btn_6.FlatAppearance.BorderSize = 0;
-            this.btn_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_6.ForeColor = System.Drawing.Color.White;
-            this.btn_6.Location = new System.Drawing.Point(346, 20);
-            this.btn_6.Name = "btn_6";
-            this.btn_6.Size = new System.Drawing.Size(49, 50);
-            this.btn_6.TabIndex = 20;
-            this.btn_6.Text = "6";
-            this.btn_6.UseVisualStyleBackColor = false;
-            this.btn_6.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_5
-            // 
-            this.btn_5.BackColor = System.Drawing.Color.HotPink;
-            this.btn_5.FlatAppearance.BorderSize = 0;
-            this.btn_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_5.ForeColor = System.Drawing.Color.White;
-            this.btn_5.Location = new System.Drawing.Point(291, 20);
-            this.btn_5.Name = "btn_5";
-            this.btn_5.Size = new System.Drawing.Size(49, 50);
-            this.btn_5.TabIndex = 19;
-            this.btn_5.Text = "5";
-            this.btn_5.UseVisualStyleBackColor = false;
-            this.btn_5.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_4
-            // 
-            this.btn_4.BackColor = System.Drawing.Color.HotPink;
-            this.btn_4.FlatAppearance.BorderSize = 0;
-            this.btn_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_4.ForeColor = System.Drawing.Color.White;
-            this.btn_4.Location = new System.Drawing.Point(236, 19);
-            this.btn_4.Name = "btn_4";
-            this.btn_4.Size = new System.Drawing.Size(49, 50);
-            this.btn_4.TabIndex = 18;
-            this.btn_4.Text = "4";
-            this.btn_4.UseVisualStyleBackColor = false;
-            this.btn_4.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_3
-            // 
-            this.btn_3.BackColor = System.Drawing.Color.HotPink;
-            this.btn_3.FlatAppearance.BorderSize = 0;
-            this.btn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_3.ForeColor = System.Drawing.Color.White;
-            this.btn_3.Location = new System.Drawing.Point(181, 20);
-            this.btn_3.Name = "btn_3";
-            this.btn_3.Size = new System.Drawing.Size(49, 50);
-            this.btn_3.TabIndex = 17;
-            this.btn_3.Text = "3";
-            this.btn_3.UseVisualStyleBackColor = false;
-            this.btn_3.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_2
-            // 
-            this.btn_2.BackColor = System.Drawing.Color.HotPink;
-            this.btn_2.FlatAppearance.BorderSize = 0;
-            this.btn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_2.ForeColor = System.Drawing.Color.White;
-            this.btn_2.Location = new System.Drawing.Point(126, 20);
-            this.btn_2.Name = "btn_2";
-            this.btn_2.Size = new System.Drawing.Size(49, 50);
-            this.btn_2.TabIndex = 16;
-            this.btn_2.Text = "2";
-            this.btn_2.UseVisualStyleBackColor = false;
-            this.btn_2.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_1
-            // 
-            this.btn_1.BackColor = System.Drawing.Color.HotPink;
-            this.btn_1.FlatAppearance.BorderSize = 0;
-            this.btn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_1.ForeColor = System.Drawing.Color.White;
-            this.btn_1.Location = new System.Drawing.Point(71, 20);
-            this.btn_1.Name = "btn_1";
-            this.btn_1.Size = new System.Drawing.Size(49, 50);
-            this.btn_1.TabIndex = 15;
-            this.btn_1.Text = "1";
-            this.btn_1.UseVisualStyleBackColor = false;
-            this.btn_1.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
-            // btn_0
-            // 
-            this.btn_0.BackColor = System.Drawing.Color.HotPink;
-            this.btn_0.FlatAppearance.BorderSize = 0;
-            this.btn_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_0.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_0.ForeColor = System.Drawing.Color.White;
-            this.btn_0.Location = new System.Drawing.Point(16, 20);
-            this.btn_0.Name = "btn_0";
-            this.btn_0.Size = new System.Drawing.Size(49, 50);
-            this.btn_0.TabIndex = 0;
-            this.btn_0.Text = "0";
-            this.btn_0.UseVisualStyleBackColor = false;
-            this.btn_0.Click += new System.EventHandler(this.btns_quantity_click);
-            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,5 +656,6 @@ namespace RestaurantApp.View
         public ComboBox Cb_IndeQuantity { get => cb_indeQuantity; set => cb_indeQuantity = value; }
         public Button Btn_CancelTable { get => btn_cancelTable; set => btn_cancelTable = value; }
         public Button Btn_Pay { get => btn_pay; set => btn_pay = value; }
+        public Button Btn_SwitchTable { get => btn_switchTable; set => btn_switchTable = value; }
     }
 }
