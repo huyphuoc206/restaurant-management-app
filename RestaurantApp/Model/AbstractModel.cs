@@ -19,15 +19,6 @@ namespace RestaurantApp.Model
         public DateTime CreatedDate { get => createdDate; set => createdDate = value; }
         public string CreatedBy { get => createdBy; set => createdBy = value; }
         public DateTime ModifiedDate { get => modifiedDate; set => modifiedDate = value; }
-        public string ModifiedBy { get => modifiedBy; set => modifiedBy = value; }
-
-        public async Task<bool> Delete(HttpClient client, string path)
-        {
-            bool result = false;
-            HttpResponseMessage response = await client.DeleteAsync(path);
-            if (response.IsSuccessStatusCode)
-                result = await response.Content.ReadAsAsync<bool>();
-            return result;
-        }
+        public string ModifiedBy { get => modifiedBy; set => modifiedBy = value; }      
     }
 }

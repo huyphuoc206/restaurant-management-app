@@ -16,5 +16,6 @@ namespace RestaurantWebAPI.Service
         TableDTO Update(long id, TableDTO table);
 
         bool Delete(long id);
+        TableDTO FindOneById(long id);
     }
 }

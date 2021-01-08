@@ -23,12 +23,12 @@ namespace RestaurantApp.Controller
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            InitControllerAsync();
+            InitController();
         }
 
         public Admin View { get => view; set => view = value; }
 
-        private void InitControllerAsync()
+        private void InitController()
         {
             LoadData();
             EventBtnView();
@@ -39,12 +39,12 @@ namespace RestaurantApp.Controller
 
         private async void LoadData()
         {
-            List<UserModel> users = await UserModel.GetUsersAsync(client, "api/users");
-            List<TableModel> tables = await TableModel.GetTablesAsync(client, "api/tables");
-            List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
-            List<FoodModel> food = await FoodModel.GetFoodAsync(client, "api/food");
-            List<SaleModel> sales = await SaleModel.GetSalesAsync(client, "api/sales");
-            List<RoleModel> roles = await RoleModel.GetRolesAsync(client, "api/roles");
+            List<UserModel> users = await new UserModel().GetUsers(client);
+            List<TableModel> tables = await new TableModel().GetTables(client);
+            List<CategoryModel> categories = await new CategoryModel().GetCategories(client);
+            List<FoodModel> food = await new FoodModel().GetFood(client);
+            List<SaleModel> sales = await new SaleModel().GetSales(client);
+            List<RoleModel> roles = await new RoleModel().GetRoles(client);
             view.loadCategories(categories);
             view.loadUsers(users);
             view.loadTables(tables);
@@ -91,7 +91,7 @@ namespace RestaurantApp.Controller
         private async void LoadFood(object sender, EventArgs e)
         {
             view.ClearFoodBinding();
-            List<FoodModel> food = await FoodModel.GetFoodAsync(client, "api/food");
+            List<FoodModel> food = await new FoodModel().GetFood(client);
             view.loadFood(food);
         }
         private async void AddFood(object sender, EventArgs e)
@@ -120,15 +120,15 @@ namespace RestaurantApp.Controller
                     food.Status = "0";
                 food.CreatedBy = LoginInfo.Username;
 
-                food = await food.Save(client, "api/food");
+                food = await food.Save(client);
 
                 if (food != null)
                 {
-                    MessageBox.Show("Thêm món ăn thành công.");
+                    MessageBox.Show("Thêm món ăn thành công.", "Thông báo");
                     LoadFood(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateFood(object sender, EventArgs e)
@@ -144,8 +144,8 @@ namespace RestaurantApp.Controller
             }
             if (countError == 0)
             {
-                long id = Convert.ToInt64(view.Text_foodId.Text);
                 FoodModel food = new FoodModel();
+                food.ID = Convert.ToInt64(view.Text_foodId.Text);
                 food.Name = view.Text_foodName.Text;
                 food.Price = (long)view.Food_price.Value;
                 food.Discount = (int)view.Food_discount.Value;
@@ -158,34 +158,33 @@ namespace RestaurantApp.Controller
                     food.Status = "0";
                 food.ModifiedBy = LoginInfo.Username;
 
-                food = await food.Update(client, "api/food/" + id);
+                food = await food.Update(client);
 
                 if (food != null)
                 {
-                    MessageBox.Show("Cập nhật món ăn thành công.");
+                    MessageBox.Show("Cập nhật món ăn thành công.", "Thông báo");
                     LoadFood(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void DeleteFood(object sender, EventArgs e)
         {
-            long id = Convert.ToInt64(view.Text_foodId.Text);
             FoodModel food = new FoodModel();
-
+            food.ID = Convert.ToInt64(view.Text_foodId.Text);
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa món ăn này?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                bool result = await food.Delete(client, "api/food/" + id);
+                bool result = await food.Delete(client);
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa món ăn thành công.");
+                    MessageBox.Show("Xóa món ăn thành công.", "Thông báo");
                     LoadFood(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Food
@@ -194,7 +193,7 @@ namespace RestaurantApp.Controller
         private async void LoadTable(object sender, EventArgs e)
         {
             view.ClearTableBinding();
-            List<TableModel> tables = await TableModel.GetTablesAsync(client, "api/tables");
+            List<TableModel> tables = await new TableModel().GetTables(client);
             view.loadTables(tables);
         }
         private async void AddTable(object sender, EventArgs e)
@@ -222,15 +221,15 @@ namespace RestaurantApp.Controller
                     table.Status = "2";
                 table.CreatedBy = LoginInfo.Username;
 
-                table = await table.Save(client, "api/tables");
+                table = await table.Save(client);
 
                 if (table != null)
                 {
-                    MessageBox.Show("Thêm bàn ăn thành công.");
+                    MessageBox.Show("Thêm bàn ăn thành công.", "Thông báo");
                     LoadTable(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateTable(object sender, EventArgs e)
@@ -246,8 +245,8 @@ namespace RestaurantApp.Controller
             }
             if (countError == 0)
             {
-                long id = Convert.ToInt64(view.Text_tableId.Text);
                 TableModel table = new TableModel();
+                table.ID = Convert.ToInt64(view.Text_tableId.Text);
                 table.Name = view.Text_tableName.Text;
                 table.Seats = (int)view.Num_tableSeats.Value;
                 string status = (string)view.Cb_tableStatus.SelectedItem;
@@ -259,35 +258,35 @@ namespace RestaurantApp.Controller
                     table.Status = "2";
                 table.ModifiedBy = LoginInfo.Username;
 
-                table = await table.Update(client, "api/tables/" + id);
-             
+                table = await table.Update(client);
+
                 if (table != null)
                 {
-                    MessageBox.Show("Cập nhật bàn ăn thành công.");
+                    MessageBox.Show("Cập nhật bàn ăn thành công.", "Thông báo");
                     LoadTable(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
                 }
             }
         }
         private async void DeleteTable(object sender, EventArgs e)
         {
-            long id = Convert.ToInt64(view.Text_tableId.Text);
             TableModel table = new TableModel();
+            table.ID = Convert.ToInt64(view.Text_tableId.Text);
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa bàn ăn này?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                bool result = await table.Delete(client, "api/tables/" + id);
-              
+                bool result = await table.Delete(client);
+
                 if (result)
                 {
-                    MessageBox.Show("Xóa bàn ăn thành công.");
+                    MessageBox.Show("Xóa bàn ăn thành công.", "Thông báo");
                     LoadTable(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành ngưng hoạt động thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành ngưng hoạt động thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Table
@@ -296,8 +295,9 @@ namespace RestaurantApp.Controller
         private async void LoadCategory(object sender, EventArgs e)
         {
             view.ClearCategoryBinding();
-            List<CategoryModel> categories = await CategoryModel.GetCategoriessAsync(client, "api/categories");
+            List<CategoryModel> categories = await new CategoryModel().GetCategories(client);
             view.loadCategories(categories);
+            view.loadCategoriesIntoCb(categories);
         }
         private async void AddCategory(object sender, EventArgs e)
         {
@@ -322,15 +322,15 @@ namespace RestaurantApp.Controller
 
                 category.CreatedBy = LoginInfo.Username;
 
-                category = await category.Save(client, "api/categories");
+                category = await category.Save(client);
 
                 if (category != null)
                 {
-                    MessageBox.Show("Thêm danh mục thành công.");
+                    MessageBox.Show("Thêm danh mục thành công.", "Thông báo");
                     LoadCategory(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateCategory(object sender, EventArgs e)
@@ -346,8 +346,8 @@ namespace RestaurantApp.Controller
             }
             if (countError == 0)
             {
-                long id = Convert.ToInt64(view.Text_categoryId.Text);
                 CategoryModel category = new CategoryModel();
+                category.ID = Convert.ToInt64(view.Text_categoryId.Text);
                 category.Name = view.Text_categoryname.Text;
                 string status = (string)view.Cb_categoryStatus.SelectedItem;
                 if (status.Equals("Hoạt động"))
@@ -357,35 +357,35 @@ namespace RestaurantApp.Controller
 
                 category.ModifiedBy = LoginInfo.Username;
 
-                category = await category.Update(client, "api/categories/" + id);
+                category = await category.Update(client);
 
                 if (category != null)
                 {
-                    MessageBox.Show("Cập nhật danh mục thành công.");
+                    MessageBox.Show("Cập nhật danh mục thành công.", "Thông báo");
                     LoadCategory(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
                 }
             }
         }
         private async void DeleteCategory(object sender, EventArgs e)
         {
-            long id = Convert.ToInt64(view.Text_categoryId.Text);
             CategoryModel category = new CategoryModel();
+            category.ID = Convert.ToInt64(view.Text_categoryId.Text);
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa danh mục này?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                bool result = await category.Delete(client, "api/categories/" + id);
+                bool result = await category.Delete(client);
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa danh mục thành công.");
+                    MessageBox.Show("Xóa danh mục thành công.", "Thông báo");
                     LoadCategory(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Category
@@ -395,7 +395,7 @@ namespace RestaurantApp.Controller
         private async void LoadSale(object sender, EventArgs e)
         {
             view.ClearSaleBinding();
-            List<SaleModel> sales = await SaleModel.GetSalesAsync(client, "api/sales");
+            List<SaleModel> sales = await new SaleModel().GetSales(client);
             view.loadSales(sales);
         }
         private async void AddSale(object sender, EventArgs e)
@@ -422,15 +422,15 @@ namespace RestaurantApp.Controller
 
                 sale.CreatedBy = LoginInfo.Username;
 
-                sale = await sale.Save(client, "api/sales");
+                sale = await sale.Save(client);
 
                 if (sale != null)
                 {
-                    MessageBox.Show("Thêm chương trình giảm giá thành công.");
+                    MessageBox.Show("Thêm chương trình giảm giá thành công.", "Thông báo");
                     LoadSale(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void UpdateSale(object sender, EventArgs e)
@@ -446,8 +446,8 @@ namespace RestaurantApp.Controller
             }
             if (countError == 0)
             {
-                long id = Convert.ToInt64(view.Text_saleId.Text);
                 SaleModel sale = new SaleModel();
+                sale.ID = Convert.ToInt64(view.Text_saleId.Text);
                 sale.Name = view.Text_saleName.Text;
                 sale.Discount = (int)view.SaleDiscountNum.Value;
                 string status = (string)view.Cb_saleStatus.SelectedItem;
@@ -458,33 +458,33 @@ namespace RestaurantApp.Controller
 
                 sale.ModifiedBy = LoginInfo.Username;
 
-                sale = await sale.Update(client, "api/sales/" + id);
+                sale = await sale.Update(client);
 
                 if (sale != null)
                 {
-                    MessageBox.Show("Cập nhật chương trình giảm giá thành công.");
+                    MessageBox.Show("Cập nhật chương trình giảm giá thành công.", "Thông báo");
                     LoadSale(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra.");
+                    MessageBox.Show("Có lỗi xảy ra.", "Thông báo");
             }
         }
         private async void DeleteSale(object sender, EventArgs e)
         {
-            long id = Convert.ToInt64(view.Text_saleId.Text);
             SaleModel sale = new SaleModel();
+            sale.ID = Convert.ToInt64(view.Text_saleId.Text);
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa chương trình giảm giá này?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                bool result = await sale.Delete(client, "api/sales/" + id);
+                bool result = await sale.Delete(client);
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa chương trình giảm giá thành công.");
+                    MessageBox.Show("Xóa chương trình giảm giá thành công.", "Thông báo");
                     LoadSale(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD Sale
@@ -493,7 +493,7 @@ namespace RestaurantApp.Controller
         private async void LoadUser(object sender, EventArgs e)
         {
             view.ClearUserBinding();
-            List<UserModel> users = await UserModel.GetUsersAsync(client, "api/users");
+            List<UserModel> users = await new UserModel().GetUsers(client);
             view.loadUsers(users);
         }
         private async void AddUser(object sender, EventArgs e)
@@ -528,15 +528,15 @@ namespace RestaurantApp.Controller
                 user.Gender = gender;
                 user.CreatedBy = LoginInfo.Username;
 
-                user = await user.Save(client, "api/users");
+                user = await user.Save(client);
 
                 if (user != null)
                 {
-                    MessageBox.Show("Thêm người dùng thành công.");
+                    MessageBox.Show("Thêm người dùng thành công.", "Thông báo");
                     LoadUser(sender, e);
                 }
                 else
-                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.");
+                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.", "Thông báo");
             }
         }
         private async void UpdateUser(object sender, EventArgs e)
@@ -552,8 +552,8 @@ namespace RestaurantApp.Controller
             }
             if (countError == 0)
             {
-                long id = Convert.ToInt64(view.Text_userId.Text);
                 UserModel user = new UserModel();
+                user.ID = Convert.ToInt64(view.Text_userId.Text);
                 user.FullName = view.Text_fullname.Text;
                 user.UserName = view.Text_username.Text;
                 user.PassWord = view.Text_password.Text;
@@ -573,37 +573,35 @@ namespace RestaurantApp.Controller
 
                 user.ModifiedBy = LoginInfo.Username;
 
-                user = await user.Update(client, "api/users/" + id);
+                user = await user.Update(client);
 
                 if (user != null)
                 {
-                    MessageBox.Show("Cập nhật người dùng thành công.");
+                    MessageBox.Show("Cập nhật người dùng thành công.", "Thông báo");
                     LoadUser(sender, e);
                 }
                 else
-                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.");
+                    MessageBox.Show("Email hoặc tên tài khoản đã tồn tại trong hệ thống.", "Thông báo");
             }
         }
         private async void DeleteUser(object sender, EventArgs e)
         {
-            long id = Convert.ToInt64(view.Text_userId.Text);
             UserModel user = new UserModel();
+            user.ID = Convert.ToInt64(view.Text_userId.Text);
             DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn xóa người dùng này?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                bool result = await user.Delete(client, "api/users/" + id);
+                bool result = await user.Delete(client);
 
                 if (result)
                 {
-                    MessageBox.Show("Xóa người dùng thành công.");
+                    MessageBox.Show("Xóa người dùng thành công.", "Thông báo");
                     LoadUser(sender, e);
                 }
                 else
-                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.");
+                    MessageBox.Show("Có lỗi xảy ra, bạn nên cập nhật trạng thái thành tạm ngưng thay vì xóa.", "Thông báo");
             }
         }
         // End CRUD User
-
-
     }
 }

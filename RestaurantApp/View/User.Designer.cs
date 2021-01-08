@@ -37,6 +37,7 @@ namespace RestaurantApp.View
         public void InitializeComponent()
         {
             this.panel_menu = new System.Windows.Forms.Panel();
+            this.cb_indeQuantity = new System.Windows.Forms.ComboBox();
             this.btn_9 = new RestaurantApp.Model.CircularButton();
             this.btn_8 = new RestaurantApp.Model.CircularButton();
             this.btn_7 = new RestaurantApp.Model.CircularButton();
@@ -54,12 +55,21 @@ namespace RestaurantApp.View
             this.label_foodCategory = new System.Windows.Forms.Label();
             this.label_quantity = new System.Windows.Forms.Label();
             this.panel_bill = new System.Windows.Forms.Panel();
+            this.currentTable = new System.Windows.Forms.TextBox();
+            this.cb_switchTable = new System.Windows.Forms.ComboBox();
+            this.btn_cancelTable = new System.Windows.Forms.Button();
+            this.text_totalPrice = new System.Windows.Forms.TextBox();
+            this.lb_totalPrice = new System.Windows.Forms.Label();
             this.cb_sales = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_switchTable = new System.Windows.Forms.Button();
             this.btn_printBill = new System.Windows.Forms.Button();
             this.btn_pay = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.list_orderDetails = new System.Windows.Forms.ListView();
+            this.foodNameOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.quantityOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitPriceOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.totalUnitPriceOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_userInformation = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +85,7 @@ namespace RestaurantApp.View
             // panel_menu
             // 
             this.panel_menu.BackColor = System.Drawing.Color.Transparent;
+            this.panel_menu.Controls.Add(this.cb_indeQuantity);
             this.panel_menu.Controls.Add(this.btn_9);
             this.panel_menu.Controls.Add(this.btn_8);
             this.panel_menu.Controls.Add(this.btn_7);
@@ -95,6 +106,19 @@ namespace RestaurantApp.View
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(574, 629);
             this.panel_menu.TabIndex = 0;
+            // 
+            // cb_indeQuantity
+            // 
+            this.cb_indeQuantity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_indeQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_indeQuantity.FormattingEnabled = true;
+            this.cb_indeQuantity.Items.AddRange(new object[] {
+            "+",
+            "-"});
+            this.cb_indeQuantity.Location = new System.Drawing.Point(396, 88);
+            this.cb_indeQuantity.Name = "cb_indeQuantity";
+            this.cb_indeQuantity.Size = new System.Drawing.Size(37, 28);
+            this.cb_indeQuantity.TabIndex = 24;
             // 
             // btn_9
             // 
@@ -258,10 +282,10 @@ namespace RestaurantApp.View
             // 
             this.quantity.BackColor = System.Drawing.Color.White;
             this.quantity.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.Location = new System.Drawing.Point(414, 89);
+            this.quantity.Location = new System.Drawing.Point(439, 88);
             this.quantity.Name = "quantity";
             this.quantity.ReadOnly = true;
-            this.quantity.Size = new System.Drawing.Size(72, 27);
+            this.quantity.Size = new System.Drawing.Size(71, 27);
             this.quantity.TabIndex = 3;
             // 
             // cb_categories
@@ -272,7 +296,7 @@ namespace RestaurantApp.View
             this.cb_categories.FormattingEnabled = true;
             this.cb_categories.Location = new System.Drawing.Point(126, 86);
             this.cb_categories.Name = "cb_categories";
-            this.cb_categories.Size = new System.Drawing.Size(170, 31);
+            this.cb_categories.Size = new System.Drawing.Size(159, 31);
             this.cb_categories.Sorted = true;
             this.cb_categories.TabIndex = 2;
             // 
@@ -283,9 +307,9 @@ namespace RestaurantApp.View
             this.button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_clear.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_clear.ForeColor = System.Drawing.Color.White;
-            this.button_clear.Location = new System.Drawing.Point(492, 87);
+            this.button_clear.Location = new System.Drawing.Point(516, 87);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(70, 32);
+            this.button_clear.Size = new System.Drawing.Size(51, 32);
             this.button_clear.TabIndex = 1;
             this.button_clear.Text = "Xóa";
             this.button_clear.UseVisualStyleBackColor = false;
@@ -307,7 +331,7 @@ namespace RestaurantApp.View
             this.label_quantity.AutoSize = true;
             this.label_quantity.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_quantity.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label_quantity.Location = new System.Drawing.Point(314, 87);
+            this.label_quantity.Location = new System.Drawing.Point(292, 89);
             this.label_quantity.Name = "label_quantity";
             this.label_quantity.Size = new System.Drawing.Size(103, 25);
             this.label_quantity.TabIndex = 0;
@@ -316,26 +340,88 @@ namespace RestaurantApp.View
             // panel_bill
             // 
             this.panel_bill.BackColor = System.Drawing.Color.Transparent;
+            this.panel_bill.Controls.Add(this.currentTable);
+            this.panel_bill.Controls.Add(this.cb_switchTable);
+            this.panel_bill.Controls.Add(this.btn_cancelTable);
+            this.panel_bill.Controls.Add(this.text_totalPrice);
+            this.panel_bill.Controls.Add(this.lb_totalPrice);
             this.panel_bill.Controls.Add(this.cb_sales);
             this.panel_bill.Controls.Add(this.label1);
             this.panel_bill.Controls.Add(this.btn_switchTable);
             this.panel_bill.Controls.Add(this.btn_printBill);
             this.panel_bill.Controls.Add(this.btn_pay);
-            this.panel_bill.Controls.Add(this.listView1);
+            this.panel_bill.Controls.Add(this.list_orderDetails);
             this.panel_bill.Location = new System.Drawing.Point(887, 51);
             this.panel_bill.Name = "panel_bill";
             this.panel_bill.Size = new System.Drawing.Size(441, 629);
             this.panel_bill.TabIndex = 0;
             // 
+            // currentTable
+            // 
+            this.currentTable.BackColor = System.Drawing.Color.White;
+            this.currentTable.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentTable.Location = new System.Drawing.Point(3, 573);
+            this.currentTable.Name = "currentTable";
+            this.currentTable.ReadOnly = true;
+            this.currentTable.Size = new System.Drawing.Size(63, 23);
+            this.currentTable.TabIndex = 25;
+            // 
+            // cb_switchTable
+            // 
+            this.cb_switchTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_switchTable.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_switchTable.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.cb_switchTable.FormattingEnabled = true;
+            this.cb_switchTable.Location = new System.Drawing.Point(165, 548);
+            this.cb_switchTable.Name = "cb_switchTable";
+            this.cb_switchTable.Size = new System.Drawing.Size(80, 27);
+            this.cb_switchTable.TabIndex = 27;
+            // 
+            // btn_cancelTable
+            // 
+            this.btn_cancelTable.BackColor = System.Drawing.Color.Firebrick;
+            this.btn_cancelTable.FlatAppearance.BorderSize = 0;
+            this.btn_cancelTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelTable.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelTable.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_cancelTable.Location = new System.Drawing.Point(72, 587);
+            this.btn_cancelTable.Name = "btn_cancelTable";
+            this.btn_cancelTable.Size = new System.Drawing.Size(87, 38);
+            this.btn_cancelTable.TabIndex = 26;
+            this.btn_cancelTable.Text = "Hủy bàn";
+            this.btn_cancelTable.UseVisualStyleBackColor = false;
+            // 
+            // text_totalPrice
+            // 
+            this.text_totalPrice.BackColor = System.Drawing.Color.White;
+            this.text_totalPrice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_totalPrice.Location = new System.Drawing.Point(306, 545);
+            this.text_totalPrice.Name = "text_totalPrice";
+            this.text_totalPrice.ReadOnly = true;
+            this.text_totalPrice.Size = new System.Drawing.Size(131, 27);
+            this.text_totalPrice.TabIndex = 25;
+            this.text_totalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lb_totalPrice
+            // 
+            this.lb_totalPrice.AutoSize = true;
+            this.lb_totalPrice.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_totalPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lb_totalPrice.Location = new System.Drawing.Point(251, 544);
+            this.lb_totalPrice.Name = "lb_totalPrice";
+            this.lb_totalPrice.Size = new System.Drawing.Size(60, 23);
+            this.lb_totalPrice.TabIndex = 5;
+            this.lb_totalPrice.Text = "Tổng:";
+            // 
             // cb_sales
             // 
             this.cb_sales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_sales.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_sales.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_sales.ForeColor = System.Drawing.SystemColors.MenuText;
             this.cb_sales.FormattingEnabled = true;
-            this.cb_sales.Location = new System.Drawing.Point(138, 29);
+            this.cb_sales.Location = new System.Drawing.Point(111, 31);
             this.cb_sales.Name = "cb_sales";
-            this.cb_sales.Size = new System.Drawing.Size(241, 31);
+            this.cb_sales.Size = new System.Drawing.Size(183, 27);
             this.cb_sales.TabIndex = 4;
             // 
             // label1
@@ -343,7 +429,7 @@ namespace RestaurantApp.View
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(30, 29);
+            this.label1.Location = new System.Drawing.Point(3, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 25);
             this.label1.TabIndex = 3;
@@ -354,11 +440,11 @@ namespace RestaurantApp.View
             this.btn_switchTable.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_switchTable.FlatAppearance.BorderSize = 0;
             this.btn_switchTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_switchTable.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_switchTable.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_switchTable.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_switchTable.Location = new System.Drawing.Point(3, 561);
+            this.btn_switchTable.Location = new System.Drawing.Point(72, 543);
             this.btn_switchTable.Name = "btn_switchTable";
-            this.btn_switchTable.Size = new System.Drawing.Size(125, 54);
+            this.btn_switchTable.Size = new System.Drawing.Size(87, 38);
             this.btn_switchTable.TabIndex = 1;
             this.btn_switchTable.Text = "Chuyển bàn";
             this.btn_switchTable.UseVisualStyleBackColor = false;
@@ -368,11 +454,11 @@ namespace RestaurantApp.View
             this.btn_printBill.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_printBill.FlatAppearance.BorderSize = 0;
             this.btn_printBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_printBill.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_printBill.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_printBill.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_printBill.Location = new System.Drawing.Point(151, 561);
+            this.btn_printBill.Location = new System.Drawing.Point(306, 583);
             this.btn_printBill.Name = "btn_printBill";
-            this.btn_printBill.Size = new System.Drawing.Size(143, 54);
+            this.btn_printBill.Size = new System.Drawing.Size(131, 43);
             this.btn_printBill.TabIndex = 1;
             this.btn_printBill.Text = "Xuất hóa đơn";
             this.btn_printBill.UseVisualStyleBackColor = false;
@@ -384,21 +470,52 @@ namespace RestaurantApp.View
             this.btn_pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pay.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pay.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_pay.Location = new System.Drawing.Point(312, 561);
+            this.btn_pay.Location = new System.Drawing.Point(306, 15);
             this.btn_pay.Name = "btn_pay";
             this.btn_pay.Size = new System.Drawing.Size(116, 54);
             this.btn_pay.TabIndex = 1;
             this.btn_pay.Text = "Thanh toán";
             this.btn_pay.UseVisualStyleBackColor = false;
             // 
-            // listView1
+            // list_orderDetails
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 87);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(434, 453);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.list_orderDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.foodNameOrder,
+            this.quantityOrder,
+            this.unitPriceOrder,
+            this.totalUnitPriceOrder});
+            this.list_orderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.list_orderDetails.GridLines = true;
+            this.list_orderDetails.HideSelection = false;
+            this.list_orderDetails.Location = new System.Drawing.Point(3, 86);
+            this.list_orderDetails.Name = "list_orderDetails";
+            this.list_orderDetails.Size = new System.Drawing.Size(434, 453);
+            this.list_orderDetails.TabIndex = 1;
+            this.list_orderDetails.UseCompatibleStateImageBehavior = false;
+            this.list_orderDetails.View = System.Windows.Forms.View.Details;
+            // 
+            // foodNameOrder
+            // 
+            this.foodNameOrder.Text = "Tên món ăn";
+            this.foodNameOrder.Width = 147;
+            // 
+            // quantityOrder
+            // 
+            this.quantityOrder.Text = "Số lượng";
+            this.quantityOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.quantityOrder.Width = 78;
+            // 
+            // unitPriceOrder
+            // 
+            this.unitPriceOrder.Text = "Đơn giá";
+            this.unitPriceOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.unitPriceOrder.Width = 89;
+            // 
+            // totalUnitPriceOrder
+            // 
+            this.totalUnitPriceOrder.Text = "Thành tiền";
+            this.totalUnitPriceOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.totalUnitPriceOrder.Width = 114;
             // 
             // menuStrip1
             // 
@@ -414,12 +531,13 @@ namespace RestaurantApp.View
             // 
             // accountMenu
             // 
-            this.accountMenu.BackColor = System.Drawing.Color.Aquamarine;
+            this.accountMenu.BackColor = System.Drawing.Color.LightCyan;
             this.accountMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItem_userInformation,
             this.menuResetPassword,
             this.menuItem_logout});
             this.accountMenu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountMenu.ForeColor = System.Drawing.Color.Black;
             this.accountMenu.Name = "accountMenu";
             this.accountMenu.Size = new System.Drawing.Size(104, 29);
             this.accountMenu.Text = "Tài khoản";
@@ -493,7 +611,7 @@ namespace RestaurantApp.View
         public Button btn_switchTable;
         public Button btn_printBill;
         public Button btn_pay;
-        public ListView listView1;
+        public ListView list_orderDetails;
         public MenuStrip menuStrip1;
         public ToolStripMenuItem accountMenu;
         public ToolStripMenuItem menuItem_userInformation;
@@ -517,8 +635,27 @@ namespace RestaurantApp.View
         private CircularButton btn_1;
         private CircularButton btn_8;
         private CircularButton btn_9;
+        private ComboBox cb_indeQuantity;
+        private ColumnHeader foodNameOrder;
+        private ColumnHeader quantityOrder;
+        private ColumnHeader unitPriceOrder;
+        private ColumnHeader totalUnitPriceOrder;
+        private TextBox text_totalPrice;
+        public Label lb_totalPrice;
+        public ComboBox cb_switchTable;
+        public Button btn_cancelTable;
+        private TextBox currentTable;
 
         public ToolStripMenuItem AccountMenu { get => accountMenu; set => accountMenu = value; }
         public FlowLayoutPanel FlPanel_table { get => flPanel_table; set => flPanel_table = value; }
+        public ComboBox Cb_categories { get => cb_categories; set => cb_categories = value; }
+        public ListView List_orderDetails { get => list_orderDetails; set => list_orderDetails = value; }
+        public TextBox Text_totalPrice { get => text_totalPrice; set => text_totalPrice = value; }
+        public TextBox Quantity { get => quantity; set => quantity = value; }
+        public TextBox CurrentTable { get => currentTable; set => currentTable = value; }
+        public ComboBox Cb_IndeQuantity { get => cb_indeQuantity; set => cb_indeQuantity = value; }
+        public Button Btn_CancelTable { get => btn_cancelTable; set => btn_cancelTable = value; }
+        public Button Btn_Pay { get => btn_pay; set => btn_pay = value; }
+        public Button Btn_SwitchTable { get => btn_switchTable; set => btn_switchTable = value; }
     }
 }

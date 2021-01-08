@@ -56,5 +56,11 @@ namespace RestaurantWebAPI.Service.impl
             tableDAO = TableDAO.Instance;
             return tableDAO.Delete(id);
         }
+
+        public TableDTO FindOneById(long id)
+        {
+            tableDAO = TableDAO.Instance;
+            return tableDAO.FindOneById(id);
+        }
     }
 }

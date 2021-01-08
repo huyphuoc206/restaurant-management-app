@@ -21,9 +21,9 @@ namespace RestaurantApp.Model
         public string Status { get => status; set => status = value; }
         public CategoryModel Category { get => category; set => category = value; }
        
-        public static async Task<List<FoodModel>> GetFoodAsync(HttpClient client, string path)
+        public async Task<List<FoodModel>> GetFood(HttpClient client)
         {
-            HttpResponseMessage response = await client.GetAsync(path);
+            HttpResponseMessage response = await client.GetAsync("api/food");
             List<FoodModel> food = new List<FoodModel>();
             if (response.IsSuccessStatusCode)
             {
@@ -32,26 +32,26 @@ namespace RestaurantApp.Model
             return food;
         }
 
-        public async Task<FoodModel> Save(HttpClient client, string path)
+        public async Task<FoodModel> Save(HttpClient client)
         {
             FoodModel foodResult = null;
-            HttpResponseMessage response = await client.PostAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/food", this);
             if (response.IsSuccessStatusCode)
                 foodResult = await response.Content.ReadAsAsync<FoodModel>();
             return foodResult;
         }
 
-        public async Task<FoodModel> Update(HttpClient client, string path)
+        public async Task<FoodModel> Update(HttpClient client)
         {
             FoodModel foodResult = null;
-            HttpResponseMessage response = await client.PutAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PutAsJsonAsync("api/food/" + this.ID, this);
             if (response.IsSuccessStatusCode)
                 foodResult = await response.Content.ReadAsAsync<FoodModel>();
 
             if (foodResult != null)
             {
                 // Xu ly cac order detail thuoc order (chua duoc thanh toan) co chua food nay -> phai cap nhat lai gia tien
-                List<OrderModel> orders = await OrderModel.GetOrdersAsync(client, "api/orders");
+                List<OrderModel> orders = await new OrderModel().GetOrders(client);
                 List<OrderModel> ordersUnPaid = new List<OrderModel>();
                 foreach (OrderModel o in orders)
                 {
@@ -62,7 +62,7 @@ namespace RestaurantApp.Model
                 {
                     foreach (OrderModel o in ordersUnPaid)
                     {
-                        List<OrderDetailModel> orderDetails = await OrderDetailModel.GetOrderDetailAsync(client, "api/orders/" + o.ID + "/orderdetails");
+                        List<OrderDetailModel> orderDetails = await o.GetOrderDetails(client);
                         foreach (OrderDetailModel od in orderDetails)
                         {
                             if (od.Food.ID == foodResult.ID)
@@ -78,6 +78,15 @@ namespace RestaurantApp.Model
             }
             else
                 return null;
+        }
+
+        public async Task<bool> Delete(HttpClient client)
+        {
+            bool result = false;
+            HttpResponseMessage response = await client.DeleteAsync("api/food/" + this.ID);
+            if (response.IsSuccessStatusCode)
+                result = await response.Content.ReadAsAsync<bool>();
+            return result;
         }
     }
 }

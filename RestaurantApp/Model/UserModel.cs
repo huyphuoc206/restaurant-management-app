@@ -31,31 +31,40 @@ namespace RestaurantApp.Model
         public RoleModel Role { get => role; set => role = value; }
         public DateTime Dob { get => dob; set => dob = value; }
 
-        public static async Task<List<UserModel>> GetUsersAsync(HttpClient client, string path)
+        public async Task<List<UserModel>> GetUsers(HttpClient client)
         {
-            HttpResponseMessage response = await client.GetAsync(path);
+            HttpResponseMessage response = await client.GetAsync("api/users");
             List<UserModel> users = new List<UserModel>();
             if (response.IsSuccessStatusCode)
                 users = await response.Content.ReadAsAsync<List<UserModel>>();
             return users;
         }
 
-        public async Task<UserModel> Save(HttpClient client, string path)
+        public async Task<UserModel> Save(HttpClient client)
         {
             UserModel userResult = null;
-            HttpResponseMessage response = await client.PostAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PostAsJsonAsync("api/users", this);
             if (response.IsSuccessStatusCode)
                 userResult = await response.Content.ReadAsAsync<UserModel>();
             return userResult;
         }
 
-        public async Task<UserModel> Update(HttpClient client, string path)
+        public async Task<UserModel> Update(HttpClient client)
         {
             UserModel userResult = null;
-            HttpResponseMessage response = await client.PutAsJsonAsync(path, this);
+            HttpResponseMessage response = await client.PutAsJsonAsync("api/users/"+this.ID, this);
             if (response.IsSuccessStatusCode)
                 userResult = await response.Content.ReadAsAsync<UserModel>();
             return userResult;
+        }
+
+        public async Task<bool> Delete(HttpClient client)
+        {
+            bool result = false;
+            HttpResponseMessage response = await client.DeleteAsync("api/users/" + this.ID);
+            if (response.IsSuccessStatusCode)
+                result = await response.Content.ReadAsAsync<bool>();
+            return result;
         }
     }
 }

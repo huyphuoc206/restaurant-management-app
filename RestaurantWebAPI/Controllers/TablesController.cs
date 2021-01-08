@@ -20,6 +20,12 @@ namespace RestaurantWebAPI.Controllers
             return tableService.FindAll();
         }
 
+        public TableDTO Get(long id)
+        {
+            tableService = TableService.Instance;
+            return tableService.FindOneById(id);
+        }
+
         public TableDTO Post(TableDTO table)
         {
             tableService = TableService.Instance;

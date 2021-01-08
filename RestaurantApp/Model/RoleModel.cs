@@ -20,9 +20,9 @@ namespace RestaurantApp.Model
             return name;
         }
 
-        public static async Task<List<RoleModel>> GetRolesAsync(HttpClient client, string path)
+        public async Task<List<RoleModel>> GetRoles(HttpClient client)
         {
-            HttpResponseMessage response = await client.GetAsync(path);
+            HttpResponseMessage response = await client.GetAsync("api/roles");
             List<RoleModel> roles = new List<RoleModel>();
             if (response.IsSuccessStatusCode)
                 roles = await response.Content.ReadAsAsync<List<RoleModel>>();

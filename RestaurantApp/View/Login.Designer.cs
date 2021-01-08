@@ -47,6 +47,7 @@ namespace RestaurantApp.View
             // 
             this.btn_exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_exit.BackColor = System.Drawing.Color.Black;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_exit.Location = new System.Drawing.Point(154, 360);
@@ -61,6 +62,8 @@ namespace RestaurantApp.View
             // 
             this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_login.BackColor = System.Drawing.Color.Black;
+            this.btn_login.FlatAppearance.BorderSize = 0;
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_login.Location = new System.Drawing.Point(37, 360);

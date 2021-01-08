@@ -127,7 +127,7 @@ namespace RestaurantApp.View
             this.radio_female.Location = new System.Drawing.Point(224, 3);
             this.radio_female.Name = "radio_female";
             this.radio_female.Size = new System.Drawing.Size(48, 23);
-            this.radio_female.TabIndex = 1;
+            this.radio_female.TabIndex = 7;
             this.radio_female.TabStop = true;
             this.radio_female.Text = "Nữ";
             this.radio_female.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@ namespace RestaurantApp.View
             this.radio_male.Location = new System.Drawing.Point(112, 2);
             this.radio_male.Name = "radio_male";
             this.radio_male.Size = new System.Drawing.Size(60, 23);
-            this.radio_male.TabIndex = 0;
+            this.radio_male.TabIndex = 6;
             this.radio_male.TabStop = true;
             this.radio_male.Text = "Nam";
             this.radio_male.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@ namespace RestaurantApp.View
             this.text_address.Location = new System.Drawing.Point(173, 164);
             this.text_address.Name = "text_address";
             this.text_address.Size = new System.Drawing.Size(275, 27);
-            this.text_address.TabIndex = 13;
+            this.text_address.TabIndex = 5;
             this.text_address.Validating += new System.ComponentModel.CancelEventHandler(this.text_address_Validating);
             // 
             // text_email
@@ -159,7 +159,7 @@ namespace RestaurantApp.View
             this.text_email.Location = new System.Drawing.Point(173, 124);
             this.text_email.Name = "text_email";
             this.text_email.Size = new System.Drawing.Size(275, 27);
-            this.text_email.TabIndex = 14;
+            this.text_email.TabIndex = 4;
             this.text_email.Validating += new System.ComponentModel.CancelEventHandler(this.text_email_Validating);
             // 
             // text_phone
@@ -168,7 +168,7 @@ namespace RestaurantApp.View
             this.text_phone.Location = new System.Drawing.Point(173, 84);
             this.text_phone.Name = "text_phone";
             this.text_phone.Size = new System.Drawing.Size(275, 27);
-            this.text_phone.TabIndex = 15;
+            this.text_phone.TabIndex = 3;
             this.text_phone.Validating += new System.ComponentModel.CancelEventHandler(this.text_phone_Validating);
             // 
             // lb_gender
@@ -187,7 +187,7 @@ namespace RestaurantApp.View
             this.text_fullname.Location = new System.Drawing.Point(173, 45);
             this.text_fullname.Name = "text_fullname";
             this.text_fullname.Size = new System.Drawing.Size(275, 27);
-            this.text_fullname.TabIndex = 16;
+            this.text_fullname.TabIndex = 2;
             this.text_fullname.Validating += new System.ComponentModel.CancelEventHandler(this.text_fullname_Validating);
             // 
             // lb_email
@@ -216,7 +216,7 @@ namespace RestaurantApp.View
             this.text_username.Location = new System.Drawing.Point(173, 8);
             this.text_username.Name = "text_username";
             this.text_username.Size = new System.Drawing.Size(275, 27);
-            this.text_username.TabIndex = 17;
+            this.text_username.TabIndex = 1;
             this.text_username.Validating += new System.ComponentModel.CancelEventHandler(this.text_username_Validating);
             // 
             // lb_phone
