@@ -123,7 +123,7 @@ namespace RestaurantApp.View
             // btn_saveResetPassword
             // 
             this.btn_saveResetPassword.BackColor = System.Drawing.Color.Transparent;
-            this.btn_saveResetPassword.BackgroundImage = global::RestaurantApp.Properties.Resources.Save_icon;
+            this.btn_saveResetPassword.BackgroundImage = global::RestaurantApp.Properties.Resources.update;
             this.btn_saveResetPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_saveResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_saveResetPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,6 +132,8 @@ namespace RestaurantApp.View
             this.btn_saveResetPassword.Size = new System.Drawing.Size(47, 49);
             this.btn_saveResetPassword.TabIndex = 4;
             this.btn_saveResetPassword.UseVisualStyleBackColor = false;
+            ToolTip toolTipResetPassword = new ToolTip();
+            toolTipResetPassword.SetToolTip(this.btn_saveResetPassword, "Cập nhật mật khẩu");
             // 
             // btn_back
             // 
@@ -147,6 +149,8 @@ namespace RestaurantApp.View
             this.btn_back.TabIndex = 5;
             this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            ToolTip toolTipBack = new ToolTip();
+            toolTipBack.SetToolTip(this.btn_back, "Quay lại");
             // 
             // ResetPassword
             // 

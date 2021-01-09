@@ -272,6 +272,8 @@ namespace RestaurantApp.View
             this.btn_update.Size = new System.Drawing.Size(55, 51);
             this.btn_update.TabIndex = 0;
             this.btn_update.UseVisualStyleBackColor = true;
+            ToolTip toolTipUpdate = new ToolTip();
+            toolTipUpdate.SetToolTip(this.btn_update, "Cập nhật");
             // 
             // btn_back
             // 
@@ -286,6 +288,8 @@ namespace RestaurantApp.View
             this.btn_back.TabIndex = 1;
             this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_turnBack_Click);
+            ToolTip toolTipBack = new ToolTip();
+            toolTipBack.SetToolTip(this.btn_back, "Quay lại");
             // 
             // AccountProfile
             // 
