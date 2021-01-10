@@ -41,6 +41,8 @@ namespace RestaurantApp.Controller
 
         private async void loadData()
         {
+            view.Cb_IndeQuantity.SelectedIndex = 0;
+            view.cb_showTable.SelectedIndex = 0;
             List<TableModel> tables = await new TableModel().GetTables(client);
             List<SaleModel> sales = await new SaleModel().GetSales(client);
             List<SaleModel> salesShow = new List<SaleModel>();
@@ -52,11 +54,10 @@ namespace RestaurantApp.Controller
             foreach (CategoryModel category in categories)
                 if (category.Status.Equals("1"))
                     categoriesShow.Add(category);
-            view.loadTables(getButtonsTables(tables));
+            view.loadTables(getButtonsTables(tables,0));
             view.loadCategories(categoriesShow);
             view.loadSales(salesShow);
-            view.loadTableToSwitch(tables);
-            view.Cb_IndeQuantity.SelectedIndex = 0;
+            view.loadTableToSwitch(tables);        
         }
 
         private void Event()
@@ -67,6 +68,16 @@ namespace RestaurantApp.Controller
             view.cb_sales.SelectedIndexChanged += new EventHandler(cb_sales_SelectedIndexChanged);
             view.Btn_SwitchTable.Click += new EventHandler(switchTable);
             view.btn_printBill.Click += new EventHandler(printBill);
+            view.cb_showTable.SelectedIndexChanged += new EventHandler(cb_showTable_SelectedIndexChanged);
+        }
+
+        private async void cb_showTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = sender as ComboBox;
+            if (cb.SelectedItem == null) return;
+            int index = cb.SelectedIndex;
+            List<TableModel> tables = await new TableModel().GetTables(client);
+            view.loadTables(getButtonsTables(tables, index));
         }
 
         private async void printBill(object sender, EventArgs e)
@@ -139,7 +150,7 @@ namespace RestaurantApp.Controller
                     selectedTable.Status = "1";
                     await selectedTable.Update(client);
                     List<TableModel> tables = await selectedTable.GetTables(client);
-                    view.loadTables(getButtonsTables(tables));
+                    view.loadTables(getButtonsTables(tables, view.cb_showTable.SelectedIndex));
                     showOrder(currentTable);
                 }
             }
@@ -203,7 +214,7 @@ namespace RestaurantApp.Controller
                     table.Status = "0";
                     await table.Update(client);
                     List<TableModel> tables = await table.GetTables(client);
-                    view.loadTables(getButtonsTables(tables));
+                    view.loadTables(getButtonsTables(tables,view.cb_showTable.SelectedIndex));
                     showOrder(table);
                 }
                 else
@@ -230,7 +241,7 @@ namespace RestaurantApp.Controller
                 {
                     MessageBox.Show("Hủy thành công.", "Thông báo");
                     List<TableModel> tables = await table.GetTables(client);
-                    view.loadTables(getButtonsTables(tables));
+                    view.loadTables(getButtonsTables(tables, view.cb_showTable.SelectedIndex));
                     showOrder(table);
                 }
                 else
@@ -308,7 +319,7 @@ namespace RestaurantApp.Controller
                     await order.CreateOrderDetail(client, orderDetail);
                     await table.Update(client);
                     List<TableModel> tables = await new TableModel().GetTables(client);
-                    view.loadTables(getButtonsTables(tables));
+                    view.loadTables(getButtonsTables(tables, view.cb_showTable.SelectedIndex));
                 }
 
             }
@@ -321,8 +332,25 @@ namespace RestaurantApp.Controller
             view.Quantity.Text = "";
         }
 
-        private Button[] getButtonsTables(List<TableModel> tables)
+        private Button[] getButtonsTables(List<TableModel> tables, int status)
         {
+            switch(status)
+            {
+                case 0:
+                    break;
+                case 1:
+                    tables.RemoveAll(e => e.Status.Equals("1"));
+                    break;
+                case 2:
+                    tables.RemoveAll(e => e.Status.Equals("0"));
+                    break;
+                case 3:
+                    tables.Sort((x, y) => x.Seats.CompareTo(y.Seats));
+                    break;
+                case 4:
+                    tables.Sort((x, y) => y.Seats.CompareTo(x.Seats));
+                    break;
+            }
             Button[] btns_table = new Button[tables.Count];
             for (int i = 0; i < btns_table.Length; i++)
             {
