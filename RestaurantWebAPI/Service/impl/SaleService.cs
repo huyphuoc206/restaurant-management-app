@@ -59,5 +59,11 @@ namespace RestaurantWebAPI.Service.impl
             if (id == 1) return false;
             return saleDAO.Delete(id);
         }
+
+        public List<SaleDTO> FindByKeyWord(string keyword)
+        {
+            saleDAO = SaleDAO.Instance;
+            return saleDAO.FindByKeyWord(keyword);
+        }
     }
 }

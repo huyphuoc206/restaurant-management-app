@@ -53,7 +53,7 @@ namespace RestaurantApp.Controller
                 {
                     AdminController adminView = new AdminController();
                     view.Hide();
-                    adminView.View.Text = adminView.View.Text + " (" + LoginInfo.Fullname + ")";
+                    adminView.View.accountMenu.Text = "Quản lý - " + LoginInfo.Fullname;
                     adminView.View.ShowDialog();
                 }
                 else if (user.Role.Code.Equals(SystemConstant.STAFF))

@@ -23,5 +23,6 @@ namespace RestaurantWebAPI.Service
         UserDTO CheckLogin(Login data);
 
         UserDTO FindOneById(long id);
+        List<UserDTO> FindByKeyWord(string keyword);
     }
 }

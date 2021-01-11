@@ -113,5 +113,11 @@ namespace RestaurantWebAPI.Service.impl
             userDAO = UserDAO.Instance;
             return userDAO.FindOneById(id);
         }
+
+        public List<UserDTO> FindByKeyWord(string keyword)
+        {
+            userDAO = UserDAO.Instance;
+            return userDAO.FindAllByKeyWord(keyword);
+        }
     }
 }

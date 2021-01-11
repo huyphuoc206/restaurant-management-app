@@ -27,6 +27,14 @@ namespace RestaurantWebAPI.Controllers
             return userService.FindOneById(id);
         }
 
+        [Route("api/users/search")]
+        [HttpGet]
+        public List<UserDTO> Search(string keyword)
+        {
+            userService = UserService.Instance;
+            return userService.FindByKeyWord(keyword);
+        }
+
         public UserDTO Post(UserDTO user)
         {
             userService = UserService.Instance;

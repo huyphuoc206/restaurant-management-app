@@ -20,6 +20,14 @@ namespace RestaurantWebAPI.Controllers
             return saleService.FindAll();
         }
 
+        [Route("api/sales/search")]
+        [HttpGet]
+        public List<SaleDTO> Search(string keyword)
+        {
+            saleService = SaleService.Instance;
+            return saleService.FindByKeyWord(keyword);
+        }
+
         public SaleDTO Post(SaleDTO sale)
         {
             saleService = SaleService.Instance;

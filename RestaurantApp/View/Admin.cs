@@ -1,4 +1,5 @@
-﻿using RestaurantApp.Model;
+﻿using RestaurantApp.Controller;
+using RestaurantApp.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -562,6 +563,33 @@ namespace RestaurantApp.View
                 e.Cancel = false;
                 ErrorEmpty.SetError(text_email, null);
             }
+        }
+
+        private void menuItem_userInformation_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AccountProfileController accountProfile = new AccountProfileController();
+            accountProfile.View.StartPosition = FormStartPosition.CenterScreen;
+            accountProfile.View.ShowDialog();
+            accountMenu.Text = "Quản lý - " + LoginInfo.Fullname;
+            this.Show();
+        }
+
+        private void menuResetPassword_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ResetPasswordController resetPassword = new ResetPasswordController();
+            resetPassword.View.StartPosition = FormStartPosition.CenterScreen;
+            resetPassword.View.ShowDialog();
+            this.Show();
+        }
+
+        private void menuItem_logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginInfo.UserID = 0;
+            LoginInfo.Username = "";
+            LoginInfo.Fullname = "";
         }
         // end user
     }

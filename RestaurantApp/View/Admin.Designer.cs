@@ -149,8 +149,8 @@ namespace RestaurantApp.View
             this.categoryStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdDateCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.text_searchCategory = new System.Windows.Forms.TextBox();
             this.btn_searchcategory = new System.Windows.Forms.Button();
+            this.text_searchCategory = new System.Windows.Forms.TextBox();
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel_user = new System.Windows.Forms.Panel();
             this.lb_dob = new System.Windows.Forms.Label();
@@ -200,7 +200,7 @@ namespace RestaurantApp.View
             this.createdDateUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btn_searchuser = new System.Windows.Forms.Button();
-            this.tb_searchtextuser = new System.Windows.Forms.TextBox();
+            this.text_searchUser = new System.Windows.Forms.TextBox();
             this.tbSale = new System.Windows.Forms.TabPage();
             this.panel_sale = new System.Windows.Forms.Panel();
             this.text_saleId = new System.Windows.Forms.TextBox();
@@ -251,6 +251,11 @@ namespace RestaurantApp.View
             this.toolTipUpdateSale = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipDeleteSale = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipViewSale = new System.Windows.Forms.ToolTip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.accountMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_userInformation = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuResetPassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_logout = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlAdmin.SuspendLayout();
             this.tpMoney.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -292,6 +297,7 @@ namespace RestaurantApp.View
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sale)).BeginInit();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorEmpty)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAdmin
@@ -303,7 +309,7 @@ namespace RestaurantApp.View
             this.tabControlAdmin.Controls.Add(this.tpAccount);
             this.tabControlAdmin.Controls.Add(this.tbSale);
             this.tabControlAdmin.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlAdmin.Location = new System.Drawing.Point(-3, 0);
+            this.tabControlAdmin.Location = new System.Drawing.Point(12, 46);
             this.tabControlAdmin.Name = "tabControlAdmin";
             this.tabControlAdmin.SelectedIndex = 0;
             this.tabControlAdmin.Size = new System.Drawing.Size(1213, 612);
@@ -806,7 +812,7 @@ namespace RestaurantApp.View
             // 
             this.btn_searchfood.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_searchfood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_searchfood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_searchfood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_searchfood.Location = new System.Drawing.Point(329, 3);
             this.btn_searchfood.Name = "btn_searchfood";
             this.btn_searchfood.Size = new System.Drawing.Size(47, 30);
@@ -1106,7 +1112,7 @@ namespace RestaurantApp.View
             // 
             this.btn_searchtable.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_searchtable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_searchtable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_searchtable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_searchtable.Location = new System.Drawing.Point(342, 3);
             this.btn_searchtable.Name = "btn_searchtable";
             this.btn_searchtable.Size = new System.Drawing.Size(47, 30);
@@ -1368,12 +1374,23 @@ namespace RestaurantApp.View
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.text_searchCategory);
             this.panel14.Controls.Add(this.btn_searchcategory);
+            this.panel14.Controls.Add(this.text_searchCategory);
             this.panel14.Location = new System.Drawing.Point(64, 13);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(390, 38);
             this.panel14.TabIndex = 4;
+            // 
+            // btn_searchcategory
+            // 
+            this.btn_searchcategory.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
+            this.btn_searchcategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_searchcategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_searchcategory.Location = new System.Drawing.Point(328, 3);
+            this.btn_searchcategory.Name = "btn_searchcategory";
+            this.btn_searchcategory.Size = new System.Drawing.Size(47, 30);
+            this.btn_searchcategory.TabIndex = 5;
+            this.btn_searchcategory.UseVisualStyleBackColor = true;
             // 
             // text_searchCategory
             // 
@@ -1382,17 +1399,6 @@ namespace RestaurantApp.View
             this.text_searchCategory.Name = "text_searchCategory";
             this.text_searchCategory.Size = new System.Drawing.Size(329, 30);
             this.text_searchCategory.TabIndex = 2;
-            // 
-            // btn_searchcategory
-            // 
-            this.btn_searchcategory.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
-            this.btn_searchcategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_searchcategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_searchcategory.Location = new System.Drawing.Point(329, 3);
-            this.btn_searchcategory.Name = "btn_searchcategory";
-            this.btn_searchcategory.Size = new System.Drawing.Size(47, 30);
-            this.btn_searchcategory.TabIndex = 1;
-            this.btn_searchcategory.UseVisualStyleBackColor = true;
             // 
             // tpAccount
             // 
@@ -1930,7 +1936,7 @@ namespace RestaurantApp.View
             // panel18
             // 
             this.panel18.Controls.Add(this.btn_searchuser);
-            this.panel18.Controls.Add(this.tb_searchtextuser);
+            this.panel18.Controls.Add(this.text_searchUser);
             this.panel18.Location = new System.Drawing.Point(48, 8);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(390, 34);
@@ -1940,20 +1946,20 @@ namespace RestaurantApp.View
             // 
             this.btn_searchuser.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_searchuser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_searchuser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_searchuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_searchuser.Location = new System.Drawing.Point(329, 3);
             this.btn_searchuser.Name = "btn_searchuser";
             this.btn_searchuser.Size = new System.Drawing.Size(47, 30);
             this.btn_searchuser.TabIndex = 1;
             this.btn_searchuser.UseVisualStyleBackColor = true;
             // 
-            // tb_searchtextuser
+            // text_searchUser
             // 
-            this.tb_searchtextuser.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_searchtextuser.Location = new System.Drawing.Point(3, 3);
-            this.tb_searchtextuser.Name = "tb_searchtextuser";
-            this.tb_searchtextuser.Size = new System.Drawing.Size(329, 30);
-            this.tb_searchtextuser.TabIndex = 0;
+            this.text_searchUser.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_searchUser.Location = new System.Drawing.Point(3, 3);
+            this.text_searchUser.Name = "text_searchUser";
+            this.text_searchUser.Size = new System.Drawing.Size(329, 30);
+            this.text_searchUser.TabIndex = 0;
             // 
             // tbSale
             // 
@@ -2243,7 +2249,7 @@ namespace RestaurantApp.View
             // 
             this.btn_SearchSale.BackgroundImage = global::RestaurantApp.Properties.Resources.kinh_lup_icon;
             this.btn_SearchSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_SearchSale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_SearchSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SearchSale.Location = new System.Drawing.Point(339, 3);
             this.btn_SearchSale.Name = "btn_SearchSale";
             this.btn_SearchSale.Size = new System.Drawing.Size(47, 30);
@@ -2263,13 +2269,60 @@ namespace RestaurantApp.View
             this.errorEmpty.ContainerControl = this;
             this.errorEmpty.Icon = ((System.Drawing.Icon)(resources.GetObject("errorEmpty.Icon")));
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.accountMenu});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1247, 33);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // accountMenu
+            // 
+            this.accountMenu.BackColor = System.Drawing.Color.LightCyan;
+            this.accountMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItem_userInformation,
+            this.menuResetPassword,
+            this.menuItem_logout});
+            this.accountMenu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountMenu.ForeColor = System.Drawing.Color.Black;
+            this.accountMenu.Name = "accountMenu";
+            this.accountMenu.Size = new System.Drawing.Size(104, 29);
+            this.accountMenu.Text = "Tài khoản";
+            // 
+            // menuItem_userInformation
+            // 
+            this.menuItem_userInformation.Name = "menuItem_userInformation";
+            this.menuItem_userInformation.Size = new System.Drawing.Size(248, 30);
+            this.menuItem_userInformation.Text = "Thông tin tài khoản";
+            this.menuItem_userInformation.Click += new System.EventHandler(this.menuItem_userInformation_Click);
+            // 
+            // menuResetPassword
+            // 
+            this.menuResetPassword.Name = "menuResetPassword";
+            this.menuResetPassword.Size = new System.Drawing.Size(248, 30);
+            this.menuResetPassword.Text = "Đổi mật khẩu";
+            this.menuResetPassword.Click += new System.EventHandler(this.menuResetPassword_Click);
+            // 
+            // menuItem_logout
+            // 
+            this.menuItem_logout.Name = "menuItem_logout";
+            this.menuItem_logout.Size = new System.Drawing.Size(248, 30);
+            this.menuItem_logout.Text = "Đăng xuất";
+            this.menuItem_logout.Click += new System.EventHandler(this.menuItem_logout_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1247, 661);
+            this.ClientSize = new System.Drawing.Size(1247, 665);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControlAdmin);
             this.MaximizeBox = false;
             this.Name = "Admin";
@@ -2329,7 +2382,10 @@ namespace RestaurantApp.View
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorEmpty)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2400,7 +2456,6 @@ namespace RestaurantApp.View
         private Panel panel13;
         private DataGridView dataGridView_category;
         private Panel panel14;
-        private Button btn_searchcategory;
         private Panel panel_user;
         private TextBox text_phone;
         private Label lb_address;
@@ -2421,7 +2476,7 @@ namespace RestaurantApp.View
         private DataGridView dataGridView_user;
         private Panel panel18;
         private Button btn_searchuser;
-        private TextBox tb_searchtextuser;
+        private TextBox text_searchUser;
         private TextBox text_address;
         private Label lb_role;
         private Label lb_gender;
@@ -2532,6 +2587,12 @@ namespace RestaurantApp.View
         private ToolTip toolTipUpdateSale;
         private ToolTip toolTipViewSale;
         private TextBox text_searchCategory;
+        private Button btn_searchcategory;
+        public MenuStrip menuStrip1;
+        public ToolStripMenuItem accountMenu;
+        public ToolStripMenuItem menuItem_userInformation;
+        private ToolStripMenuItem menuResetPassword;
+        public ToolStripMenuItem menuItem_logout;
 
         public DataGridView DataGridView_Table { get => dataGridView_table; set => dataGridView_table = value; }
         public DataGridView DataGridView_User { get => dataGridView_user; set => dataGridView_user = value; }
@@ -2559,6 +2620,12 @@ namespace RestaurantApp.View
         public Button Btn_addUser { get => btn_addUser; set => btn_addUser = value; }
         public Button Btn_deleteUser { get => btn_deleteUser; set => btn_deleteUser = value; }
         public Button Btn_updateUser { get => btn_updateUser; set => btn_updateUser = value; }
+
+        public Button Btn_searchcategory { get => btn_searchcategory; set => btn_searchcategory = value; }
+        public Button Btn_searchfood { get => btn_searchfood; set => btn_searchfood = value; }
+        public Button Btn_SearchSale { get => btn_SearchSale; set => btn_SearchSale = value; }
+        public Button Btn_searchuser { get => btn_searchuser; set => btn_searchuser = value; }
+        public Button Btn_searchtable { get => btn_searchtable; set => btn_searchtable = value; }
 
         public TextBox Text_foodId { get => text_foodId; set => text_foodId = value; }
         public TextBox Text_foodName { get => text_foodName; set => text_foodName = value; }
@@ -2595,5 +2662,11 @@ namespace RestaurantApp.View
         public TextBox Text_phone { get => text_phone; set => text_phone = value; }
         public ComboBox Cb_role { get => cb_role; set => cb_role = value; }
         public DateTimePicker DateTime_dobUser { get => dateTime_dobUser; set => dateTime_dobUser = value; }
+
+        public TextBox Text_SearchCategory { get => text_searchCategory; set => text_searchCategory = value; }
+        public TextBox Text_SearchFood { get => text_searchFood; set => text_searchFood = value; }
+        public TextBox Text_SearchSale { get => text_searchSale; set => text_searchSale = value; }
+        public TextBox Text_SearchTable { get => text_searchTable; set => text_searchTable = value; }
+        public TextBox Text_SearchUser { get => text_searchUser; set => text_searchUser = value; }
     }
 }

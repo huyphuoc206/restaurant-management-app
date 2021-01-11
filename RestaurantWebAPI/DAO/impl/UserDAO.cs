@@ -81,5 +81,14 @@ namespace RestaurantWebAPI.DAO.impl
             object[] parameters = { user.PassWord, user.ModifiedDate, user.ModifiedBy, id };
             return Update(sql, parameters);
         }
+
+        public List<UserDTO> FindAllByKeyWord(string keyword)
+        {
+            string sql = "SELECT user.*, role.name FROM user JOIN role ON user.roleid = role.id WHERE fullname LIKE @Keyword";
+            keyword = '%' + keyword + '%';
+            object[] parameters = { keyword };
+            List<UserDTO> users = Query(sql, new UserMapper(), parameters);
+            return users;
+        }
     }
 }

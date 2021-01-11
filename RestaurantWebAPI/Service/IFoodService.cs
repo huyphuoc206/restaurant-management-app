@@ -18,5 +18,6 @@ namespace RestaurantWebAPI.Service
         FoodDTO Update(long id, FoodDTO food);
 
         bool Delete(long id);
+        List<FoodDTO> FindByKeyWord(string keyword);
     }
 }

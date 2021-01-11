@@ -54,5 +54,13 @@ namespace RestaurantWebAPI.DAO.impl
             object[] parameters = { id };
             return Update(sql, parameters);
         }
+
+        public List<CategoryDTO> FindByKeyWord(string keyword)
+        {
+            string sql = "SELECT * FROM category WHERE name LIKE @Keyword";
+            keyword = '%' + keyword + '%';
+            object[] parameters = { keyword };
+            return Query(sql, new CategoryMapper(),parameters);
+        }
     }
 }

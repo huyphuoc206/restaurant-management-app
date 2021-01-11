@@ -35,6 +35,7 @@ namespace RestaurantApp.Controller
             EventBtnAdd();
             EventBtnUpdate();
             EventBtnDelete();
+            EventBtnSearch();
         }
 
         private async void LoadData()
@@ -87,9 +88,84 @@ namespace RestaurantApp.Controller
             view.Btn_deleteUser.Click += new EventHandler(DeleteUser);
         }
 
+        private void EventBtnSearch()
+        {
+            view.Btn_searchcategory.Click += new EventHandler(SearchCategory);
+            view.Btn_searchfood.Click += new EventHandler(SearchFood);
+            view.Btn_searchtable.Click += new EventHandler(SearchTable);
+            view.Btn_SearchSale.Click += new EventHandler(SearchSale);
+            view.Btn_searchuser.Click += new EventHandler(SearchUser);
+        }
+
+        private async void SearchUser(object sender, EventArgs e)
+        {
+            string keyword = view.Text_SearchUser.Text.Trim();
+            if(string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập họ tên người dùng cần tìm", "Chú ý");
+                return;
+            }
+            view.ClearUserBinding();
+            List<UserModel> users = await new UserModel().GetUsersByKeyWord(client,keyword);
+            view.loadUsers(users);
+        }
+
+        private async void SearchSale(object sender, EventArgs e)
+        {
+            string keyword = view.Text_SearchSale.Text.Trim();
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập tên chương trình giảm giá cần tìm", "Chú ý");
+                return;
+            }
+            view.ClearSaleBinding();
+            List<SaleModel> sales = await new SaleModel().GetSalesByKeyWord(client, keyword);
+            view.loadSales(sales);
+        }
+
+        private async void SearchTable(object sender, EventArgs e)
+        {
+            string keyword = view.Text_SearchTable.Text.Trim();
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập tên bàn cần tìm", "Chú ý");
+                return;
+            }
+            view.ClearTableBinding();
+            List<TableModel> tables = await new TableModel().GetTablesByKeyWord(client, keyword);
+            view.loadTables(tables);
+        }
+
+        private async void SearchFood(object sender, EventArgs e)
+        {
+            string keyword = view.Text_SearchFood.Text.Trim();
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập tên món ăn cần tìm", "Chú ý");
+                return;
+            }
+            view.ClearFoodBinding();
+            List<FoodModel> food = await new FoodModel().GetFoodByKeyWord(client, keyword);
+            view.loadFood(food);
+        }
+
+        private async void SearchCategory(object sender, EventArgs e)
+        {
+            string keyword = view.Text_SearchCategory.Text.Trim();
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập tên danh mục cần tìm", "Chú ý");
+                return;
+            }
+            view.ClearCategoryBinding();
+            List<CategoryModel> categories = await new CategoryModel().GetCategoriesByKeyWord(client, keyword);
+            view.loadCategories(categories);
+        }
+
         // CRUD Food
         private async void LoadFood(object sender, EventArgs e)
         {
+            view.Text_SearchFood.Text = "";
             view.ClearFoodBinding();
             List<FoodModel> food = await new FoodModel().GetFood(client);
             view.loadFood(food);
@@ -192,6 +268,7 @@ namespace RestaurantApp.Controller
         // CRUD Table
         private async void LoadTable(object sender, EventArgs e)
         {
+            view.Text_SearchTable.Text = "";
             view.ClearTableBinding();
             List<TableModel> tables = await new TableModel().GetTables(client);
             view.loadTables(tables);
@@ -294,6 +371,7 @@ namespace RestaurantApp.Controller
         // CRUD Category
         private async void LoadCategory(object sender, EventArgs e)
         {
+            view.Text_SearchCategory.Text = "";
             view.ClearCategoryBinding();
             List<CategoryModel> categories = await new CategoryModel().GetCategories(client);
             view.loadCategories(categories);
@@ -394,6 +472,7 @@ namespace RestaurantApp.Controller
         // CRUD Sale
         private async void LoadSale(object sender, EventArgs e)
         {
+            view.Text_SearchSale.Text = "";
             view.ClearSaleBinding();
             List<SaleModel> sales = await new SaleModel().GetSales(client);
             view.loadSales(sales);
@@ -492,6 +571,7 @@ namespace RestaurantApp.Controller
         // CRUD User
         private async void LoadUser(object sender, EventArgs e)
         {
+            view.Text_SearchUser.Text = "";
             view.ClearUserBinding();
             List<UserModel> users = await new UserModel().GetUsers(client);
             view.loadUsers(users);

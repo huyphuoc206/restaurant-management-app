@@ -62,5 +62,11 @@ namespace RestaurantWebAPI.Service.impl
             tableDAO = TableDAO.Instance;
             return tableDAO.FindOneById(id);
         }
+
+        public List<TableDTO> FindByKeyWord(string keyword)
+        {
+            tableDAO = TableDAO.Instance;
+            return tableDAO.FindByKeyWord(keyword);
+        }
     }
 }

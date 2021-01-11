@@ -66,5 +66,14 @@ namespace RestaurantApp.Model
                 result = await response.Content.ReadAsAsync<bool>();
             return result;
         }
+
+        public async Task<List<UserModel>> GetUsersByKeyWord(HttpClient client, string keyword)
+        {
+            HttpResponseMessage response = await client.GetAsync("api/users/search?keyword="+keyword);
+            List<UserModel> users = new List<UserModel>();
+            if (response.IsSuccessStatusCode)
+                users = await response.Content.ReadAsAsync<List<UserModel>>();
+            return users;
+        }
     }
 }

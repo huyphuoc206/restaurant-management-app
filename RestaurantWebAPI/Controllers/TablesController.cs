@@ -20,6 +20,14 @@ namespace RestaurantWebAPI.Controllers
             return tableService.FindAll();
         }
 
+        [Route("api/tables/search")]
+        [HttpGet]
+        public List<TableDTO> Search(string keyword)
+        {
+            tableService = TableService.Instance;
+            return tableService.FindByKeyWord(keyword);
+        }
+
         public TableDTO Get(long id)
         {
             tableService = TableService.Instance;

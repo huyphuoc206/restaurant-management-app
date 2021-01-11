@@ -106,5 +106,14 @@ namespace RestaurantApp.Model
                 orderResult = await response.Content.ReadAsAsync<OrderModel>();
             return orderResult;
         }
+
+        public async Task<List<TableModel>> GetTablesByKeyWord(HttpClient client, string keyword)
+        {
+            HttpResponseMessage response = await client.GetAsync("api/tables/search?keyword="+keyword);
+            List<TableModel> tables = new List<TableModel>();
+            if (response.IsSuccessStatusCode)
+                tables = await response.Content.ReadAsAsync<List<TableModel>>();
+            return tables;
+        }
     }
 }

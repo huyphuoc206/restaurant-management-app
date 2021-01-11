@@ -24,7 +24,6 @@ namespace RestaurantWebAPI.DAO
         bool Delete(long id);
 
         bool ResetPassword(long id, UserDTO user);
-
-
+        List<UserDTO> FindAllByKeyWord(string keyword);
     }
 }

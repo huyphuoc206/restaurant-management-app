@@ -55,5 +55,11 @@ namespace RestaurantWebAPI.Service.impl
             categoryDAO = CategoryDAO.Instance;
             return categoryDAO.Delete(id);
         }
+
+        public List<CategoryDTO> FindByKeyWord(string keyword)
+        {
+            categoryDAO = CategoryDAO.Instance;
+            return categoryDAO.FindByKeyWord(keyword);
+        }
     }
 }

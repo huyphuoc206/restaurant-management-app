@@ -18,5 +18,6 @@ namespace RestaurantWebAPI.DAO
         bool Update(long id, SaleDTO sale);
 
         bool Delete(long id);
+        List<SaleDTO> FindByKeyWord(string keyword);
     }
 }

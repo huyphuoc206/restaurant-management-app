@@ -20,6 +20,14 @@ namespace RestaurantWebAPI.Controllers
             return categoryService.FindAll();
         }
 
+        [Route("api/categories/search")]
+        [HttpGet]
+        public List<CategoryDTO> Search(string keyword)
+        {
+            categoryService = CategoryService.Instance;
+            return categoryService.FindByKeyWord(keyword);
+        }
+
         public CategoryDTO Post(CategoryDTO category)
         {
             categoryService = CategoryService.Instance;
