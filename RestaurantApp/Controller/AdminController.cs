@@ -1,4 +1,6 @@
 ﻿using RestaurantApp.Model;
+using RestaurantApp.ModelData;
+using RestaurantApp.Utils;
 using RestaurantApp.View;
 using System;
 using System.Collections.Generic;
@@ -36,6 +38,7 @@ namespace RestaurantApp.Controller
             EventBtnUpdate();
             EventBtnDelete();
             EventBtnSearch();
+            EventBtnReport();
         }
 
         private async void LoadData()
@@ -46,6 +49,10 @@ namespace RestaurantApp.Controller
             List<FoodModel> food = await new FoodModel().GetFood(client);
             List<SaleModel> sales = await new SaleModel().GetSales(client);
             List<RoleModel> roles = await new RoleModel().GetRoles(client);
+            // cho nay moi bat app len thi show order cua thang hien tai
+            DateTime fromDate = view.Dtp_fromdate.Value;
+            DateTime toDate = view.Dtp_todate.Value;
+            List<OrderModel> orders = await new OrderModel().GetOrdersByDate(client, fromDate, toDate);
             view.loadCategories(categories);
             view.loadUsers(users);
             view.loadTables(tables);
@@ -53,6 +60,7 @@ namespace RestaurantApp.Controller
             view.loadSales(sales);
             view.loadCategoriesIntoCb(categories);
             view.loadRolesIntoCb(roles);
+            view.loadOrders(orders);
         }
 
         private void EventBtnView()
@@ -97,16 +105,51 @@ namespace RestaurantApp.Controller
             view.Btn_searchuser.Click += new EventHandler(SearchUser);
         }
 
+        private void EventBtnReport()
+        {
+            view.Btn_Statis.Click += new EventHandler(Statistic);
+            view.Btn_PrintReport.Click += new EventHandler(PrintReport);
+        }
+
+        private void PrintReport(object sender, EventArgs e)
+        {
+            DateTime fromDate = view.Dtp_fromdate.Value;
+            DateTime toDate = view.Dtp_todate.Value;
+            if (DateTime.Compare(fromDate, toDate) > 0)
+            {
+                MessageBox.Show("Ngày bắt đầu phải trước ngày kết thúc", "Chú ý");
+                return;
+            }
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn in báo cáo doanh thu từ " + fromDate.ToString("dd/MM/yyyy") + " đến " + toDate.ToString("dd/MM/yyyy") + "?", "Chú ý", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                ReportInfo report = new ReportInfo(fromDate, toDate, view.Text_CountOrder.Text, view.Text_TotalPriceOrder.Text);
+                PDFUtil.PrintingReport(view.DataGridView_Order,report);
+            }
+        }
+        private async void Statistic(object sender, EventArgs e)
+        {
+            DateTime fromDate = view.Dtp_fromdate.Value;
+            DateTime toDate = view.Dtp_todate.Value;
+            if (DateTime.Compare(fromDate,toDate) > 0)
+            {
+                MessageBox.Show("Ngày bắt đầu phải trước ngày kết thúc", "Chú ý");
+                return;
+            }
+            List<OrderModel> orders = await new OrderModel().GetOrdersByDate(client, fromDate, toDate);
+            view.loadOrders(orders);
+        }
+
         private async void SearchUser(object sender, EventArgs e)
         {
             string keyword = view.Text_SearchUser.Text.Trim();
-            if(string.IsNullOrEmpty(keyword))
+            if (string.IsNullOrEmpty(keyword))
             {
                 MessageBox.Show("Vui lòng nhập họ tên người dùng cần tìm", "Chú ý");
                 return;
             }
             view.ClearUserBinding();
-            List<UserModel> users = await new UserModel().GetUsersByKeyWord(client,keyword);
+            List<UserModel> users = await new UserModel().GetUsersByKeyWord(client, keyword);
             view.loadUsers(users);
         }
 

@@ -54,10 +54,10 @@ namespace RestaurantApp.Controller
             foreach (CategoryModel category in categories)
                 if (category.Status.Equals("1"))
                     categoriesShow.Add(category);
-            view.loadTables(getButtonsTables(tables,0));
+            view.loadTables(getButtonsTables(tables, 0));
             view.loadCategories(categoriesShow);
             view.loadSales(salesShow);
-            view.loadTableToSwitch(tables);        
+            view.loadTableToSwitch(tables);
         }
 
         private void Event()
@@ -94,7 +94,6 @@ namespace RestaurantApp.Controller
                 return;
             }
             BillData billData = new BillData();
-            billData.tableName = table.Name.ToUpper();
             SaleModel sale = (SaleModel)view.cb_sales.SelectedItem;
             if (sale == null)
             {
@@ -135,7 +134,7 @@ namespace RestaurantApp.Controller
                 MessageBox.Show(selectedTable.Name + " hiện đang có người, không thể chuyển qua bàn này.", "Chú ý");
                 return;
             }
-            DialogResult dialogResult = MessageBox.Show("Bạn muốn chuyền từ " + currentTable.Name + " sang " + selectedTable.Name + "? ", "Chú ý", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn chuyền từ " + currentTable.Name.ToLower() + " sang " + selectedTable.Name.ToLower() + "? ", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 OrderModel order = await currentTable.GetOrderUnChecked(client);
@@ -144,7 +143,7 @@ namespace RestaurantApp.Controller
                 order = await order.Update(client);
                 if (order != null)
                 {
-                    MessageBox.Show("Chuyển " + currentTable.Name + " sang " + selectedTable.Name + " thành công", "Thông báo");
+                    MessageBox.Show("Chuyển " + currentTable.Name.ToLower() + " sang " + selectedTable.Name.ToLower() + " thành công", "Thông báo");
                     currentTable.Status = "0";
                     await currentTable.Update(client);
                     selectedTable.Status = "1";
@@ -154,7 +153,6 @@ namespace RestaurantApp.Controller
                     showOrder(currentTable);
                 }
             }
-
         }
 
         private async void cb_sales_SelectedIndexChanged(object sender, EventArgs e)
@@ -179,7 +177,7 @@ namespace RestaurantApp.Controller
                 totalPrice += o.Quantity * o.UnitPrice;
             totalPrice = totalPrice - totalPrice * saleSelected.Discount / 100;
             CultureInfo culture = new CultureInfo("vi-VN");
-            view.Text_totalPrice.Text = totalPrice.ToString("c", culture).Replace(",00", "");
+            view.Text_totalPrice.Text = totalPrice.ToString("c0", culture);
         }
 
         private async void payOrder(object sender, EventArgs e)
@@ -187,7 +185,7 @@ namespace RestaurantApp.Controller
             TableModel table = view.list_orderDetails.Tag as TableModel; // lay ban dang dc chon
             if (table == null)
             {
-                MessageBox.Show("Vui lòng chọn bàn cần thanh toán.","Chú ý");
+                MessageBox.Show("Vui lòng chọn bàn cần thanh toán.", "Chú ý");
                 return;
             }
             if (table.Status.Equals("0"))
@@ -200,7 +198,7 @@ namespace RestaurantApp.Controller
                 MessageBox.Show("Vui lòng chọn chương trình giảm giá.", "Chú ý");
                 return;
             }
-            DialogResult dialogResult = MessageBox.Show("Bạn muốn thanh toán bàn này?", "Chú ý", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn thanh toán hóa đơn " + table.Name.ToLower() + "?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 OrderModel currentOrder = await table.GetOrderUnChecked(client);
@@ -210,11 +208,11 @@ namespace RestaurantApp.Controller
                 currentOrder = await currentOrder.Pay(client);
                 if (currentOrder != null)
                 {
-                    MessageBox.Show("Thanh toán thành công.");
+                    MessageBox.Show("Thanh toán " + table.Name.ToLower() + " thành công.");
                     table.Status = "0";
                     await table.Update(client);
                     List<TableModel> tables = await table.GetTables(client);
-                    view.loadTables(getButtonsTables(tables,view.cb_showTable.SelectedIndex));
+                    view.loadTables(getButtonsTables(tables, view.cb_showTable.SelectedIndex));
                     showOrder(table);
                 }
                 else
@@ -233,13 +231,13 @@ namespace RestaurantApp.Controller
                 MessageBox.Show("Vui lòng chọn bàn muốn hủy.", "Chú ý");
                 return;
             }
-            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn hủy bàn này?", "Chú ý", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn chắc chắn muốn hủy " + table.Name.ToLower() + "?", "Chú ý", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 bool result = await table.CancelTable(client);
                 if (result)
                 {
-                    MessageBox.Show("Hủy thành công.", "Thông báo");
+                    MessageBox.Show("Hủy " + table.Name.ToLower() + " thành công.", "Thông báo");
                     List<TableModel> tables = await table.GetTables(client);
                     view.loadTables(getButtonsTables(tables, view.cb_showTable.SelectedIndex));
                     showOrder(table);
@@ -334,7 +332,7 @@ namespace RestaurantApp.Controller
 
         private Button[] getButtonsTables(List<TableModel> tables, int status)
         {
-            switch(status)
+            switch (status)
             {
                 case 0:
                     break;
@@ -405,14 +403,14 @@ namespace RestaurantApp.Controller
                 {
                     ListViewItem lsvItem = new ListViewItem(item.Food.Name.ToString());
                     lsvItem.SubItems.Add(item.Quantity.ToString());
-                    lsvItem.SubItems.Add(item.UnitPrice.ToString("c", culture).Replace(",00", ""));
+                    lsvItem.SubItems.Add(item.UnitPrice.ToString("c0", culture));
                     long totalPriceItem = item.Quantity * item.UnitPrice;
                     totalPrice += totalPriceItem;
-                    lsvItem.SubItems.Add(totalPriceItem.ToString("c", culture).Replace(",00", ""));
+                    lsvItem.SubItems.Add(totalPriceItem.ToString("c0", culture));
                     view.List_orderDetails.Items.Add(lsvItem);
                 }
             }
-            view.Text_totalPrice.Text = totalPrice.ToString("c", culture).Replace(",00", "");
+            view.Text_totalPrice.Text = totalPrice.ToString("c0", culture);
         }
     }
 }

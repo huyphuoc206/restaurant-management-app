@@ -23,8 +23,8 @@ namespace RestaurantApp.View
         void LoadDateTimerAllBill()
         {
             DateTime today = DateTime.Now;
-            dtp_fromdate.Value = new DateTime(today.Year, today.Month, 1);
-            dtp_todate.Value = dtp_fromdate.Value.AddMonths(1).AddDays(-1);
+            Dtp_fromdate.Value = new DateTime(today.Year, today.Month, 1);
+            Dtp_todate.Value = Dtp_fromdate.Value.AddMonths(1).AddDays(-1);
         }
 
         private void checkErrorEmpty(TextBox textBox, string message, CancelEventArgs e)
@@ -87,6 +87,23 @@ namespace RestaurantApp.View
             FoodBinding();
             if (Cb_foodStatus.Items.Count == 0)
                 LoadStatus(Cb_foodStatus, "Hoạt động", "Tạm ngưng");
+        }
+
+        public void loadOrders(List<OrderModel> orders)
+        {
+            orders = orders.OrderBy(r => r.ID).ToList();
+            dataGridView_order.DataSource = orders;
+            string[] array = { "ModifiedBy", "Status" };
+
+            foreach (DataGridViewColumn column in dataGridView_order.Columns)
+            {
+                if (array.Contains(column.Name))
+                    column.Visible = false;
+            }
+            text_countOrder.Text = orders.Count.ToString();
+            long totalMoney = 0;
+            orders.ForEach(a => totalMoney += a.TotalPrice);
+            text_totalMoney.Text = totalMoney.ToString("C0");
         }
 
         public void FoodBinding()

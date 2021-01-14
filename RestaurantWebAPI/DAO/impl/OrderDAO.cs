@@ -34,6 +34,15 @@ namespace RestaurantWebAPI.DAO.impl
             return orders[0];
         }
 
+        public List<OrderDTO> FindAllByDate(string fromDate, string toDate)
+        {
+            string sql = "SELECT orders.*, tables.name as tablename, tables.seats, sales.name as salename, sales.discount FROM orders JOIN tables ON orders.tableid = tables.id JOIN sales ON orders.saleid = sales.id WHERE orders.status = 1 AND orders.modifieddate >= @fromdate AND orders.modifieddate <= @todate";
+            string from = fromDate + " 00:00:00";
+            string to = toDate + " 23:59:59";
+            object[] parameters = { from, to };
+            return Query(sql, new OrderMapper(), parameters);
+        }
+
         public long Save(OrderDTO order)
         {
             string sql = "INSERT INTO orders (totalprice, tableid, status, createddate, createdby) VALUES( @totalprice , @tableid , @status , @createddate , @createdby )";

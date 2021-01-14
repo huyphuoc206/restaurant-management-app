@@ -28,6 +28,12 @@ namespace RestaurantWebAPI.Controllers
             return orderService.FindAllByTableId(tableId);
         }
 
+        public List<OrderDTO> GetByDate(string fromDate, string toDate)
+        {
+            orderService = OrderService.Instance;
+            return orderService.FindAllByDate(fromDate,toDate);
+        }
+
         public OrderDTO Post(OrderDTO order)
         {
             orderService = OrderService.Instance;

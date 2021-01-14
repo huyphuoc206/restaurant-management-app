@@ -16,5 +16,6 @@ namespace RestaurantWebAPI.DAO
         bool Update(long id, OrderDTO order);
         bool Delete(long id);
         List<OrderDTO> FindAllByTableId(long tableId);
+        List<OrderDTO> FindAllByDate(string fromDate, string toDate);
     }
 }

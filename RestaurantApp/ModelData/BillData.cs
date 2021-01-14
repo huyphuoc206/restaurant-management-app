@@ -10,8 +10,8 @@ namespace RestaurantApp.ModelData
     public class BillData
     {
         public long orderId;
-        public string RESTAURANT_NAME = "Nong Lam Restaurant";
-        public string address = "Phường Linh Trung, Thành phố Thủ Đức, TP.HCM";
+        public static string RESTAURANT_NAME = "Nong Lam Restaurant";
+        public static string address = "Phường Linh Trung, Thành phố Thủ Đức, TP.HCM";
         public string tableName;
         public SaleModel sale;
         public string totalPrice;

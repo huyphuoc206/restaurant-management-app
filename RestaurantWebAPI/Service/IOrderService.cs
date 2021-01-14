@@ -18,5 +18,6 @@ namespace RestaurantWebAPI.Service
         bool Delete(long id);
 
         List<OrderDTO> FindAllByTableId(long tableId);
+        List<OrderDTO> FindAllByDate(string fromDate, string toDate);
     }
 }

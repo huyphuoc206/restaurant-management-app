@@ -64,5 +64,11 @@ namespace RestaurantWebAPI.Service.impl
             if (tableDAO.FindOneById(tableId) == null) return null;
             return orderDAO.FindAllByTableId(tableId);
         }
+
+        public List<OrderDTO> FindAllByDate(string fromDate, string toDate)
+        {
+            orderDAO = OrderDAO.Instance;
+            return orderDAO.FindAllByDate(fromDate, toDate);
+        }
     }
 }

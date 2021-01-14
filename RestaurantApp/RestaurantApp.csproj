@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="ModelData\BillData.cs" />
     <Compile Include="ModelData\LoginData.cs" />
+    <Compile Include="ModelData\ReportInfo.cs" />
     <Compile Include="ModelData\ResetPasswordData.cs" />
     <Compile Include="Constant\SystemConstant.cs" />
     <Compile Include="Controller\AccountProfileController.cs" />

@@ -19,6 +19,20 @@ namespace RestaurantApp.Model
         public SaleModel Sale { get => sale; set => sale = value; }
         public TableModel Table { get => table; set => table = value; }
 
+        public async Task<List<OrderModel>> GetOrdersByDate(HttpClient client, DateTime fromDate, DateTime toDate)
+        {
+            string from = fromDate.ToString("yyyy-MM-dd");
+            string to = toDate.ToString("yyyy-MM-dd");
+            HttpResponseMessage response = await client.GetAsync("api/orders?fromDate="+from+"&toDate="+to);
+            List<OrderModel> orders = new List<OrderModel>();
+            if (response.IsSuccessStatusCode)
+            {
+                orders = await response.Content.ReadAsAsync<List<OrderModel>>();
+            }
+            return orders;
+        }
+
+
         public async Task<List<OrderModel>> GetOrders(HttpClient client)
         {
             HttpResponseMessage response = await client.GetAsync("api/orders");
@@ -49,6 +63,7 @@ namespace RestaurantApp.Model
                 orderResult = await response.Content.ReadAsAsync<OrderModel>();
             return orderResult;
         }
+
 
         public void SetUnChecked()
         {

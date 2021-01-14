@@ -17,6 +17,11 @@ namespace RestaurantApp.Model
         public int Seats { get => seats; set => seats = value; }
         public string Status { get => status; set => status = value; }
 
+        public override string ToString()
+        {
+            return name;
+        }
+
         public async Task<List<TableModel>> GetTables(HttpClient client)
         {
             HttpResponseMessage response = await client.GetAsync("api/tables");
