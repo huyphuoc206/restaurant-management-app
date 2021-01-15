@@ -318,6 +318,7 @@ namespace RestaurantApp.Controller
                     await table.Update(client);
                     List<TableModel> tables = await new TableModel().GetTables(client);
                     view.loadTables(getButtonsTables(tables, view.cb_showTable.SelectedIndex));
+                    view.loadTableToSwitch(tables);
                 }
 
             }

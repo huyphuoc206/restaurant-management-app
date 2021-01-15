@@ -115,8 +115,11 @@ namespace RestaurantApp.Utils
                             pdfDoc.Add(new Chunk("\n"));
                             pdfDoc.Add(pdfTable);
                             pdfDoc.Add(new Chunk("\n"));
-                            pdfDoc.Add(sale);
-                            pdfDoc.Add(discount);
+                            if(billData.sale.Discount != 0)
+                            {
+                                pdfDoc.Add(sale);
+                                pdfDoc.Add(discount);
+                            }                       
                             pdfDoc.Add(totalPrice);
                             pdfDoc.Add(new Chunk("\n"));
                             pdfDoc.Add(wifi);
